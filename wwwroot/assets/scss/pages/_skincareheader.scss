@@ -1,0 +1,568 @@
+// Rənglər və Şrift
+$header-bg: #fffef2;
+$text-dark: #333;
+$font-family: 'Inter', sans-serif;
+
+.category-header {
+    background-color: $header-bg;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    font-family: $font-family;
+
+    .category-header-container {
+        // Ümumi kənar boşluğunu azaltdıq (20px-dən 10px-ə)
+        padding: 10px 40px;
+    }
+
+    .category-header-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // Alt boşluğu azaltdıq (20px-dən 10px-ə)
+        padding-bottom: 10px;
+
+        .category-nav-left,
+        .category-nav-right {
+            display: flex;
+            gap: 20px;
+            flex: 1;
+
+            a {
+                text-decoration: none;
+                color: $text-dark;
+                font-size: 13px;
+                font-weight: 400;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .category-nav-right {
+            justify-content: flex-end;
+        }
+
+        .category-logo-box {
+            .category-logo {
+                height: 25px; // Loqonu da bir az kiçiltdik ki, hündürlük azalsın
+                width: auto;
+            }
+        }
+    }
+
+    .category-header-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: none;
+        // Üst boşluğu azaltdıq (15px-dən 8px-ə)
+        padding-top: 8px;
+
+        .category-main-nav {
+            ul {
+                display: flex;
+                list-style: none;
+                gap: 25px;
+                padding: 0;
+                margin: 0;
+
+                li a {
+                    text-decoration: none;
+                    color: $text-dark;
+                    font-size: 14px;
+                    transition: opacity 0.3s;
+
+                    &:hover {
+                        opacity: 0.6;
+                    }
+
+                    &.active-link {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        .category-search {
+            .search-wrapper {
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid #333;
+                padding-bottom: 3px; // Boşluğu bir az daraltdıq
+                position: relative;
+
+                input {
+                    background: none;
+                    border: none;
+                    outline: none;
+                    font-size: 14px;
+                    color: #000;
+                    width: 150px;
+                    font-family: 'Inter', sans-serif;
+                    transition: width 0.3s ease;
+
+                    &::placeholder {
+                        color: #666;
+                    }
+
+                    &:focus {
+                        width: 200px;
+                    }
+                }
+
+                .search-icon {
+                    color: #000;
+                    font-size: 14px;
+                    cursor: pointer;
+                    margin-left: 10px;
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+}
+
+
+// ========== RESPONSIVE ÜSLUBLAR ==========
+
+/* Böyük kompüterlər (1600px və yuxarı) */
+@media (min-width: 1600px) {
+    .category-header {
+        .category-header-container {
+            padding: 15px 60px;
+        }
+
+        .category-header-top {
+            padding-bottom: 15px;
+
+            .category-nav-left,
+            .category-nav-right {
+                gap: 30px;
+
+                a {
+                    font-size: 14px;
+                }
+            }
+
+            .category-logo-box {
+                .category-logo {
+                    height: 30px;
+                }
+            }
+        }
+
+        .category-header-bottom {
+            padding-top: 12px;
+
+            .category-main-nav {
+                ul {
+                    gap: 35px;
+
+                    li a {
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            .category-search {
+                .search-wrapper {
+                    input {
+                        width: 180px;
+                        font-size: 15px;
+
+                        &:focus {
+                            width: 250px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Kiçik kompüterlər (1200px - 1600px) */
+@media (max-width: 1600px) and (min-width: 1200px) {
+    .category-header {
+        .category-header-container {
+            padding: 10px 40px;
+        }
+    }
+}
+
+/* Planşetlər (992px - 1200px) */
+@media (max-width: 1200px) and (min-width: 992px) {
+    .category-header {
+        .category-header-container {
+            padding: 10px 30px;
+        }
+
+        .category-header-top {
+
+            .category-nav-left,
+            .category-nav-right {
+                gap: 15px;
+
+                a {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .category-header-bottom {
+            .category-main-nav {
+                ul {
+                    gap: 20px;
+
+                    li a {
+                        font-size: 13px;
+                    }
+                }
+            }
+
+            .category-search {
+                .search-wrapper {
+                    input {
+                        width: 130px;
+                        font-size: 13px;
+
+                        &:focus {
+                            width: 170px;
+                        }
+                    }
+
+                    .search-icon {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Kiçik planşetlər (768px - 992px) */
+@media (max-width: 992px) and (min-width: 768px) {
+    .category-header {
+        .category-header-container {
+            padding: 8px 25px;
+        }
+
+        .category-header-top {
+
+            .category-nav-left,
+            .category-nav-right {
+                gap: 12px;
+
+                a {
+                    font-size: 11px;
+                }
+            }
+
+            .category-logo-box {
+                .category-logo {
+                    height: 22px;
+                }
+            }
+        }
+
+        .category-header-bottom {
+            .category-main-nav {
+                ul {
+                    gap: 15px;
+
+                    li a {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .category-search {
+                .search-wrapper {
+                    input {
+                        width: 110px;
+                        font-size: 12px;
+
+                        &:focus {
+                            width: 140px;
+                        }
+                    }
+
+                    .search-icon {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Böyük telefonlar / phablet (576px - 768px) */
+@media (max-width: 768px) and (min-width: 576px) {
+    .category-header {
+        position: relative; // Sticky-i ləğv edirik, mobilde daha yaxşı təcrübə üçün
+        top: auto;
+
+        .category-header-container {
+            padding: 8px 20px;
+        }
+
+        .category-header-top {
+
+            .category-nav-left,
+            .category-nav-right {
+                gap: 10px;
+
+                a {
+                    font-size: 10px;
+                    white-space: nowrap;
+                }
+            }
+
+            .category-logo-box {
+                .category-logo {
+                    height: 20px;
+                }
+            }
+        }
+
+        .category-header-bottom {
+            flex-direction: column; // Aşağı hissə sütun halında
+            align-items: flex-start;
+            gap: 12px;
+            padding-top: 8px;
+
+            .category-main-nav {
+                width: 100%;
+                overflow-x: auto; // Horizontal scroll
+                padding-bottom: 5px;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                ul {
+                    gap: 20px;
+                    flex-wrap: nowrap;
+
+                    li a {
+                        font-size: 12px;
+                        white-space: nowrap;
+                    }
+                }
+            }
+
+            .category-search {
+                width: 100%;
+
+                .search-wrapper {
+                    width: 100%;
+
+                    input {
+                        width: 100%;
+                        font-size: 13px;
+
+                        &:focus {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Telefonlar (480px - 576px) */
+@media (max-width: 576px) and (min-width: 480px) {
+    .category-header {
+        position: relative;
+
+        .category-header-container {
+            padding: 8px 15px;
+        }
+
+        .category-header-top {
+
+            .category-nav-left,
+            .category-nav-right {
+                gap: 8px;
+
+                a {
+                    font-size: 9px;
+                }
+            }
+
+            .category-logo-box {
+                .category-logo {
+                    height: 18px;
+                }
+            }
+        }
+
+        .category-header-bottom {
+            flex-direction: column;
+            gap: 10px;
+
+            .category-main-nav {
+                width: 100%;
+                overflow-x: auto;
+
+                ul {
+                    gap: 15px;
+
+                    li a {
+                        font-size: 11px;
+                    }
+                }
+            }
+
+            .category-search {
+                width: 100%;
+
+                .search-wrapper {
+                    input {
+                        width: 100%;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Kiçik telefonlar (400px - 480px) */
+@media (max-width: 480px) and (min-width: 400px) {
+    .category-header {
+        position: relative;
+
+        .category-header-container {
+            padding: 8px 12px;
+        }
+
+        .category-header-top {
+
+            .category-nav-left,
+            .category-nav-right {
+                gap: 6px;
+
+                a {
+                    font-size: 8px;
+                }
+            }
+
+            .category-logo-box {
+                .category-logo {
+                    height: 16px;
+                }
+            }
+        }
+
+        .category-header-bottom {
+            .category-main-nav {
+                ul {
+                    gap: 12px;
+
+                    li a {
+                        font-size: 10px;
+                    }
+                }
+            }
+
+            .category-search {
+                .search-wrapper {
+                    input {
+                        font-size: 11px;
+                    }
+
+                    .search-icon {
+                        font-size: 11px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Çox kiçik telefonlar (400px-dən aşağı) */
+@media (max-width: 400px) {
+    .category-header {
+        position: relative;
+
+        .category-header-container {
+            padding: 8px 10px;
+        }
+
+        .category-header-top {
+
+            .category-nav-left,
+            .category-nav-right {
+                gap: 5px;
+
+                a {
+                    font-size: 7px;
+                }
+            }
+
+            .category-logo-box {
+                .category-logo {
+                    height: 14px;
+                }
+            }
+        }
+
+        .category-header-bottom {
+            .category-main-nav {
+                ul {
+                    gap: 10px;
+
+                    li a {
+                        font-size: 9px;
+                    }
+                }
+            }
+
+            .category-search {
+                .search-wrapper {
+                    input {
+                        font-size: 10px;
+                    }
+
+                    .search-icon {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Hover effektlərinin idarəsi */
+@media (hover: hover) {
+    .category-header {
+
+        .category-nav-left a:hover,
+        .category-nav-right a:hover {
+            text-decoration: underline;
+        }
+
+        .category-main-nav li a:hover {
+            opacity: 0.6;
+        }
+    }
+}
+
+@media (hover: none) {
+    .category-header {
+
+        .category-nav-left a:active,
+        .category-nav-right a:active {
+            text-decoration: underline;
+        }
+
+        .category-main-nav li a:active {
+            opacity: 0.6;
+        }
+    }
+}

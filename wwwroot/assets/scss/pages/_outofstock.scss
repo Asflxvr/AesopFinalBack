@@ -1,0 +1,664 @@
+$bg-color: #f6f5e8;
+$text-dark: #333;
+$text-light: #666;
+$accent-color: #a6662d; // "New addition" üçün qəhvəyi ton
+$btn-dark: #333;
+$border-color: #e2e2e2;
+
+.gift-kits {
+    background-color: $bg-color;
+    padding: 80px 40px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 60px;
+
+        .subtitle {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-size: 32px;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            font-size: 16px;
+            color: $text-light;
+        }
+    }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .product-card {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        transition: transform 0.3s ease;
+
+        .card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 30px;
+            margin-bottom: 10px;
+
+            .badge {
+                color: $accent-color;
+                font-size: 12px;
+                font-weight: 500;
+            }
+
+            .save-btn {
+                background: none;
+                border: none;
+                cursor: pointer;
+                font-size: 16px;
+                color: $text-dark;
+            }
+        }
+
+        .product-image {
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .product-info {
+            flex-grow: 1;
+            margin-bottom: 25px;
+
+            .item-name {
+                font-size: 16px;
+                margin-bottom: 10px;
+                font-weight: 600;
+            }
+
+            .item-desc {
+                font-size: 14px;
+                color: $text-light;
+                margin-bottom: 15px;
+                min-height: 40px;
+            }
+
+            .item-price {
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+
+        .add-btn {
+            background-color: $btn-dark;
+            color: white;
+            border: none;
+            padding: 18px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+
+        // Out of stock xüsusi tənzimləmə
+        &.out-of-stock {
+            .add-btn {
+                background-color: #f0f0f0;
+                color: #999;
+                cursor: not-allowed;
+            }
+        }
+    }
+}
+
+
+// ========== RESPONSIVE ÜSLUBLAR ==========
+
+/* Böyük kompüterlər (1600px və yuxarı) */
+@media (min-width: 1600px) {
+    .gift-kits {
+        padding: 100px 60px;
+
+        .section-header {
+            margin-bottom: 70px;
+
+            .title {
+                font-size: 38px;
+            }
+
+            .description {
+                font-size: 18px;
+            }
+        }
+
+        .product-grid {
+            max-width: 1400px;
+            gap: 40px;
+        }
+
+        .product-card {
+            .product-image {
+                height: 400px;
+            }
+
+            .product-info {
+                .item-name {
+                    font-size: 18px;
+                }
+
+                .item-desc {
+                    font-size: 15px;
+                }
+
+                .item-price {
+                    font-size: 18px;
+                }
+            }
+
+            .add-btn {
+                padding: 20px;
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+/* Kiçik kompüterlər (1200px - 1600px) */
+@media (max-width: 1600px) and (min-width: 1200px) {
+    .gift-kits {
+        .product-grid {
+            gap: 25px;
+        }
+
+        .product-card {
+            .product-image {
+                height: 330px;
+            }
+        }
+    }
+}
+
+/* Planşetlər (992px - 1200px) */
+@media (max-width: 1200px) and (min-width: 992px) {
+    .gift-kits {
+        padding: 70px 30px;
+
+        .section-header {
+            margin-bottom: 50px;
+
+            .title {
+                font-size: 30px;
+            }
+
+            .description {
+                font-size: 15px;
+            }
+        }
+
+        .product-grid {
+            gap: 20px;
+        }
+
+        .product-card {
+            .product-image {
+                height: 300px;
+                margin-bottom: 20px;
+            }
+
+            .product-info {
+                .item-name {
+                    font-size: 15px;
+                }
+
+                .item-desc {
+                    font-size: 13px;
+                    min-height: 35px;
+                }
+
+                .item-price {
+                    font-size: 15px;
+                }
+            }
+
+            .add-btn {
+                padding: 16px;
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+/* Kiçik planşetlər (768px - 992px) */
+@media (max-width: 992px) and (min-width: 768px) {
+    .gift-kits {
+        padding: 60px 25px;
+
+        .section-header {
+            margin-bottom: 45px;
+
+            .subtitle {
+                font-size: 13px;
+            }
+
+            .title {
+                font-size: 28px;
+            }
+
+            .description {
+                font-size: 15px;
+                padding: 0 20px;
+            }
+        }
+
+        .product-grid {
+            grid-template-columns: repeat(2, 1fr); // 3 sütun → 2 sütun
+            gap: 25px;
+            max-width: 800px;
+        }
+
+        .product-card {
+            .card-top {
+                .badge {
+                    font-size: 11px;
+                }
+
+                .save-btn {
+                    font-size: 15px;
+                }
+            }
+
+            .product-image {
+                height: 280px;
+                margin-bottom: 20px;
+            }
+
+            .product-info {
+                margin-bottom: 20px;
+
+                .item-name {
+                    font-size: 15px;
+                }
+
+                .item-desc {
+                    font-size: 13px;
+                    min-height: 36px;
+                }
+
+                .item-price {
+                    font-size: 15px;
+                }
+            }
+
+            .add-btn {
+                padding: 16px;
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+/* Böyük telefonlar / phablet (576px - 768px) */
+@media (max-width: 768px) and (min-width: 576px) {
+    .gift-kits {
+        padding: 50px 20px;
+
+        .section-header {
+            margin-bottom: 40px;
+
+            .subtitle {
+                font-size: 12px;
+                margin-bottom: 8px;
+            }
+
+            .title {
+                font-size: 26px;
+                margin-bottom: 12px;
+            }
+
+            .description {
+                font-size: 14px;
+                padding: 0 15px;
+            }
+        }
+
+        .product-grid {
+            grid-template-columns: repeat(2, 1fr); // 2 sütun davam edir
+            gap: 20px;
+            max-width: 600px;
+        }
+
+        .product-card {
+            .card-top {
+                height: 25px;
+
+                .badge {
+                    font-size: 10px;
+                }
+
+                .save-btn {
+                    font-size: 14px;
+                }
+            }
+
+            .product-image {
+                height: 220px;
+                margin-bottom: 15px;
+            }
+
+            .product-info {
+                margin-bottom: 15px;
+
+                .item-name {
+                    font-size: 14px;
+                    margin-bottom: 8px;
+                }
+
+                .item-desc {
+                    font-size: 12px;
+                    min-height: 32px;
+                    margin-bottom: 12px;
+                }
+
+                .item-price {
+                    font-size: 14px;
+                }
+            }
+
+            .add-btn {
+                padding: 14px;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+/* Telefonlar (480px - 576px) */
+@media (max-width: 576px) and (min-width: 480px) {
+    .gift-kits {
+        padding: 40px 15px;
+
+        .section-header {
+            margin-bottom: 35px;
+
+            .subtitle {
+                font-size: 11px;
+                margin-bottom: 6px;
+            }
+
+            .title {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+            .description {
+                font-size: 13px;
+                padding: 0 10px;
+            }
+        }
+
+        .product-grid {
+            grid-template-columns: repeat(2, 1fr); // 2 sütun davam edir
+            gap: 15px;
+        }
+
+        .product-card {
+            .card-top {
+                height: 22px;
+
+                .badge {
+                    font-size: 9px;
+                }
+
+                .save-btn {
+                    font-size: 13px;
+                }
+            }
+
+            .product-image {
+                height: 180px;
+                margin-bottom: 12px;
+            }
+
+            .product-info {
+                margin-bottom: 12px;
+
+                .item-name {
+                    font-size: 13px;
+                    margin-bottom: 6px;
+                }
+
+                .item-desc {
+                    font-size: 11px;
+                    min-height: 30px;
+                    margin-bottom: 10px;
+                }
+
+                .item-price {
+                    font-size: 13px;
+                }
+            }
+
+            .add-btn {
+                padding: 12px;
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+/* Kiçik telefonlar (400px - 480px) */
+@media (max-width: 480px) and (min-width: 400px) {
+    .gift-kits {
+        padding: 35px 15px;
+
+        .section-header {
+            margin-bottom: 30px;
+
+            .subtitle {
+                font-size: 11px;
+            }
+
+            .title {
+                font-size: 22px;
+            }
+
+            .description {
+                font-size: 12px;
+            }
+        }
+
+        .product-grid {
+            grid-template-columns: 1fr; // 2 sütun → 1 sütun
+            gap: 25px;
+            max-width: 320px;
+        }
+
+        .product-card {
+            .card-top {
+                .badge {
+                    font-size: 11px;
+                }
+
+                .save-btn {
+                    font-size: 15px;
+                }
+            }
+
+            .product-image {
+                height: 240px;
+            }
+
+            .product-info {
+                .item-name {
+                    font-size: 15px;
+                }
+
+                .item-desc {
+                    font-size: 13px;
+                    min-height: 36px;
+                }
+
+                .item-price {
+                    font-size: 15px;
+                }
+            }
+
+            .add-btn {
+                padding: 15px;
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+/* Çox kiçik telefonlar (400px-dən aşağı) */
+@media (max-width: 400px) {
+    .gift-kits {
+        padding: 30px 12px;
+
+        .section-header {
+            margin-bottom: 25px;
+
+            .subtitle {
+                font-size: 10px;
+            }
+
+            .title {
+                font-size: 20px;
+            }
+
+            .description {
+                font-size: 11px;
+            }
+        }
+
+        .product-grid {
+            grid-template-columns: 1fr; // Tək sütun
+            gap: 20px;
+            max-width: 280px;
+        }
+
+        .product-card {
+            .card-top {
+                .badge {
+                    font-size: 10px;
+                }
+
+                .save-btn {
+                    font-size: 14px;
+                }
+            }
+
+            .product-image {
+                height: 200px;
+            }
+
+            .product-info {
+                .item-name {
+                    font-size: 14px;
+                }
+
+                .item-desc {
+                    font-size: 12px;
+                    min-height: 34px;
+                }
+
+                .item-price {
+                    font-size: 14px;
+                }
+            }
+
+            .add-btn {
+                padding: 14px;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+/* Hover effektlərinin idarəsi */
+@media (hover: hover) {
+    .gift-kits {
+        .product-card {
+            &:hover {
+                transform: translateY(-5px);
+            }
+        }
+
+        .add-btn:hover {
+            opacity: 0.9;
+        }
+    }
+}
+
+/* Toxunma cihazlar üçün active state */
+@media (hover: none) {
+    .gift-kits {
+        .product-card:active {
+            transform: translateY(-3px);
+        }
+
+        .add-btn:active {
+            opacity: 0.9;
+        }
+    }
+}
+
+/* Landscape rejimi - telefonlar */
+@media (max-width: 900px) and (orientation: landscape) {
+    .gift-kits {
+        .product-grid {
+            grid-template-columns: repeat(3, 1fr); // Landscape-də 3 sütun
+            gap: 15px;
+        }
+
+        .product-card {
+            .product-image {
+                height: 150px;
+            }
+
+            .product-info {
+                .item-name {
+                    font-size: 12px;
+                }
+
+                .item-desc {
+                    font-size: 10px;
+                    min-height: 28px;
+                }
+            }
+
+            .add-btn {
+                padding: 10px;
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+/* Çox geniş planşetlər üçün xüsusi düzəliş */
+@media (min-width: 1024px) and (max-width: 1200px) and (orientation: landscape) {
+    .gift-kits {
+        .product-grid {
+            grid-template-columns: repeat(3, 1fr); // 3 sütun qorunur
+        }
+    }
+}

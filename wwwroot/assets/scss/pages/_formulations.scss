@@ -1,0 +1,309 @@
+.skin-needs-section {
+    background-color: #f6f5e8; // Aesop-un açıq bej fonu
+    padding: 100px 0;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+
+    .section-title {
+        font-family: serif;
+        font-size: 30px;
+        font-weight: 400;
+        margin-bottom: 60px;
+        color: #333;
+    }
+
+    .needs-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); // 3 sütunlu struktur
+        column-gap: 60px;
+        row-gap: 40px;
+    }
+
+    .need-item {
+        border-top: 1px solid #d6d5ca; // Üstdəki o incə ayırıcı xətt
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+
+        .need-link {
+            font-size: 15px;
+            font-weight: 500;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: #000;
+
+                .arrow {
+                    transform: translateX(5px);
+                }
+            }
+
+            .arrow {
+                transition: transform 0.3s ease;
+                font-size: 18px;
+            }
+        }
+
+        .need-desc {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #666;
+            margin: 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+.skin-needs-section {
+    background-color: #f6f5e8; // Aesop-un açıq bej fonu
+    padding: 100px 0;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+
+    .section-title {
+        font-family: serif;
+        font-size: 30px;
+        font-weight: 400;
+        margin-bottom: 60px;
+        color: #333;
+    }
+
+    .needs-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); // 3 sütunlu struktur
+        column-gap: 60px;
+        row-gap: 40px;
+    }
+
+    .need-item {
+        border-top: 1px solid #d6d5ca; // Üstdəki o incə ayırıcı xətt
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+
+        .need-link {
+            font-size: 15px;
+            font-weight: 500;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: #000;
+
+                .arrow {
+                    transform: translateX(5px);
+                }
+            }
+
+            .arrow {
+                transition: transform 0.3s ease;
+                font-size: 18px;
+            }
+        }
+
+        .need-desc {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #666;
+            margin: 0;
+        }
+    }
+
+    // ========== RESPONSIVE ÜSLUBLAR ==========
+
+    /* Laptop və kiçik ekranlar üçün (1024px-ə qədər) */
+    @media (max-width: 1024px) {
+        padding: 80px 0;
+
+        .container {
+            padding: 0 30px;
+        }
+
+        .needs-grid {
+            column-gap: 40px; // Sütunlar arası boşluğu azaldırıq
+        }
+    }
+
+    /* Tabletlər üçün (992px-ə qədər) */
+    @media (max-width: 992px) {
+        .needs-grid {
+            grid-template-columns: repeat(2, 1fr); // 2 sütunlu struktura keçid
+            column-gap: 50px;
+            row-gap: 35px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 50px;
+        }
+    }
+
+    /* Kiçik tabletlər və böyük mobillər üçün (768px-ə qədər) */
+    @media (max-width: 768px) {
+        padding: 60px 0;
+
+        .container {
+            padding: 0 25px;
+        }
+
+        .section-title {
+            font-size: 26px;
+            margin-bottom: 40px;
+            text-align: center; // Başlığı mərkəzləşdiririk
+        }
+
+        .needs-grid {
+            column-gap: 30px;
+            row-gap: 30px;
+        }
+
+        .need-item {
+            padding-top: 18px;
+
+            .need-link {
+                font-size: 14px;
+                margin-bottom: 12px;
+
+                .arrow {
+                    font-size: 16px;
+                }
+            }
+
+            .need-desc {
+                font-size: 13px;
+                line-height: 1.5;
+            }
+        }
+    }
+
+    /* Mobil cihazlar üçün (576px-ə qədər) */
+    @media (max-width: 576px) {
+        padding: 50px 0;
+
+        .container {
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 35px;
+        }
+
+        .needs-grid {
+            grid-template-columns: 1fr; // Tək sütunlu struktura keçid
+            row-gap: 25px;
+        }
+
+        .need-item {
+            padding-top: 15px;
+
+            .need-link {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+
+            .need-desc {
+                font-size: 13px;
+                padding-right: 20px; // Sağ tərəfdən bir az boşluq
+            }
+        }
+    }
+
+    /* Kiçik mobil cihazlar üçün (400px-ə qədər) */
+    @media (max-width: 400px) {
+        padding: 40px 0;
+
+        .container {
+            padding: 0 15px;
+        }
+
+        .section-title {
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+
+        .need-item {
+            .need-link {
+                font-size: 13px;
+
+                .arrow {
+                    font-size: 15px;
+                }
+            }
+
+            .need-desc {
+                font-size: 12px;
+                line-height: 1.5;
+            }
+        }
+    }
+
+    /* Hover effektlərinin idarəsi */
+    @media (hover: hover) {
+        .need-link:hover {
+            color: #000;
+
+            .arrow {
+                transform: translateX(5px);
+            }
+        }
+    }
+
+    /* Toxunma cihazlar üçün active state */
+    @media (hover: none) {
+        .need-link:active {
+            color: #000;
+
+            .arrow {
+                transform: translateX(5px);
+            }
+        }
+    }
+
+    /* Grid düzəlişləri - çox böyük ekranlar üçün */
+    @media (min-width: 1600px) {
+        .container {
+            max-width: 1400px; // Daha böyük ekranlarda container genişlənir
+        }
+
+        .section-title {
+            font-size: 36px;
+        }
+
+        .need-link {
+            font-size: 16px;
+        }
+
+        .need-desc {
+            font-size: 15px;
+        }
+    }
+}

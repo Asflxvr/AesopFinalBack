@@ -1,0 +1,901 @@
+.feature-section {
+    background-color: #fffef2;
+    font-family: 'Inter', sans-serif;
+
+    .feature-container {
+        display: flex;
+        min-height: 100vh;
+    }
+
+    // --- SOL TƏRƏF (Hero) ---
+    .hero-feature {
+        position: relative;
+        flex: 1.2;
+
+        .hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            bottom: 50px;
+            left: 50px;
+            color: #fff;
+            max-width: 380px;
+
+            .sub-title {
+                font-size: 13px;
+                display: block;
+                margin-bottom: 12px;
+                letter-spacing: 0.5px;
+            }
+
+            .main-title {
+                font-family: serif;
+                font-size: 32px;
+                line-height: 1.2;
+                margin-bottom: 25px;
+                font-weight: 400;
+            }
+
+            .explore-btn {
+                display: inline-flex;
+                align-items: center;
+                padding: 14px 24px;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                color: #fff;
+                text-decoration: none;
+                font-size: 13px;
+                transition: 0.3s ease;
+
+                &:hover {
+                    background: #fff;
+                    color: #000;
+                }
+
+                .arrow-right {
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+
+    // --- SAĞ TƏRƏF (Məhsul) ---
+    .product-feature {
+        flex: 0.8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 60px;
+
+        .product-wrapper {
+            max-width: 400px; // Yazıların rahat yerləşməsi üçün bir az artırdım
+            text-align: center;
+        }
+
+        .product-header {
+            margin-bottom: 30px;
+
+            .tagline {
+                font-size: 12px;
+                margin-bottom: 10px;
+                color: #333;
+            }
+
+            .intro-title {
+                font-family: serif;
+                font-size: 24px; // Bir az böyütdüm ki, başlıq olduğu bilinsin
+                margin-bottom: 15px;
+                font-weight: 400;
+            }
+
+            .intro-desc {
+                font-size: 13.5px;
+                color: #666;
+                line-height: 1.6;
+            }
+        }
+
+        .product-visual {
+            position: relative;
+            height: 300px; // Şəkil üçün ideal kiçik ölçü
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+
+            // Şəklin sol üstündəki yazı
+            .new-label {
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-size: 12px;
+                color: #8e5d3c; // Aesop qəhvəyisi
+            }
+
+            // Bookmark ikonu
+            .wish-btn {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: none;
+                border: none;
+                cursor: pointer;
+                font-size: 16px;
+                color: #333;
+                padding: 0;
+
+                &:hover {
+                    color: #000;
+                }
+            }
+
+            img {
+                max-width: 80%;
+                max-height: 85%;
+                object-fit: contain;
+                transition: opacity 0.7s ease-in-out;
+            }
+
+            .img-reveal {
+                position: absolute;
+                opacity: 0;
+            }
+
+            &:hover {
+                .img-base {
+                    opacity: 0;
+                }
+
+                .img-reveal {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .product-details {
+            .product-name {
+                font-size: 14px;
+                font-weight: 500;
+                margin-bottom: 8px;
+                color: #333;
+            }
+
+            .price {
+                font-size: 14px;
+                margin-bottom: 25px;
+                color: #666;
+            }
+
+            // ADD TO CART DÜYMƏSİ - Dizaynı bərpa edildi
+            .add-btn {
+                width: 100%;
+                padding: 18px;
+                background-color: #333333; // Tünd rəng geri gəldi
+                color: #ffffff;
+                border: none;
+                font-size: 13px;
+                font-weight: 400;
+                cursor: pointer;
+                transition: background 0.3s ease;
+
+                &:hover {
+                    background-color: #000000;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.feature-section {
+    background-color: #fffef2;
+    font-family: 'Inter', sans-serif;
+
+    .feature-container {
+        display: flex;
+        min-height: 100vh;
+
+        // =========================================
+        // RESPONSIVE: container düzülüşü
+        // =========================================
+        @media (max-width: 1200px) {
+            min-height: 90vh;
+        }
+
+        @media (max-width: 992px) {
+            flex-direction: column; // Sütun düzülüşü
+            min-height: auto;
+        }
+    }
+
+    // --- SOL TƏRƏF (Hero) ---
+    .hero-feature {
+        position: relative;
+        flex: 1.2;
+
+        // =========================================
+        // RESPONSIVE: hero-feature
+        // =========================================
+        @media (max-width: 1400px) {
+            flex: 1.1;
+        }
+
+        @media (max-width: 1200px) {
+            flex: 1;
+        }
+
+        @media (max-width: 992px) {
+            flex: auto;
+            height: 80vh; // Planşetdə hündürlük
+            min-height: 500px;
+        }
+
+        @media (max-width: 768px) {
+            height: 70vh;
+            min-height: 450px;
+        }
+
+        @media (max-width: 576px) {
+            height: 60vh;
+            min-height: 400px;
+        }
+
+        @media (max-width: 400px) {
+            height: 50vh;
+            min-height: 350px;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            bottom: 50px;
+            left: 50px;
+            color: #fff;
+            max-width: 380px;
+
+            // =========================================
+            // RESPONSIVE: hero-overlay
+            // =========================================
+            @media (max-width: 1400px) {
+                bottom: 45px;
+                left: 45px;
+                max-width: 350px;
+            }
+
+            @media (max-width: 1200px) {
+                bottom: 40px;
+                left: 40px;
+                max-width: 320px;
+            }
+
+            @media (max-width: 992px) {
+                bottom: 50px;
+                left: 50px;
+                max-width: 400px; // Planşetdə daha geniş
+            }
+
+            @media (max-width: 768px) {
+                bottom: 40px;
+                left: 30px;
+                max-width: 350px;
+            }
+
+            @media (max-width: 576px) {
+                bottom: 30px;
+                left: 20px;
+                max-width: 280px; // Mətn sınmasın
+                right: 20px; // Sağdan da məhdudiyyət
+            }
+
+            @media (max-width: 400px) {
+                bottom: 25px;
+                left: 15px;
+                max-width: 90%; // Tam enə yaxın
+            }
+
+            .sub-title {
+                font-size: 13px;
+                display: block;
+                margin-bottom: 12px;
+                letter-spacing: 0.5px;
+
+                // =========================================
+                // RESPONSIVE: sub-title
+                // =========================================
+                @media (max-width: 768px) {
+                    font-size: 12px;
+                    margin-bottom: 10px;
+                }
+
+                @media (max-width: 576px) {
+                    font-size: 11px;
+                    margin-bottom: 8px;
+                    letter-spacing: 0.3px;
+                }
+            }
+
+            .main-title {
+                font-family: serif;
+                font-size: 32px;
+                line-height: 1.2;
+                margin-bottom: 25px;
+                font-weight: 400;
+
+                // =========================================
+                // RESPONSIVE: main-title
+                // =========================================
+                @media (max-width: 1400px) {
+                    font-size: 30px;
+                }
+
+                @media (max-width: 1200px) {
+                    font-size: 28px;
+                }
+
+                @media (max-width: 992px) {
+                    font-size: 32px; // Planşetdə böyük qalsın
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 28px;
+                    margin-bottom: 20px;
+                }
+
+                @media (max-width: 576px) {
+                    font-size: 24px;
+                    margin-bottom: 18px;
+                }
+
+                @media (max-width: 400px) {
+                    font-size: 22px;
+                    margin-bottom: 15px;
+                }
+            }
+
+            .explore-btn {
+                display: inline-flex;
+                align-items: center;
+                padding: 14px 24px;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                color: #fff;
+                text-decoration: none;
+                font-size: 13px;
+                transition: 0.3s ease;
+
+                // =========================================
+                // RESPONSIVE: explore-btn
+                // =========================================
+                @media (max-width: 1400px) {
+                    padding: 13px 22px;
+                }
+
+                @media (max-width: 1200px) {
+                    padding: 12px 20px;
+                }
+
+                @media (max-width: 992px) {
+                    padding: 14px 24px; // Planşetdə normal
+                }
+
+                @media (max-width: 768px) {
+                    padding: 13px 22px;
+                    font-size: 12px;
+                }
+
+                @media (max-width: 576px) {
+                    padding: 12px 20px;
+                    font-size: 12px;
+                }
+
+                @media (max-width: 400px) {
+                    padding: 10px 18px;
+                    font-size: 11px;
+                }
+
+                &:hover {
+                    background: #fff;
+                    color: #000;
+
+                    @media (max-width: 992px) {
+                        background: rgba(255, 255, 255, 0.9);
+                    }
+                }
+
+                // Touch active state
+                &:active {
+                    @media (max-width: 768px) {
+                        transform: scale(0.97);
+                        background: #fff;
+                        color: #000;
+                    }
+                }
+
+                .arrow-right {
+                    margin-left: 8px;
+
+                    @media (max-width: 576px) {
+                        margin-left: 6px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    // --- SAĞ TƏRƏF (Məhsul) ---
+    .product-feature {
+        flex: 0.8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 60px;
+
+        // =========================================
+        // RESPONSIVE: product-feature
+        // =========================================
+        @media (max-width: 1600px) {
+            padding: 40px 50px;
+        }
+
+        @media (max-width: 1400px) {
+            padding: 40px 45px;
+            flex: 0.9;
+        }
+
+        @media (max-width: 1200px) {
+            padding: 35px 40px;
+            flex: 1;
+        }
+
+        @media (max-width: 992px) {
+            padding: 60px 40px; // Planşetdə daha çox padding
+            flex: auto;
+        }
+
+        @media (max-width: 768px) {
+            padding: 50px 30px;
+        }
+
+        @media (max-width: 576px) {
+            padding: 40px 20px;
+        }
+
+        @media (max-width: 400px) {
+            padding: 35px 15px;
+        }
+
+        .product-wrapper {
+            max-width: 400px;
+            text-align: center;
+
+            // =========================================
+            // RESPONSIVE: product-wrapper
+            // =========================================
+            @media (max-width: 1600px) {
+                max-width: 380px;
+            }
+
+            @media (max-width: 1400px) {
+                max-width: 360px;
+            }
+
+            @media (max-width: 1200px) {
+                max-width: 340px;
+            }
+
+            @media (max-width: 992px) {
+                max-width: 450px; // Planşetdə daha geniş
+            }
+
+            @media (max-width: 768px) {
+                max-width: 400px;
+            }
+
+            @media (max-width: 576px) {
+                max-width: 100%;
+            }
+        }
+
+        .product-header {
+            margin-bottom: 30px;
+
+            // =========================================
+            // RESPONSIVE: product-header
+            // =========================================
+            @media (max-width: 1400px) {
+                margin-bottom: 28px;
+            }
+
+            @media (max-width: 1200px) {
+                margin-bottom: 25px;
+            }
+
+            @media (max-width: 992px) {
+                margin-bottom: 30px; // Planşetdə normal
+            }
+
+            @media (max-width: 768px) {
+                margin-bottom: 25px;
+            }
+
+            @media (max-width: 576px) {
+                margin-bottom: 22px;
+            }
+
+            .tagline {
+                font-size: 12px;
+                margin-bottom: 10px;
+                color: #333;
+
+                // =========================================
+                // RESPONSIVE: tagline
+                // =========================================
+                @media (max-width: 768px) {
+                    font-size: 11px;
+                    margin-bottom: 8px;
+                }
+
+                @media (max-width: 576px) {
+                    font-size: 11px;
+                    margin-bottom: 6px;
+                }
+            }
+
+            .intro-title {
+                font-family: serif;
+                font-size: 24px;
+                margin-bottom: 15px;
+                font-weight: 400;
+
+                // =========================================
+                // RESPONSIVE: intro-title
+                // =========================================
+                @media (max-width: 1600px) {
+                    font-size: 23px;
+                }
+
+                @media (max-width: 1400px) {
+                    font-size: 22px;
+                }
+
+                @media (max-width: 1200px) {
+                    font-size: 21px;
+                }
+
+                @media (max-width: 992px) {
+                    font-size: 24px; // Planşetdə böyük
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 22px;
+                    margin-bottom: 12px;
+                }
+
+                @media (max-width: 576px) {
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+
+                @media (max-width: 400px) {
+                    font-size: 19px;
+                }
+            }
+
+            .intro-desc {
+                font-size: 13.5px;
+                color: #666;
+                line-height: 1.6;
+
+                // =========================================
+                // RESPONSIVE: intro-desc
+                // =========================================
+                @media (max-width: 1600px) {
+                    font-size: 13px;
+                }
+
+                @media (max-width: 1400px) {
+                    font-size: 13px;
+                }
+
+                @media (max-width: 1200px) {
+                    font-size: 12.5px;
+                }
+
+                @media (max-width: 992px) {
+                    font-size: 14px; // Planşetdə böyük
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 13px;
+                    line-height: 1.5;
+                }
+
+                @media (max-width: 576px) {
+                    font-size: 12.5px;
+                }
+
+                @media (max-width: 400px) {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .product-visual {
+            position: relative;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+
+            // =========================================
+            // RESPONSIVE: product-visual
+            // =========================================
+            @media (max-width: 1600px) {
+                height: 280px;
+            }
+
+            @media (max-width: 1400px) {
+                height: 270px;
+            }
+
+            @media (max-width: 1200px) {
+                height: 250px;
+            }
+
+            @media (max-width: 992px) {
+                height: 320px; // Planşetdə böyük
+                margin-bottom: 35px;
+            }
+
+            @media (max-width: 768px) {
+                height: 280px;
+                margin-bottom: 30px;
+            }
+
+            @media (max-width: 576px) {
+                height: 250px;
+                margin-bottom: 25px;
+            }
+
+            @media (max-width: 400px) {
+                height: 220px;
+                margin-bottom: 22px;
+            }
+
+            // Şəklin sol üstündəki yazı
+            .new-label {
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-size: 12px;
+                color: #8e5d3c;
+
+                // =========================================
+                // RESPONSIVE: new-label
+                // =========================================
+                @media (max-width: 768px) {
+                    font-size: 11px;
+                }
+
+                @media (max-width: 576px) {
+                    font-size: 10px;
+                }
+            }
+
+            // Bookmark ikonu
+            .wish-btn {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: none;
+                border: none;
+                cursor: pointer;
+                font-size: 16px;
+                color: #333;
+                padding: 8px; // Toxunma sahəsi böyük olsun
+
+                // =========================================
+                // RESPONSIVE: wish-btn
+                // =========================================
+                @media (max-width: 768px) {
+                    font-size: 18px; // Mobilde böyük
+                    padding: 10px;
+                }
+
+                @media (max-width: 576px) {
+                    font-size: 16px;
+                    padding: 8px;
+                }
+
+                &:hover {
+                    color: #000;
+
+                    @media (max-width: 768px) {
+                        color: #333; // Mobilde hover yox
+                    }
+                }
+
+                // Touch active state
+                &:active {
+                    @media (max-width: 768px) {
+                        transform: scale(0.9);
+                        color: #8e5d3c;
+                    }
+                }
+            }
+
+            img {
+                max-width: 80%;
+                max-height: 85%;
+                object-fit: contain;
+                transition: opacity 0.7s ease-in-out;
+
+                // =========================================
+                // RESPONSIVE: img
+                // =========================================
+                @media (max-width: 768px) {
+                    max-width: 85%;
+                    max-height: 90%;
+                }
+
+                @media (max-width: 576px) {
+                    max-width: 90%;
+                }
+            }
+
+            .img-reveal {
+                position: absolute;
+                opacity: 0;
+            }
+
+            &:hover {
+                .img-base {
+                    opacity: 0;
+                }
+
+                .img-reveal {
+                    opacity: 1;
+                }
+            }
+
+            // Mobil üçün hover-ə alternativ (toxunma ilə dəyişə bilər)
+            @media (max-width: 768px) {
+                &.touched {
+                    .img-base {
+                        opacity: 0;
+                    }
+
+                    .img-reveal {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .product-details {
+            .product-name {
+                font-size: 14px;
+                font-weight: 500;
+                margin-bottom: 8px;
+                color: #333;
+
+                // =========================================
+                // RESPONSIVE: product-name
+                // =========================================
+                @media (max-width: 768px) {
+                    font-size: 13px;
+                    margin-bottom: 6px;
+                }
+
+                @media (max-width: 576px) {
+                    font-size: 13px;
+                }
+            }
+
+            .price {
+                font-size: 14px;
+                margin-bottom: 25px;
+                color: #666;
+
+                // =========================================
+                // RESPONSIVE: price
+                // =========================================
+                @media (max-width: 1200px) {
+                    margin-bottom: 22px;
+                }
+
+                @media (max-width: 992px) {
+                    margin-bottom: 25px; // Planşetdə normal
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 13px;
+                    margin-bottom: 20px;
+                }
+
+                @media (max-width: 576px) {
+                    font-size: 13px;
+                    margin-bottom: 18px;
+                }
+            }
+
+            // ADD TO CART DÜYMƏSİ
+            .add-btn {
+                width: 100%;
+                padding: 18px;
+                background-color: #333333;
+                color: #ffffff;
+                border: none;
+                font-size: 13px;
+                font-weight: 400;
+                cursor: pointer;
+                transition: background 0.3s ease;
+
+                // =========================================
+                // RESPONSIVE: add-btn
+                // =========================================
+                @media (max-width: 1600px) {
+                    padding: 17px;
+                }
+
+                @media (max-width: 1400px) {
+                    padding: 16px;
+                }
+
+                @media (max-width: 1200px) {
+                    padding: 15px;
+                    font-size: 12.5px;
+                }
+
+                @media (max-width: 992px) {
+                    padding: 18px; // Planşetdə normal
+                    font-size: 13px;
+                }
+
+                @media (max-width: 768px) {
+                    padding: 16px;
+                    font-size: 13px;
+                }
+
+                @media (max-width: 576px) {
+                    padding: 15px;
+                    font-size: 12px;
+                }
+
+                @media (max-width: 400px) {
+                    padding: 14px;
+                    font-size: 11px;
+                }
+
+                &:hover {
+                    background-color: #000000;
+
+                    @media (max-width: 768px) {
+                        background-color: #333333; // Mobilde hover yox
+                    }
+                }
+
+                // Touch active state
+                &:active {
+                    @media (max-width: 768px) {
+                        background-color: #000000;
+                        transform: scale(0.98);
+                    }
+                }
+            }
+        }
+    }
+}

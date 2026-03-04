@@ -1,0 +1,428 @@
+// Şrift Dəyişənləri
+$font-serif: 'Cormorant Garamond', serif; // Başlıqlar üçün (Klassik və lüks)
+$font-sans: 'Inter', sans-serif; // Mətnlər üçün (Modern və təmiz)
+
+$bg-color: #fffef2;
+$text-black: #333333;
+$desc-gray: #666666;
+
+.bathing-connoisseur {
+    background-color: $bg-color;
+    width: 100%;
+    padding: 120px 0;
+    font-family: $font-sans; // Default şrift
+
+    .container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    .image-section {
+        flex: 1.2;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: grayscale(10%) contrast(1.05); // Şəkilə bir az daha "editorial" hava verir
+        }
+    }
+
+    .text-section {
+        flex: 1;
+        padding: 0 10% 0 100px;
+
+        .section-title {
+            // BAŞLIQ BURADA DƏYİŞDİ
+            font-family: $font-serif;
+            font-size: 38px; // Şrift serif olduğu üçün bir az böyütdük ki, oxunsun
+            font-weight: 400;
+            letter-spacing: -0.5px; // Hərfləri bir-birinə yaxınlaşdırıb daha professional etdik
+            color: $text-black;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .section-desc {
+            // MƏTN BURADA DƏYİŞDİ
+            font-family: $font-sans;
+            font-size: 15px;
+            line-height: 1.8; // Sətirlər arası məsafəni artırdıq (daha rahat oxunur)
+            color: $desc-gray;
+            font-weight: 300;
+            max-width: 450px;
+            letter-spacing: 0.2px;
+        }
+    }
+}
+
+
+
+// ========== RESPONSIVE ÜSLUBLAR ==========
+
+/* Böyük kompüterlər (1800px və yuxarı) */
+@media (min-width: 1800px) {
+    .bathing-connoisseur {
+        padding: 150px 0;
+
+        .container {
+            max-width: 1800px;
+        }
+
+        .text-section {
+            padding: 0 10% 0 150px;
+
+            .section-title {
+                font-size: 46px;
+                margin-bottom: 25px;
+            }
+
+            .section-desc {
+                font-size: 17px;
+                max-width: 500px;
+                line-height: 2;
+            }
+        }
+    }
+}
+
+/* Orta ölçülü kompüterlər (1600px - 1800px) */
+@media (max-width: 1800px) and (min-width: 1600px) {
+    .bathing-connoisseur {
+        .text-section {
+            padding: 0 8% 0 120px;
+
+            .section-title {
+                font-size: 42px;
+            }
+        }
+    }
+}
+
+/* Kiçik kompüterlər (1400px - 1600px) */
+@media (max-width: 1600px) and (min-width: 1400px) {
+    .bathing-connoisseur {
+        .text-section {
+            padding: 0 8% 0 100px;
+
+            .section-title {
+                font-size: 38px;
+            }
+
+            .section-desc {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+/* Planşetlər (1200px - 1400px) */
+@media (max-width: 1400px) and (min-width: 1200px) {
+    .bathing-connoisseur {
+        padding: 100px 0;
+
+        .text-section {
+            padding: 0 6% 0 80px;
+
+            .section-title {
+                font-size: 34px;
+                margin-bottom: 18px;
+            }
+
+            .section-desc {
+                font-size: 14px;
+                line-height: 1.7;
+                max-width: 400px;
+            }
+        }
+    }
+}
+
+/* Kiçik planşetlər (992px - 1200px) */
+@media (max-width: 1200px) and (min-width: 992px) {
+    .bathing-connoisseur {
+        padding: 80px 0;
+
+        .container {
+            padding: 0 40px;
+        }
+
+        .image-section {
+            flex: 1;
+        }
+
+        .text-section {
+            flex: 1;
+            padding: 0 5% 0 60px;
+
+            .section-title {
+                font-size: 30px;
+                margin-bottom: 16px;
+            }
+
+            .section-desc {
+                font-size: 14px;
+                line-height: 1.6;
+                max-width: 380px;
+            }
+        }
+    }
+}
+
+/* Böyük planşetlər / portret (768px - 992px) */
+@media (max-width: 992px) and (min-width: 768px) {
+    .bathing-connoisseur {
+        padding: 70px 0;
+
+        .container {
+            flex-direction: column; // Şəkil və mətn alt-alta
+            padding: 0 40px;
+        }
+
+        .image-section {
+            width: 100%;
+            margin-bottom: 40px;
+
+            img {
+                max-width: 80%;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+
+        .text-section {
+            width: 100%;
+            padding: 0;
+            text-align: center;
+
+            .section-title {
+                font-size: 32px;
+                max-width: 600px;
+                margin: 0 auto 20px auto;
+            }
+
+            .section-desc {
+                font-size: 15px;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+/* Böyük telefonlar / phablet (576px - 768px) */
+@media (max-width: 768px) and (min-width: 576px) {
+    .bathing-connoisseur {
+        padding: 60px 0;
+
+        .container {
+            flex-direction: column;
+            padding: 0 30px;
+        }
+
+        .image-section {
+            width: 100%;
+            margin-bottom: 35px;
+
+            img {
+                max-width: 90%;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+
+        .text-section {
+            width: 100%;
+            padding: 0;
+            text-align: center;
+
+            .section-title {
+                font-size: 28px;
+                max-width: 500px;
+                margin: 0 auto 18px auto;
+                letter-spacing: -0.3px;
+            }
+
+            .section-desc {
+                font-size: 14px;
+                max-width: 450px;
+                margin: 0 auto;
+                line-height: 1.7;
+            }
+        }
+    }
+}
+
+/* Telefonlar (480px - 576px) */
+@media (max-width: 576px) and (min-width: 480px) {
+    .bathing-connoisseur {
+        padding: 50px 0;
+
+        .container {
+            flex-direction: column;
+            padding: 0 25px;
+        }
+
+        .image-section {
+            width: 100%;
+            margin-bottom: 30px;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .text-section {
+            width: 100%;
+            padding: 0;
+            text-align: center;
+
+            .section-title {
+                font-size: 26px;
+                max-width: 400px;
+                margin: 0 auto 16px auto;
+            }
+
+            .section-desc {
+                font-size: 13px;
+                max-width: 380px;
+                margin: 0 auto;
+                line-height: 1.6;
+            }
+        }
+    }
+}
+
+/* Kiçik telefonlar (400px - 480px) */
+@media (max-width: 480px) and (min-width: 400px) {
+    .bathing-connoisseur {
+        padding: 40px 0;
+
+        .container {
+            flex-direction: column;
+            padding: 0 20px;
+        }
+
+        .image-section {
+            margin-bottom: 25px;
+        }
+
+        .text-section {
+            .section-title {
+                font-size: 24px;
+                margin-bottom: 14px;
+            }
+
+            .section-desc {
+                font-size: 13px;
+                line-height: 1.6;
+            }
+        }
+    }
+}
+
+/* Çox kiçik telefonlar (400px-dən aşağı) */
+@media (max-width: 400px) {
+    .bathing-connoisseur {
+        padding: 35px 0;
+
+        .container {
+            flex-direction: column;
+            padding: 0 15px;
+        }
+
+        .image-section {
+            margin-bottom: 20px;
+        }
+
+        .text-section {
+            .section-title {
+                font-size: 22px;
+                margin-bottom: 12px;
+                letter-spacing: -0.2px;
+            }
+
+            .section-desc {
+                font-size: 12px;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+
+
+
+
+/* Landscape rejimi - telefonlar */
+@media (max-width: 900px) and (orientation: landscape) {
+    .bathing-connoisseur {
+        padding: 40px 0;
+
+        .container {
+            flex-direction: row; // Landscape-də yenidən yan-yana
+            padding: 0 30px;
+        }
+
+        .image-section {
+            flex: 1;
+            margin-bottom: 0;
+
+            img {
+                max-width: 90%;
+            }
+        }
+
+        .text-section {
+            flex: 1;
+            padding: 0 0 0 30px;
+            text-align: left;
+
+            .section-title {
+                font-size: 24px;
+                margin-bottom: 12px;
+            }
+
+            .section-desc {
+                font-size: 12px;
+                max-width: 350px;
+            }
+        }
+    }
+}
+
+/* Çox geniş ekranlar üçün (4K) */
+@media (min-width: 2000px) {
+    .bathing-connoisseur {
+        padding: 180px 0;
+
+        .container {
+            max-width: 2000px;
+        }
+
+        .text-section {
+            padding: 0 10% 0 200px;
+
+            .section-title {
+                font-size: 52px;
+                margin-bottom: 30px;
+            }
+
+            .section-desc {
+                font-size: 18px;
+                max-width: 550px;
+                line-height: 2;
+            }
+        }
+    }
+}
+
+/* Hündür ekranlar üçün (çox uzun telefonlar) */
+@media (min-height: 800px) and (max-width: 480px) {
+    .bathing-connoisseur {
+        padding: 60px 0;
+    }
+}

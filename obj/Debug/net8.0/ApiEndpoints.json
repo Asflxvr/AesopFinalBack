@@ -1,0 +1,70 @@
+[
+  {
+    "ContainingType": "YourProject.Controllers.Api.CartApiController",
+    "Method": "GetCart",
+    "RelativePath": "api/CartApi",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YourProject.Controllers.Api.CartApiController",
+    "Method": "AddToCart",
+    "RelativePath": "api/CartApi/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "item",
+        "Type": "YourProject.Controllers.Api.CartItem",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YourProject.Controllers.Api.CartApiController",
+    "Method": "ClearCart",
+    "RelativePath": "api/CartApi/clear",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YourProject.Controllers.Api.CartApiController",
+    "Method": "RemoveFromCart",
+    "RelativePath": "api/CartApi/remove",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "item",
+        "Type": "YourProject.Controllers.Api.CartItem",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YourProject.Controllers.Api.CartApiController",
+    "Method": "UpdateQuantity",
+    "RelativePath": "api/CartApi/update",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "YourProject.Controllers.Api.CartUpdateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

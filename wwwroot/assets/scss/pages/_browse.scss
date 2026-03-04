@@ -1,0 +1,500 @@
+.category-section {
+    padding: 80px 40px;
+    background-color: #fffef2;
+    overflow: hidden;
+
+    .category-header {
+        margin-bottom: 40px;
+
+        h2 {
+            font-family: 'Inter', sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+            color: #333;
+        }
+    }
+
+    .carousel-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .carousel-track-wrapper {
+            width: 100%;
+            overflow: hidden; // Artıq qalan kartlar gizlənir
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 20px;
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+            will-change: transform;
+        }
+
+        .category-card {
+            flex: 0 0 calc(20% - 16px); // Ekranda eyni anda 5 kart görünür
+            cursor: pointer;
+            text-align: center;
+
+            img {
+                width: 100%;
+                aspect-ratio: 4 / 3; // Aesop şəkilləri adətən bu nisbətdə olur
+                object-fit: cover;
+                margin-bottom: 15px;
+                transition: transform 0.3s ease;
+            }
+
+            span {
+                display: block;
+                font-family: 'Inter', sans-serif;
+                font-size: 14px;
+                color: #333;
+                border-bottom: 1px solid transparent;
+                width: fit-content;
+                margin: 0 auto;
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.02);
+                }
+
+                span {
+                    border-bottom: 1px solid #333;
+                }
+            }
+        }
+
+        // Oxların dizaynı
+        .nav-btn {
+            position: absolute;
+            top: 40%;
+            transform: translateY(-50%);
+            width: 45px;
+            height: 45px;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: #000;
+            }
+
+            &.prev {
+                left: -22px;
+            }
+
+            // Ox qırağa çıxmış vəziyyətdə
+            &.next {
+                right: -22px;
+            }
+
+            &:disabled {
+                opacity: 0; // Sona çatanda ox gizlənsin
+                cursor: default;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+// Variables
+$category-bg: #fffef2;
+$text-dark: #333;
+$font-main: 'Inter', sans-serif;
+
+.category-section {
+    padding: 80px 40px;
+    background-color: $category-bg;
+    overflow: hidden;
+
+    // =========================================
+    // RESPONSIVE: category-section padding
+    // =========================================
+    @media (max-width: 1200px) {
+        padding: 70px 30px;
+    }
+
+    @media (max-width: 992px) {
+        padding: 60px 25px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 50px 20px;
+    }
+
+    @media (max-width: 576px) {
+        padding: 40px 15px;
+    }
+
+    .category-header {
+        margin-bottom: 40px;
+
+        // =========================================
+        // RESPONSIVE: category-header
+        // =========================================
+        @media (max-width: 992px) {
+            margin-bottom: 35px;
+        }
+
+        @media (max-width: 768px) {
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 576px) {
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-family: $font-main;
+            font-size: 24px;
+            font-weight: 400;
+            color: $text-dark;
+
+            // =========================================
+            // RESPONSIVE: h2
+            // =========================================
+            @media (max-width: 992px) {
+                font-size: 22px;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 20px;
+            }
+
+            @media (max-width: 576px) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .carousel-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .carousel-track-wrapper {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 20px;
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+            will-change: transform;
+
+            // =========================================
+            // RESPONSIVE: carousel-track gap
+            // =========================================
+            @media (max-width: 992px) {
+                gap: 18px;
+            }
+
+            @media (max-width: 768px) {
+                gap: 16px;
+            }
+
+            @media (max-width: 576px) {
+                gap: 14px;
+            }
+        }
+
+        .category-card {
+            flex: 0 0 calc(20% - 16px); // Default: 5 cards
+            cursor: pointer;
+            text-align: center;
+
+            // =========================================
+            // RESPONSIVE: category-card flex basis
+            // Görünən kart sayını dəyişirik
+            // =========================================
+            @media (max-width: 1200px) {
+                flex: 0 0 calc(25% - 15px); // 4 cards
+            }
+
+            @media (max-width: 992px) {
+                flex: 0 0 calc(33.33% - 14px); // 3 cards
+            }
+
+            @media (max-width: 768px) {
+                flex: 0 0 calc(50% - 12px); // 2 cards
+            }
+
+            @media (max-width: 576px) {
+                flex: 0 0 calc(70% - 10px); // 1.5 cards (parcial görünüş - sürüşdürmə effekti üçün)
+            }
+
+            img {
+                width: 100%;
+                aspect-ratio: 4 / 3;
+                object-fit: cover;
+                margin-bottom: 15px;
+                transition: transform 0.3s ease;
+
+                // =========================================
+                // RESPONSIVE: img margin
+                // =========================================
+                @media (max-width: 992px) {
+                    margin-bottom: 13px;
+                }
+
+                @media (max-width: 768px) {
+                    margin-bottom: 12px;
+                }
+
+                @media (max-width: 576px) {
+                    margin-bottom: 10px;
+                }
+            }
+
+            span {
+                display: block;
+                font-family: $font-main;
+                font-size: 14px;
+                color: $text-dark;
+                border-bottom: 1px solid transparent;
+                width: fit-content;
+                margin: 0 auto;
+
+                // =========================================
+                // RESPONSIVE: span font-size
+                // =========================================
+                @media (max-width: 992px) {
+                    font-size: 13px;
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 13px;
+                }
+
+                @media (max-width: 576px) {
+                    font-size: 12px;
+                }
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.02);
+
+                    // Mobil cihazlarda hover yoxdur, amma qalsın
+                    @media (max-width: 768px) {
+                        transform: none; // Mobilde hover olmur, toxunma üçün active əlavə edə bilərik
+                    }
+                }
+
+                span {
+                    border-bottom: 1px solid $text-dark;
+
+                    @media (max-width: 768px) {
+                        border-bottom: none; // Mobilde hover yoxdur
+                    }
+                }
+            }
+
+            // Touch cihazlar üçün active state
+            &:active {
+                @media (max-width: 768px) {
+                    img {
+                        transform: scale(0.98);
+                        transition: transform 0.1s ease;
+                    }
+                }
+            }
+        }
+
+        // Navigation buttons
+        .nav-btn {
+            position: absolute;
+            top: 45%; // Bir az yuxarı, şəklin ortasına yaxın
+            transform: translateY(-50%);
+            width: 45px;
+            height: 45px;
+            background: rgba($text-dark, 0.9);
+            color: white;
+            border: none;
+            border-radius: 50%; // Daha müasir görünüş
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+            &:hover {
+                background: $text-dark;
+                transform: translateY(-50%) scale(1.05);
+
+                @media (max-width: 768px) {
+                    transform: translateY(-50%); // Mobilde hover scale yox
+                }
+            }
+
+            // =========================================
+            // RESPONSIVE: nav-btn size and position
+            // =========================================
+            @media (max-width: 1200px) {
+                width: 42px;
+                height: 42px;
+            }
+
+            @media (max-width: 992px) {
+                width: 40px;
+                height: 40px;
+            }
+
+            @media (max-width: 768px) {
+                width: 38px;
+                height: 38px;
+                top: 40%; // Mobilde bir az aşağı
+            }
+
+            @media (max-width: 576px) {
+                width: 35px;
+                height: 35px;
+                top: 35%;
+            }
+
+            &.prev {
+                left: -15px;
+
+                // Responsive position
+                @media (max-width: 1200px) {
+                    left: -12px;
+                }
+
+                @media (max-width: 992px) {
+                    left: -10px;
+                }
+
+                @media (max-width: 768px) {
+                    left: -5px;
+                }
+
+                @media (max-width: 576px) {
+                    left: 0; // Mobilde tam kənarda yox, içəridə
+                }
+            }
+
+            &.next {
+                right: -15px;
+
+                // Responsive position
+                @media (max-width: 1200px) {
+                    right: -12px;
+                }
+
+                @media (max-width: 992px) {
+                    right: -10px;
+                }
+
+                @media (max-width: 768px) {
+                    right: -5px;
+                }
+
+                @media (max-width: 576px) {
+                    right: 0; // Mobilde tam kənarda yox, içəridə
+                }
+            }
+
+            &:disabled {
+                opacity: 0;
+                cursor: default;
+                pointer-events: none; // Heç bir event işləməsin
+            }
+
+            // SVG icon (əgər icon istifadə edirsinizsə)
+            svg {
+                width: 20px;
+                height: 20px;
+                fill: currentColor;
+
+                @media (max-width: 768px) {
+                    width: 18px;
+                    height: 18px;
+                }
+
+                @media (max-width: 576px) {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+
+            // > işarəsi üçün (əgər mətn istifadə edirsinizsə)
+            &::before {
+                font-size: 24px;
+                line-height: 1;
+
+                @media (max-width: 992px) {
+                    font-size: 22px;
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 20px;
+                }
+
+                @media (max-width: 576px) {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        // Touch cihazlar üçün sürüşdürmə ipucu (isteğe bağlı)
+        @media (max-width: 576px) {
+            &::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 40px;
+                background: linear-gradient(to right, transparent, rgba($category-bg, 0.8));
+                pointer-events: none;
+                z-index: 5;
+                opacity: 0.8;
+                transition: opacity 0.3s ease;
+            }
+
+            // Əgər son kartdadırsa gradienti gizlət (JS ilə idarə oluna bilər)
+            &.at-end::after {
+                opacity: 0;
+            }
+        }
+    }
+
+    // Smooth scrolling for mobile (isteğe bağlı - əgər CSS scroll istifadə edirsinizsə)
+    .carousel-track {
+        @media (max-width: 576px) {
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+        }
+    }
+}
+
+// Optional: Loading state for images
+.category-card {
+    img {
+        background-color: #f0f0f0; // Şəkil yüklenene kadar boz fon
+        transition: transform 0.3s ease, opacity 0.3s ease;
+
+        &[data-loaded="false"] {
+            opacity: 0;
+        }
+
+        &[data-loaded="true"] {
+            opacity: 1;
+        }
+    }
+}

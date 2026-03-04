@@ -1,0 +1,347 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="./assets/images/images.jpg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <title>Stores Locator | Aesop</title>
+</head>
+
+<body class="stores-page">
+    <!-- Banner -->
+    <div class="banner">
+        <div class="banner-content">
+            <p class="banner-text active">
+                Receive a deluxe sample at checkout with orders over $125. Excludes Click &
+                Collect.
+            </p>
+            <p class="banner-text">
+                Enjoy complimentary Ground shipping with all orders through March 31. Complimentary
+                samples available at checkout.
+            </p>
+            <p class="banner-text">
+                Receive samples of Aesop's first retinoid, Resolute Facial Concentrate... <a href="#">Learn more.</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="headerContainer">
+            <div class="headerTop">
+                <div class="leftLinks">
+                    <a asp-action="Index" asp-controller="Stores">Stores</a>
+                    <a asp-action="Index" asp-controller="Customer">Customer service</a>
+                </div>
+                <div class="logo">
+                    <img src="./assets/images/indir (1).svg" alt="Aesop" class="logo-light" />
+                    <a asp-action="Index" asp-controller="Home"><img src="./assets/images/indir.svg" alt="Aesop" class="logo-dark" /></a>
+                </div>
+                <div class="rightLinks">
+                    <a href="./signin.html">Sign In</a>
+                    <a href="#">Account</a>
+                    <a href="#">My cart (1)</a>
+                </div>
+            </div>
+            <div class="headerBottom">
+                <nav>
+                    <ul>
+                        <li><a href="#">New & Notable</a></li>
+                        <li><a asp-action="Index" asp-controller="SkinCare">Skin Care</a></li>
+                        <li><a asp-action="Index" asp-controller="HandAndBody">Hand & Body</a></li>
+                        <li><a asp-action="Index" asp-controller="Fragrance">Fragrance</a></li>
+                        <li><a asp-action="Index" asp-controller="HomeAesop">Home</a></li>
+                        <li><a asp-action="Index" asp-controller="Hair">Hair</a></li>
+                        <li><a asp-action="Index" asp-controller="Travel">Travel</a></li>
+                        <li><a asp-action="Index" asp-controller="Gift">Gifts</a></li>
+                        <li><a asp-action="Index" asp-controller="Library">Library</a></li>
+                        <li><a asp-action="Index" asp-controller="Experience">Experience</a></li>
+                    </ul>
+                </nav>
+                <div class="searchBox">
+                    <button type="button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search...">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="stores-main">
+        <!-- Stores Hero Section -->
+        <section class="stores-hero">
+            <div class="hero-container">
+                <h1>Find a store</h1>
+                <p>
+                    Experience Aesop in person. Visit our stores for personalized consultations and to explore our full
+                    range of formulations for skin, hair, body, and home.
+                </p>
+            </div>
+        </section>
+
+        <!-- Store Locator Section -->
+        <section class="store-locator-section">
+            <div class="locator-container">
+                <!-- Left Side: Store List & Filters -->
+                <div class="store-list-side">
+                    <div class="search-filters">
+                        <!-- Search Bar -->
+                        <div class="search-bar">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Address, city, postal code..." id="storeSearchInput">
+                            <button class="search-btn" id="searchBtn">OK</button>
+                        </div>
+
+                        <!-- Filters Header -->
+                        <div class="filters-header">
+                            <button class="filters-toggle" id="filtersToggleBtn">
+                                <span>Filters</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <button class="geolocate-btn" id="geolocateBtn">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>Geolocate me</span>
+                            </button>
+                        </div>
+
+                        <!-- Filters Dropdown -->
+                        <div class="filters-dropdown" id="filtersDropdown">
+                            <div class="filters-content">
+                                <h4>Services</h4>
+                                <div class="filter-options">
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" class="filter-service" value="click-collect">
+                                        <span>Click and Collect</span>
+                                    </label>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" class="filter-service" value="department">
+                                        <span>Department stores</span>
+                                    </label>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" class="filter-service" value="facial">
+                                        <span>Facial Appointments</span>
+                                    </label>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" class="filter-service" value="fragrance-armoire">
+                                        <span>Fragrance Armoire</span>
+                                    </label>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" class="filter-service" value="consultation">
+                                        <span>Private consultation</span>
+                                    </label>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" class="filter-service" value="rinse-return">
+                                        <span>Rinse and Return</span>
+                                    </label>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" class="filter-service" value="signature">
+                                        <span>Signature store</span>
+                                    </label>
+                                    <label class="filter-checkbox">
+                                        <input type="checkbox" class="filter-service" value="stockist">
+                                        <span>Stockist</span>
+                                    </label>
+                                </div>
+
+                                <!-- Filter Images -->
+                                <div class="filter-images">
+                                    <img src="./assets/images/clickandcollect.png" alt="Click and Collect"
+                                         class="filter-img">
+                                    <img src="./assets/images/sigstore.png" alt="Signature Store" class="filter-img">
+                                    <img src="./assets/images/facial.png" alt="Facial Appointments" class="filter-img">
+                                    <img src="./assets/images/fragrance.jpg" alt="Fragrance Armoire" class="filter-img">
+                                    <img src="./assets/images/privco.png" alt="Private Consultation" class="filter-img">
+                                    <img src="./assets/images/rnr.png" alt="Rinse and Return" class="filter-img">
+                                </div>
+
+                                <div class="filter-actions">
+                                    <button class="apply-filters" id="applyFiltersBtn">Apply</button>
+                                    <button class="reset-filters" id="resetFiltersBtn">Reset filters</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stores List -->
+                    <div class="stores-list" id="storesList">
+                        <!-- Stores will be populated by JavaScript -->
+                        <div class="loading-spinner">
+                            <i class="fa-solid fa-spinner fa-spin"></i>
+                        </div>
+                    </div>
+
+                    <!-- View All Link -->
+                    <div class="view-all-link">
+                        <a href="#" id="viewAllLink">See all locations <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Right Side: Interactive Map -->
+                <div class="map-side">
+                    <div class="map-container">
+                        <!-- Map Header - Sadəcə "Harita" yazısı qaldı -->
+                        <div class="map-header">
+                            <div class="map-type-selector">
+                                <span class="map-title">Harita</span>
+                            </div>
+                        </div>
+
+                        <!-- Map Canvas -->
+                        <div class="map-canvas" id="mapCanvas">
+                            <!-- Map Tiles Layer -->
+                            <div class="map-tiles-layer" id="mapTilesLayer">
+                                <img src="./assets/images/vt (1).webp" class="map-tile" data-tile="1" alt="Map tile 1">
+                                <img src="./assets/images/vt (1).webp" class="map-tile" data-tile="2" alt="Map tile 2">
+                                <img src="./assets/images/vt.webp" class="map-tile" data-tile="3" alt="Map tile 3">
+                                <img src="./assets/images/vt (2).webp" class="map-tile" data-tile="4" alt="Map tile 4">
+                                <img src="./assets/images/vt (9).webp" class="map-tile" data-tile="5" alt="Map tile 5">
+                                <img src="./assets/images/vt (10).webp" class="map-tile" data-tile="6" alt="Map tile 6">
+                                <img src="./assets/images/vt (3).webp" class="map-tile" data-tile="7" alt="Map tile 7">
+                                <img src="./assets/images/vt (4).webp" class="map-tile" data-tile="8" alt="Map tile 8">
+                                <img src="./assets/images/vt (8).webp" class="map-tile" data-tile="9" alt="Map tile 9">
+                                <img src="./assets/images/vt (5).webp" class="map-tile" data-tile="10" alt="Map tile 10">
+                                <img src="./assets/images/vt (6).webp" class="map-tile" data-tile="11" alt="Map tile 11">
+                                <img src="./assets/images/vt (11).webp" class="map-tile" data-tile="12" alt="Map tile 12">
+                            </div>
+
+                            <!-- Markers Layer -->
+                            <div class="map-markers-layer" id="mapMarkersLayer"></div>
+
+                            <!-- Zoom Controls -->
+                            <div class="map-zoom-controls">
+                                <button class="zoom-btn" id="zoomInBtn"><i class="fa-solid fa-plus"></i></button>
+                                <button class="zoom-btn" id="zoomOutBtn"><i class="fa-solid fa-minus"></i></button>
+                            </div>
+
+                            <!-- Pan Controls -->
+                            <div class="map-pan-controls">
+                                <button class="pan-btn" id="panUpBtn"><i class="fa-solid fa-chevron-up"></i></button>
+                                <button class="pan-btn" id="panLeftBtn">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </button>
+                                <button class="pan-btn" id="panDownBtn">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                                <button class="pan-btn" id="panRightBtn">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footerBox">
+        <div class="footerContainer">
+            <div class="footerTop">
+                <div class="footerTopCard">
+                    <i class="fa-solid fa-lock"></i>
+                    <span>Secure checkout</span>
+                </div>
+                <div class="footerTopCard">
+                    <i class="fa-solid fa-fire-flame-simple"></i>
+                    <span>Complimentary samples</span>
+                </div>
+                <div class="footerTopCard">
+                    <i class="fa-solid fa-gift"></i>
+                    <span>Complimentary gift wrapping</span>
+                </div>
+            </div>
+
+            <div class="footerMid">
+                <div class="footerMidLeft">
+                    <div class="footerColumn">
+                        <h4 class="footerTitle">Orders and support</h4>
+                        <div class="footerLine"></div>
+                        <ul class="footerList">
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Text message communication</a></li>
+                            <li><a asp-action="Index" asp-controller="Faqs">FAQs</a></li>
+                            <li><a href="#">Shipping</a></li>
+                            <li><a href="#">Returns</a></li>
+                            <li><a href="#">Track your order</a></li>
+                            <li><a href="#">Check gift card balance</a></li>
+                            <li><a href="#">Terms of use</a></li>
+                            <li><a href="#">Product recalls</a></li>
+                        </ul>
+                    </div>
+                    <div class="footerColumn">
+                        <h4 class="footerTitle">About</h4>
+                        <div class="footerLine"></div>
+                        <ul class="footerList">
+                            <li><a href="#">Our story</a></li>
+                            <li><a href="#">Foundation</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Online Preferences</a></li>
+                            <li><a href="#">Privacy policy</a></li>
+                            <li><a href="#">Accessibility Statement</a></li>
+                            <li><a href="#">Your Privacy Choices</a></li>
+                            <li><a href="#">Notice At Collection</a></li>
+                            <li><a href="#">Consumer Health Data Notice</a></li>
+                        </ul>
+                    </div>
+                    <div class="footerColumn">
+                        <h4 class="footerTitle">Sustainability</h4>
+                        <div class="footerLine"></div>
+                        <p class="footerText">
+                            All Aesop products are vegan, and we do not test our formulations or ingredients on animals.
+                            We are Leaping Bunny approved and a Certified B Corporation. <a href="#">Learn more</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="footerMidRight">
+                    <h4 class="footerTitle">Subscribe to Aesop communications</h4>
+                    <form class="subscribeForm">
+                        <input type="email" placeholder="Email address*" class="formInput" />
+                        <input type="text" placeholder="Phone number" class="formInput" />
+                        <div class="checkboxGroup">
+                            <input type="checkbox" id="consentCheck" />
+                            <label class="consentCheck" for="consentCheck">
+                                By submitting this form, I expressly agree to Aesop...
+                                <a href="#">Privacy Policy</a>
+                            </label>
+                        </div>
+                        <div class="footerLine"></div>
+                        <button type="submit" class="submitButton">Submit</button>
+                    </form>
+                    <div class="footerIcon">
+                        <a href="https://www.instagram.com/aesop"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/aesop/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.pinterest.com/aesop/"><i class="fa-brands fa-pinterest"></i></a>
+                        <a href="https://www.facebook.com/Aesop"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footerBottom">
+                <div class="footerBottomLeft">
+                    <p>© 2026 Aesop | This site is intended for US consumers. <a href="#">Privacy Policy</a></p>
+                </div>
+                <div class="footerBottomRight">
+                    <ul>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Site Map</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Accessibility Statement</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/stores.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+// Dəyişənlər
+$aesop-bg: #fffef2;
+$text-dark: #333;
+$font-serif: 'Playfair Display', serif;
+$font-sans: 'Inter', sans-serif;
+
+.quote-section {
+    background-color: $aesop-bg;
+
+    // Ekranın yarısı boyda olması üçün
+    min-height: 50vh;
+    width: 100%;
+
+    // Şaquli və üfüqi mərkəzləmə
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px;
+    box-sizing: border-box;
+
+    .quote-container {
+        max-width: 900px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 20px; // Sitat və müəllif arasındakı məsafə
+    }
+
+    .quote-text {
+        font-family: $font-serif;
+        font-size: 30px; // Şəkildəki kimi iri və zərif
+        line-height: 1.4;
+        color: $text-dark;
+        font-weight: 400;
+        margin: 0;
+        font-style: normal; // Aesop adətən sitatları düz (italic olmayan) seriflə yazır
+    }
+
+    .quote-author {
+        font-family: $font-sans;
+        font-size: 14px;
+        font-weight: 500;
+        color: $text-dark;
+        font-style: normal;
+        letter-spacing: 0.3px;
+    }
+}
+
+// ========== RESPONSIVE ÜSLUBLAR ==========
+
+/* Böyük kompüterlər (1600px və yuxarı) */
+@media (min-width: 1600px) {
+    .quote-section {
+        min-height: 45vh;
+
+        .quote-container {
+            max-width: 1000px;
+            gap: 25px;
+        }
+
+        .quote-text {
+            font-size: 36px;
+            line-height: 1.5;
+        }
+
+        .quote-author {
+            font-size: 15px;
+        }
+    }
+}
+
+/* Orta ölçülü kompüterlər (1400px - 1600px) */
+@media (max-width: 1600px) and (min-width: 1400px) {
+    .quote-section {
+        .quote-text {
+            font-size: 34px;
+        }
+    }
+}
+
+/* Kiçik kompüterlər (1200px - 1400px) */
+@media (max-width: 1400px) and (min-width: 1200px) {
+    .quote-section {
+        .quote-container {
+            max-width: 850px;
+        }
+
+        .quote-text {
+            font-size: 32px;
+        }
+    }
+}
+
+/* Planşetlər (992px - 1200px) */
+@media (max-width: 1200px) and (min-width: 992px) {
+    .quote-section {
+        min-height: 45vh;
+        padding: 40px 30px;
+
+        .quote-container {
+            max-width: 750px;
+            gap: 18px;
+        }
+
+        .quote-text {
+            font-size: 28px;
+            line-height: 1.4;
+        }
+
+        .quote-author {
+            font-size: 13px;
+        }
+    }
+}
+
+/* Kiçik planşetlər (768px - 992px) */
+@media (max-width: 992px) and (min-width: 768px) {
+    .quote-section {
+        min-height: 40vh;
+        padding: 40px 25px;
+
+        .quote-container {
+            max-width: 650px;
+            gap: 18px;
+        }
+
+        .quote-text {
+            font-size: 26px;
+            line-height: 1.4;
+        }
+
+        .quote-author {
+            font-size: 13px;
+        }
+    }
+}
+
+/* Böyük telefonlar / phablet (576px - 768px) */
+@media (max-width: 768px) and (min-width: 576px) {
+    .quote-section {
+        min-height: 40vh;
+        padding: 35px 20px;
+
+        .quote-container {
+            max-width: 500px;
+            gap: 15px;
+        }
+
+        .quote-text {
+            font-size: 24px;
+            line-height: 1.4;
+        }
+
+        .quote-author {
+            font-size: 12px;
+        }
+    }
+}
+
+/* Telefonlar (480px - 576px) */
+@media (max-width: 576px) and (min-width: 480px) {
+    .quote-section {
+        min-height: 35vh;
+        padding: 30px 18px;
+
+        .quote-container {
+            max-width: 450px;
+            gap: 12px;
+        }
+
+        .quote-text {
+            font-size: 22px;
+            line-height: 1.4;
+        }
+
+        .quote-author {
+            font-size: 12px;
+        }
+    }
+}
+
+/* Kiçik telefonlar (400px - 480px) */
+@media (max-width: 480px) and (min-width: 400px) {
+    .quote-section {
+        min-height: 35vh;
+        padding: 25px 15px;
+
+        .quote-container {
+            max-width: 380px;
+            gap: 12px;
+        }
+
+        .quote-text {
+            font-size: 20px;
+            line-height: 1.4;
+        }
+
+        .quote-author {
+            font-size: 11px;
+        }
+    }
+}
+
+/* Çox kiçik telefonlar (400px-dən aşağı) */
+@media (max-width: 400px) {
+    .quote-section {
+        min-height: 30vh;
+        padding: 20px 12px;
+
+        .quote-container {
+            max-width: 300px;
+            gap: 10px;
+        }
+
+        .quote-text {
+            font-size: 18px;
+            line-height: 1.4;
+        }
+
+        .quote-author {
+            font-size: 10px;
+        }
+    }
+}
+
+/* Hover effektləri - bu bölmədə hover yoxdur */
+@media (hover: hover) {
+    .quote-section {
+        // Heç bir hover effekti yoxdur
+    }
+}
+
+@media (hover: none) {
+    .quote-section {
+        // Heç bir active effekti yoxdur
+    }
+}
+
+/* Landscape rejimi - telefonlar */
+@media (max-width: 900px) and (orientation: landscape) {
+    .quote-section {
+        min-height: 50vh;
+
+        .quote-container {
+            max-width: 600px;
+        }
+
+        .quote-text {
+            font-size: 24px;
+        }
+
+        .quote-author {
+            font-size: 12px;
+        }
+    }
+}
+
+/* Çox hündür telefonlar üçün düzəliş (məsələn, iPhone 12/13/14 Pro Max) */
+@media (min-height: 800px) and (max-width: 480px) {
+    .quote-section {
+        min-height: 25vh; // Hündür ekranlarda nisbətən az yer tutur
+    }
+}

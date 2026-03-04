@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="./assets/images/images.jpg" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Inter:wght@400;500;600&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="~/assets/css/main.css">
+    <title>Travel | Aesop</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="category-header">
+        <div class="category-header-container">
+            <div class="category-header-top">
+                <div class="category-nav-left">
+                    <a asp-controller="Stores" asp-action="Index">Stores</a>
+                    <a asp-controller="Customer" asp-action="Index">Customer service</a>
+                </div>
+
+                <a href="index.html">
+                    <div class="category-logo-box">
+                        <a asp-controller="Home" asp-action="Index"> <img src="./assets/images/indir.svg" alt="Aesop" class="category-logo"></a>
+                    </div>
+                </a>
+
+                <div class="category-nav-right">
+                    <a href="./signin.html">Sign In</a>
+                    <a href="#">Account</a>
+                    <a href="/cart">View Cart</a>
+                </div>
+            </div>
+
+            <div class="category-header-bottom">
+                <nav class="category-main-nav">
+                    <ul>
+                        <li><a href="#">New & Notable</a></li>
+                        <li><a asp-controller="SkinCare" asp-action="Index">Skin Care</a></li>
+                        <li><a asp-controller="HandAndBody" asp-action="Index">Hand & Body</a></li>
+                        <li><a asp-controller="Fragrance" asp-action="Index">Fragrance</a></li>
+                        <li><a asp-controller="HomeAesop" asp-action="Index">Home</a></li>
+                        <li><a asp-controller="Hair" asp-action="Index">Hair</a></li>
+                        <li><a asp-controller="Travel" asp-action="Index">Travel</a></li>
+                        <li><a asp-controller="Gift" asp-action="Index">Gifts</a></li>
+                        <li><a asp-controller="Library" asp-action="Index">Library</a></li>
+                        <li><a asp-controller="Experience" asp-action="Index">Experience</a></li>
+                    </ul>
+                </nav>
+                <div class="category-search">
+                    <div class="search-wrapper">
+                        <input type="text" placeholder="Search..." id="category-search-input">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div>
+        @RenderBody()
+    </div>
+        <footer id="footerBox">
+            <div class="footerContainer">
+                <div class="footerTop">
+                    <div class="footerTopCard">
+                        <i class="fa-solid fa-lock"></i><span>Secure checkout</span>
+                    </div>
+                    <div class="footerTopCard">
+                        <i class="fa-solid fa-fire-flame-simple"></i><span> Complimentary samples</span>
+                    </div>
+                    <div class="footerTopCard">
+                        <i class="fa-solid fa-gift"></i><span>Complimentary gift wrapping</span>
+                    </div>
+                </div>
+                <div class="footerMid">
+                    <div class="footerMidLeft">
+                        <div class="footerColumn">
+                            <h4 class="footerTitle">Orders and support</h4>
+                            <div class="footerLine"></div>
+                            <ul class="footerList">
+                                <li><a href="">Contact us</a></li>
+                                <li><a href="">Text message communication</a></li>
+                                <li><a asp-controller="Faqs" asp-action="Index">FAQs</a></li>
+                                <li><a href="">Shipping</a></li>
+                                <li><a href="">Returns</a></li>
+                                <li><a href="">Track your order</a></li>
+                                <li><a href="">Check gift card balance</a></li>
+                                <li><a href="">Terms of use</a></li>
+                                <li><a href="">Product recalls</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footerColumn">
+                            <h4 class="footerTitle">About</h4>
+                            <div class="footerLine"></div>
+                            <ul class="footerList">
+                                <li><a href="">Our story</a></li>
+                                <li><a href="">Foundation</a></li>
+                                <li><a href="">Careers</a></li>
+                                <li><a href="">Online Preferences</a></li>
+                                <li><a href="">Privacy policy</a></li>
+                                <li><a href="">Accessibility Statement</a></li>
+                                <li><a href="">Your Privacy Choices</a></li>
+                                <li><a href="">Notice At Collection</a></li>
+                                <li><a href="">Consumer Health Data Notice</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footerColumn">
+                            <h4 class="footerTitle">Sustainability</h4>
+                            <div class="footerLine"></div>
+                            <p class="footerText">
+                                All Aesop products are vegan, and we do not test our formulations or ingredients on animals.
+                                We
+                                are
+                                Leaping
+                                Bunny approved and a Certified B Corporation. <a href="#">Learn more</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="footerMidRight">
+                        <h4 class="footerTitle">Subscribe to Aesop communications</h4>
+
+                        <form class="subscribeForm">
+                            <input type="email" placeholder="Email address*" class="formInput" />
+                            <input type="text" placeholder="Phone number" class="formInput" />
+
+                            <div class="checkboxGroup">
+                                <input type="checkbox" id="consentCheck" />
+                                <label class="consentCheck" for="consentCheck">
+                                    By submitting this form, I expressly agree to Aesop, directly or by third parties acting
+                                    on
+                                    its behalf,
+                                    sending me promotional & marketing messages (e.g. cart reminders) - including texts or
+                                    calls
+                                    using
+                                    automated means (including for the selection or dialing of a telephone number) or
+                                    pre-recorded or
+                                    artificial voice messages - to the mobile number I provided and to the Mobile Terms
+                                    (which
+                                    include an
+                                    arbitration provision to resolve disputes). I confirm I am the owner of the # provided,
+                                    and
+                                    understand
+                                    consent is not a condition of purchase. Msg frequency varies. Msg & Data Rates May
+                                    Apply.
+                                    Text HELP for
+                                    help and STOP to cancel. <a href="">Privacy Policy Notice of Financial Incentives.</a>
+                                </label>
+                            </div>
+                            <div class="footerLine"></div>
+                            <div class="footerRecevie">
+                                <h6>Receive email communications</h6>
+                                <p>
+                                    By submitting this form, I confirm I am a US resident and (1) agree to Aesop's Terms &
+                                    Conditions
+                                    (which
+                                    includes an arbitration provision) and Marketing Disclosure; and (2) have read and
+                                    acknowledge Aesop's
+                                    Privacy Notice and Notice of Financial Incentives.
+                                </p>
+                            </div>
+                            <button type="submit" class="submitButton">Submit</button>
+                        </form>
+                        <div class="footerIcon">
+                            <a href="https://www.instagram.com/aesop"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/aesop/">
+                                <i class="fa-brands fa-square-linkedin"></i>
+                            </a>
+                            <a href="https://www.pinterest.com/aesop/"><i class="fa-brands fa-pinterest"></i></a>
+                            <a href="https://www.facebook.com/Aesop"><i class="fa-brands fa-square-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footerBottom">
+                    <div class="footerBottomLeft">
+                        <p>
+                            © 2026 Aesop | This site is intended for US consumers. Cookies and related technology are used
+                            for
+                            advertising. To learn more or opt-out, visit <a href="">AdChoices</a> and our <a href="">
+                                Privacy
+                                Policy
+                            </a>
+                        </p>
+                    </div>
+                    <div class="footerBottomRight">
+                        <ul>
+                            <li><a href="">Terms & Conditions</a></li>
+                            <li><a href="">Site Map</a></li>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">User Content Permissions</a></li>
+                            <li><a href="">Accessibility Statement</a></li>
+                            <li><a href="">Mobile Terms</a></li>
+                            <li><a href="">Online Preferences</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+</html>

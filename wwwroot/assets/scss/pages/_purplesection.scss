@@ -1,0 +1,623 @@
+// Dəyişənlər
+$lavender-bg: #f1edf5; // Açıq bənövşəyi ton
+$text-dark: #333;
+$text-muted: #666;
+$accent-brown: #a6662d;
+$transition-smooth: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+.feature-split {
+    display: flex;
+    min-height: 100vh;
+    background-color: $lavender-bg; // Arxa plan bənövşəyi edildi
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    .visual-side {
+        flex: 1;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    .content-side {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 80px;
+        text-align: center;
+
+        .text-content {
+            max-width: 440px;
+            margin-bottom: 60px;
+
+            .tagline {
+                font-size: 14px;
+                font-weight: 500;
+                margin-bottom: 15px;
+                color: $text-dark;
+            }
+
+            .title {
+                font-size: 30px;
+                font-weight: 400;
+                line-height: 1.3;
+                margin-bottom: 20px;
+                color: $text-dark;
+            }
+
+            .desc {
+                font-size: 16px;
+                line-height: 1.6;
+                color: $text-muted;
+            }
+        }
+
+        .mini-card {
+            width: 100%;
+            max-width: 320px;
+            display: flex;
+            flex-direction: column;
+
+            .card-meta {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 15px;
+
+                .label {
+                    color: $accent-brown;
+                    font-size: 12px;
+                    font-weight: 600;
+                }
+
+                .wishlist-btn {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    font-size: 16px;
+                    color: $text-dark;
+                }
+            }
+
+            .image-container {
+                position: relative;
+                width: 100%;
+                height: 320px;
+                margin-bottom: 25px;
+                cursor: pointer;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transition: $transition-smooth;
+                }
+
+                .img-secondary {
+                    opacity: 0;
+                }
+
+                &.hover-effect:hover {
+                    .img-primary {
+                        opacity: 0;
+                    }
+
+                    .img-secondary {
+                        opacity: 1;
+                        transform: scale(1.05); // Hover zamanı yüngül yaxınlaşma
+                    }
+                }
+            }
+
+            .mini-info {
+                margin-bottom: 25px;
+
+                h3 {
+                    font-size: 14px;
+                    font-weight: 600;
+                    margin-bottom: 8px;
+                }
+
+                .price {
+                    font-size: 14px;
+                }
+            }
+
+            .cart-btn {
+                background-color: #333;
+                color: #fff;
+                border: none;
+                padding: 18px;
+                font-size: 14px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: #000;
+                }
+            }
+        }
+    }
+}
+
+// ========== RESPONSIVE ÜSLUBLAR ==========
+
+/* Böyük kompüterlər (1600px və yuxarı) */
+@media (min-width: 1600px) {
+    .feature-split {
+        .content-side {
+            padding: 100px;
+
+            .text-content {
+                max-width: 500px;
+                margin-bottom: 70px;
+
+                .title {
+                    font-size: 36px;
+                }
+
+                .desc {
+                    font-size: 18px;
+                }
+            }
+
+            .mini-card {
+                max-width: 380px;
+
+                .image-container {
+                    height: 380px;
+                }
+            }
+        }
+    }
+}
+
+/* Kiçik kompüterlər (1200px - 1600px) */
+@media (max-width: 1600px) and (min-width: 1200px) {
+    .feature-split {
+        .content-side {
+            padding: 70px;
+        }
+    }
+}
+
+/* Planşetlər (992px - 1200px) */
+@media (max-width: 1200px) and (min-width: 992px) {
+    .feature-split {
+        .content-side {
+            padding: 60px 40px;
+
+            .text-content {
+                max-width: 400px;
+                margin-bottom: 50px;
+
+                .title {
+                    font-size: 28px;
+                }
+
+                .desc {
+                    font-size: 15px;
+                }
+            }
+
+            .mini-card {
+                max-width: 300px;
+
+                .image-container {
+                    height: 280px;
+                }
+            }
+        }
+    }
+}
+
+/* Kiçik planşetlər (768px - 992px) */
+@media (max-width: 992px) and (min-width: 768px) {
+    .feature-split {
+        flex-direction: column; // Yan-yana düzülüş → alt-alta
+        min-height: auto;
+
+        .visual-side {
+            height: 400px; // Şəkilə sabit hündürlük
+        }
+
+        .content-side {
+            padding: 60px 40px;
+
+            .text-content {
+                max-width: 500px;
+                margin-bottom: 50px;
+
+                .title {
+                    font-size: 28px;
+                }
+            }
+
+            .mini-card {
+                max-width: 340px;
+
+                .image-container {
+                    height: 300px;
+                }
+            }
+        }
+    }
+}
+
+/* Böyük telefonlar / phablet (576px - 768px) */
+@media (max-width: 768px) and (min-width: 576px) {
+    .feature-split {
+        flex-direction: column;
+        min-height: auto;
+
+        .visual-side {
+            height: 350px;
+        }
+
+        .content-side {
+            padding: 50px 30px;
+
+            .text-content {
+                max-width: 450px;
+                margin-bottom: 40px;
+
+                .tagline {
+                    font-size: 13px;
+                    margin-bottom: 12px;
+                }
+
+                .title {
+                    font-size: 26px;
+                    margin-bottom: 15px;
+                }
+
+                .desc {
+                    font-size: 14px;
+                }
+            }
+
+            .mini-card {
+                max-width: 320px;
+
+                .image-container {
+                    height: 280px;
+                    margin-bottom: 20px;
+                }
+
+                .mini-info {
+                    margin-bottom: 20px;
+
+                    h3 {
+                        font-size: 13px;
+                    }
+
+                    .price {
+                        font-size: 13px;
+                    }
+                }
+
+                .cart-btn {
+                    padding: 16px;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+/* Telefonlar (480px - 576px) */
+@media (max-width: 576px) and (min-width: 480px) {
+    .feature-split {
+        flex-direction: column;
+        min-height: auto;
+
+        .visual-side {
+            height: 300px;
+        }
+
+        .content-side {
+            padding: 40px 25px;
+
+            .text-content {
+                max-width: 400px;
+                margin-bottom: 35px;
+
+                .tagline {
+                    font-size: 12px;
+                    margin-bottom: 10px;
+                }
+
+                .title {
+                    font-size: 24px;
+                    margin-bottom: 12px;
+                }
+
+                .desc {
+                    font-size: 13px;
+                }
+            }
+
+            .mini-card {
+                max-width: 280px;
+
+                .card-meta {
+                    .label {
+                        font-size: 11px;
+                    }
+
+                    .wishlist-btn {
+                        font-size: 15px;
+                    }
+                }
+
+                .image-container {
+                    height: 250px;
+                    margin-bottom: 18px;
+                }
+
+                .mini-info {
+                    margin-bottom: 18px;
+
+                    h3 {
+                        font-size: 13px;
+                        margin-bottom: 5px;
+                    }
+
+                    .price {
+                        font-size: 13px;
+                    }
+                }
+
+                .cart-btn {
+                    padding: 15px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+/* Kiçik telefonlar (400px - 480px) */
+@media (max-width: 480px) and (min-width: 400px) {
+    .feature-split {
+        flex-direction: column;
+        min-height: auto;
+
+        .visual-side {
+            height: 250px;
+        }
+
+        .content-side {
+            padding: 35px 20px;
+
+            .text-content {
+                max-width: 360px;
+                margin-bottom: 30px;
+
+                .tagline {
+                    font-size: 11px;
+                    margin-bottom: 8px;
+                }
+
+                .title {
+                    font-size: 22px;
+                    margin-bottom: 10px;
+                }
+
+                .desc {
+                    font-size: 12px;
+                }
+            }
+
+            .mini-card {
+                max-width: 260px;
+
+                .card-meta {
+                    .label {
+                        font-size: 10px;
+                    }
+
+                    .wishlist-btn {
+                        font-size: 14px;
+                    }
+                }
+
+                .image-container {
+                    height: 220px;
+                    margin-bottom: 15px;
+                }
+
+                .mini-info {
+                    margin-bottom: 15px;
+
+                    h3 {
+                        font-size: 12px;
+                    }
+
+                    .price {
+                        font-size: 12px;
+                    }
+                }
+
+                .cart-btn {
+                    padding: 14px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+/* Çox kiçik telefonlar (400px-dən aşağı) */
+@media (max-width: 400px) {
+    .feature-split {
+        flex-direction: column;
+        min-height: auto;
+
+        .visual-side {
+            height: 200px;
+        }
+
+        .content-side {
+            padding: 30px 15px;
+
+            .text-content {
+                max-width: 320px;
+                margin-bottom: 25px;
+
+                .tagline {
+                    font-size: 10px;
+                    margin-bottom: 6px;
+                }
+
+                .title {
+                    font-size: 20px;
+                    margin-bottom: 8px;
+                }
+
+                .desc {
+                    font-size: 11px;
+                }
+            }
+
+            .mini-card {
+                max-width: 240px;
+
+                .card-meta {
+                    .label {
+                        font-size: 9px;
+                    }
+
+                    .wishlist-btn {
+                        font-size: 13px;
+                    }
+                }
+
+                .image-container {
+                    height: 200px;
+                    margin-bottom: 12px;
+                }
+
+                .mini-info {
+                    margin-bottom: 12px;
+
+                    h3 {
+                        font-size: 11px;
+                    }
+
+                    .price {
+                        font-size: 11px;
+                    }
+                }
+
+                .cart-btn {
+                    padding: 12px;
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+}
+
+/* Hover effektlərinin idarəsi */
+@media (hover: hover) {
+    .feature-split {
+        .image-container.hover-effect:hover {
+            .img-primary {
+                opacity: 0;
+            }
+
+            .img-secondary {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+        }
+
+        .cart-btn:hover {
+            background-color: #000;
+        }
+    }
+}
+
+/* Toxunma cihazlar üçün active state */
+@media (hover: none) {
+    .feature-split {
+        .image-container.hover-effect:active {
+            .img-primary {
+                opacity: 0;
+            }
+
+            .img-secondary {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+        }
+
+        .cart-btn:active {
+            background-color: #000;
+        }
+    }
+}
+
+/* Landscape rejimi - telefonlar */
+@media (max-width: 900px) and (orientation: landscape) {
+    .feature-split {
+        flex-direction: row; // Landscape-də yenidən yan-yana
+
+        .visual-side {
+            height: auto;
+            min-height: 100vh;
+        }
+
+        .content-side {
+            padding: 40px 30px;
+
+            .text-content {
+                max-width: 380px;
+                margin-bottom: 30px;
+
+                .title {
+                    font-size: 24px;
+                }
+
+                .desc {
+                    font-size: 13px;
+                }
+            }
+
+            .mini-card {
+                max-width: 260px;
+
+                .image-container {
+                    height: 200px;
+                }
+
+                .cart-btn {
+                    padding: 14px;
+                }
+            }
+        }
+    }
+}
+
+/* Hündür telefonlar üçün düzəliş (məsələn, iPhone 12/13/14 Pro Max) */
+@media (min-height: 800px) and (max-width: 480px) {
+    .feature-split {
+        .content-side {
+            padding: 50px 20px;
+        }
+
+        .visual-side {
+            height: 300px;
+        }
+    }
+}

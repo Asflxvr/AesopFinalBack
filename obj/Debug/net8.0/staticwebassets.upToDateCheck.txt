@@ -1,0 +1,425 @@
+wwwroot\assets\admin\css\maps\style.css.map
+wwwroot\assets\admin\css\style.css
+wwwroot\assets\admin\fonts\Roboto\Roboto-Black.eot
+wwwroot\assets\admin\fonts\Roboto\Roboto-Black.ttf
+wwwroot\assets\admin\fonts\Roboto\Roboto-Black.woff
+wwwroot\assets\admin\fonts\Roboto\Roboto-Black.woff2
+wwwroot\assets\admin\fonts\Roboto\Roboto-Bold.eot
+wwwroot\assets\admin\fonts\Roboto\Roboto-Bold.ttf
+wwwroot\assets\admin\fonts\Roboto\Roboto-Bold.woff
+wwwroot\assets\admin\fonts\Roboto\Roboto-Bold.woff2
+wwwroot\assets\admin\fonts\Roboto\Roboto-Light.eot
+wwwroot\assets\admin\fonts\Roboto\Roboto-Light.ttf
+wwwroot\assets\admin\fonts\Roboto\Roboto-Light.woff
+wwwroot\assets\admin\fonts\Roboto\Roboto-Light.woff2
+wwwroot\assets\admin\fonts\Roboto\Roboto-Medium.eot
+wwwroot\assets\admin\fonts\Roboto\Roboto-Medium.ttf
+wwwroot\assets\admin\fonts\Roboto\Roboto-Medium.woff
+wwwroot\assets\admin\fonts\Roboto\Roboto-Medium.woff2
+wwwroot\assets\admin\fonts\Roboto\Roboto-Regular.eot
+wwwroot\assets\admin\fonts\Roboto\Roboto-Regular.ttf
+wwwroot\assets\admin\fonts\Roboto\Roboto-Regular.woff
+wwwroot\assets\admin\fonts\Roboto\Roboto-Regular.woff2
+wwwroot\assets\admin\images\auth\lockscreen-bg.jpg
+wwwroot\assets\admin\images\auth\login-bg.jpg
+wwwroot\assets\admin\images\auth\register-bg.jpg
+wwwroot\assets\admin\images\faces\face1.jpg
+wwwroot\assets\admin\images\faces\face10.jpg
+wwwroot\assets\admin\images\faces\face11.jpg
+wwwroot\assets\admin\images\faces\face12.jpg
+wwwroot\assets\admin\images\faces\face13.jpg
+wwwroot\assets\admin\images\faces\face14.jpg
+wwwroot\assets\admin\images\faces\face15.jpg
+wwwroot\assets\admin\images\faces\face16.jpg
+wwwroot\assets\admin\images\faces\face17.jpg
+wwwroot\assets\admin\images\faces\face18.jpg
+wwwroot\assets\admin\images\faces\face19.jpg
+wwwroot\assets\admin\images\faces\face2.jpg
+wwwroot\assets\admin\images\faces\face20.jpg
+wwwroot\assets\admin\images\faces\face21.jpg
+wwwroot\assets\admin\images\faces\face22.jpg
+wwwroot\assets\admin\images\faces\face23.jpg
+wwwroot\assets\admin\images\faces\face24.jpg
+wwwroot\assets\admin\images\faces\face25.jpg
+wwwroot\assets\admin\images\faces\face26.jpg
+wwwroot\assets\admin\images\faces\face27.jpg
+wwwroot\assets\admin\images\faces\face3.jpg
+wwwroot\assets\admin\images\faces\face4.jpg
+wwwroot\assets\admin\images\faces\face5.jpg
+wwwroot\assets\admin\images\faces\face6.jpg
+wwwroot\assets\admin\images\faces\face7.jpg
+wwwroot\assets\admin\images\faces\face8.jpg
+wwwroot\assets\admin\images\faces\face9.jpg
+wwwroot\assets\admin\images\favicon.ico
+wwwroot\assets\admin\images\favicon.png
+wwwroot\assets\admin\images\logo-mini.svg
+wwwroot\assets\admin\images\logo.svg
+wwwroot\assets\admin\js\chart.js
+wwwroot\assets\admin\js\Chart.min.js
+wwwroot\assets\admin\js\dashboard.js
+wwwroot\assets\admin\js\data-table.js
+wwwroot\assets\admin\js\dataTables.bootstrap4.js
+wwwroot\assets\admin\js\documentation.js
+wwwroot\assets\admin\js\file-upload.js
+wwwroot\assets\admin\js\hoverable-collapse.js
+wwwroot\assets\admin\js\jquery.cookie.js
+wwwroot\assets\admin\js\jquery.dataTables.js
+wwwroot\assets\admin\js\off-canvas.js
+wwwroot\assets\admin\js\tabs.js
+wwwroot\assets\admin\js\template.js
+wwwroot\assets\admin\vendors\base\bootstrap.min.js.map
+wwwroot\assets\admin\vendors\base\vendor.bundle.base.css
+wwwroot\assets\admin\vendors\base\vendor.bundle.base.js
+wwwroot\assets\admin\vendors\chart.js\Chart.min.js
+wwwroot\assets\admin\vendors\datatables.net-bs4\dataTables.bootstrap4.css
+wwwroot\assets\admin\vendors\datatables.net-bs4\dataTables.bootstrap4.js
+wwwroot\assets\admin\vendors\datatables.net\jquery.dataTables.js
+wwwroot\assets\admin\vendors\mdi\css\materialdesignicons.min.css
+wwwroot\assets\admin\vendors\mdi\css\materialdesignicons.min.css.map
+wwwroot\assets\admin\vendors\mdi\fonts\materialdesignicons-webfont.eot
+wwwroot\assets\admin\vendors\mdi\fonts\materialdesignicons-webfont.ttf
+wwwroot\assets\admin\vendors\mdi\fonts\materialdesignicons-webfont.woff
+wwwroot\assets\admin\vendors\mdi\fonts\materialdesignicons-webfont.woff2
+wwwroot\assets\css\faqs.css
+wwwroot\assets\css\main.css
+wwwroot\assets\images\0064868f-d7aa-4d30-ba00-9f23215f6057.png
+wwwroot\assets\images\2006.133.128-list.webp
+wwwroot\assets\images\2017085_OS_N26_webimageland.jpg
+wwwroot\assets\images\5b2de624-e5cd-4519-9290-f58cb73e8a66.png
+wwwroot\assets\images\711kG9Gax2L._AC_UF350,350_QL80_.jpg
+wwwroot\assets\images\75f181da26df41e000f94fe2d1b44510-mobile.jpg
+wwwroot\assets\images\8da4f83f-07b3-440a-9de2-c691be4c5674.png
+wwwroot\assets\images\a5403a80691363d81543860141127dea-mobile.jpg
+wwwroot\assets\images\a745e52456d988dfef7759dd49533f7b-mobile.jpg
+wwwroot\assets\images\Aesop boxes.png
+wwwroot\assets\images\Aesop Corporate Gifts (1).png
+wwwroot\assets\images\Aesop Corporate Gifts.png
+wwwroot\assets\images\AESOP-UK-ST.jpg
+wwwroot\assets\images\Aesop_Above_Us_Steorra_2025_Web_Athenaeum_Thumbnail_540x400.jpg
+wwwroot\assets\images\Aesop_An_Introduction_to_Skin_Types_Web_Primary_Full_Bleed_Mobile_540x400.jpg
+wwwroot\assets\images\Aesop_Body_Avail_Body_Lotion_with_Sunscreen_SPF50_US_CA_150mL_Web_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Body_Breathless_100mL_Web_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Body_Eleos_Nourishing_Body_Cleanser_180mL_Tube_Front_2000x2000px.jpg
+wwwroot\assets\images\Aesop_Body_Eleos_Nourishing_Body_Cleanser_180mL_Tube_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Body_Eleos_Nourishing_Body_Cleanser_Texture_2000x2000px.jpg
+wwwroot\assets\images\Aesop_Body_Eleos_Nourishing_Body_Cleanser_Texture_2000x2000px.png
+wwwroot\assets\images\Aesop_Body_Geranium_Leaf_Body_Cleanser_500mL_Web_Front_2000x2000px (1).png
+wwwroot\assets\images\Aesop_Body_Geranium_Leaf_Body_Cleanser_500mL_Web_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Body_Geranium_Leaf_Body_Scrub_180mL_Web_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Body_Geranium_Leaf_Hydrating_Body_Treatment_Web_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Body_Nurture_Bar_Soap_Web_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Body_Nurture_Bar_Soap_Web_Texture_2000x2000px.png
+wwwroot\assets\images\Aesop_Body_Polish_Bar_Soap_Web_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Body_Polish_Bar_Soap_Web_Texture_2000x2000px.png
+wwwroot\assets\images\Aesop_Body_Refresh_Bar_Soap_Web_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Body_Refresh_Bar_Soap_Web_Texture_2000x2000px.png
+wwwroot\assets\images\Aesop_Body_Rejuvenate_Intensive_Body_Balm_100mL_Web_Front_A_2000x2000px.png
+wwwroot\assets\images\Aesop_Body_Rind_Concentrate_Body_Balm_100mL_Web_Front_A_2000x2000px.jpg
+wwwroot\assets\images\Aesop_Body_Rind_Concentrate_Body_Balm_100mL_Web_Front_B_2000x2000px.jpg
+wwwroot\assets\images\Aesop_Body_Rind_Concentrate_Body_Balm_500mL_Web_Back_2000x2000px.jpg
+wwwroot\assets\images\Aesop_Body_Rind_Concentrate_Body_Balm_500mL_Web_Front_2000x2000px.jpg
+wwwroot\assets\images\Aesop_Category_Page_2024_Hair_Secondary_Grid_Shampoo_Conditioner-mobile.png
+wwwroot\assets\images\Aesop_Category_Page_All_Secondary_3_Assistance_Mobile_640x640px.jpg
+wwwroot\assets\images\Aesop_Category_Page_All_Secondary_Assistance_Mobile_640x640px.jpg
+wwwroot\assets\images\Aesop_Category_Page_Fragrance_Secondary_3_Armoire_Mobile_900x900px.jpg
+wwwroot\assets\images\Aesop_Category_Page_Hair_Secondary_1_Essentials_2000x1887px (1).jpg
+wwwroot\assets\images\Aesop_Category_Page_Hair_Subcat_Menu_Grooming_1080x1080px.jpg
+wwwroot\assets\images\Aesop_Category_Page_Hair_Subcat_Menu_Treatments_1080x1080px.jpg
+wwwroot\assets\images\Aesop_Category_Page_Hand_Body_Care_Primary_Mobile_1088x1088px.jpg
+wwwroot\assets\images\Aesop_Category_Page_Hand_Body_Secondary_1_Eleos_1440x2000px.jpg
+wwwroot\assets\images\Aesop_Category_Page_Hand_Body_Subcat_Menu_Bar_Soaps_1080x1080px.jpg
+wwwroot\assets\images\Aesop_Category_Page_Hand_Body_Subcat_Menu_Body_Balms_Oils_1080x1080px.jpg
+wwwroot\assets\images\Aesop_Category_Page_Hand_Body_Subcat_Menu_Body_Cleansers_Scrubs_1080x1080px.jpg
+wwwroot\assets\images\Aesop_Category_Page_Hand_Body_Subcat_Menu_Hand_Washes_Balms_1080x1080px.jpg
+wwwroot\assets\images\Aesop_Category_Page_Hand_Body_Subcat_Menu_Oral_Care_and_Deodorants_1080x1080px.jpg
+wwwroot\assets\images\Aesop_Category_Page_Home_Subcat_Menu_Bedroom_Deodorisers_Pets_1080x1080px.jpg
+wwwroot\assets\images\Aesop_Category_Page_Home_Subcat_Menu_Design_Objects_1080x1080px.jpg
+wwwroot\assets\images\Aesop_Category_Page_Skin_Care_Primary_Mobile_1088x1088px_V2.jpg
+wwwroot\assets\images\Aesop_Category_Page_Skin_Care_Subcat_Menu_Cleansers_Exfoliants_1080x1080px.jpg
+wwwroot\assets\images\Aesop_Category_Page_Skin_Care_Subcat_Menu_Eye_Lip_Care_1080x1080px.jpg
+wwwroot\assets\images\Aesop_Category_Page_Skin_Care_Subcat_Menu_Hydrators_Moisturisers_1080x1080px.jpg
+wwwroot\assets\images\Aesop_Category_Page_Skin_Care_Subcat_Menu_Shaving_1080x1080px.jpg
+wwwroot\assets\images\Aesop_Category_Page_Skin_Care_Subcat_Menu_Sun_Care_1080x1080px.jpg
+wwwroot\assets\images\Aesop_Category_Page_Skin_Care_Subcat_Menu_Toners_1080x1080px.jpg
+wwwroot\assets\images\Aesop_Category_Page_Skin_Care_Subcat_Menu_Treats_Masques_1080x1080px.jpg
+wwwroot\assets\images\Aesop_Category_Page_Travel_Secondary_2_Airport_2560x1540px.jpg
+wwwroot\assets\images\Aesop_Category_Page_Travel_Subcat_Menu_For_the_Commute_1080x1080px.jpg
+wwwroot\assets\images\Aesop_Category_Page_Travel_Subcat_Menu_In-flight_Essentials_1080x1080px (1).jpg
+wwwroot\assets\images\Aesop_Category_Page_Travel_Subcat_Menu_In-flight_Essentials_1080x1080px.jpg
+wwwroot\assets\images\Aesop_Category_Page_Travel_Subcat_Menu_Travel_Kits_1080x1080px.jpg
+wwwroot\assets\images\Aesop_Experience_Page_Primary_Mobile_1088x1088px.jpg
+wwwroot\assets\images\Aesop_Experience_Page_Secondary_1_Corporate_Gifting_Mid_Mobile_900x900px.jpg
+wwwroot\assets\images\Aesop_Festive_2025_NGL_Category_Page_Gifts_Secondary_Banner_Fragrance_Mobile_900x506px.jpg
+wwwroot\assets\images\Aesop_Festive_2025_NGL_Category_Page_Gifts_Secondary_Banner_Seasonal_Kits_GL_Mobile_900x506px.jpg.jpg
+wwwroot\assets\images\Aesop_Festive_2025_NGL_Homepage_Secondary_Category_Menu_Desktop_1280x1000px.jpg
+wwwroot\assets\images\Aesop_Fragrance_2024_Web_Category_Page_Secondary_Menu_Floral_Desktop_640x500.jpg
+wwwroot\assets\images\Aesop_Fragrance_2024_Web_Category_Page_Secondary_Menu_Fresh_Desktop_640x500.jpg
+wwwroot\assets\images\Aesop_Fragrance_2024_Web_Category_Page_Secondary_Menu_Opulent_Desktop_640x500.jpg
+wwwroot\assets\images\Aesop_Fragrance_2024_Web_Category_Page_Secondary_Menu_Woody_Desktop_640x500.jpg
+wwwroot\assets\images\Aesop_Fragrance_Above_Us_Steorra_50mL_NGL_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Fragrance_Aurner_Eau_de_Parfum_50mL_Bottle_NGL_2000x2000px (1).png
+wwwroot\assets\images\Aesop_Fragrance_Aurner_Eau_de_Parfum_50mL_Bottle_NGL_2000x2000px.png
+wwwroot\assets\images\Aesop_Fragrance_Aurner_Eau_de_Parfum_50mL_Bottle_with_Carton_NGL_2000x2000px (1).png
+wwwroot\assets\images\Aesop_Fragrance_Aurner_Eau_de_Parfum_50mL_Bottle_with_Carton_NGL_2000x2000px (2).png
+wwwroot\assets\images\Aesop_Fragrance_Aurner_Eau_de_Parfum_50mL_Bottle_with_Carton_NGL_2000x2000px.png
+wwwroot\assets\images\Aesop_Fragrance_Eidesis_Eau_de_Parfum_50mL_Bottle_with_Carton_NGL_2000x2000px (1).png
+wwwroot\assets\images\Aesop_Fragrance_Eidesis_Eau_de_Parfum_50mL_Bottle_with_Carton_NGL_2000x2000px.png
+wwwroot\assets\images\Aesop_Fragrance_Hwyl_Eau_de_Parfum_50mL_Bottle_with_Carton_NGL_2000x2000px.png
+wwwroot\assets\images\Aesop_Fragrance_Marrakech_Intense_Eau_de_Parfum_50mL_Bottle_with_Carton_NGL_2000x2000px.png
+wwwroot\assets\images\Aesop_Fragrance_Rozu_Eau_de_Parfum_50mL_Bottle_with_Carton_NGL_2000x2000px.png
+wwwroot\assets\images\Aesop_Fragrance_Tacit_Eau_de_Parfum_100mL_Bottle_NGL_2000x2000px.png
+wwwroot\assets\images\Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Bottle_with_Carton_NGL_2000x2000px (1).png
+wwwroot\assets\images\Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Bottle_with_Carton_NGL_2000x2000px.png
+wwwroot\assets\images\Aesop_Geranium_Leaf_Body_Cleanser_500mL_NGL_In-Situ_02_Dosage_2000x2000px.png
+wwwroot\assets\images\Aesop_Geranium_Leaf_Hydrating_Body_Treatment_100mL-NGL_In-Situ_01_Product_2000x2000px.png
+wwwroot\assets\images\Aesop_Hair_Conditioner_500mL_Web_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Hair_Equalising_Shampoo_500mL_Web_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Hair_Rose_Hair_and_Scalp_Moisturising_Masque_120mL_Web_Front_A_2000x2000px.png
+wwwroot\assets\images\Aesop_Hair_Shampoo_100mL_Web_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Hand_Eleos_Aromatique_Hand_Balm_75mL_Web_Front_A_2000x2000px.png
+wwwroot\assets\images\Aesop_Hand_Resurrection_Aromatique_Hand_Wash_500mL_Web_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Hand_Reverence_Aromatique_Hand_Wash_500mL_Web_Front_2000x2000px (1).png
+wwwroot\assets\images\Aesop_Hand_Reverence_Aromatique_Hand_Wash_500mL_Web_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Home_Aganice_Aromatique_Candle_Vessel_&_Carton_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Home_Aganice_Aromatique_Candle_Web_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Home_Callippus_Aromatique_Candle_Vessel_&_Carton_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Home_Cythera_Aromatique_Room_Spray_100mL_Web_Front_2000x2000px (1).png
+wwwroot\assets\images\Aesop_Home_Cythera_Aromatique_Room_Spray_100mL_Web_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Home_Kagerou_Aromatique_Incense_Web_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Home_Murasaki_Aromatique_Incense_Web_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Home_Ptolemy_Aromatique_Candle_Web_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Home_Sarashina_Aromatique_Incense_Web_Front_2000x2000px (1).png
+wwwroot\assets\images\Aesop_Home_Sarashina_Aromatique_Incense_Web_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Kits_Aesop_Abode_NGL_In-Situ_Contents_US_CA_2000x2000px.png
+wwwroot\assets\images\Aesop_Kits_Aesop_Abode_US_NGL_1_Open_with_Product_Centre_2000x2000px.png
+wwwroot\assets\images\Aesop_Kits_Geranium_Leaf_Duet_Web_Front_A_2000x2000px.png
+wwwroot\assets\images\Aesop_Kits_Gift_Kits_2025-26_Greetings_in_the_Guestroom_GL_NGL_Baseline_2000x2000px.png
+wwwroot\assets\images\Aesop_Kits_Gift_Kits_2025-26_Party_in_the_Greenhouse_NGL_In-Situ_Product_GL_1_2000x2000px (1).png
+wwwroot\assets\images\Aesop_Kits_Gift_Kits_2025-26_Party_in_the_Greenhouse_NGL_In-Situ_Product_GL_1_2000x2000px.png
+wwwroot\assets\images\Aesop_Kits_Gift_Kits_2025-26_Shower_Room_Serenades_GL_NGL_Baseline_2000x2000px.png
+wwwroot\assets\images\Aesop_Kits_Gift_Kits_2025-26_Shower_Room_Serenades_NGL_In-Situ_Product_GL_2000x2000px.png
+wwwroot\assets\images\Aesop_Kits_Gift_Kits_2025-26_Too_Many_Cooks_in_the_Kitchen_GL_NGL_Baseline_2000x2000px (1).png
+wwwroot\assets\images\Aesop_Kits_Gift_Kits_2025-26_Too_Many_Cooks_in_the_Kitchen_GL_NGL_Baseline_2000x2000px (2).png
+wwwroot\assets\images\Aesop_Kits_Gift_Kits_2025-26_Too_Many_Cooks_in_the_Kitchen_GL_NGL_Baseline_2000x2000px.png
+wwwroot\assets\images\Aesop_Kits_Quench_Classic_Skin_Care_Kit_Web_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Kits_Resurrection_Duet_Web_Front_A_2000x2000px.png
+wwwroot\assets\images\Aesop_Kits_States_of_Being_Aromatique_Room_Spray_Trio_Web_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_NGL_Athenaeum_Thumbnail_A_Guide_to_Fragrance_Mobile_1080x800px.jpg
+wwwroot\assets\images\Aesop_NGL_Athenaeum_Thumbnail_A_History_of_Fragrance_Mobile_1080x800px.jpg
+wwwroot\assets\images\Aesop_NGL_Athenaeum_Thumbnail_Geranium_Article_Mobile_540x400.jpg
+wwwroot\assets\images\Aesop_NGL_Athenaeum_Thumbnail_How_to_Curate_a_Skin_Care_Regimen_Mobile_1080x800px.jpg
+wwwroot\assets\images\Aesop_NGL_Athenaeum_Thumbnail_On_Blending_Mobile_1080x800px.jpg
+wwwroot\assets\images\Aesop_NGL_Athenaeum_Thumbnail_Sensorialist_Literature_Mobile_1080x800px (1).jpg
+wwwroot\assets\images\Aesop_NGL_Athenaeum_Thumbnail_Sensorialist_Literature_Mobile_1080x800px.jpg
+wwwroot\assets\images\Aesop_NGL_Athenaeum_Thumbnail_The_Anatomy_and_Physiology_of_the_Skin_Mobile_1080x800px.jpg
+wwwroot\assets\images\Aesop_NGL_Library_Thumbnail_Product_Philosophy_Mobile_1080x800px.jpg
+wwwroot\assets\images\Aesop_Personal_Care_Herbal_Deodorant_50mL_Web_Front_2000x2000px (1).png
+wwwroot\assets\images\Aesop_Personal_Care_Herbal_Deodorant_50mL_Web_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Pride_2021_Web_Secondary_Queer_Library_Queen_6_Mid_Desktop_2560x1440px.jpg
+wwwroot\assets\images\Aesop_Scented_Home_Web_Secondary_Incense.jpg
+wwwroot\assets\images\Aesop_Scents_2026_Web_Navigation_Desktop_US_440x330px.jpg
+wwwroot\assets\images\Aesop_Scents_Campaign_Home_Ptolemy_Kagerou_Vertical_Bundle_PDP_2000x2000px.png
+wwwroot\assets\images\Aesop_Scents_PDP_Range_Candles_2000x2000px.png
+wwwroot\assets\images\Aesop_Skin_B_Triple_C_Facial_Balancing_Gel_60mL_Web_Texture_2000x2000px.png
+wwwroot\assets\images\Aesop_Skin_B_Triple_C_Facial_Balancing_Gel_Web_60mL_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Skin_Exalted_Eye_Serum_15mL_Web_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Skin_Immediate_Moisture_Facial_Hydrosol_50mL_Web_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Skin_Lucent_Facial_Concentrate_60mL_Front_2000x2000px.jpg
+wwwroot\assets\images\Aesop_Skin_Lucent_Facial_Concentrate_60mL_NGL_Texture_2000x2000px.jpg
+wwwroot\assets\images\Aesop_Skin_Lucent_Facial_Refiner_60mL_NGL_Front_2000x2000px (1).png
+wwwroot\assets\images\Aesop_Skin_Lucent_Facial_Refiner_60mL_NGL_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Skin_Lucent_Facial_Refiner_60mL_NGL_Use_2000x2000px (1).png
+wwwroot\assets\images\Aesop_Skin_Lucent_Facial_Refiner_60mL_NGL_Use_2000x2000px.png
+wwwroot\assets\images\Aesop_Skin_Parsley_Seed_Anti-Oxidant_Intense_Serum_60mL_Front_2000x2000px.png
+wwwroot\assets\images\Aesop_Skin_Parsley_Seed_Anti-Oxidant_Intense_Serum_60mL_Web_Texture_2000x2000px.png
+wwwroot\assets\images\Aesop_Skin_Purifying_Facial_Exfoliant_Paste_Web_75mL_Front_A_2000x2000px.png
+wwwroot\assets\images\Aesop_Skin_Purifying_Facial_Exfoliant_Paste_Web_75mL_Front_B_2000x2000px.png
+wwwroot\assets\images\Aesop_Top_20_2025_PDP_Application_Incense_2000x2000px (1).png
+wwwroot\assets\images\Aesop_Top_20_2025_PDP_Application_Incense_2000x2000px.png
+wwwroot\assets\images\Aesop_Top_20_2025_PDP_Texture_Conditioner_2000x2000px.png
+wwwroot\assets\images\Aesop_Top_20_2025_PDP_Texture_Resurrection_Hand_Wash_2000x2000px (1).png
+wwwroot\assets\images\Aesop_Top_20_2025_PDP_Texture_Resurrection_Hand_Wash_2000x2000px.png
+wwwroot\assets\images\Aesop_Top_20_2025_PDP_Texture_Reverence_Hand_Wash_2000x2000px.png
+wwwroot\assets\images\Aesop_Top_20_2025_PDP_Texture_Shampoo_2000x2000px.png
+wwwroot\assets\images\aglogo.png
+wwwroot\assets\images\ambery.png
+wwwroot\assets\images\Battersea-power-station-website-assets-resize-01-1600x1067px.jpg
+wwwroot\assets\images\clickandcollect.png
+wwwroot\assets\images\counter.png
+wwwroot\assets\images\da550216-1687-4fec-9ab4-3c83c5b18a44.png
+wwwroot\assets\images\darkAesop.svg
+wwwroot\assets\images\facial.png
+wwwroot\assets\images\fragamo.png
+wwwroot\assets\images\fragrance.jpg
+wwwroot\assets\images\hair.jpg
+wwwroot\assets\images\hand-and-body.jpg
+wwwroot\assets\images\home.jpg
+wwwroot\assets\images\image.jpg
+wwwroot\assets\images\images (1).jpg
+wwwroot\assets\images\images (2).jpg
+wwwroot\assets\images\images (3).jpg
+wwwroot\assets\images\images (4).jpg
+wwwroot\assets\images\images (5).jpg
+wwwroot\assets\images\images.jpg
+wwwroot\assets\images\indir (1).svg
+wwwroot\assets\images\indir.svg
+wwwroot\assets\images\lightAesop.svg
+wwwroot\assets\images\marine.png
+wwwroot\assets\images\module-50-50-desktop-1.jpg
+wwwroot\assets\images\Module-Bathing-Connoisseur-Mobile.jpg
+wwwroot\assets\images\privco.png
+wwwroot\assets\images\Ramadan_2026_HP_Secondary_60-40_Mobile_1080x1080px.jpg
+wwwroot\assets\images\rnr.png
+wwwroot\assets\images\sigstore.png
+wwwroot\assets\images\skincare.jpg
+wwwroot\assets\images\stock.png
+wwwroot\assets\images\travel.jpg
+wwwroot\assets\images\Understanding-your-skin-m.jpg
+wwwroot\assets\images\vt (1).webp
+wwwroot\assets\images\vt (10).webp
+wwwroot\assets\images\vt (11).webp
+wwwroot\assets\images\vt (2).webp
+wwwroot\assets\images\vt (3).webp
+wwwroot\assets\images\vt (4).webp
+wwwroot\assets\images\vt (5).webp
+wwwroot\assets\images\vt (6).webp
+wwwroot\assets\images\vt (7).webp
+wwwroot\assets\images\vt (8).webp
+wwwroot\assets\images\vt (9).webp
+wwwroot\assets\images\vt.webp
+wwwroot\assets\images\woody.png
+wwwroot\assets\js\banner.js
+wwwroot\assets\js\browse.js
+wwwroot\assets\js\carecard.js
+wwwroot\assets\js\customer.js
+wwwroot\assets\js\discover.js
+wwwroot\assets\js\drop.js
+wwwroot\assets\js\experience.js
+wwwroot\assets\js\faqs.js
+wwwroot\assets\js\fragrance.js
+wwwroot\assets\js\fullvideo.js
+wwwroot\assets\js\gifts.js
+wwwroot\assets\js\handcard.js
+wwwroot\assets\js\home.js
+wwwroot\assets\js\library.js
+wwwroot\assets\js\ox.js
+wwwroot\assets\js\price.js
+wwwroot\assets\js\scroolbanner.js
+wwwroot\assets\js\signin.js
+wwwroot\assets\js\skincars.js
+wwwroot\assets\js\stores.js
+wwwroot\assets\js\video.js
+wwwroot\assets\scss\main.scss
+wwwroot\assets\scss\pages\_additional.scss
+wwwroot\assets\scss\pages\_addtocart.scss
+wwwroot\assets\scss\pages\_browse.scss
+wwwroot\assets\scss\pages\_cardsskincare.scss
+wwwroot\assets\scss\pages\_customor.scss
+wwwroot\assets\scss\pages\_discover.scss
+wwwroot\assets\scss\pages\_discovergift.scss
+wwwroot\assets\scss\pages\_experience.scss
+wwwroot\assets\scss\pages\_explore.scss
+wwwroot\assets\scss\pages\_exxplore.scss
+wwwroot\assets\scss\pages\_faqs.scss
+wwwroot\assets\scss\pages\_findtravel.scss
+wwwroot\assets\scss\pages\_footer.scss
+wwwroot\assets\scss\pages\_formulations.scss
+wwwroot\assets\scss\pages\_fragrance.scss
+wwwroot\assets\scss\pages\_gifts.scss
+wwwroot\assets\scss\pages\_haircards.scss
+wwwroot\assets\scss\pages\_hairhero.scss
+wwwroot\assets\scss\pages\_handbodyhero.scss
+wwwroot\assets\scss\pages\_handcard.scss
+wwwroot\assets\scss\pages\_handcards.scss
+wwwroot\assets\scss\pages\_header.scss
+wwwroot\assets\scss\pages\_home.scss
+wwwroot\assets\scss\pages\_kart.scss
+wwwroot\assets\scss\pages\_library.scss
+wwwroot\assets\scss\pages\_login.scss
+wwwroot\assets\scss\pages\_neighbourly.scss
+wwwroot\assets\scss\pages\_newandnotable.scss
+wwwroot\assets\scss\pages\_outof.scss
+wwwroot\assets\scss\pages\_outofstock.scss
+wwwroot\assets\scss\pages\_purplesection.scss
+wwwroot\assets\scss\pages\_recent.scss
+wwwroot\assets\scss\pages\_recomended.scss
+wwwroot\assets\scss\pages\_recommended.scss
+wwwroot\assets\scss\pages\_resurroction.scss
+wwwroot\assets\scss\pages\_skincare.scss
+wwwroot\assets\scss\pages\_skincarecard.scss
+wwwroot\assets\scss\pages\_skincareheader.scss
+wwwroot\assets\scss\pages\_soap.scss
+wwwroot\assets\scss\pages\_stores.scss
+wwwroot\assets\scss\pages\_travelhero.scss
+wwwroot\assets\scss\pages\_travelkard.scss
+wwwroot\assets\scss\pages\_ucluhand.scss
+wwwroot\assets\scss\pages\_understanding.scss
+wwwroot\assets\scss\pages\_video.scss
+wwwroot\assets\scss\pages\_wishes.scss
+wwwroot\assets\videos\v-41a8ce4e-fcc9-4fcf-ad86-2b0d919616c4_original.mp4
+wwwroot\assets\videos\v-86be55ac-310d-4c90-84f2-2eda0f70cbec_original (1).mp4
+wwwroot\assets\videos\v-c4edaa02-c8af-43ac-b51e-46b0d5ce69ca_original.mp4
+wwwroot\assets\videos\WhatsApp Video 2026-02-21 at 13.25.46.mp4
+wwwroot\favicon.ico
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+wwwroot\lib\bootstrap\LICENSE
+wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
+wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
+wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+wwwroot\lib\jquery-validation\dist\additional-methods.js
+wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+wwwroot\lib\jquery-validation\dist\jquery.validate.js
+wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+wwwroot\lib\jquery-validation\LICENSE.md
+wwwroot\lib\jquery\dist\jquery.js
+wwwroot\lib\jquery\dist\jquery.min.js
+wwwroot\lib\jquery\dist\jquery.min.map
+wwwroot\lib\jquery\LICENSE.txt
+wwwroot\assets\images\3247fd4c-cc2b-4e18-81c9-5558d4cfa482.png
+wwwroot\assets\images\9af03f9f-b880-44df-95d3-9777b16d68ef.png
+wwwroot\assets\images\d1140765-22e0-4ead-b551-2f27de70f77e.png
+wwwroot\assets\images\499ea12a-6488-4b7f-802c-96ec9f666113.png
+wwwroot\assets\images\7ce88eb1-d554-4808-aa0a-cb383832bfe1.png

@@ -1,0 +1,45 @@
+﻿@using AesopFinal.Areas.AdminPanel.ViewModels.UpdateVM
+@using AesopFinal.Areas.AdminPanel.ViewModels.UpdateVM.AesopFinal.Areas.AdminPanel.ViewModels.UpdateVM
+@model RecommendUpdateVM
+
+<div class="row">
+
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Create Product form</h4>
+                <p class="card-description">
+                    <form class="forms-sample" method="post" enctype="multipart/form-data">
+
+                        <div class="form-group">
+                            <label asp-for="title">Title</label>
+                            <input asp-for="title" class="form-control" placeholder="Title" />
+                            <span asp-validation-for="title" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="category">Category</label>
+                            <input asp-for="category" class="form-control" placeholder="Category" />
+                            <span asp-validation-for="category" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="readingMinute">Reading Minute</label>
+                            <input asp-for="readingMinute" class="form-control" placeholder="ReadingMinute" />
+                            <span asp-validation-for="readingMinute" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="imageFile">Image</label>
+                            <input asp-for="imageFile" type="file" class="form-control" />
+                            <span asp-validation-for="imageFile" class="text-danger"></span>
+                        </div>
+                       
+                        <button type="submit" class="btn btn-primary me-2">Submit</button>
+                        <button class="btn btn-light" asp-action="Index" asp-controller="Product">Cancel</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>
+

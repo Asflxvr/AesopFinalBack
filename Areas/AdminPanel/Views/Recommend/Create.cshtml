@@ -1,0 +1,49 @@
+﻿@using AesopFinal.Areas.AdminPanel.ViewModels.CreateVM
+@model RecommendCreateVM
+
+<div>
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Create Recommended form</h4>
+                <p class="card-description"></p>
+
+                <form class="forms-sample" method="post" enctype="multipart/form-data">
+
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-group">
+                        <label asp-for="title">Title</label>
+                        <input asp-for="title" class="form-control" placeholder="Title" />
+                        <span asp-validation-for="title" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="category">Category</label>
+                        <input asp-for="category" class="form-control" placeholder="Category" />
+                        <span asp-validation-for="category" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="readingMinute">Reading Minute</label>
+                        <input asp-for="readingMinute" class="form-control" placeholder="ReadingMinute" />
+                        <span asp-validation-for="readingMinute" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="imageFile">Image</label>
+                        <input asp-for="imageFile" type="file" class="form-control" />
+                        <span asp-validation-for="imageFile" class="text-danger"></span>
+                    </div>
+
+
+                  
+
+                    <button type="submit" class="btn btn-primary me-2" asp-action="Create" asp-controller="Recommend">Submit</button>
+                    <a asp-action="Index" asp-controller="Recommend" class="btn btn-light">Cancel</a>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

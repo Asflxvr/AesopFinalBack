@@ -1,0 +1,843 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap");
+
+/* HOME PAGE (Ev əşyaları) STYLES */
+
+/* 1. HERO SECTION */
+.home-hero {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    min-height: 650px;
+    margin-top: -40px;
+    padding-top: 40px;
+    overflow: hidden;
+
+    .hero-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.3) 100%);
+        }
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 5;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fffef2;
+
+        .hero-text-wrapper {
+            max-width: 700px;
+            padding: 0 20px;
+            animation: fadeInUp 1s ease-out;
+
+            .hero-mini-title {
+                font-family: 'Inter', sans-serif;
+                font-size: 13px;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                display: inline-block;
+                margin-bottom: 20px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid rgba(255, 254, 242, 0.3);
+                font-weight: 300;
+            }
+
+            .hero-main-title {
+                font-family: 'Playfair Display', serif;
+                font-size: 58px;
+                font-weight: 400;
+                line-height: 1.1;
+                margin-bottom: 25px;
+                text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+
+                @media (max-width: 992px) {
+                    font-size: 48px;
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 42px;
+                }
+
+                @media (max-width: 576px) {
+                    font-size: 36px;
+                }
+            }
+
+            .hero-description {
+                font-family: 'Inter', sans-serif;
+                font-size: 17px;
+                line-height: 1.7;
+                max-width: 550px;
+                margin: 0 auto 35px;
+                opacity: 0.9;
+                font-weight: 300;
+
+                @media (max-width: 768px) {
+                    font-size: 16px;
+                }
+            }
+
+            .hero-buttons {
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+                flex-wrap: wrap;
+
+                .hero-btn {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 12px;
+                    padding: 16px 32px;
+                    text-decoration: none;
+                    font-family: 'Inter', sans-serif;
+                    font-size: 15px;
+                    transition: all 0.4s ease;
+
+                    i {
+                        font-size: 14px;
+                        transition: transform 0.3s ease;
+                    }
+
+                    &.primary {
+                        background: #fffef2;
+                        color: #333;
+                        border: 1px solid #fffef2;
+
+                        &:hover {
+                            background: transparent;
+                            color: #fffef2;
+
+                            i {
+                                transform: translateX(5px);
+                            }
+                        }
+                    }
+
+                    &.secondary {
+                        background: transparent;
+                        color: #fffef2;
+                        border: 1px solid #fffef2;
+
+                        &:hover {
+                            background: #fffef2;
+                            color: #333;
+
+                            i {
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 2. CANDLES COLLECTION */
+.candles-collection {
+    background-color: #fffef2;
+    padding: 100px 0;
+
+    .container {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 40px;
+
+        @media (max-width: 768px) {
+            padding: 0 20px;
+        }
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 60px;
+
+        .section-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #8a7a6a;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            font-weight: 400;
+            color: #333;
+            margin-bottom: 15px;
+
+            @media (max-width: 768px) {
+                font-size: 36px;
+            }
+        }
+
+        .section-description {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+    }
+
+    .candles-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+        @media (max-width: 992px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 576px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .candle-card {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+
+            .card-image img {
+                transform: scale(1.02);
+            }
+        }
+
+        .card-image {
+            position: relative;
+            height: 320px;
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, #f5f2e8 0%, #e8e2d8 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+
+            img {
+                max-width: 80%;
+                max-height: 80%;
+                object-fit: contain;
+                transition: transform 0.5s ease;
+            }
+
+            .wishlist-btn {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                background: rgba(255, 254, 242, 0.9);
+                border: none;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                cursor: pointer;
+                color: #333;
+                font-size: 16px;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background: #333;
+                    color: #fffef2;
+                }
+            }
+        }
+
+        .card-content {
+            flex-grow: 1;
+            padding: 0 15px;
+
+            h3 {
+                font-family: 'Playfair Display', serif;
+                font-size: 22px;
+                font-weight: 400;
+                margin-bottom: 8px;
+                color: #333;
+            }
+
+            .candle-notes {
+                font-family: 'Inter', sans-serif;
+                font-size: 14px;
+                color: #8a7a6a;
+                margin-bottom: 15px;
+                line-height: 1.5;
+            }
+
+            .candle-details {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                margin-bottom: 15px;
+
+                span {
+                    font-family: 'Inter', sans-serif;
+                    font-size: 12px;
+                    color: #999;
+                    position: relative;
+
+                    &:first-child::after {
+                        content: '•';
+                        position: absolute;
+                        right: -10px;
+                        color: #ccc;
+                    }
+                }
+            }
+
+            .price {
+                display: block;
+                font-family: 'Inter', sans-serif;
+                font-size: 18px;
+                font-weight: 500;
+                color: #333;
+                margin-bottom: 20px;
+            }
+        }
+
+        .add-to-cart {
+            width: 100%;
+            padding: 16px;
+            background: #333;
+            color: #fffef2;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 40px;
+
+            &:hover {
+                background: #b57a44;
+            }
+        }
+    }
+}
+
+/* 3. ROOM SPRAYS & INCENSE */
+.ambience-section {
+    background-color: #f5f2e8;
+    padding: 100px 0;
+
+    .ambience-container {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 40px;
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 60px;
+        align-items: center;
+
+        @media (max-width: 992px) {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            padding: 0 20px;
+        }
+    }
+
+    .ambience-image {
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 20px 20px 0 rgba(51, 51, 51, 0.1);
+            transition: transform 0.5s ease;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    .ambience-content {
+        .ambience-tagline {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #8a7a6a;
+            display: inline-block;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #d6c9bc;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #333;
+
+            @media (max-width: 768px) {
+                font-size: 36px;
+            }
+        }
+
+        p {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+            color: #666;
+            margin-bottom: 40px;
+            max-width: 450px;
+        }
+    }
+
+    .ambience-grid {
+        display: grid;
+        gap: 20px;
+        margin-bottom: 40px;
+
+        .ambience-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 15px;
+            background: #fffef2;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+
+            &:hover {
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+                transform: translateX(5px);
+            }
+
+            img {
+                width: 70px;
+                height: 70px;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+
+            .item-info {
+                flex-grow: 1;
+
+                h4 {
+                    font-family: 'Inter', sans-serif;
+                    font-size: 16px;
+                    font-weight: 500;
+                    margin-bottom: 4px;
+                    color: #333;
+                }
+
+                p {
+                    font-size: 12px;
+                    color: #8a7a6a;
+                    margin-bottom: 5px;
+                }
+
+                .item-price {
+                    font-family: 'Inter', sans-serif;
+                    font-size: 15px;
+                    font-weight: 600;
+                    color: #333;
+                }
+            }
+
+            .item-add {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                background: #333;
+                border: none;
+                color: #fffef2;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background: #b57a44;
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    .ambience-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 32px;
+        background: #333;
+        color: #fffef2;
+        text-decoration: none;
+        font-family: 'Inter', sans-serif;
+        font-size: 15px;
+        transition: all 0.3s ease;
+        border-radius: 40px;
+
+        i {
+            transition: transform 0.3s ease;
+        }
+
+        &:hover {
+            background: #b57a44;
+
+            i {
+                transform: translateX(5px);
+            }
+        }
+    }
+}
+
+/* 4. OIL BLENDS */
+.oil-blends {
+    background-color: #fffef2;
+    padding: 100px 0;
+
+    .container {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 40px;
+
+        @media (max-width: 768px) {
+            padding: 0 20px;
+        }
+    }
+
+    .blends-header {
+        text-align: center;
+        margin-bottom: 60px;
+
+        .blends-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #8a7a6a;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            font-weight: 400;
+            color: #333;
+
+            @media (max-width: 768px) {
+                font-size: 32px;
+            }
+        }
+    }
+
+    .blends-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+        @media (max-width: 992px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 576px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .blend-card {
+        text-align: center;
+        padding: 30px;
+        background: #faf7f0;
+        border-radius: 20px;
+        transition: all 0.4s ease;
+
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .blend-image {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 25px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 3px solid #d6c9bc;
+                transition: transform 0.4s ease;
+            }
+        }
+
+        h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: 400;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .blend-notes {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: #8a7a6a;
+            margin-bottom: 15px;
+        }
+
+        .blend-price {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .blend-add {
+            padding: 12px 30px;
+            background: transparent;
+            border: 1px solid #333;
+            color: #333;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 40px;
+
+            &:hover {
+                background: #333;
+                color: #fffef2;
+            }
+        }
+    }
+}
+
+/* 5. CERAMIC COLLECTION */
+.ceramic-collection {
+    background: linear-gradient(135deg, #e8e2d8 0%, #d6c9bc 100%);
+    padding: 100px 0;
+
+    .ceramic-container {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+
+        @media (max-width: 992px) {
+            grid-template-columns: 1fr;
+        }
+
+        @media (max-width: 768px) {
+            padding: 0 20px;
+        }
+    }
+
+    .ceramic-content {
+        .ceramic-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #333;
+            display: inline-block;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #333;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            color: #333;
+
+            @media (max-width: 768px) {
+                font-size: 42px;
+            }
+        }
+
+        p {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+            color: #333;
+            margin-bottom: 25px;
+            opacity: 0.8;
+        }
+
+        .ceramic-price {
+            font-family: 'Inter', sans-serif;
+            font-size: 28px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .ceramic-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 32px;
+            background: #333;
+            color: #fffef2;
+            text-decoration: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            border-radius: 40px;
+
+            i {
+                transition: transform 0.3s ease;
+            }
+
+            &:hover {
+                background: #b57a44;
+
+                i {
+                    transform: translateX(5px);
+                }
+            }
+        }
+    }
+
+    .ceramic-image {
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 30px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s ease;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+}
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+    .candles-collection .candles-grid {
+        gap: 20px;
+    }
+
+    .blends-grid {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-hero .hero-content .hero-text-wrapper .hero-main-title {
+        font-size: 42px;
+    }
+
+    .hero-buttons .hero-btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+
+    .candles-collection {
+        padding: 70px 0;
+    }
+
+    .ambience-section {
+        padding: 70px 0;
+    }
+
+    .oil-blends {
+        padding: 70px 0;
+    }
+
+    .ceramic-collection {
+        padding: 70px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .home-hero .hero-content .hero-text-wrapper .hero-main-title {
+        font-size: 36px;
+    }
+
+    .candles-collection .section-title {
+        font-size: 32px;
+    }
+
+    .ambience-content h2 {
+        font-size: 32px;
+    }
+
+    .ceramic-content h2 {
+        font-size: 36px;
+    }
+
+    .blend-card .blend-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* TOUCH DEVICES */
+@media (hover: none) {
+    .candle-card:active {
+        transform: translateY(-5px);
+    }
+
+    .ambience-item:active {
+        transform: translateX(5px);
+    }
+
+    .blend-card:active {
+        transform: translateY(-10px);
+    }
+
+    .ceramic-image img:active {
+        transform: scale(1.02);
+    }
+}

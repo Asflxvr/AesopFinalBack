@@ -1,0 +1,314 @@
+// Font dəyişənləri (əvvəlki Inter və Cormorant fontlarını istifadə edirik)
+$font-bezekli: 'Cormorant Garamond', serif;
+$font-sade: 'Inter', sans-serif;
+
+.discover-travel-banner {
+    width: 100%;
+    height: 80vh; // Ekranın 80%-ni tutur
+    position: relative;
+
+    // Arxa fon şəkli
+    background-image: url('https://www.aesop.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-aesop-us-Library/default/dw44aa4918/images/pages/discover-travel/hero-banner-mobile.jpg?sw=640&sh=640&sm=cut&q=70');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // Şəklin üzərinə tündlük vermək üçün (yazı daha yaxşı görünsün deyə)
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.2); // 20% tündlük
+        z-index: 1;
+    }
+
+    .banner-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        color: #ffffff;
+        max-width: 600px;
+        padding: 0 20px;
+
+        .banner-title {
+            font-family: $font-bezekli;
+            font-size: 48px;
+            font-weight: 500;
+            font-style: italic;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .banner-subtitle {
+            font-family: $font-sade;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+    }
+}
+
+
+
+// ========== RESPONSIVE ÜSLUBLAR ==========
+
+/* Böyük kompüterlər (1600px və yuxarı) */
+@media (min-width: 1600px) {
+    .discover-travel-banner {
+        height: 85vh;
+
+        .banner-content {
+            max-width: 700px;
+
+            .banner-title {
+                font-size: 60px;
+                margin-bottom: 20px;
+            }
+
+            .banner-subtitle {
+                font-size: 18px;
+                line-height: 1.7;
+            }
+        }
+    }
+}
+
+/* Orta ölçülü kompüterlər (1400px - 1600px) */
+@media (max-width: 1600px) and (min-width: 1400px) {
+    .discover-travel-banner {
+        .banner-content {
+            .banner-title {
+                font-size: 54px;
+            }
+        }
+    }
+}
+
+/* Kiçik kompüterlər (1200px - 1400px) */
+@media (max-width: 1400px) and (min-width: 1200px) {
+    .discover-travel-banner {
+        .banner-content {
+            max-width: 550px;
+
+            .banner-title {
+                font-size: 48px;
+            }
+
+            .banner-subtitle {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+/* Planşetlər (992px - 1200px) */
+@media (max-width: 1200px) and (min-width: 992px) {
+    .discover-travel-banner {
+        height: 70vh;
+
+        .banner-content {
+            max-width: 500px;
+
+            .banner-title {
+                font-size: 42px;
+                margin-bottom: 12px;
+            }
+
+            .banner-subtitle {
+                font-size: 15px;
+                line-height: 1.5;
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+
+/* Kiçik planşetlər (768px - 992px) */
+@media (max-width: 992px) and (min-width: 768px) {
+    .discover-travel-banner {
+        height: 60vh;
+
+        &::before {
+            background-color: rgba(0, 0, 0, 0.25); // Tündlüyü bir az artırırıq
+        }
+
+        .banner-content {
+            max-width: 450px;
+
+            .banner-title {
+                font-size: 38px;
+                margin-bottom: 10px;
+            }
+
+            .banner-subtitle {
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+/* Böyük telefonlar / phablet (576px - 768px) */
+@media (max-width: 768px) and (min-width: 576px) {
+    .discover-travel-banner {
+        height: 55vh;
+
+        &::before {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .banner-content {
+            max-width: 400px;
+            padding: 0 15px;
+
+            .banner-title {
+                font-size: 34px;
+                margin-bottom: 8px;
+                letter-spacing: 0.5px;
+            }
+
+            .banner-subtitle {
+                font-size: 13px;
+                line-height: 1.5;
+                margin-bottom: 18px;
+            }
+        }
+    }
+}
+
+/* Telefonlar (480px - 576px) */
+@media (max-width: 576px) and (min-width: 480px) {
+    .discover-travel-banner {
+        height: 50vh;
+
+        &::before {
+            background-color: rgba(0, 0, 0, 0.35);
+        }
+
+        .banner-content {
+            max-width: 350px;
+            padding: 0 15px;
+
+            .banner-title {
+                font-size: 30px;
+                margin-bottom: 8px;
+            }
+
+            .banner-subtitle {
+                font-size: 12px;
+                line-height: 1.5;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+/* Kiçik telefonlar (400px - 480px) */
+@media (max-width: 480px) and (min-width: 400px) {
+    .discover-travel-banner {
+        height: 45vh;
+
+        &::before {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .banner-content {
+            max-width: 300px;
+            padding: 0 12px;
+
+            .banner-title {
+                font-size: 28px;
+                margin-bottom: 6px;
+            }
+
+            .banner-subtitle {
+                font-size: 11px;
+                line-height: 1.4;
+                margin-bottom: 12px;
+            }
+        }
+    }
+}
+
+/* Çox kiçik telefonlar (400px-dən aşağı) */
+@media (max-width: 400px) {
+    .discover-travel-banner {
+        height: 40vh;
+
+        &::before {
+            background-color: rgba(0, 0, 0, 0.45);
+        }
+
+        .banner-content {
+            max-width: 260px;
+            padding: 0 10px;
+
+            .banner-title {
+                font-size: 24px;
+                margin-bottom: 5px;
+                letter-spacing: 0.3px;
+            }
+
+            .banner-subtitle {
+                font-size: 10px;
+                line-height: 1.4;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+/* Landscape rejimi - telefonlar */
+@media (max-width: 900px) and (orientation: landscape) {
+    .discover-travel-banner {
+        height: 100vh; // Landscape-də tam ekran
+
+        .banner-content {
+            max-width: 500px;
+
+            .banner-title {
+                font-size: 34px;
+            }
+
+            .banner-subtitle {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+/* Çox hündür telefonlar üçün düzəliş (məsələn, iPhone 12/13/14 Pro Max) */
+@media (min-height: 800px) and (max-width: 480px) {
+    .discover-travel-banner {
+        height: 35vh; // Hündür ekranlarda nisbətən az yer tutur
+    }
+}
+
+/* Çox böyük ekranlar üçün (4K) */
+@media (min-width: 2000px) {
+    .discover-travel-banner {
+        height: 70vh;
+
+        .banner-content {
+            max-width: 800px;
+
+            .banner-title {
+                font-size: 70px;
+                margin-bottom: 25px;
+            }
+
+            .banner-subtitle {
+                font-size: 20px;
+                line-height: 1.8;
+            }
+        }
+    }
+}

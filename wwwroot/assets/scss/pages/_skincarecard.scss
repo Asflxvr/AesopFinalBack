@@ -1,0 +1,801 @@
+// --- Dəyişənlər ---
+$aesop-bg: #fffef2;
+$aesop-dark: #333333;
+$aesop-text-muted: #666666;
+$aesop-border: #e2e2e2;
+$font-main: 'Inter', sans-serif;
+
+.new-notable {
+    background-color: $aesop-bg;
+    padding: 80px 0; // 100px-dən azaldıldı
+    font-family: $font-main;
+
+    .container {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 60px;
+    }
+
+    // --- Başlıq ---
+    .section-title {
+        text-align: center;
+        margin-bottom: 50px; // 70px-dən azaldıldı
+
+        h2 {
+            font-family: "Zapf Humanist", "Optima", serif;
+            font-size: 28px; // 32px-dən azaldıldı
+            font-weight: 400;
+            color: $aesop-dark;
+            letter-spacing: 0.5px;
+        }
+    }
+
+    // --- Slider Konteyneri ---
+    .slider-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .arrow {
+            position: absolute;
+            z-index: 10;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            width: 40px; // 50px-dən azaldıldı
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s ease;
+            opacity: 0.6;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &::after {
+                content: '';
+                width: 20px; // 25px-dən azaldıldı
+                height: 20px;
+                border-top: 1.2px solid #333; // Daha nazik xətt
+                border-left: 1.2px solid #333;
+                display: block;
+            }
+
+            &.prev {
+                left: -35px;
+
+                &::after {
+                    transform: rotate(-45deg);
+                }
+            }
+
+            &.next {
+                right: -35px;
+
+                &::after {
+                    transform: rotate(135deg);
+                }
+            }
+
+            i {
+                display: none;
+            }
+        }
+    }
+
+    // --- Sürüşən Siyahı ---
+    .product-list {
+        display: flex;
+        gap: 30px; // 35px-dən azaldıldı
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        padding-bottom: 25px;
+
+        .product-card {
+            flex: 0 0 calc(33.33% - 20px);
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            .product-visual {
+                position: relative;
+                width: 100%;
+                height: 380px; // 450px-dən azaldıldı (şəkillər kiçildi)
+                margin-bottom: 25px; // 35px-dən azaldıldı
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    max-width: 90%; // 100%-dən azaldıldı ki, kənarlarda boşluq qalsın
+                    max-height: 90%;
+                    object-fit: contain;
+                    transition: opacity 0.7s ease;
+                }
+
+                .img-reveal {
+                    position: absolute;
+                    opacity: 0;
+                }
+
+                .wish-icon {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    font-size: 14px; // 16px-dən azaldıldı
+                    color: $aesop-dark;
+                }
+
+                &:hover {
+                    &:has(.img-reveal) {
+                        .img-base {
+                            opacity: 0;
+                        }
+
+                        .img-reveal {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            // --- Yazı Hissəsi ---
+            .product-details {
+                flex-grow: 1;
+                padding: 0 10px;
+
+                h4 {
+                    font-size: 14px; // 16px-dən azaldıldı
+                    font-weight: 500;
+                    margin-bottom: 10px;
+                    color: $aesop-dark;
+                }
+
+                .summary {
+                    font-size: 13px; // 14px-dən azaldıldı
+                    color: $aesop-text-muted;
+                    line-height: 1.5;
+                    margin-bottom: 12px;
+                    min-height: 35px;
+                }
+
+                .cost {
+                    font-size: 14px; // 15px-dən azaldıldı
+                    font-weight: 500;
+                    color: $aesop-dark;
+                    margin-bottom: 20px;
+                }
+            }
+
+            // --- Düymə ---
+            .buy-button {
+                width: 100%;
+                padding: 15px; // 18px-dən azaldıldı
+                background-color: #333333;
+                color: #ffffff;
+                border: none;
+                font-size: 13px; // 14px-dən azaldıldı
+                cursor: pointer;
+                transition: background 0.3s ease;
+
+                &:hover {
+                    background-color: #000000;
+                }
+            }
+        }
+    }
+
+    // --- Progress Bar ---
+    .slider-progress {
+        width: 100%;
+        height: 1px; // 2px-dən 1px-ə endirildi, daha zərif görünür
+        background-color: #e5e5e5;
+        margin-top: 40px;
+        position: relative;
+
+        .progress-bar {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            background-color: #333;
+            transition: left 0.4s ease;
+        }
+    }
+}
+
+
+
+
+// ========== RESPONSIVE ÜSLUBLAR ==========
+
+/* Böyük kompüterlər (1600px və yuxarı) */
+@media (min-width: 1600px) {
+    .new-notable {
+        padding: 100px 0;
+
+        .container {
+            max-width: 1600px;
+            padding: 0 80px;
+        }
+
+        .section-title {
+            margin-bottom: 60px;
+
+            h2 {
+                font-size: 32px;
+            }
+        }
+
+        .slider-wrapper {
+            .arrow {
+                width: 50px;
+                height: 50px;
+
+                &::after {
+                    width: 25px;
+                    height: 25px;
+                }
+
+                &.prev {
+                    left: -45px;
+                }
+
+                &.next {
+                    right: -45px;
+                }
+            }
+        }
+
+        .product-list {
+            gap: 40px;
+
+            .product-card {
+                flex: 0 0 calc(33.33% - 27px);
+
+                .product-visual {
+                    height: 450px;
+                    margin-bottom: 35px;
+
+                    .wish-icon {
+                        font-size: 16px;
+                    }
+                }
+
+                .product-details {
+                    h4 {
+                        font-size: 16px;
+                    }
+
+                    .summary {
+                        font-size: 14px;
+                        min-height: 42px;
+                    }
+
+                    .cost {
+                        font-size: 16px;
+                    }
+                }
+
+                .buy-button {
+                    padding: 18px;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .slider-progress {
+            height: 2px;
+            margin-top: 50px;
+        }
+    }
+}
+
+/* Kiçik kompüterlər (1200px - 1600px) */
+@media (max-width: 1600px) and (min-width: 1200px) {
+    .new-notable {
+        .product-list {
+            gap: 25px;
+
+            .product-card {
+                .product-visual {
+                    height: 350px;
+                }
+            }
+        }
+    }
+}
+
+/* Planşetlər (992px - 1200px) */
+@media (max-width: 1200px) and (min-width: 992px) {
+    .new-notable {
+        padding: 70px 0;
+
+        .container {
+            padding: 0 40px;
+        }
+
+        .section-title {
+            margin-bottom: 45px;
+
+            h2 {
+                font-size: 26px;
+            }
+        }
+
+        .slider-wrapper {
+            .arrow {
+                width: 35px;
+                height: 35px;
+
+                &::after {
+                    width: 18px;
+                    height: 18px;
+                }
+
+                &.prev {
+                    left: -25px;
+                }
+
+                &.next {
+                    right: -25px;
+                }
+            }
+        }
+
+        .product-list {
+            gap: 20px;
+
+            .product-card {
+                flex: 0 0 calc(33.33% - 14px);
+
+                .product-visual {
+                    height: 300px;
+                    margin-bottom: 20px;
+                }
+
+                .product-details {
+                    h4 {
+                        font-size: 13px;
+                    }
+
+                    .summary {
+                        font-size: 12px;
+                        min-height: 32px;
+                    }
+
+                    .cost {
+                        font-size: 13px;
+                    }
+                }
+
+                .buy-button {
+                    padding: 14px;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .slider-progress {
+            margin-top: 35px;
+        }
+    }
+}
+
+/* Kiçik planşetlər (768px - 992px) */
+@media (max-width: 992px) and (min-width: 768px) {
+    .new-notable {
+        padding: 60px 0;
+
+        .container {
+            padding: 0 30px;
+        }
+
+        .section-title {
+            margin-bottom: 40px;
+
+            h2 {
+                font-size: 26px;
+            }
+        }
+
+        .slider-wrapper {
+            .arrow {
+                width: 35px;
+                height: 35px;
+
+                &.prev {
+                    left: -15px;
+                }
+
+                &.next {
+                    right: -15px;
+                }
+            }
+        }
+
+        .product-list {
+            gap: 20px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding-bottom: 20px;
+
+            .product-card {
+                flex: 0 0 calc(50% - 10px); // 3 sütun → 2 sütun
+                scroll-snap-align: start;
+
+                .product-visual {
+                    height: 280px;
+                    margin-bottom: 20px;
+                }
+
+                .product-details {
+                    h4 {
+                        font-size: 13px;
+                    }
+
+                    .summary {
+                        font-size: 12px;
+                        min-height: 32px;
+                    }
+                }
+
+                .buy-button {
+                    padding: 14px;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .slider-progress {
+            margin-top: 30px;
+
+            .progress-bar {
+                width: 50%; // 2 sütun üçün progress bar yenilənməli
+            }
+        }
+    }
+}
+
+/* Böyük telefonlar / phablet (576px - 768px) */
+@media (max-width: 768px) and (min-width: 576px) {
+    .new-notable {
+        padding: 50px 0;
+
+        .container {
+            padding: 0 20px;
+        }
+
+        .section-title {
+            margin-bottom: 35px;
+
+            h2 {
+                font-size: 24px;
+            }
+        }
+
+        .slider-wrapper {
+            .arrow {
+                display: none; // Telefonda oxları gizlət
+            }
+        }
+
+        .product-list {
+            gap: 15px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding-bottom: 15px;
+
+            .product-card {
+                flex: 0 0 calc(50% - 8px); // 2 sütun
+                scroll-snap-align: start;
+
+                .product-visual {
+                    height: 220px;
+                    margin-bottom: 15px;
+
+                    .wish-icon {
+                        font-size: 12px;
+                    }
+
+                    img {
+                        max-width: 85%;
+                        max-height: 85%;
+                    }
+                }
+
+                .product-details {
+                    padding: 0 5px;
+
+                    h4 {
+                        font-size: 12px;
+                        margin-bottom: 8px;
+                    }
+
+                    .summary {
+                        font-size: 11px;
+                        min-height: 30px;
+                        margin-bottom: 8px;
+                    }
+
+                    .cost {
+                        font-size: 12px;
+                        margin-bottom: 15px;
+                    }
+                }
+
+                .buy-button {
+                    padding: 12px;
+                    font-size: 11px;
+                }
+            }
+        }
+
+        .slider-progress {
+            margin-top: 25px;
+
+            .progress-bar {
+                width: 50%;
+            }
+        }
+    }
+}
+
+/* Telefonlar (480px - 576px) */
+@media (max-width: 576px) and (min-width: 480px) {
+    .new-notable {
+        padding: 40px 0;
+
+        .container {
+            padding: 0 15px;
+        }
+
+        .section-title {
+            margin-bottom: 30px;
+
+            h2 {
+                font-size: 22px;
+            }
+        }
+
+        .slider-wrapper {
+            .arrow {
+                display: none;
+            }
+        }
+
+        .product-list {
+            gap: 15px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+
+            .product-card {
+                flex: 0 0 calc(70% - 8px); // 1.5 məhsul görünür, swipe effekti üçün
+                scroll-snap-align: start;
+
+                .product-visual {
+                    height: 240px;
+                    margin-bottom: 15px;
+
+                    .wish-icon {
+                        font-size: 12px;
+                    }
+                }
+
+                .product-details {
+                    h4 {
+                        font-size: 13px;
+                    }
+
+                    .summary {
+                        font-size: 12px;
+                    }
+
+                    .cost {
+                        font-size: 13px;
+                    }
+                }
+
+                .buy-button {
+                    padding: 12px;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .slider-progress {
+            margin-top: 25px;
+
+            .progress-bar {
+                width: 33.33%; // Geri qayıdır
+            }
+        }
+    }
+}
+
+/* Kiçik telefonlar (400px - 480px) */
+@media (max-width: 480px) and (min-width: 400px) {
+    .new-notable {
+        padding: 35px 0;
+
+        .container {
+            padding: 0 12px;
+        }
+
+        .section-title {
+            margin-bottom: 25px;
+
+            h2 {
+                font-size: 20px;
+            }
+        }
+
+        .product-list {
+            gap: 12px;
+
+            .product-card {
+                flex: 0 0 calc(80% - 6px); // Daha dar, swipe üçün
+
+                .product-visual {
+                    height: 220px;
+                }
+
+                .product-details {
+                    h4 {
+                        font-size: 12px;
+                    }
+
+                    .summary {
+                        font-size: 11px;
+                        min-height: 28px;
+                    }
+                }
+
+                .buy-button {
+                    padding: 10px;
+                    font-size: 11px;
+                }
+            }
+        }
+
+        .slider-progress {
+            margin-top: 20px;
+        }
+    }
+}
+
+/* Çox kiçik telefonlar (400px-dən aşağı) */
+@media (max-width: 400px) {
+    .new-notable {
+        padding: 30px 0;
+
+        .container {
+            padding: 0 10px;
+        }
+
+        .section-title {
+            margin-bottom: 20px;
+
+            h2 {
+                font-size: 18px;
+            }
+        }
+
+        .product-list {
+            gap: 10px;
+
+            .product-card {
+                flex: 0 0 calc(85% - 5px);
+
+                .product-visual {
+                    height: 180px;
+                    margin-bottom: 12px;
+
+                    .wish-icon {
+                        font-size: 11px;
+                    }
+                }
+
+                .product-details {
+                    h4 {
+                        font-size: 11px;
+                        margin-bottom: 6px;
+                    }
+
+                    .summary {
+                        font-size: 10px;
+                        min-height: 26px;
+                        margin-bottom: 8px;
+                    }
+
+                    .cost {
+                        font-size: 11px;
+                        margin-bottom: 12px;
+                    }
+                }
+
+                .buy-button {
+                    padding: 10px;
+                    font-size: 10px;
+                }
+            }
+        }
+
+        .slider-progress {
+            margin-top: 18px;
+            height: 1px;
+        }
+    }
+}
+
+/* Hover effektlərinin idarəsi */
+@media (hover: hover) {
+    .new-notable {
+        .arrow:hover {
+            opacity: 1;
+        }
+
+        .product-visual:hover {
+            &:has(.img-reveal) {
+                .img-base {
+                    opacity: 0;
+                }
+
+                .img-reveal {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .buy-button:hover {
+            background-color: #000000;
+        }
+    }
+}
+
+@media (hover: none) {
+    .new-notable {
+        .arrow:active {
+            opacity: 1;
+        }
+
+        .product-visual:active {
+            .img-base {
+                opacity: 0;
+            }
+
+            .img-reveal {
+                opacity: 1;
+            }
+        }
+
+        .buy-button:active {
+            background-color: #000000;
+        }
+    }
+}
+
+/* Landscape rejimi - telefonlar */
+@media (max-width: 900px) and (orientation: landscape) {
+    .new-notable {
+        .product-list {
+            .product-card {
+                flex: 0 0 calc(33.33% - 15px); // Landscape-də 3 sütun
+
+                .product-visual {
+                    height: 160px;
+                }
+            }
+        }
+
+        .slider-progress {
+            .progress-bar {
+                width: 33.33%;
+            }
+        }
+    }
+}

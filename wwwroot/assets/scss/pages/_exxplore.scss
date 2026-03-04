@@ -1,0 +1,477 @@
+.promo-section {
+    background-color: #fffef2;
+    padding: 0; // solda boşluq olmasın
+
+    .promo-container {
+        display: grid;
+        grid-template-columns: 65% 35%;
+        align-items: center;
+    }
+
+    .promo-image-wrapper {
+        height: 650px; // vizual olaraq böyük et
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    .promo-content {
+        padding: 0 8%;
+
+        .text-group {
+            margin-bottom: 40px;
+
+            .subtitle {
+                font-size: 14px;
+                color: #6f6a63;
+                margin-bottom: 20px;
+            }
+
+            .title {
+                font-size: 44px;
+                font-weight: 400;
+                line-height: 1.2;
+                color: #2e2a26;
+                margin-bottom: 25px;
+            }
+
+            .description {
+                font-size: 16px;
+                line-height: 1.7;
+                color: #5a5651;
+                max-width: 420px;
+            }
+        }
+
+        .promo-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;
+            padding: 18px 30px;
+            border: 1px solid #cfc9bf;
+            text-decoration: none;
+            color: #2e2a26;
+            transition: all 0.3s ease;
+
+            .arrow-icon {
+                transition: transform 0.3s ease;
+            }
+
+            &:hover {
+                background-color: #e7e1d6;
+
+                .arrow-icon {
+                    transform: translateX(6px);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+.promo-section {
+    background-color: #fffef2;
+    padding: 0;
+
+    .promo-container {
+        display: grid;
+        grid-template-columns: 65% 35%;
+        align-items: center;
+
+        // =========================================
+        // RESPONSIVE: grid düzülüşü
+        // =========================================
+        @media (max-width: 1400px) {
+            grid-template-columns: 60% 40%; // Şəkil azalır, məzmun artır
+        }
+
+        @media (max-width: 1200px) {
+            grid-template-columns: 55% 45%;
+        }
+
+        @media (max-width: 992px) {
+            grid-template-columns: 1fr; // Tək sütun
+            grid-template-rows: auto auto; // Əvvəl şəkil, sonra məzmun
+        }
+    }
+
+    .promo-image-wrapper {
+        height: 650px;
+        overflow: hidden;
+
+        // =========================================
+        // RESPONSIVE: image height
+        // =========================================
+        @media (max-width: 1600px) {
+            height: 600px;
+        }
+
+        @media (max-width: 1400px) {
+            height: 550px;
+        }
+
+        @media (max-width: 1200px) {
+            height: 500px;
+        }
+
+        @media (max-width: 992px) {
+            height: 450px; // Planşetdə kiçildi
+        }
+
+        @media (max-width: 768px) {
+            height: 400px;
+        }
+
+        @media (max-width: 576px) {
+            height: 350px;
+        }
+
+        @media (max-width: 400px) {
+            height: 300px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+
+            // Opsiyonel: mobilde yumşaq zoom effekti
+            transition: transform 0.5s ease;
+
+            &:hover {
+                @media (min-width: 993px) {
+                    transform: scale(1.02);
+                }
+            }
+        }
+    }
+
+    .promo-content {
+        padding: 0 8%;
+
+        // =========================================
+        // RESPONSIVE: content padding
+        // =========================================
+        @media (max-width: 1600px) {
+            padding: 0 7%;
+        }
+
+        @media (max-width: 1400px) {
+            padding: 0 6%;
+        }
+
+        @media (max-width: 1200px) {
+            padding: 0 5%;
+        }
+
+        @media (max-width: 992px) {
+            padding: 60px 8%; // Planşetdə yuxarı və aşağı padding
+        }
+
+        @media (max-width: 768px) {
+            padding: 50px 6%;
+        }
+
+        @media (max-width: 576px) {
+            padding: 40px 5%;
+        }
+
+        @media (max-width: 400px) {
+            padding: 35px 4%;
+        }
+
+        .text-group {
+            margin-bottom: 40px;
+
+            // =========================================
+            // RESPONSIVE: text-group margin
+            // =========================================
+            @media (max-width: 1600px) {
+                margin-bottom: 38px;
+            }
+
+            @media (max-width: 1400px) {
+                margin-bottom: 35px;
+            }
+
+            @media (max-width: 1200px) {
+                margin-bottom: 32px;
+            }
+
+            @media (max-width: 992px) {
+                margin-bottom: 35px;
+                text-align: center; // Planşetdə mətn mərkəzə
+            }
+
+            @media (max-width: 768px) {
+                margin-bottom: 30px;
+            }
+
+            @media (max-width: 576px) {
+                margin-bottom: 28px;
+            }
+
+            .subtitle {
+                font-size: 14px;
+                color: #6f6a63;
+                margin-bottom: 20px;
+
+                // =========================================
+                // RESPONSIVE: subtitle
+                // =========================================
+                @media (max-width: 1400px) {
+                    font-size: 13.5px;
+                    margin-bottom: 18px;
+                }
+
+                @media (max-width: 1200px) {
+                    font-size: 13px;
+                    margin-bottom: 16px;
+                }
+
+                @media (max-width: 992px) {
+                    font-size: 13px;
+                    margin-bottom: 15px;
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 12.5px;
+                    margin-bottom: 14px;
+                }
+
+                @media (max-width: 576px) {
+                    font-size: 12px;
+                    margin-bottom: 12px;
+                }
+            }
+
+            .title {
+                font-size: 44px;
+                font-weight: 400;
+                line-height: 1.2;
+                color: #2e2a26;
+                margin-bottom: 25px;
+
+                // =========================================
+                // RESPONSIVE: title
+                // =========================================
+                @media (max-width: 1600px) {
+                    font-size: 42px;
+                }
+
+                @media (max-width: 1400px) {
+                    font-size: 38px;
+                    margin-bottom: 22px;
+                }
+
+                @media (max-width: 1200px) {
+                    font-size: 34px;
+                    margin-bottom: 20px;
+                }
+
+                @media (max-width: 992px) {
+                    font-size: 36px; // Planşetdə bir az böyük
+                    margin-bottom: 20px;
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 32px;
+                    margin-bottom: 18px;
+                    line-height: 1.25;
+                }
+
+                @media (max-width: 576px) {
+                    font-size: 28px;
+                    margin-bottom: 16px;
+                }
+
+                @media (max-width: 400px) {
+                    font-size: 24px;
+                    margin-bottom: 14px;
+                }
+            }
+
+            .description {
+                font-size: 16px;
+                line-height: 1.7;
+                color: #5a5651;
+                max-width: 420px;
+
+                // =========================================
+                // RESPONSIVE: description
+                // =========================================
+                @media (max-width: 1600px) {
+                    font-size: 15.5px;
+                    max-width: 400px;
+                }
+
+                @media (max-width: 1400px) {
+                    font-size: 15px;
+                    max-width: 380px;
+                }
+
+                @media (max-width: 1200px) {
+                    font-size: 14.5px;
+                    max-width: 350px;
+                }
+
+                @media (max-width: 992px) {
+                    font-size: 15px;
+                    max-width: 500px; // Planşetdə daha geniş
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 14px;
+                    max-width: 100%;
+                    line-height: 1.6;
+                }
+
+                @media (max-width: 576px) {
+                    font-size: 13.5px;
+                }
+
+                @media (max-width: 400px) {
+                    font-size: 13px;
+                }
+            }
+        }
+
+        .promo-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;
+            padding: 18px 30px;
+            border: 1px solid #cfc9bf;
+            text-decoration: none;
+            color: #2e2a26;
+            transition: all 0.3s ease;
+
+            // =========================================
+            // RESPONSIVE: button
+            // =========================================
+            @media (max-width: 1600px) {
+                padding: 17px 28px;
+                gap: 18px;
+            }
+
+            @media (max-width: 1400px) {
+                padding: 16px 26px;
+                gap: 16px;
+            }
+
+            @media (max-width: 1200px) {
+                padding: 15px 24px;
+                gap: 14px;
+                font-size: 14px;
+            }
+
+            @media (max-width: 992px) {
+                padding: 18px 32px; // Planşetdə bir az böyük
+                gap: 20px;
+                font-size: 14px;
+                margin: 0 auto; // Mərkəzə düz
+            }
+
+            @media (max-width: 768px) {
+                width: 100%; // Mobilde tam en
+                max-width: 400px;
+                justify-content: space-between;
+                padding: 16px 25px;
+            }
+
+            @media (max-width: 576px) {
+                max-width: 100%;
+                padding: 15px 22px;
+                font-size: 13px;
+                gap: 12px;
+            }
+
+            @media (max-width: 400px) {
+                padding: 14px 20px;
+                font-size: 12px;
+                gap: 10px;
+            }
+
+            .arrow-icon {
+                transition: transform 0.3s ease;
+
+                // =========================================
+                // RESPONSIVE: arrow
+                // =========================================
+                @media (max-width: 1200px) {
+                    font-size: 14px;
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 16px; // Mobilde böyük
+                }
+
+                @media (max-width: 576px) {
+                    font-size: 14px;
+                }
+            }
+
+            &:hover {
+                background-color: #e7e1d6;
+
+                .arrow-icon {
+                    transform: translateX(6px);
+
+                    @media (max-width: 768px) {
+                        transform: translateX(4px); // Mobilde az hərəkət
+                    }
+                }
+
+                @media (max-width: 992px) {
+                    background-color: rgba(231, 225, 214, 0.8);
+                }
+            }
+
+            // Touch active state
+            &:active {
+                @media (max-width: 768px) {
+                    background-color: #e7e1d6;
+                    transform: scale(0.98);
+
+                    .arrow-icon {
+                        transform: translateX(4px);
+                    }
+                }
+            }
+        }
+    }
+
+    // Opsiyonel: Şəkil və məzmun arasında vizual əlaqə üçün
+    @media (max-width: 992px) {
+        .promo-container {
+
+            // Şəklin altına incə xətt (opsiyonel)
+            .promo-image-wrapper {
+                border-bottom: 1px solid rgba(207, 201, 191, 0.3);
+            }
+        }
+    }
+}
+
+// Retina display üçün şəkil keyfiyyəti
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .promo-image-wrapper {
+        img {
+            // Retina üçün daha kəskin görüntü
+            image-rendering: -webkit-optimize-contrast;
+        }
+    }
+}

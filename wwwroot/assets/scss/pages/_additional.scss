@@ -1,0 +1,241 @@
+.assistance-section {
+    background-color: #fffef2;
+    padding: 100px 0;
+
+    .assistance-container {
+        display: flex;
+        align-items: center;
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+
+    .info-content {
+        flex: 1;
+        padding-right: 10%; // Mətn və şəkil arasında vizual balans
+
+        .title {
+            font-family: serif;
+            font-size: 30px;
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
+
+        .description {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            color: #666;
+        }
+
+        .consult-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 25px;
+            border: 1px solid #d6d5ca;
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            min-width: 280px;
+            transition: 0.3s ease;
+
+            &:hover {
+                background-color: #333;
+                color: #fff;
+            }
+        }
+    }
+
+    .image-box {
+        flex: 1;
+
+        .consultant-img {
+            width: 100%;
+            height: auto; // Şəklin orijinal nisbətini qoruyur
+            max-height: 550px;
+            object-fit: cover; // Şəkli sahəyə tam oturdur və əzmir
+            display: block;
+        }
+    }
+}
+
+
+
+.assistance-section {
+    background-color: #fffef2;
+    padding: 100px 0;
+
+    .assistance-container {
+        display: flex;
+        align-items: center;
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 0 40px;
+
+        // =========================================
+        // RESPONSIVE: assistance-container
+        // =========================================
+        @media (max-width: 1200px) {
+            max-width: 960px;
+        }
+
+        @media (max-width: 992px) {
+            flex-direction: column;
+            max-width: 720px;
+            padding: 0 30px;
+        }
+
+        @media (max-width: 768px) {
+            max-width: 540px;
+            padding: 0 20px;
+        }
+
+        @media (max-width: 576px) {
+            padding: 0 15px;
+        }
+    }
+
+    .info-content {
+        flex: 1;
+        padding-right: 10%; // Mətn və şəkil arasında vizual balans
+
+        .title {
+            font-family: serif;
+            font-size: 30px;
+            margin-bottom: 25px;
+            font-weight: 400;
+
+            // =========================================
+            // RESPONSIVE: title
+            // =========================================
+            @media (max-width: 992px) {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 24px;
+                margin-bottom: 18px;
+            }
+
+            @media (max-width: 576px) {
+                font-size: 22px;
+                margin-bottom: 15px;
+            }
+        }
+
+        .description {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            color: #666;
+
+            // =========================================
+            // RESPONSIVE: description
+            // =========================================
+            @media (max-width: 992px) {
+                font-size: 15px;
+                margin-bottom: 35px;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 15px;
+                margin-bottom: 30px;
+                line-height: 1.5;
+            }
+
+            @media (max-width: 576px) {
+                font-size: 14px;
+                margin-bottom: 25px;
+            }
+        }
+
+        .consult-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 25px;
+            border: 1px solid #d6d5ca;
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            min-width: 280px;
+            transition: 0.3s ease;
+
+            &:hover {
+                background-color: #333;
+                color: #fff;
+            }
+
+            // =========================================
+            // RESPONSIVE: consult-btn
+            // =========================================
+            @media (max-width: 992px) {
+                min-width: 250px;
+                padding: 16px 22px;
+            }
+
+            @media (max-width: 768px) {
+                min-width: 100%;
+                padding: 15px 20px;
+                font-size: 14px;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            @media (max-width: 576px) {
+                padding: 14px 18px;
+                font-size: 13px;
+            }
+        }
+
+        // =========================================
+        // RESPONSIVE: info-content
+        // =========================================
+        @media (max-width: 992px) {
+            padding-right: 0;
+            margin-bottom: 40px;
+            text-align: center; // Mobil/planşetdə mətn mərkəzə
+        }
+
+        @media (max-width: 768px) {
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 576px) {
+            margin-bottom: 25px;
+        }
+    }
+
+    .image-box {
+        flex: 1;
+
+        .consultant-img {
+            width: 100%;
+            height: auto;
+            max-height: 550px;
+            object-fit: cover;
+            display: block;
+
+            // =========================================
+            // RESPONSIVE: consultant-img
+            // =========================================
+            @media (max-width: 1200px) {
+                max-height: 500px;
+            }
+
+            @media (max-width: 992px) {
+                max-height: 450px;
+            }
+
+            @media (max-width: 768px) {
+                max-height: 400px;
+            }
+
+            @media (max-width: 576px) {
+                max-height: 350px;
+            }
+        }
+    }
+}

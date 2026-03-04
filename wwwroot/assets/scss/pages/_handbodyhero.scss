@@ -1,0 +1,341 @@
+.category-banner {
+    width: 100%;
+    min-height: 85vh;
+    display: flex;
+    justify-content: center; // Üfüqi mərkəzləmə (Sağ-Sol)
+    align-items: center; // Şaquli mərkəzləmə (Yuxarı-Aşağı)
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://www.aesop.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-aesop-us-Library/default/dw6bab5229/Aesop_Category_Page_Hand_Body_Care_Primary_Mobile_1088x1088px.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        // Blur və Tündlük
+        filter: blur(5px) brightness(0.65);
+        transform: scale(1.1); // Kənarlardakı sönüklüyü itirmək üçün
+        z-index: 1;
+    }
+
+    .banner-container {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .banner-content {
+        max-width: 550px; // Yazının blok halında daha "orta" görünməsi üçün ölçü
+        color: #ffffff;
+        text-align: center; // Mətnin öz daxilində mərkəzlənməsi
+        padding: 20px;
+
+        .banner-title {
+            font-size: 46px; // Bir az da böyüdüldü ki, mərkəzdə dolğun dursun
+            font-weight: 400;
+            margin-bottom: 25px;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 1px;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .banner-description {
+            font-size: 18px;
+            line-height: 1.8;
+            font-weight: 300;
+            font-family: 'Inter', sans-serif;
+            opacity: 0.95;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+        }
+    }
+}
+
+
+
+
+.category-banner {
+    width: 100%;
+    min-height: 85vh;
+    display: flex;
+    justify-content: center; // Üfüqi mərkəzləmə (Sağ-Sol)
+    align-items: center; // Şaquli mərkəzləmə (Yuxarı-Aşağı)
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://www.aesop.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-aesop-us-Library/default/dw6bab5229/Aesop_Category_Page_Hand_Body_Care_Primary_Mobile_1088x1088px.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        // Blur və Tündlük
+        filter: blur(5px) brightness(0.65);
+        transform: scale(1.1); // Kənarlardakı sönüklüyü itirmək üçün
+        z-index: 1;
+    }
+
+    .banner-container {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .banner-content {
+        max-width: 550px; // Yazının blok halında daha "orta" görünməsi üçün ölçü
+        color: #ffffff;
+        text-align: center; // Mətnin öz daxilində mərkəzlənməsi
+        padding: 20px;
+
+        .banner-title {
+            font-size: 46px; // Bir az da böyüdüldü ki, mərkəzdə dolğun dursun
+            font-weight: 400;
+            margin-bottom: 25px;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 1px;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .banner-description {
+            font-size: 18px;
+            line-height: 1.8;
+            font-weight: 300;
+            font-family: 'Inter', sans-serif;
+            opacity: 0.95;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    // ========== RESPONSIVE ÜSLUBLAR ==========
+
+    /* Tabletlər üçün (992px-ə qədər) */
+    @media (max-width: 992px) {
+        min-height: 70vh; // Hündürlüyü azaldırıq
+
+        &::before {
+            filter: blur(4px) brightness(0.65); // Blur miqdarını azaldırıq
+            transform: scale(1.08);
+        }
+
+        .banner-content {
+            max-width: 500px;
+
+            .banner-title {
+                font-size: 40px; // 46px → 40px
+                margin-bottom: 20px;
+            }
+
+            .banner-description {
+                font-size: 17px; // 18px → 17px
+                line-height: 1.7;
+            }
+        }
+    }
+
+    /* Kiçik tabletlər və böyük mobillər üçün (768px-ə qədər) */
+    @media (max-width: 768px) {
+        min-height: 65vh;
+
+        &::before {
+            filter: blur(3px) brightness(0.65);
+            transform: scale(1.06);
+        }
+
+        .banner-content {
+            max-width: 450px;
+            padding: 20px 15px;
+
+            .banner-title {
+                font-size: 36px; // 40px → 36px
+                margin-bottom: 18px;
+                letter-spacing: 0.8px;
+                text-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+            }
+
+            .banner-description {
+                font-size: 16px; // 17px → 16px
+                line-height: 1.6;
+            }
+        }
+    }
+
+    /* Mobil cihazlar üçün (576px-ə qədər) */
+    @media (max-width: 576px) {
+        min-height: 60vh;
+
+        &::before {
+            filter: blur(2px) brightness(0.65);
+            transform: scale(1.04);
+        }
+
+        .banner-content {
+            max-width: 400px;
+            padding: 20px 15px;
+
+            .banner-title {
+                font-size: 32px; // 36px → 32px
+                margin-bottom: 16px;
+                letter-spacing: 0.7px;
+            }
+
+            .banner-description {
+                font-size: 15px; // 16px → 15px
+                line-height: 1.6;
+                max-width: 90%;
+                margin: 0 auto; // Mətni mərkəzləşdirir
+            }
+        }
+    }
+
+    /* Kiçik mobil cihazlar üçün (480px-ə qədər) */
+    @media (max-width: 480px) {
+        min-height: 55vh;
+
+        &::before {
+            filter: blur(1.5px) brightness(0.65);
+        }
+
+        .banner-content {
+            padding: 20px 12px;
+
+            .banner-title {
+                font-size: 28px; // 32px → 28px
+                margin-bottom: 14px;
+                letter-spacing: 0.6px;
+                text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+            }
+
+            .banner-description {
+                font-size: 14px; // 15px → 14px
+                line-height: 1.5;
+                max-width: 95%;
+            }
+        }
+    }
+
+    /* Çox kiçik mobil cihazlar üçün (400px-ə qədər) */
+    @media (max-width: 400px) {
+        min-height: 50vh;
+
+        &::before {
+            filter: blur(1px) brightness(0.65); // Minimum blur
+            transform: scale(1.02);
+        }
+
+        .banner-content {
+            padding: 20px 10px;
+
+            .banner-title {
+                font-size: 24px; // 28px → 24px
+                margin-bottom: 12px;
+                letter-spacing: 0.5px;
+            }
+
+            .banner-description {
+                font-size: 13px; // 14px → 13px
+                line-height: 1.5;
+            }
+        }
+    }
+
+    /* Hündür ekranlar üçün (çox uzun telefonlar) */
+    @media (min-height: 800px) and (max-width: 576px) {
+        min-height: 45vh; // Uzun ekranlarda hündürlüyü azaldırıq
+    }
+
+    /* Böyük ekranlar üçün (4K, 5K) */
+    @media (min-width: 1600px) {
+        min-height: 70vh; // Böyük ekranlarda nisbətən az hündürlük
+
+        .banner-content {
+            max-width: 700px;
+
+            .banner-title {
+                font-size: 58px; // 46px → 58px
+                margin-bottom: 30px;
+                letter-spacing: 1.5px;
+            }
+
+            .banner-description {
+                font-size: 22px; // 18px → 22px
+                line-height: 2;
+            }
+        }
+    }
+
+    /* Çox böyük ekranlar üçün */
+    @media (min-width: 2000px) {
+        .banner-content {
+            max-width: 850px;
+
+            .banner-title {
+                font-size: 68px;
+                margin-bottom: 35px;
+            }
+
+            .banner-description {
+                font-size: 26px;
+                line-height: 2.1;
+            }
+        }
+    }
+
+    /* Üfüqi (landscape) rejimində mobil cihazlar üçün */
+    @media (max-width: 900px) and (orientation: landscape) {
+        min-height: 100vh; // Landscape-də tam ekran
+
+        .banner-content {
+            .banner-title {
+                font-size: 30px; // Daha kiçik başlıq
+                margin-bottom: 10px;
+            }
+
+            .banner-description {
+                font-size: 16px;
+                max-width: 80%;
+                margin: 0 auto; // Mətni mərkəzləşdirir
+            }
+        }
+    }
+
+    /* Landscape + kiçik mobil */
+    @media (max-width: 700px) and (orientation: landscape) {
+        .banner-content {
+            .banner-title {
+                font-size: 26px;
+            }
+
+            .banner-description {
+                font-size: 14px;
+                max-width: 70%;
+            }
+        }
+    }
+
+    /* Toxunma cihazlar üçün əlavə düzəliş */
+    @media (hover: none) and (pointer: coarse) {
+        .banner-content {
+
+            // Toxunma cihazlarda toxunma sahəsini yaxşılaşdırırıq
+            .banner-title {
+                text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+}

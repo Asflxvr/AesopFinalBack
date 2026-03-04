@@ -1,0 +1,916 @@
+$bg-color: #fffef2;
+$text-color: #333;
+$btn-black: #252525;
+$btn-hover: #000;
+$font-sans: 'Inter', sans-serif;
+$font-serif: 'Playfair Display', serif;
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    padding: 80px 40px;
+    background-color: $bg-color;
+
+    .product-card {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+                transition: opacity 0.4s ease-in-out;
+            }
+
+            .secondary-img {
+                position: absolute;
+                opacity: 0;
+            }
+
+            &:hover {
+                .primary-img {
+                    opacity: 0;
+                }
+
+                .secondary-img {
+                    opacity: 1;
+                }
+            }
+
+            .bookmark-btn {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: none;
+                border: none;
+                font-size: 18px;
+                color: $text-color;
+                cursor: pointer;
+                padding: 5px;
+            }
+        }
+
+        .product-info {
+            text-align: center;
+            flex-grow: 1;
+
+            .tag {
+                font-size: 11px;
+                color: #888;
+                display: block;
+                margin-bottom: 12px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            h3 {
+                font-family: $font-serif;
+                font-size: 18px;
+                font-weight: 400;
+                color: $text-color;
+                margin-bottom: 8px;
+            }
+
+            .ingredients {
+                font-size: 14px;
+                color: #666;
+                margin-bottom: 18px;
+            }
+
+            .meta {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                font-size: 13px;
+                color: #7a7a7a;
+                margin-bottom: 15px;
+
+                .divider {
+                    width: 1px;
+                    height: 12px;
+                    background-color: rgba(0, 0, 0, 0.1);
+                }
+            }
+
+            .size-dropdown-custom {
+                position: relative;
+                width: 100%;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                margin: 20px 0;
+
+                .dropdown-header {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 12px 15px;
+                    cursor: pointer;
+
+                    label {
+                        font-size: 13px;
+                        color: #666;
+                        cursor: pointer;
+                    }
+
+                    .selected-value {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        font-size: 14px;
+
+                        .arrow-icon {
+                            font-size: 10px;
+                            transition: 0.3s;
+                        }
+                    }
+                }
+
+                .dropdown-list {
+                    position: absolute;
+                    top: 100%;
+                    left: -1px;
+                    right: -1px;
+                    background: $bg-color;
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+                    border-top: none;
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    opacity: 0;
+                    visibility: hidden;
+                    z-index: 10;
+
+                    li {
+                        padding: 10px 15px;
+                        font-size: 14px;
+                        text-align: right;
+
+                        &:hover {
+                            background: #f0eee0;
+                        }
+                    }
+                }
+
+                &.active {
+                    .dropdown-list {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+
+                    .arrow-icon {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+
+            .price {
+                font-size: 15px;
+                font-weight: 500;
+                color: $text-color;
+                margin-top: 10px;
+            }
+        }
+
+        .add-to-cart {
+            width: 100%;
+            margin-top: 25px;
+            padding: 18px;
+            background-color: $btn-black;
+            color: #fff;
+            border: none;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s ease;
+
+            &:hover {
+                background-color: $btn-hover;
+            }
+        }
+    }
+
+}
+
+
+
+
+
+$bg-color: #fffef2;
+$text-color: #333;
+$btn-black: #252525;
+$btn-hover: #000;
+$font-sans: 'Inter', sans-serif;
+$font-serif: 'Playfair Display', serif;
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    padding: 80px 40px;
+    background-color: $bg-color;
+
+    .product-card {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+                transition: opacity 0.4s ease-in-out;
+            }
+
+            .secondary-img {
+                position: absolute;
+                opacity: 0;
+            }
+
+            &:hover {
+                .primary-img {
+                    opacity: 0;
+                }
+
+                .secondary-img {
+                    opacity: 1;
+                }
+            }
+
+            .bookmark-btn {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: none;
+                border: none;
+                font-size: 18px;
+                color: $text-color;
+                cursor: pointer;
+                padding: 5px;
+            }
+        }
+
+        .product-info {
+            text-align: center;
+            flex-grow: 1;
+
+            .tag {
+                font-size: 11px;
+                color: #888;
+                display: block;
+                margin-bottom: 12px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            h3 {
+                font-family: $font-serif;
+                font-size: 18px;
+                font-weight: 400;
+                color: $text-color;
+                margin-bottom: 8px;
+            }
+
+            .ingredients {
+                font-size: 14px;
+                color: #666;
+                margin-bottom: 18px;
+            }
+
+            .meta {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                font-size: 13px;
+                color: #7a7a7a;
+                margin-bottom: 15px;
+
+                .divider {
+                    width: 1px;
+                    height: 12px;
+                    background-color: rgba(0, 0, 0, 0.1);
+                }
+            }
+
+            .size-dropdown-custom {
+                position: relative;
+                width: 100%;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                margin: 20px 0;
+
+                .dropdown-header {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 12px 15px;
+                    cursor: pointer;
+
+                    label {
+                        font-size: 13px;
+                        color: #666;
+                        cursor: pointer;
+                    }
+
+                    .selected-value {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        font-size: 14px;
+
+                        .arrow-icon {
+                            font-size: 10px;
+                            transition: 0.3s;
+                        }
+                    }
+                }
+
+                .dropdown-list {
+                    position: absolute;
+                    top: 100%;
+                    left: -1px;
+                    right: -1px;
+                    background: $bg-color;
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+                    border-top: none;
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    opacity: 0;
+                    visibility: hidden;
+                    z-index: 10;
+
+                    li {
+                        padding: 10px 15px;
+                        font-size: 14px;
+                        text-align: right;
+
+                        &:hover {
+                            background: #f0eee0;
+                        }
+                    }
+                }
+
+                &.active {
+                    .dropdown-list {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+
+                    .arrow-icon {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+
+            .price {
+                font-size: 15px;
+                font-weight: 500;
+                color: $text-color;
+                margin-top: 10px;
+            }
+        }
+
+        .add-to-cart {
+            width: 100%;
+            margin-top: 25px;
+            padding: 18px;
+            background-color: $btn-black;
+            color: #fff;
+            border: none;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s ease;
+
+            &:hover {
+                background-color: $btn-hover;
+            }
+        }
+    }
+
+    // ========== RESPONSIVE ÜSLUBLAR ==========
+
+    /* Böyük kompüterlər / 4K ekranlar (1600px və yuxarı) */
+    @media (min-width: 1600px) {
+        grid-template-columns: repeat(4, 1fr); // 3 sütun → 4 sütun
+        gap: 45px;
+        padding: 100px 60px;
+
+        .product-card {
+            .image-container {
+                height: 500px;
+                margin-bottom: 30px;
+            }
+
+            .product-info {
+                h3 {
+                    font-size: 20px;
+                }
+
+                .ingredients {
+                    font-size: 15px;
+                }
+
+                .price {
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+
+    /* Orta ölçülü kompüterlər (1400px - 1600px) */
+    @media (max-width: 1600px) and (min-width: 1400px) {
+        gap: 40px;
+        padding: 80px 50px;
+
+        .product-card {
+            .image-container {
+                height: 480px;
+            }
+        }
+    }
+
+    /* Kiçik kompüterlər / böyük planşetlər (1200px - 1400px) */
+    @media (max-width: 1400px) and (min-width: 1200px) {
+        gap: 30px;
+        padding: 70px 35px;
+
+        .product-card {
+            .image-container {
+                height: 420px;
+                margin-bottom: 20px;
+            }
+
+            .product-info {
+                h3 {
+                    font-size: 17px;
+                }
+
+                .ingredients {
+                    font-size: 13px;
+                }
+
+                .meta {
+                    font-size: 12px;
+                }
+
+                .size-dropdown-custom {
+                    .dropdown-header {
+                        padding: 10px 12px;
+
+                        label {
+                            font-size: 12px;
+                        }
+
+                        .selected-value {
+                            font-size: 13px;
+                        }
+                    }
+
+                    .dropdown-list li {
+                        padding: 8px 12px;
+                        font-size: 13px;
+                    }
+                }
+
+                .price {
+                    font-size: 14px;
+                }
+            }
+
+            .add-to-cart {
+                padding: 16px;
+                font-size: 13px;
+            }
+        }
+    }
+
+    /* Planşetlər (992px - 1200px) */
+    @media (max-width: 1200px) and (min-width: 992px) {
+        grid-template-columns: repeat(2, 1fr); // 3 sütun → 2 sütun
+        gap: 35px;
+        padding: 60px 30px;
+
+        .product-card {
+            .image-container {
+                height: 400px;
+            }
+
+            .product-info {
+                h3 {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    /* Kiçik planşetlər (768px - 992px) */
+    @media (max-width: 992px) and (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr); // 2 sütun davam edir
+        gap: 30px;
+        padding: 50px 25px;
+
+        .product-card {
+            .image-container {
+                height: 350px;
+                margin-bottom: 20px;
+            }
+
+            .product-info {
+                h3 {
+                    font-size: 17px;
+                }
+
+                .ingredients {
+                    font-size: 13px;
+                    margin-bottom: 15px;
+                }
+
+                .meta {
+                    font-size: 12px;
+                    gap: 8px;
+                }
+
+                .size-dropdown-custom {
+                    margin: 15px 0;
+
+                    .dropdown-header {
+                        padding: 10px 12px;
+
+                        label {
+                            font-size: 12px;
+                        }
+
+                        .selected-value {
+                            font-size: 13px;
+                        }
+                    }
+                }
+
+                .price {
+                    font-size: 14px;
+                    margin-top: 8px;
+                }
+            }
+
+            .add-to-cart {
+                margin-top: 20px;
+                padding: 15px;
+                font-size: 13px;
+            }
+        }
+    }
+
+    /* Böyük telefonlar / phablet (576px - 768px) */
+    @media (max-width: 768px) and (min-width: 576px) {
+        grid-template-columns: repeat(2, 1fr); // 2 sütun davam edir
+        gap: 20px;
+        padding: 40px 20px;
+
+        .product-card {
+            .image-container {
+                height: 280px;
+                margin-bottom: 15px;
+
+                .bookmark-btn {
+                    font-size: 16px;
+                    padding: 4px;
+                }
+            }
+
+            .product-info {
+                .tag {
+                    font-size: 10px;
+                    margin-bottom: 8px;
+                }
+
+                h3 {
+                    font-size: 16px;
+                    margin-bottom: 6px;
+                }
+
+                .ingredients {
+                    font-size: 12px;
+                    margin-bottom: 12px;
+                }
+
+                .meta {
+                    font-size: 11px;
+                    gap: 6px;
+                    margin-bottom: 12px;
+
+                    .divider {
+                        height: 10px;
+                    }
+                }
+
+                .size-dropdown-custom {
+                    margin: 12px 0;
+
+                    .dropdown-header {
+                        padding: 8px 10px;
+
+                        label {
+                            font-size: 11px;
+                        }
+
+                        .selected-value {
+                            font-size: 12px;
+                            gap: 5px;
+
+                            .arrow-icon {
+                                font-size: 9px;
+                            }
+                        }
+                    }
+
+                    .dropdown-list li {
+                        padding: 8px 10px;
+                        font-size: 12px;
+                        text-align: center;
+                    }
+                }
+
+                .price {
+                    font-size: 13px;
+                    margin-top: 6px;
+                }
+            }
+
+            .add-to-cart {
+                margin-top: 15px;
+                padding: 14px;
+                font-size: 12px;
+            }
+        }
+    }
+
+    /* Telefonlar (480px - 576px) */
+    @media (max-width: 576px) and (min-width: 480px) {
+        grid-template-columns: repeat(2, 1fr); // 2 sütun davam edir
+        gap: 15px;
+        padding: 30px 15px;
+
+        .product-card {
+            .image-container {
+                height: 220px;
+                margin-bottom: 12px;
+
+                .bookmark-btn {
+                    font-size: 15px;
+                    padding: 3px;
+                }
+            }
+
+            .product-info {
+                .tag {
+                    font-size: 9px;
+                    margin-bottom: 6px;
+                    letter-spacing: 0.3px;
+                }
+
+                h3 {
+                    font-size: 15px;
+                    margin-bottom: 4px;
+                }
+
+                .ingredients {
+                    font-size: 11px;
+                    margin-bottom: 10px;
+                }
+
+                .meta {
+                    font-size: 10px;
+                    gap: 5px;
+                    margin-bottom: 10px;
+                }
+
+                .size-dropdown-custom {
+                    margin: 10px 0;
+
+                    .dropdown-header {
+                        padding: 7px 8px;
+
+                        label {
+                            font-size: 10px;
+                        }
+
+                        .selected-value {
+                            font-size: 11px;
+                            gap: 4px;
+                        }
+                    }
+                }
+
+                .price {
+                    font-size: 12px;
+                }
+            }
+
+            .add-to-cart {
+                margin-top: 12px;
+                padding: 12px;
+                font-size: 11px;
+            }
+        }
+    }
+
+    /* Kiçik telefonlar (400px - 480px) */
+    @media (max-width: 480px) and (min-width: 400px) {
+        grid-template-columns: 1fr; // 2 sütun → 1 sütun
+        gap: 25px;
+        padding: 25px 20px;
+
+        .product-card {
+            max-width: 350px;
+            margin: 0 auto;
+            width: 100%;
+
+            .image-container {
+                height: 300px;
+                margin-bottom: 15px;
+            }
+
+            .product-info {
+                h3 {
+                    font-size: 17px;
+                }
+
+                .ingredients {
+                    font-size: 13px;
+                }
+
+                .meta {
+                    font-size: 12px;
+                }
+
+                .size-dropdown-custom {
+                    .dropdown-header {
+                        padding: 10px 12px;
+
+                        label {
+                            font-size: 12px;
+                        }
+
+                        .selected-value {
+                            font-size: 13px;
+                        }
+                    }
+                }
+
+                .price {
+                    font-size: 14px;
+                }
+            }
+
+            .add-to-cart {
+                padding: 15px;
+                font-size: 13px;
+            }
+        }
+    }
+
+    /* Çox kiçik telefonlar (400px-dən aşağı) */
+    @media (max-width: 400px) {
+        grid-template-columns: 1fr; // Tək sütun
+        gap: 20px;
+        padding: 20px 15px;
+
+        .product-card {
+            .image-container {
+                height: 250px;
+                margin-bottom: 12px;
+
+                .bookmark-btn {
+                    font-size: 16px;
+                }
+            }
+
+            .product-info {
+                .tag {
+                    font-size: 9px;
+                }
+
+                h3 {
+                    font-size: 16px;
+                }
+
+                .ingredients {
+                    font-size: 12px;
+                }
+
+                .meta {
+                    font-size: 11px;
+                }
+
+                .size-dropdown-custom {
+                    .dropdown-header {
+                        padding: 8px 10px;
+                    }
+                }
+
+                .price {
+                    font-size: 13px;
+                }
+            }
+
+            .add-to-cart {
+                padding: 14px;
+                font-size: 12px;
+            }
+        }
+    }
+
+    /* Hover effektlərinin idarəsi */
+    @media (hover: hover) {
+        .image-container:hover {
+            .primary-img {
+                opacity: 0;
+            }
+
+            .secondary-img {
+                opacity: 1;
+            }
+        }
+
+        .add-to-cart:hover {
+            background-color: $btn-hover;
+        }
+
+        .dropdown-list li:hover {
+            background: #f0eee0;
+        }
+    }
+
+    /* Toxunma cihazlar üçün active state */
+    @media (hover: none) {
+        .image-container:active {
+            .primary-img {
+                opacity: 0;
+            }
+
+            .secondary-img {
+                opacity: 1;
+            }
+        }
+
+        .add-to-cart:active {
+            background-color: $btn-hover;
+        }
+
+        .dropdown-list li:active {
+            background: #f0eee0;
+        }
+    }
+
+    /* Landscape rejimi - telefonlar */
+    @media (max-width: 900px) and (orientation: landscape) {
+        grid-template-columns: repeat(3, 1fr); // Landscape-də 3 sütun
+        gap: 20px;
+        padding: 30px 20px;
+
+        .product-card {
+            .image-container {
+                height: 200px;
+            }
+
+            .product-info {
+                h3 {
+                    font-size: 15px;
+                }
+
+                .ingredients {
+                    font-size: 11px;
+                }
+            }
+
+            .add-to-cart {
+                padding: 12px;
+                font-size: 11px;
+            }
+        }
+    }
+
+    /* Böyük planşet landscape */
+    @media (min-width: 1024px) and (orientation: landscape) and (max-width: 1200px) {
+        grid-template-columns: repeat(3, 1fr); // Landscape-də 3 sütun
+    }
+}

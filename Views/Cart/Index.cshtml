@@ -1,0 +1,267 @@
+﻿@{
+    ViewData["Title"] = "Shopping Cart";
+
+}
+
+<div class="cart-page">
+    <div class="cart-header">
+        <h1>Shopping Cart</h1>
+    </div>
+
+    <div class="cart-container" id="cartContainer">
+        <!-- Sepet buraya yüklenecek -->
+    </div>
+</div>
+
+<style>
+    .cart-page {
+        max-width: 1200px;
+        margin: 120px auto 60px;
+        padding: 0 20px;
+    }
+
+    .cart-header h1 {
+        font-size: 32px;
+        font-weight: 300;
+        margin-bottom: 40px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .cart-items {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .cart-items th {
+            text-align: left;
+            padding: 15px 10px;
+            font-weight: 500;
+            color: #666;
+            font-size: 13px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+    .cart-item td {
+        padding: 20px 10px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .cart-item-product {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+        .cart-item-product img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+    .cart-item-name {
+        font-weight: 500;
+    }
+
+    .cart-item-size {
+        font-size: 13px;
+        color: #666;
+    }
+
+    .cart-item-price {
+        font-weight: 500;
+    }
+
+    .cart-item-quantity input {
+        width: 60px;
+        padding: 5px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    .cart-item-remove {
+        color: #999;
+        cursor: pointer;
+    }
+
+        .cart-item-remove:hover {
+            color: #ff4444;
+        }
+
+    .cart-summary {
+        margin-top: 30px;
+        padding: 20px;
+        background: #f9f9f9;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cart-total {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .checkout-btn {
+        background: #333;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+        .checkout-btn:hover {
+            background: #b57a44;
+        }
+
+    .empty-cart {
+        text-align: center;
+        padding: 60px;
+        background: #f9f9f9;
+    }
+
+        .empty-cart i {
+            font-size: 50px;
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+
+    .continue-shopping {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: #333;
+        color: white;
+        text-decoration: none;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', loadCartPage);
+
+    async function loadCartPage() {
+        try {
+            const response = await fetch('/api/cartapi');
+            const data = await response.json();
+
+            if (data.items && data.items.length > 0) {
+                displayCartPage(data.items, data.total);
+            } else {
+                displayEmptyCart();
+            }
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+
+    function displayCartPage(items, total) {
+        const container = document.getElementById('cartContainer');
+
+        container.innerHTML = `
+            <table class="cart-items">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${items.map(item => `
+                        <tr class="cart-item" data-id="${item.id}" data-size="${item.size}">
+                            <td>
+                                <div class="cart-item-product">
+                                    <img src="${item.imageUrl || '/assets/images/placeholder.jpg'}" alt="${item.name}">
+                                    <div>
+                                        <div class="cart-item-name">${item.name}</div>
+                                        <div class="cart-item-size">${item.size}</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="cart-item-price">$${item.price.toFixed(2)}</td>
+                            <td class="cart-item-quantity">
+                                <input type="number" value="${item.quantity || 1}" min="1"
+                                       onchange="updateCartItemQuantity('${item.id}', '${item.size}', this.value)">
+                            </td>
+                            <td class="cart-item-price">$${(item.price * (item.quantity || 1)).toFixed(2)}</td>
+                            <td>
+                                <span class="cart-item-remove" onclick="removeCartItem('${item.id}', '${item.size}')">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </span>
+                            </td>
+                        </tr>
+                    `).join('')}
+                </tbody>
+            </table>
+
+            <div class="cart-summary">
+                <div class="cart-total">
+                    Total: $${total.toFixed(2)}
+                </div>
+                <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+            </div>
+        `;
+    }
+
+    function displayEmptyCart() {
+        document.getElementById('cartContainer').innerHTML = `
+            <div class="empty-cart">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <h3>Your cart is empty</h3>
+                <p>Looks like you haven't added anything yet.</p>
+                <a href="/" class="continue-shopping">Continue Shopping</a>
+            </div>
+        `;
+    }
+
+    async function updateCartItemQuantity(id, size, quantity) {
+        const item = { id, size, quantity: parseInt(quantity) };
+
+        try {
+            const response = await fetch('/api/cartapi/update', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(item)
+            });
+
+            if (response.ok) {
+                loadCartPage();
+                // Header'daki sepeti de güncelle
+                if (typeof loadCart === 'function') loadCart();
+            }
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+
+    async function removeCartItem(id, size) {
+        if (!confirm('Remove this item from cart?')) return;
+
+        const item = { id, size };
+
+        try {
+            const response = await fetch('/api/cartapi/remove', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(item)
+            });
+
+            if (response.ok) {
+                loadCartPage();
+                if (typeof loadCart === 'function') loadCart();
+            }
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+
+    function checkout() {
+        alert('Checkout functionality coming soon!');
+    }
+</script>

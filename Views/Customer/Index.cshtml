@@ -1,0 +1,203 @@
+﻿
+@{
+    Layout = "_Layout";
+}
+
+
+<!-- Customer Service Main Content Start -->
+<main class="customer-service">
+    <!-- Hero Section -->
+    <div class="cs-hero">
+        <h1>Customer Service</h1>
+        <p>
+            We're here to help. Whether you have a question about an order, need product advice, or just want to
+            talk, our team is ready to assist.
+        </p>
+    </div>
+
+    <!-- Cards Grid Section -->
+    <div class="cs-grid">
+        <!-- Contact Us Card -->
+        <div class="cs-card">
+            <div class="cs-card-icon">
+                <i class="fa-regular fa-envelope"></i>
+            </div>
+            <h3>Contact Us</h3>
+            <p>Get in touch via email or our online form. We aim to respond within 24 hours.</p>
+            <a href="#" class="cs-link">Email us <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Live Chat Card -->
+        <div class="cs-card">
+            <div class="cs-card-icon">
+                <i class="fa-regular fa-comment"></i>
+            </div>
+            <h3>Live Chat</h3>
+            <p>Chat with a consultant during business hours for immediate assistance.</p>
+            <a href="#" class="cs-link">Start chat <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Shipping & Returns Card -->
+        <div class="cs-card">
+            <div class="cs-card-icon">
+                <i class="fa-solid fa-rotate-left"></i>
+            </div>
+            <h3>Shipping & Returns</h3>
+            <p>Learn about our shipping options and hassle-free return policy.</p>
+            <a href="#" class="cs-link">Read more <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- FAQ Card -->
+        <div class="cs-card">
+            <div class="cs-card-icon">
+                <i class="fa-regular fa-circle-question"></i>
+            </div>
+            <h3>FAQ</h3>
+            <p>Find answers to commonly asked questions about orders, products, and more.</p>
+            <a asp-controller="Faqs" asp-action="Index" class="cs-link">View FAQ <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <!-- FAQ Preview Section -->
+    <div class="cs-faq-preview">
+        <div class="cs-faq-header">
+            <h2>Frequently asked questions</h2>
+            <p>
+                Find quick answers to common questions below. For more detailed information, visit our full FAQ page.
+            </p>
+        </div>
+
+        <div class="cs-faq-container">
+            <!-- FAQ Item 1 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I track my order?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>
+                            You'll receive a shipping confirmation email with a tracking number once your order has
+                            shipped. You can also track your order by:
+                        </p>
+                        <ul>
+                            <li>Logging into your account and visiting "Order History"</li>
+                            <li>Clicking the tracking link in your shipping confirmation email</li>
+                            <li>Contacting our customer service team with your order number</li>
+                        </ul>
+                        <p>
+                            <strong>Note:</strong> Tracking information may take 24-48 hours to update after
+                            shipping.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What is your return policy?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>We offer a <strong>30-day return policy</strong> on all unused and unopened products.</p>
+                        <h4>Return conditions:</h4>
+                        <ul>
+                            <li>Items must be in original packaging</li>
+                            <li>Products must be unused and unopened</li>
+                            <li>Return shipping is free for domestic orders</li>
+                            <li>Refunds are processed within 5-7 business days</li>
+                        </ul>
+                        <p><a href="#">Start a return →</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Do you ship internationally?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Yes, we ship to over 50 countries worldwide.</p>
+                        <h4>Shipping information:</h4>
+                        <ul>
+                            <li><strong>Standard shipping:</strong> 5-10 business days</li>
+                            <li><strong>Express shipping:</strong> 2-4 business days</li>
+                            <li><strong>Free shipping:</strong> On orders over $125</li>
+                        </ul>
+                        <p>Customs fees and import duties may apply depending on your location.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do I care for my Aesop products?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>To maintain product quality and extend shelf life:</p>
+                        <ul>
+                            <li>Store in a cool, dry place away from direct sunlight</li>
+                            <li>Keep containers tightly closed when not in use</li>
+                            <li>Avoid introducing water into product containers</li>
+                            <li>Check the PAO (Period After Opening) symbol on packaging</li>
+                        </ul>
+                        <p>Most products are best used within 12 months of opening.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can I change or cancel my order?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Orders can be modified or canceled within <strong>1 hour</strong> of placement.</p>
+                        <h4>To make changes:</h4>
+                        <ol>
+                            <li>
+                                Contact customer service immediately at <a href="mailto:help@aesop.com">help@aesop.com</a>
+                            </li>
+                            <li>Provide your order number and requested changes</li>
+                            <li>Our team will confirm if changes are possible</li>
+                        </ol>
+                        <p>After 1 hour, orders enter processing and cannot be modified.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Are Aesop products tested on animals?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>No, Aesop does not test any products or ingredients on animals.</p>
+                        <ul>
+                            <li>We are certified by <strong>Leaping Bunny</strong> (Cruelty-Free International)</li>
+                            <li>All products are 100% vegan</li>
+                            <li>We are a Certified B Corporation</li>
+                            <li>We audit our suppliers to ensure ethical practices</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cs-faq-footer">
+            <p>Still have questions? <a href="#">Contact our support team</a> and we'll be happy to help.</p>
+        </div>
+    </div>
+</main>

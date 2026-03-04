@@ -1,0 +1,430 @@
+// faq.scss
+// Aesop dizaynına uyğun FAQ səhifəsi üslubları
+
+// Dəyişənlər (variables)
+$color-background: #fffef2;
+$color-background-light: #faf9f2;
+$color-background-warm: #f5f2d2;
+$color-text-primary: #333;
+$color-text-secondary: #666;
+$color-text-light: #999;
+$color-border: #e5e5e5;
+$color-border-light: #f0f0e8;
+$color-border-btn: #cfc9bf;
+
+$font-primary: "Inter", sans-serif;
+$font-secondary: "Playfair Display", serif;
+
+$spacing-xs: 8px;
+$spacing-sm: 15px;
+$spacing-md: 20px;
+$spacing-lg: 25px;
+$spacing-xl: 40px;
+$spacing-xxl: 80px;
+
+$breakpoint-tablet: 992px;
+$breakpoint-mobile: 768px;
+$breakpoint-small: 480px;
+
+// Mixin-lər
+@mixin transition($properties...) {
+    transition-property: $properties;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin container-max-width($max-width: 1200px) {
+    max-width: $max-width;
+    margin: 0 auto;
+}
+
+/* FAQ Hero bölməsi */
+.faq-hero {
+    background-color: $color-background;
+    padding: 180px $spacing-xl $spacing-xxl $spacing-xl;
+    text-align: center;
+
+    .faq-hero-title {
+        font-family: $font-secondary;
+        font-size: 42px;
+        font-weight: 400;
+        color: $color-text-primary;
+        margin-bottom: $spacing-md;
+        line-height: 1.2;
+    }
+
+    .faq-hero-subtitle {
+        font-family: $font-primary;
+        font-size: 16px;
+        color: $color-text-secondary;
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        padding: 150px $spacing-md 60px $spacing-md;
+
+        .faq-hero-title {
+            font-size: 32px;
+        }
+    }
+
+    @media (max-width: $breakpoint-small) {
+        padding: 130px $spacing-sm 40px $spacing-sm;
+
+        .faq-hero-title {
+            font-size: 28px;
+        }
+    }
+}
+
+/* Axtarış bölməsi */
+.faq-search-section {
+    background-color: $color-background;
+    padding: 0 $spacing-xl $spacing-xl $spacing-xl;
+
+    .faq-search-container {
+        max-width: 600px;
+        margin: 0 auto;
+
+        .faq-search-wrapper {
+            position: relative;
+            border-bottom: 1px solid $color-border;
+
+            i {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                color: $color-text-light;
+                font-size: 14px;
+            }
+
+            input {
+                width: 100%;
+                padding: $spacing-sm 0 $spacing-sm 30px;
+                border: none;
+                background: transparent;
+                font-family: $font-primary;
+                font-size: 14px;
+                outline: none;
+                color: $color-text-primary;
+
+                &::placeholder {
+                    color: $color-text-light;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}
+
+/* Kateqoriya nişanları (tabs) */
+.faq-categories {
+    background-color: $color-background;
+    padding: $spacing-md $spacing-xl;
+    border-top: 1px solid $color-border-light;
+    border-bottom: 1px solid $color-border-light;
+
+    .faq-categories-container {
+        @include container-max-width(1200px);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+
+        .faq-category-tab {
+            font-family: $font-primary;
+            font-size: 14px;
+            color: $color-text-light;
+            cursor: pointer;
+            padding-bottom: $spacing-xs;
+            border-bottom: 1px solid transparent;
+            @include transition(color, border-color);
+
+            &:hover {
+                color: $color-text-primary;
+            }
+
+            &.active {
+                color: $color-text-primary;
+                border-bottom-color: $color-text-primary;
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        .faq-categories-container {
+            gap: $spacing-md;
+        }
+    }
+}
+
+/* FAQ əsas bölməsi */
+.faq-main-section {
+    background-color: $color-background;
+    padding: 60px $spacing-xl 100px $spacing-xl;
+
+    .faq-container {
+        max-width: 900px;
+        margin: 0 auto;
+
+        .faq-category-content {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+
+            .faq-category-title {
+                font-family: $font-secondary;
+                font-size: 28px;
+                font-weight: 400;
+                color: $color-text-primary;
+                margin-bottom: $spacing-xl;
+                text-align: center;
+
+                @media (max-width: $breakpoint-small) {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+
+/* FAQ elementləri (accordion) */
+.faq-item {
+    border-bottom: 1px solid $color-border;
+
+    .faq-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: $spacing-lg 0;
+        cursor: pointer;
+        @include transition(background-color);
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.01);
+        }
+
+        .faq-question-text {
+            font-family: $font-primary;
+            font-size: 16px;
+            font-weight: 400;
+            color: $color-text-primary;
+            padding-right: $spacing-md;
+
+            @media (max-width: $breakpoint-small) {
+                font-size: 15px;
+            }
+        }
+
+        .faq-question-icon {
+            color: $color-text-light;
+            font-size: 14px;
+            transition: transform 0.3s ease;
+        }
+    }
+
+    &.active {
+        .faq-question-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            display: block;
+        }
+    }
+
+    .faq-answer {
+        display: none;
+        padding: 0 0 30px 0;
+        font-family: $font-primary;
+        font-size: 14px;
+        line-height: 1.7;
+        color: $color-text-secondary;
+
+        p {
+            margin-bottom: $spacing-sm;
+        }
+
+        a {
+            color: $color-text-primary;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            @include transition(opacity);
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+
+        ul {
+            margin-left: $spacing-md;
+            list-style-type: disc;
+        }
+
+        li {
+            margin-bottom: $spacing-xs;
+        }
+    }
+}
+
+/* "Hələ də kömək lazımdır?" bölməsi */
+.faq-help-section {
+    background-color: $color-background-warm;
+    padding: $spacing-xxl $spacing-xl;
+    text-align: center;
+
+    .faq-help-title {
+        font-family: $font-secondary;
+        font-size: 32px;
+        font-weight: 400;
+        color: $color-text-primary;
+        margin-bottom: $spacing-md;
+    }
+
+    .faq-help-text {
+        font-family: $font-primary;
+        font-size: 16px;
+        color: $color-text-secondary;
+        max-width: 600px;
+        margin: 0 auto $spacing-xl auto;
+        line-height: 1.6;
+    }
+
+    .faq-help-buttons {
+        display: flex;
+        justify-content: center;
+        gap: $spacing-md;
+        flex-wrap: wrap;
+
+        .faq-help-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 30px;
+            border: 1px solid $color-border-btn;
+            background-color: transparent;
+            color: $color-text-primary;
+            font-family: $font-primary;
+            font-size: 14px;
+            text-decoration: none;
+            @include transition(all);
+
+            i {
+                font-size: 14px;
+                transition: transform 0.3s ease;
+            }
+
+            &:hover {
+                background-color: $color-text-primary;
+                color: $color-background;
+                border-color: $color-text-primary;
+
+                i {
+                    transform: translateX(5px);
+                }
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        .faq-help-buttons {
+            flex-direction: column;
+            align-items: center;
+
+            .faq-help-btn {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+/* Əlaqə saxla bölməsi */
+.faq-contact-section {
+    background-color: $color-background;
+    padding: $spacing-xxl $spacing-xl;
+    border-top: 1px solid $color-border-light;
+
+    .faq-contact-grid {
+        @include container-max-width(1200px);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: $spacing-xl;
+
+        .faq-contact-card {
+            text-align: center;
+            padding: $spacing-xl 30px;
+            background-color: $color-background-light;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            .faq-contact-icon {
+                width: 60px;
+                height: 60px;
+                margin: 0 auto $spacing-lg auto;
+                background-color: $color-text-primary;
+                border-radius: 50%;
+                @include flex-center;
+                color: $color-background;
+                font-size: 20px;
+            }
+
+            h3 {
+                font-family: $font-secondary;
+                font-size: 20px;
+                font-weight: 400;
+                color: $color-text-primary;
+                margin-bottom: $spacing-sm;
+            }
+
+            p {
+                font-family: $font-primary;
+                font-size: 14px;
+                color: $color-text-secondary;
+                line-height: 1.6;
+                margin-bottom: $spacing-lg;
+            }
+
+            .faq-contact-link {
+                font-family: $font-primary;
+                font-size: 13px;
+                color: $color-text-primary;
+                text-decoration: none;
+                border-bottom: 1px solid $color-text-primary;
+                padding-bottom: 2px;
+                @include transition(opacity);
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        .faq-contact-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        .faq-contact-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+}

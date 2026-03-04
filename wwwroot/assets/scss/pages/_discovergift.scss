@@ -1,0 +1,643 @@
+// Fontlar
+$font-serif: 'Playfair Display', serif;
+$font-sans: 'Inter', sans-serif;
+$aesop-bg: #fffef2;
+
+.horse-section {
+    background-color: $aesop-bg;
+    padding: 100px 0;
+
+    .horse-container {
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center; // Mətn və videonu mərkəzdə saxlayır
+        padding: 0 60px;
+        gap: 80px;
+    }
+
+    .horse-content {
+        flex: 1;
+
+        .horse-label {
+            font-family: $font-sans;
+            font-size: 14px;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .horse-title {
+            font-family: $font-serif;
+            font-size: 32px;
+            font-weight: 400;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .horse-text {
+            font-family: $font-sans;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 40px;
+            max-width: 450px;
+        }
+
+        .horse-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 25px;
+            border: 1px solid #ccc;
+            text-decoration: none;
+            color: #333;
+            width: 280px;
+            transition: 0.4s;
+            font-family: $font-sans;
+
+            &:hover {
+                background: #333;
+                color: #fff;
+            }
+        }
+    }
+
+    .horse-video-wrapper {
+        flex: 1.1; // 1.6-dan 1.1-ə endirdik (Video balacalaşdı)
+        position: relative;
+        overflow: hidden;
+        max-width: 650px; // Enini məhdudlaşdırdıq
+        width: 100%;
+
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+            aspect-ratio: 16 / 9; // Videonu eninə (landscape) edən əsas kod
+            object-fit: cover; // Formanın pozulmaması üçün
+        }
+
+        .video-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            gap: 15px;
+
+            .control-btn {
+                background-color: rgba(60, 60, 60, 0.4); // Bozumtul və şəffaf fon
+                border: none;
+                color: #fff; // İkonun rəngi (ağ)
+                font-size: 16px; // İkonun ölçüsü
+                cursor: pointer;
+
+                // Yumru forma üçün:
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+
+                // İkonu mərkəzləmək üçün:
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                transition: all 0.3s ease;
+                backdrop-filter: blur(4px); // Arxasını bir az bulanıq edir (daha premium görünür)
+
+                &:hover {
+                    background-color: rgba(60, 60, 60, 0.7); // Hover edəndə bir az tündləşir
+                    transform: scale(1.05); // Çox az böyüyür
+                }
+
+                i {
+                    // Pauza və Play ikonlarının tam mərkəzdə durması üçün
+                    display: block;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+// Fontlar
+$font-serif: 'Playfair Display', serif;
+$font-sans: 'Inter', sans-serif;
+$aesop-bg: #fffef2;
+
+.horse-section {
+    background-color: $aesop-bg;
+    padding: 100px 0;
+
+    // =========================================
+    // RESPONSIVE: section padding
+    // =========================================
+    @media (max-width: 1600px) {
+        padding: 90px 0;
+    }
+
+    @media (max-width: 1400px) {
+        padding: 80px 0;
+    }
+
+    @media (max-width: 1200px) {
+        padding: 70px 0;
+    }
+
+    @media (max-width: 992px) {
+        padding: 60px 0;
+    }
+
+    @media (max-width: 768px) {
+        padding: 50px 0;
+    }
+
+    @media (max-width: 576px) {
+        padding: 40px 0;
+    }
+
+    .horse-container {
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        padding: 0 60px;
+        gap: 80px;
+
+        // =========================================
+        // RESPONSIVE: container
+        // =========================================
+        @media (max-width: 1600px) {
+            max-width: 1300px;
+            padding: 0 50px;
+            gap: 70px;
+        }
+
+        @media (max-width: 1400px) {
+            max-width: 1200px;
+            padding: 0 45px;
+            gap: 60px;
+        }
+
+        @media (max-width: 1200px) {
+            max-width: 1100px;
+            padding: 0 40px;
+            gap: 50px;
+        }
+
+        @media (max-width: 992px) {
+            max-width: 960px;
+            padding: 0 35px;
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            flex-direction: column; // Sütun düzülüşünə keçid
+            padding: 0 30px;
+            gap: 40px;
+        }
+
+        @media (max-width: 576px) {
+            padding: 0 20px;
+            gap: 35px;
+        }
+
+        @media (max-width: 400px) {
+            padding: 0 15px;
+            gap: 30px;
+        }
+    }
+
+    .horse-content {
+        flex: 1;
+
+        // =========================================
+        // RESPONSIVE: content alignment
+        // =========================================
+        @media (max-width: 768px) {
+            width: 100%;
+            text-align: center; // Mətni mərkəzə alırıq
+        }
+
+        .horse-label {
+            font-family: $font-sans;
+            font-size: 14px;
+            margin-bottom: 25px;
+            display: block;
+
+            // =========================================
+            // RESPONSIVE: label
+            // =========================================
+            @media (max-width: 992px) {
+                font-size: 13px;
+                margin-bottom: 22px;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 13px;
+                margin-bottom: 20px;
+            }
+
+            @media (max-width: 576px) {
+                font-size: 12px;
+                margin-bottom: 18px;
+            }
+
+            @media (max-width: 400px) {
+                font-size: 11px;
+                margin-bottom: 15px;
+            }
+        }
+
+        .horse-title {
+            font-family: $font-serif;
+            font-size: 32px;
+            font-weight: 400;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            color: #333;
+
+            // =========================================
+            // RESPONSIVE: title
+            // =========================================
+            @media (max-width: 1600px) {
+                font-size: 34px; // Geniş ekranda böyük
+            }
+
+            @media (max-width: 1400px) {
+                font-size: 32px;
+            }
+
+            @media (max-width: 1200px) {
+                font-size: 30px;
+            }
+
+            @media (max-width: 992px) {
+                font-size: 28px;
+                margin-bottom: 18px;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 26px;
+                margin-bottom: 16px;
+            }
+
+            @media (max-width: 576px) {
+                font-size: 24px;
+                margin-bottom: 15px;
+                line-height: 1.25;
+            }
+
+            @media (max-width: 400px) {
+                font-size: 22px;
+                margin-bottom: 12px;
+            }
+        }
+
+        .horse-text {
+            font-family: $font-sans;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 40px;
+            max-width: 450px;
+
+            // =========================================
+            // RESPONSIVE: text
+            // =========================================
+            @media (max-width: 1400px) {
+                font-size: 15.5px;
+            }
+
+            @media (max-width: 1200px) {
+                font-size: 15px;
+                max-width: 400px;
+            }
+
+            @media (max-width: 992px) {
+                font-size: 14.5px;
+                margin-bottom: 35px;
+                max-width: 380px;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 14px;
+                margin-bottom: 30px;
+                max-width: 100%; // Mətn tam en
+                margin-left: auto;
+                margin-right: auto;
+                padding: 0 15px; // Kenarlardan boşluq
+            }
+
+            @media (max-width: 576px) {
+                font-size: 13.5px;
+                margin-bottom: 25px;
+                line-height: 1.5;
+            }
+
+            @media (max-width: 400px) {
+                font-size: 13px;
+                margin-bottom: 22px;
+            }
+        }
+
+        .horse-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 25px;
+            border: 1px solid #ccc;
+            text-decoration: none;
+            color: #333;
+            width: 280px;
+            transition: 0.4s;
+            font-family: $font-sans;
+
+            // =========================================
+            // RESPONSIVE: button
+            // =========================================
+            @media (max-width: 1400px) {
+                width: 270px;
+                padding: 17px 24px;
+            }
+
+            @media (max-width: 1200px) {
+                width: 260px;
+                padding: 16px 22px;
+            }
+
+            @media (max-width: 992px) {
+                width: 250px;
+                padding: 15px 20px;
+                font-size: 14px;
+            }
+
+            @media (max-width: 768px) {
+                width: 100%; // Mobilde tam en
+                max-width: 350px; // Çox böyüməsin
+                margin: 0 auto; // Mərkəzə düz
+                padding: 16px 24px;
+                font-size: 14px;
+                justify-content: space-between;
+            }
+
+            @media (max-width: 576px) {
+                max-width: 300px;
+                padding: 14px 22px;
+                font-size: 13.5px;
+            }
+
+            @media (max-width: 400px) {
+                max-width: 280px;
+                padding: 13px 20px;
+                font-size: 13px;
+            }
+
+            &:hover {
+                background: #333;
+                color: #fff;
+
+                @media (max-width: 768px) {
+                    background: rgba(51, 51, 51, 0.9); // Mobilde yüngül hover
+                }
+            }
+
+            // Touch active state
+            &:active {
+                @media (max-width: 768px) {
+                    transform: scale(0.98);
+                    background: #333;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .horse-video-wrapper {
+        flex: 1.1;
+        position: relative;
+        overflow: hidden;
+        max-width: 650px;
+        width: 100%;
+
+        // =========================================
+        // RESPONSIVE: video wrapper
+        // =========================================
+        @media (max-width: 1600px) {
+            max-width: 600px;
+            flex: 1;
+        }
+
+        @media (max-width: 1400px) {
+            max-width: 550px;
+        }
+
+        @media (max-width: 1200px) {
+            max-width: 500px;
+        }
+
+        @media (max-width: 992px) {
+            max-width: 450px;
+        }
+
+        @media (max-width: 768px) {
+            max-width: 100%; // Mobilde tam en
+            flex: auto;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+
+            // =========================================
+            // RESPONSIVE: video aspect ratio
+            // =========================================
+            @media (max-width: 576px) {
+                aspect-ratio: 4 / 3; // Mobilde daha kvadrat yaxın (daha çox görüntü)
+            }
+        }
+
+        .video-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            gap: 15px;
+
+            // =========================================
+            // RESPONSIVE: video controls
+            // =========================================
+            @media (max-width: 1200px) {
+                bottom: 18px;
+                left: 18px;
+                gap: 12px;
+            }
+
+            @media (max-width: 992px) {
+                bottom: 15px;
+                left: 15px;
+                gap: 10px;
+            }
+
+            @media (max-width: 768px) {
+                bottom: 20px;
+                left: 20px;
+                gap: 12px;
+            }
+
+            @media (max-width: 576px) {
+                bottom: 15px;
+                left: 15px;
+                gap: 10px;
+            }
+
+            @media (max-width: 400px) {
+                bottom: 12px;
+                left: 12px;
+                gap: 8px;
+            }
+
+            .control-btn {
+                background-color: rgba(60, 60, 60, 0.4);
+                border: none;
+                color: #fff;
+                font-size: 16px;
+                cursor: pointer;
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+                backdrop-filter: blur(4px);
+
+                // =========================================
+                // RESPONSIVE: control buttons
+                // =========================================
+                @media (max-width: 1400px) {
+                    width: 42px;
+                    height: 42px;
+                    font-size: 15px;
+                }
+
+                @media (max-width: 1200px) {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 14px;
+                }
+
+                @media (max-width: 992px) {
+                    width: 38px;
+                    height: 38px;
+                    font-size: 13px;
+                }
+
+                @media (max-width: 768px) {
+                    width: 42px;
+                    height: 42px;
+                    font-size: 15px;
+                    background-color: rgba(60, 60, 60, 0.5); // Mobilde daha görünür
+                }
+
+                @media (max-width: 576px) {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 14px;
+                }
+
+                @media (max-width: 400px) {
+                    width: 36px;
+                    height: 36px;
+                    font-size: 13px;
+                }
+
+                &:hover {
+                    background-color: rgba(60, 60, 60, 0.7);
+                    transform: scale(1.05);
+
+                    @media (max-width: 768px) {
+                        transform: scale(1); // Mobilde hover scale yox
+                        background-color: rgba(60, 60, 60, 0.7);
+                    }
+                }
+
+                // Touch active state
+                &:active {
+                    @media (max-width: 768px) {
+                        transform: scale(0.95);
+                        background-color: rgba(60, 60, 60, 0.9);
+                    }
+                }
+
+                i {
+                    display: block;
+                    line-height: 1;
+                }
+            }
+        }
+
+        // Play/Pause indikatoru üçün opsiyonel
+        .video-status {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(60, 60, 60, 0.4);
+            backdrop-filter: blur(4px);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-family: $font-sans;
+            letter-spacing: 0.5px;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+
+            @media (max-width: 768px) {
+                top: 15px;
+                right: 15px;
+                padding: 5px 10px;
+                font-size: 11px;
+            }
+
+            @media (max-width: 576px) {
+                top: 12px;
+                right: 12px;
+                padding: 4px 8px;
+                font-size: 10px;
+            }
+        }
+    }
+
+    // Opsiyonel: Dekorativ element (Aesop üslubu üçün)
+    .horse-decoration {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        border-radius: 50%;
+        z-index: 0;
+
+        @media (max-width: 768px) {
+            display: none; // Mobilde dekorasiya yox
+        }
+    }
+}
+
+// Retina display üçün yüksək keyfiyyətli media
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .horse-video-wrapper {
+        video {
+            // Retina üçün video keyfiyyəti (əgər mümkünsə)
+            image-rendering: crisp-edges; // Daha kəskin görüntü
+        }
+    }
+}

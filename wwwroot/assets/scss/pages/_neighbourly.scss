@@ -1,0 +1,545 @@
+// Dəyişənlər
+$aesop-bg: #fffef2;
+$text-dark: #333;
+$font-serif: 'Playfair Display', serif;
+$font-sans: 'Inter', sans-serif;
+
+.store-locator {
+    background-color: $aesop-bg;
+
+    // Ekranın yarısı boyda olması üçün:
+    min-height: 50vh;
+    width: 100%;
+
+    // İçindəki mətni həm şaquli (vertical), həm üfüqi (horizontal) mərkəzləmək üçün:
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px 20px; // Mobildə sıxılmaması üçün minimum boşluq
+    box-sizing: border-box;
+
+    .store-container {
+        max-width: 750px; // Mətnin oxunaqlı eni
+        width: 100%;
+    }
+
+    .store-content {
+        text-align: center;
+
+        .store-location {
+            display: block;
+            font-family: $font-sans;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            text-transform: none;
+            margin-bottom: 20px;
+            color: $text-dark;
+        }
+
+        .store-title {
+            font-family: $font-serif;
+            font-size: 32px; // Yarım ekran üçün daha mütənasib ölçü
+            line-height: 1.3;
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: $text-dark;
+        }
+
+        .store-description {
+            font-family: $font-sans;
+            font-size: 15px;
+            line-height: 1.6;
+            color: $text-dark;
+            margin-bottom: 35px;
+            padding: 0 5%;
+        }
+
+        .store-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            min-width: 260px;
+            padding: 16px 20px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            color: $text-dark;
+            font-family: $font-sans;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+            i {
+                font-size: 14px;
+                transition: transform 0.3s ease;
+            }
+
+            &:hover {
+                background-color: $text-dark;
+                color: #fff;
+                border-color: $text-dark;
+
+                i {
+                    transform: translateX(5px); // Oxun sağa sürüşmə effekti
+                }
+            }
+        }
+    }
+}
+
+// Dəyişənlər
+$aesop-bg: #fffef2;
+$text-dark: #333;
+$font-serif: 'Playfair Display', serif;
+$font-sans: 'Inter', sans-serif;
+
+.store-locator {
+    background-color: $aesop-bg;
+
+    // Ekranın yarısı boyda olması üçün:
+    min-height: 50vh;
+    width: 100%;
+
+    // İçindəki mətni həm şaquli (vertical), həm üfüqi (horizontal) mərkəzləmək üçün:
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px 20px; // Mobildə sıxılmaması üçün minimum boşluq
+    box-sizing: border-box;
+
+    .store-container {
+        max-width: 750px; // Mətnin oxunaqlı eni
+        width: 100%;
+    }
+
+    .store-content {
+        text-align: center;
+
+        .store-location {
+            display: block;
+            font-family: $font-sans;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            text-transform: none;
+            margin-bottom: 20px;
+            color: $text-dark;
+        }
+
+        .store-title {
+            font-family: $font-serif;
+            font-size: 32px; // Yarım ekran üçün daha mütənasib ölçü
+            line-height: 1.3;
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: $text-dark;
+        }
+
+        .store-description {
+            font-family: $font-sans;
+            font-size: 15px;
+            line-height: 1.6;
+            color: $text-dark;
+            margin-bottom: 35px;
+            padding: 0 5%;
+        }
+
+        .store-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            min-width: 260px;
+            padding: 16px 20px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            color: $text-dark;
+            font-family: $font-sans;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+            i {
+                font-size: 14px;
+                transition: transform 0.3s ease;
+            }
+
+            &:hover {
+                background-color: $text-dark;
+                color: #fff;
+                border-color: $text-dark;
+
+                i {
+                    transform: translateX(5px); // Oxun sağa sürüşmə effekti
+                }
+            }
+        }
+    }
+
+    // ========== RESPONSIVE ÜSLUBLAR ==========
+
+    /* Böyük kompüterlər / 4K ekranlar (1600px və yuxarı) */
+    @media (min-width: 1600px) {
+        min-height: 40vh; // Böyük ekranlarda hündürlüyü nisbətən azaldırıq
+        padding: 80px 20px;
+
+        .store-container {
+            max-width: 900px;
+        }
+
+        .store-content {
+            .store-location {
+                font-size: 14px;
+                margin-bottom: 25px;
+            }
+
+            .store-title {
+                font-size: 42px;
+                margin-bottom: 25px;
+            }
+
+            .store-description {
+                font-size: 18px;
+                margin-bottom: 45px;
+                max-width: 700px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .store-link {
+                min-width: 300px;
+                padding: 20px 25px;
+                font-size: 15px;
+
+                i {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    /* Orta ölçülü kompüterlər (1400px - 1600px) */
+    @media (max-width: 1600px) and (min-width: 1400px) {
+        .store-container {
+            max-width: 800px;
+        }
+
+        .store-content {
+            .store-title {
+                font-size: 36px;
+            }
+
+            .store-description {
+                font-size: 16px;
+            }
+        }
+    }
+
+    /* Kiçik kompüterlər / böyük planşetlər (1200px - 1400px) */
+    @media (max-width: 1400px) and (min-width: 1200px) {
+        padding: 70px 20px;
+
+        .store-content {
+            .store-title {
+                font-size: 34px;
+            }
+
+            .store-description {
+                font-size: 16px;
+                padding: 0 3%;
+            }
+
+            .store-link {
+                min-width: 280px;
+                padding: 18px 22px;
+            }
+        }
+    }
+
+    /* Planşetlər (992px - 1200px) */
+    @media (max-width: 1200px) and (min-width: 992px) {
+        min-height: 45vh;
+        padding: 60px 30px;
+
+        .store-container {
+            max-width: 700px;
+        }
+
+        .store-content {
+            .store-location {
+                font-size: 12px;
+                margin-bottom: 18px;
+            }
+
+            .store-title {
+                font-size: 30px;
+                margin-bottom: 18px;
+            }
+
+            .store-description {
+                font-size: 15px;
+                margin-bottom: 30px;
+                padding: 0 2%;
+            }
+
+            .store-link {
+                min-width: 260px;
+                padding: 16px 20px;
+            }
+        }
+    }
+
+    /* Kiçik planşetlər (768px - 992px) */
+    @media (max-width: 992px) and (min-width: 768px) {
+        min-height: 45vh;
+        padding: 50px 25px;
+
+        .store-container {
+            max-width: 650px;
+        }
+
+        .store-content {
+            .store-location {
+                font-size: 12px;
+                margin-bottom: 16px;
+            }
+
+            .store-title {
+                font-size: 28px;
+                margin-bottom: 16px;
+            }
+
+            .store-description {
+                font-size: 14px;
+                margin-bottom: 28px;
+                padding: 0 2%;
+                line-height: 1.5;
+            }
+
+            .store-link {
+                min-width: 250px;
+                padding: 15px 20px;
+                font-size: 12px;
+
+                i {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    /* Böyük telefonlar / phablet (576px - 768px) */
+    @media (max-width: 768px) and (min-width: 576px) {
+        min-height: 40vh;
+        padding: 45px 20px;
+
+        .store-container {
+            max-width: 550px;
+        }
+
+        .store-content {
+            .store-location {
+                font-size: 11px;
+                margin-bottom: 14px;
+                letter-spacing: 0.4px;
+            }
+
+            .store-title {
+                font-size: 26px;
+                margin-bottom: 14px;
+                line-height: 1.2;
+            }
+
+            .store-description {
+                font-size: 13px;
+                margin-bottom: 25px;
+                padding: 0 15px;
+                line-height: 1.5;
+            }
+
+            .store-link {
+                min-width: 240px;
+                padding: 14px 18px;
+                font-size: 12px;
+
+                i {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    /* Telefonlar (480px - 576px) */
+    @media (max-width: 576px) and (min-width: 480px) {
+        min-height: 40vh;
+        padding: 40px 15px;
+
+        .store-container {
+            max-width: 450px;
+        }
+
+        .store-content {
+            .store-location {
+                font-size: 10px;
+                margin-bottom: 12px;
+                letter-spacing: 0.3px;
+            }
+
+            .store-title {
+                font-size: 24px;
+                margin-bottom: 12px;
+            }
+
+            .store-description {
+                font-size: 12px;
+                margin-bottom: 22px;
+                padding: 0 10px;
+                line-height: 1.5;
+            }
+
+            .store-link {
+                min-width: 220px;
+                padding: 12px 16px;
+                font-size: 11px;
+
+                i {
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+
+    /* Kiçik telefonlar (400px - 480px) */
+    @media (max-width: 480px) and (min-width: 400px) {
+        min-height: 45vh;
+        padding: 35px 15px;
+
+        .store-content {
+            .store-location {
+                font-size: 10px;
+                margin-bottom: 10px;
+            }
+
+            .store-title {
+                font-size: 22px;
+                margin-bottom: 10px;
+            }
+
+            .store-description {
+                font-size: 12px;
+                margin-bottom: 20px;
+                padding: 0 5px;
+            }
+
+            .store-link {
+                min-width: 200px;
+                padding: 12px 15px;
+                font-size: 11px;
+                width: 100%;
+                max-width: 280px;
+
+                i {
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+
+    /* Çox kiçik telefonlar (400px-dən aşağı) */
+    @media (max-width: 400px) {
+        min-height: 50vh;
+        padding: 30px 12px;
+
+        .store-content {
+            .store-location {
+                font-size: 9px;
+                margin-bottom: 8px;
+                letter-spacing: 0.2px;
+            }
+
+            .store-title {
+                font-size: 20px;
+                margin-bottom: 8px;
+                line-height: 1.2;
+            }
+
+            .store-description {
+                font-size: 11px;
+                margin-bottom: 18px;
+                padding: 0 5px;
+                line-height: 1.4;
+            }
+
+            .store-link {
+                min-width: 180px;
+                padding: 12px 15px;
+                font-size: 10px;
+                width: 100%;
+                max-width: 250px;
+
+                i {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    /* Hover effektlərinin idarəsi */
+    @media (hover: hover) {
+        .store-link:hover {
+            background-color: $text-dark;
+            color: #fff;
+            border-color: $text-dark;
+
+            i {
+                transform: translateX(5px);
+            }
+        }
+    }
+
+    /* Toxunma cihazlar üçün active state */
+    @media (hover: none) {
+        .store-link:active {
+            background-color: $text-dark;
+            color: #fff;
+            border-color: $text-dark;
+
+            i {
+                transform: translateX(5px);
+            }
+        }
+    }
+
+    /* Landscape rejimi - telefonlar */
+    @media (max-width: 900px) and (orientation: landscape) {
+        min-height: 70vh; // Landscape-də daha hündür
+
+        .store-content {
+            .store-title {
+                font-size: 26px;
+            }
+
+            .store-description {
+                font-size: 13px;
+                max-width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+    /* Çox hündür telefonlar üçün (məsələn, iPhone 12/13/14 Pro Max) */
+    @media (min-height: 800px) and (max-width: 480px) {
+        min-height: 40vh; // Hündür ekranlarda nisbətən az yer tutur
+    }
+
+    /* Xüsusi düzəliş - çox geniş ekranlarda mətn çox uzanmasın */
+    @media (min-width: 2000px) {
+        .store-content {
+            .store-description {
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}

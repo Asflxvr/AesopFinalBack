@@ -1,0 +1,298 @@
+$bg-color: #fffef2;
+$text-color: #333;
+$font-sade: 'Inter', sans-serif;
+
+.airport-discovery {
+    background-color: $bg-color;
+    width: 100%;
+    overflow: hidden;
+
+    .discovery-container {
+        display: flex;
+        flex-wrap: wrap; // Mobildə alt-alta keçməsi üçün
+        min-height: 500px;
+    }
+
+    .discovery-image {
+        flex: 1;
+        min-width: 50%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    .discovery-content {
+        flex: 1;
+        min-width: 50%;
+        display: flex;
+        align-items: center; // Şaquli mərkəzləmə
+        justify-content: flex-start; // Yazını sola söykəyir
+        padding: 60px 80px;
+
+        .content-wrapper {
+            max-width: 450px; // Mətnin çox uzanmaması üçün
+
+            .discovery-title {
+                font-size: 20px;
+                font-weight: 500;
+                margin-bottom: 20px;
+                color: $text-color;
+            }
+
+            .discovery-text {
+                font-size: 14px;
+                line-height: 1.6;
+                color: #666;
+                margin-bottom: 30px;
+            }
+
+            .discovery-btn {
+                display: inline-flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                max-width: 280px;
+                padding: 18px 25px;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                text-decoration: none;
+                color: $text-color;
+                font-size: 14px;
+                font-weight: 500;
+                transition: all 0.3s ease;
+
+                .arrow {
+                    font-size: 18px;
+                    transition: transform 0.3s ease;
+                }
+
+                &:hover {
+                    background-color: #333;
+                    color: #fff;
+                    border-color: #333;
+
+                    .arrow {
+                        transform: translateX(5px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+$bg-color: #fffef2;
+$text-color: #333;
+$font-sade: 'Inter', sans-serif;
+
+.airport-discovery {
+    background-color: $bg-color;
+    width: 100%;
+    overflow: hidden;
+
+    .discovery-container {
+        display: flex;
+        flex-wrap: wrap; // Mobildə alt-alta keçməsi üçün
+        min-height: 500px;
+    }
+
+    .discovery-image {
+        flex: 1;
+        min-width: 50%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    .discovery-content {
+        flex: 1;
+        min-width: 50%;
+        display: flex;
+        align-items: center; // Şaquli mərkəzləmə
+        justify-content: flex-start; // Yazını sola söykəyir
+        padding: 60px 80px;
+
+        .content-wrapper {
+            max-width: 450px; // Mətnin çox uzanmaması üçün
+
+            .discovery-title {
+                font-size: 20px;
+                font-weight: 500;
+                margin-bottom: 20px;
+                color: $text-color;
+            }
+
+            .discovery-text {
+                font-size: 14px;
+                line-height: 1.6;
+                color: #666;
+                margin-bottom: 30px;
+            }
+
+            .discovery-btn {
+                display: inline-flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                max-width: 280px;
+                padding: 18px 25px;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                text-decoration: none;
+                color: $text-color;
+                font-size: 14px;
+                font-weight: 500;
+                transition: all 0.3s ease;
+
+                .arrow {
+                    font-size: 18px;
+                    transition: transform 0.3s ease;
+                }
+
+                &:hover {
+                    background-color: #333;
+                    color: #fff;
+                    border-color: #333;
+
+                    .arrow {
+                        transform: translateX(5px);
+                    }
+                }
+            }
+        }
+    }
+
+    // ========== RESPONSIVE ÜSLUBLAR ==========
+
+    /* Tabletlər üçün (992px-ə qədər) */
+    @media (max-width: 992px) {
+        .discovery-content {
+            padding: 50px 40px; // Yan boşluqları azaldırıq
+        }
+    }
+
+    /* Mobil cihazlar üçün (768px-ə qədər) */
+    @media (max-width: 768px) {
+        .discovery-container {
+            flex-direction: column; // Elementləri sütun halında düzür
+            min-height: auto; // Hündürlüyü avtomatik edirik
+        }
+
+        .discovery-image {
+            min-width: 100%;
+            height: 300px; // Şəkilə sabit hündürlük veririk
+
+            img {
+                height: 100%;
+            }
+        }
+
+        .discovery-content {
+            min-width: 100%;
+            padding: 50px 30px;
+            justify-content: center; // Mərkəzə yerləşdiririk
+
+            .content-wrapper {
+                max-width: 100%; // Tam genişlik
+                text-align: center; // Mətni mərkəzə yerləşdiririk
+
+                .discovery-btn {
+                    margin: 0 auto; // Düyməni mərkəzləşdiririk
+                }
+            }
+        }
+    }
+
+    /* Kiçik mobil cihazlar üçün (576px-ə qədər) */
+    @media (max-width: 576px) {
+        .discovery-image {
+            height: 250px; // Şəkil hündürlüyünü azaldırıq
+        }
+
+        .discovery-content {
+            padding: 40px 20px;
+
+            .content-wrapper {
+                .discovery-title {
+                    font-size: 18px; // Başlıq ölçüsünü kiçildirik
+                    margin-bottom: 15px;
+                }
+
+                .discovery-text {
+                    font-size: 13px; // Mətn ölçüsünü kiçildirik
+                    margin-bottom: 25px;
+                }
+
+                .discovery-btn {
+                    max-width: 260px; // Düymə enini azaldırıq
+                    padding: 15px 20px; // Düymə paddingini azaldırıq
+                    font-size: 13px;
+
+                    .arrow {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Çox kiçik mobil cihazlar üçün (400px-ə qədər) */
+    @media (max-width: 400px) {
+        .discovery-image {
+            height: 200px;
+        }
+
+        .discovery-content {
+            padding: 30px 15px;
+
+            .content-wrapper {
+                .discovery-title {
+                    font-size: 16px;
+                }
+
+                .discovery-text {
+                    font-size: 12px;
+                    line-height: 1.5;
+                }
+
+                .discovery-btn {
+                    max-width: 100%; // Tam genişlik
+                    padding: 12px 15px;
+                }
+            }
+        }
+    }
+
+    /* Hover effektinin toxunma cihazlarda idarəsi */
+    @media (hover: hover) {
+        .discovery-btn:hover {
+            background-color: #333;
+            color: #fff;
+            border-color: #333;
+
+            .arrow {
+                transform: translateX(5px);
+            }
+        }
+    }
+
+    /* Toxunma cihazlar üçün active state */
+    @media (hover: none) {
+        .discovery-btn:active {
+            background-color: #333;
+            color: #fff;
+            border-color: #333;
+
+            .arrow {
+                transform: translateX(5px);
+            }
+        }
+    }
+}

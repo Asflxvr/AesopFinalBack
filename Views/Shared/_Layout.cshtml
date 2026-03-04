@@ -1,0 +1,511 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulations for Skin, Hair & Body | Aesop</title>
+    <link rel="icon" type="image/jpg" href="./assets/images/images.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;1,400&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+      <link href="~/assets/css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- header ve hero -->
+    <div class="banner">
+        <div class="banner-content">
+            <p class="banner-text active">
+                Receive a deluxe sample at checkout with orders over $125. Excludes Click &
+                Collect.
+            </p>
+            <p class="banner-text">
+                Enjoy complimentary Ground shipping with all orders through March 31. Complimentary
+                samples
+                available at checkout.
+            </p>
+            <p class="banner-text">
+                Receive samples of Aesop's first retinoid, Resolute Facial Concentrate... <a href="#">
+                    Learn
+                    more.
+                </a>
+            </p>
+        </div>
+    </div>
+    <header id="header">
+        <div class="headerContainer">
+            <div class="headerTop">
+                <div class="leftLinks">
+                    <a asp-controller="Stores" asp-action="Index">Stores</a>
+                    <a asp-controller="Customer" asp-action="Index">Customer service</a>
+                </div>
+                <div class="logo">
+                    <img src="./assets/images/indir (1).svg" alt="Aesop" class="logo-light" />
+                    <a asp-controller="Home" asp-action="Index"><img src="./assets/images/indir.svg" alt="Aesop" class="logo-dark" /></a>
+                </div>
+
+                <div class="rightLinks">
+                    <a href="./signin.html">Sign In</a>
+                    <a href="#">Account</a>
+                     <a href="/cart">View Cart</a>                   
+                </div>
+            </div>
+
+            <div class="headerBottom">
+                <nav>
+                    <ul>
+                        <li><a href="#">New & Notable</a></li>
+                        <li><a asp-controller="SkinCare" asp-action="Index">Skin Care</a></li>
+                        <li><a asp-controller="HandAndBody" asp-action="Index">Hand & Body</a></li>
+                        <li><a asp-controller="Fragrance" asp-action="Index">Fragrance</a></li>
+                        <li><a asp-controller="HomeAesop" asp-action="Index">Home</a></li>
+                        <li><a asp-controller="Hair" asp-action="Index">Hair</a></li>
+                        <li><a asp-controller="Travel" asp-action="Index">Travel</a></li>
+                        <li><a asp-controller="Gift" asp-action="Index">Gifts</a></li>
+                        <li><a asp-controller="Library" asp-action="Index">Library</a></li>
+                        <li><a asp-controller="Experience" asp-action="Index">Experience</a></li>
+                    </ul>
+                </nav>
+                <div class="searchBox">
+                    <button type="button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search...">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+            @RenderBody()
+
+    <!-- foooter -->
+    <footer id="footerBox">
+        <div class="footerContainer">
+            <div class="footerTop">
+                <div class="footerTopCard">
+                    <i class="fa-solid fa-lock"></i><span>Secure checkout</span>
+                </div>
+                <div class="footerTopCard">
+                    <i class="fa-solid fa-fire-flame-simple"></i><span> Complimentary samples</span>
+                </div>
+                <div class="footerTopCard">
+                    <i class="fa-solid fa-gift"></i><span>Complimentary gift wrapping</span>
+                </div>
+            </div>
+            <div class="footerMid">
+                <div class="footerMidLeft">
+                    <div class="footerColumn">
+                        <h4 class="footerTitle">Orders and support</h4>
+                        <div class="footerLine"></div>
+                        <ul class="footerList">
+                            <li><a href="">Contact us</a></li>
+                            <li><a href="">Text message communication</a></li>
+                            <li><a asp-controller="Faqs" asp-action="Index">FAQs</a></li>
+                            <li><a href="">Shipping</a></li>
+                            <li><a href="">Returns</a></li>
+                            <li><a href="">Track your order</a></li>
+                            <li><a href="">Check gift card balance</a></li>
+                            <li><a href="">Terms of use</a></li>
+                            <li><a href="">Product recalls</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footerColumn">
+                        <h4 class="footerTitle">About</h4>
+                        <div class="footerLine"></div>
+                        <ul class="footerList">
+                            <li><a href="">Our story</a></li>
+                            <li><a href="">Foundation</a></li>
+                            <li><a href="">Careers</a></li>
+                            <li><a href="">Online Preferences</a></li>
+                            <li><a href="">Privacy policy</a></li>
+                            <li><a href="">Accessibility Statement</a></li>
+                            <li><a href="">Your Privacy Choices</a></li>
+                            <li><a href="">Notice At Collection</a></li>
+                            <li><a href="">Consumer Health Data Notice</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footerColumn">
+                        <h4 class="footerTitle">Sustainability</h4>
+                        <div class="footerLine"></div>
+                        <p class="footerText">
+                            All Aesop products are vegan, and we do not test our formulations or ingredients on animals. We are
+                            Leaping
+                            Bunny approved and a Certified B Corporation. <a href="#">Learn more</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="footerMidRight">
+                    <h4 class="footerTitle">Subscribe to Aesop communications</h4>
+
+                    <form class="subscribeForm">
+                        <input type="email" placeholder="Email address*" class="formInput" />
+                        <input type="text" placeholder="Phone number" class="formInput" />
+
+                        <div class="checkboxGroup">
+                            <input type="checkbox" id="consentCheck" />
+                            <label class="consentCheck" for="consentCheck">
+                                By submitting this form, I expressly agree to Aesop, directly or by third parties acting on its behalf,
+                                sending me promotional & marketing messages (e.g. cart reminders) - including texts or calls using
+                                automated means (including for the selection or dialing of a telephone number) or pre-recorded or
+                                artificial voice messages - to the mobile number I provided and to the Mobile Terms (which include an
+                                arbitration provision to resolve disputes). I confirm I am the owner of the # provided, and understand
+                                consent is not a condition of purchase. Msg frequency varies. Msg & Data Rates May Apply. Text HELP for
+                                help and STOP to cancel. <a href="">Privacy Policy Notice of Financial Incentives.</a>
+                            </label>
+                        </div>
+                        <div class="footerLine"></div>
+                        <div class="footerRecevie">
+                            <h6>Receive email communications</h6>
+                            <p>
+                                By submitting this form, I confirm I am a US resident and (1) agree to Aesop's Terms & Conditions
+                                (which
+                                includes an arbitration provision) and Marketing Disclosure; and (2) have read and acknowledge Aesop's
+                                Privacy Notice and Notice of Financial Incentives.
+                            </p>
+                        </div>
+                        <button type="submit" class="submitButton">Submit</button>
+                    </form>
+                    <div class="footerIcon">
+                        <a href="https://www.instagram.com/aesop"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/aesop/"><i class="fa-brands fa-square-linkedin"></i></a>
+                        <a href="https://www.pinterest.com/aesop/"><i class="fa-brands fa-pinterest"></i></a>
+                        <a href="https://www.facebook.com/Aesop"><i class="fa-brands fa-square-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footerBottom">
+                <div class="footerBottomLeft">
+                    <p>
+                        © 2026 Aesop | This site is intended for US consumers. Cookies and related technology are used for
+                        advertising. To learn more or opt-out, visit <a href="">AdChoices</a> and our <a href="">Privacy Policy</a>
+                    </p>
+                </div>
+                <div class="footerBottomRight">
+                    <ul>
+                        <li><a href="">Terms & Conditions</a></li>
+                        <li><a href="">Site Map</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">User Content Permissions</a></li>
+                        <li><a href="">Accessibility Statement</a></li>
+                        <li><a href="">Mobile Terms</a></li>
+                        <li><a href="">Online Preferences</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ferid -->
+    <script src="./assets/js/scroolbanner.js"></script>
+    <script src="./assets/js/banner.js"></script>
+    <script src="./assets/js/video.js"></script>
+    <script src="./assets/js/ox.js"></script>
+    <script src="./assets/js/discover.js"></script>
+    <script src="./assets/js/price.js"></script>
+    <script src="./assets/js/browse.js"></script>
+    <script src="./assets/js/drop.js"></script>
+    <script src="./assets/js/fullvideo.js"></script>
+    <script>
+        // Sepet API URL
+        const cartApiUrl = '/api/cartapi';
+
+        // Sepet durumu
+        let cart = {
+            items: [],
+            total: 0
+        };
+
+        // Sayfa yüklendiğinde
+        document.addEventListener('DOMContentLoaded', function() {
+            loadCart();
+            setupCartToggle();
+            setupAddToCartButtons();
+        });
+
+        // Sepeti yükle
+        async function loadCart() {
+            try {
+                const response = await fetch(cartApiUrl);
+                const data = await response.json();
+                cart = data;
+                updateCartUI();
+            } catch (error) {
+                console.error('Cart load error:', error);
+            }
+        }
+
+        // Sepet toggle
+        function setupCartToggle() {
+            const toggle = document.getElementById('cartToggle');
+            const dropdown = document.getElementById('cartDropdown');
+
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+            });
+
+            // Dışarı tıklanınca kapat
+            document.addEventListener('click', (e) => {
+                if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
+                    dropdown.style.display = 'none';
+                }
+            });
+        }
+
+        // Add to cart butonlarını ayarla
+        function setupAddToCartButtons() {
+            document.querySelectorAll('.add-to-cart, .add-to-cart-btn, .buy-button, .add-btn').forEach(btn => {
+                btn.addEventListener('click', async function(e) {
+                    e.preventDefault();
+
+                    // Ürün kartını bul
+                    const card = this.closest('.product-card, .product-item, .candle-card, .set-card, .blend-card');
+                    if (!card) return;
+
+                    // Ürün bilgilerini topla
+                    const item = extractProductInfo(card);
+
+                    // Sepete ekle
+                    await addToCart(item, this);
+                });
+            });
+        }
+
+        // Ürün bilgilerini çıkar
+        function extractProductInfo(card) {
+            const item = {
+                id: card.dataset.id || generateId(),
+                name: '',
+                price: 0,
+                size: 'One size',
+                imageUrl: '',
+                quantity: 1
+            };
+
+            // İsim
+            const titleEl = card.querySelector('h3, .product-name, .item-name, .title');
+            if (titleEl) item.name = titleEl.textContent.trim();
+
+            // Fiyat
+            const priceEl = card.querySelector('.price, .product-price, .item-price, .cost');
+            if (priceEl) {
+                const priceText = priceEl.textContent.replace(/[^0-9.]/g, '');
+                item.price = parseFloat(priceText) || 0;
+            }
+
+            // Resim
+            const imgEl = card.querySelector('img');
+            if (imgEl) item.imageUrl = imgEl.src;
+
+            // Size dropdown varsa
+            const sizeSelect = card.querySelector('select.size-select, .size-dropdown select');
+            if (sizeSelect && sizeSelect.value) {
+                item.size = sizeSelect.options[sizeSelect.selectedIndex]?.text || 'One size';
+            }
+
+            return item;
+        }
+
+        // Sepete ekle
+        async function addToCart(item, button) {
+            // Loading state
+            button.classList.add('loading');
+            button.disabled = true;
+
+            try {
+                const response = await fetch(`${cartApiUrl}/add`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(item)
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    // Sepeti güncelle
+                    cart.items = data.items || [];
+                    cart.total = data.total || 0;
+                    updateCartUI();
+
+                    // Başarılı mesajı göster
+                    showToast(data.message, 'success');
+                }
+            } catch (error) {
+                console.error('Add to cart error:', error);
+                showToast('Error adding to cart', 'error');
+            } finally {
+                button.classList.remove('loading');
+                button.disabled = false;
+            }
+        }
+
+        // Sepetten çıkar
+        async function removeFromCart(item) {
+            try {
+                const response = await fetch(`${cartApiUrl}/remove`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(item)
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    await loadCart();
+                    showToast('Item removed from cart', 'success');
+                }
+            } catch (error) {
+                console.error('Remove error:', error);
+            }
+        }
+
+        // Miktar güncelle
+        async function updateQuantity(item, quantity) {
+            try {
+                const response = await fetch(`${cartApiUrl}/update`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        id: item.id,
+                        size: item.size,
+                        quantity: quantity
+                    })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    await loadCart();
+                }
+            } catch (error) {
+                console.error('Update error:', error);
+            }
+        }
+
+        // Sepet UI'ını güncelle
+        function updateCartUI() {
+            const cartCount = document.getElementById('cartCount');
+            const cartItems = document.getElementById('cartItems');
+            const cartTotal = document.getElementById('cartTotal');
+            const cartItemCount = document.getElementById('cartItemCount');
+
+            const totalItems = cart.items?.reduce((sum, item) => sum + (item.quantity || 1), 0) || 0;
+
+            // Sepet sayısı
+            if (totalItems > 0) {
+                cartCount.textContent = totalItems;
+                cartCount.style.display = 'flex';
+            } else {
+                cartCount.style.display = 'none';
+            }
+
+            // Sepet öğeleri
+            if (cartItems) {
+                if (cart.items && cart.items.length > 0) {
+                    cartItems.innerHTML = cart.items.map(item => `
+                        <div class="cart-item" data-id="${item.id}" data-size="${item.size}">
+                            <img src="${item.imageUrl || '/assets/images/placeholder.jpg'}" alt="${item.name}">
+                            <div class="cart-item-info">
+                                <div class="cart-item-name">${item.name}</div>
+                                <div class="cart-item-details">${item.size} × ${item.quantity}</div>
+                                <div class="cart-item-price">$${(item.price * (item.quantity || 1)).toFixed(2)}</div>
+                            </div>
+                            <div class="cart-item-remove" onclick="removeFromCart(${JSON.stringify(item).replace(/"/g, '&quot;')})">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </div>
+                        </div>
+                    `).join('');
+                } else {
+                    cartItems.innerHTML = '<div class="empty-cart">Your cart is empty</div>';
+                }
+            }
+
+            // Toplam
+            if (cartTotal) {
+                cartTotal.textContent = `$${(cart.total || 0).toFixed(2)}`;
+            }
+
+            // Ürün sayısı
+            if (cartItemCount) {
+                cartItemCount.textContent = `${totalItems} item${totalItems !== 1 ? 's' : ''}`;
+            }
+        }
+
+        // Toast bildirimi
+        function showToast(message, type = 'success') {
+            const toast = document.createElement('div');
+            toast.className = `toast-notification ${type}`;
+            toast.innerHTML = `
+                <i class="fa-${type === 'success' ? 'regular' : 'solid'} fa-circle-${type === 'success' ? 'check' : 'exclamation'}"></i>
+                <span>${message}</span>
+            `;
+
+            toast.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 30px;
+                background: ${type === 'success' ? '#333' : '#ff4444'};
+                color: white;
+                padding: 12px 20px;
+                border-radius: 4px;
+                font-size: 14px;
+                z-index: 2000;
+                animation: slideIn 0.3s ease;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            `;
+
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+
+        // ID generate
+        function generateId() {
+            return Date.now().toString(36) + Math.random().toString(36).substr(2);
+        }
+
+        // Animasyonlar
+        const style = document.createElement('style');
+        style.textContent = `
+            @@keyframes slideIn {
+                from {
+                    opacity: 0;
+                    transform: translateX(100%);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            @@keyframes slideOut {
+                from {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+                to {
+                    opacity: 0;
+                    transform: translateX(100%);
+                }
+            }
+        `;
+        document.head.appendChild(style);</script>
+</body>
+
+</html>

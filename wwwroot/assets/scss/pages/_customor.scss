@@ -1,0 +1,364 @@
+// Header offset - header-in üstünə düşməməsi üçün
+.header-offset {
+    height: 20px; // İstədiyin qədər artıra bilərsən
+    width: 100%;
+    background: transparent;
+
+    @media (max-width: 768px) {
+        height: 10px; // Mobil üçün daha az boşluq
+    }
+}
+
+// Customer Service Section - Premium Aesop Style
+.customer-service {
+    max-width: 1200px;
+    margin: 0 auto 80px; // Üst margin-i sıfırla, offset artıq var
+    padding: 0 24px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #faf9f7; // Yumşaq krem fon rəngi
+
+    // Hero Section
+    .cs-hero {
+        text-align: center;
+        margin-bottom: 72px;
+        padding: 40px 0 0; // Üst padding-i azalt
+
+        h1 {
+            font-size: 56px;
+            font-weight: 300;
+            letter-spacing: -1px;
+            margin-bottom: 24px;
+            color: #1a1a1a;
+            line-height: 1.1;
+        }
+
+        p {
+            font-size: 18px;
+            color: #4a4a4a;
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+    }
+
+    // Cards Grid
+    .cs-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        margin-bottom: 100px;
+
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        @media (max-width: 640px) {
+            grid-template-columns: 1fr;
+        }
+
+        .cs-card {
+            background: #ffffff;
+            padding: 48px 28px 40px;
+            text-align: center;
+            border: none;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 40px;
+                height: 1px;
+                background: #d4d4d4;
+                transition: width 0.3s ease;
+            }
+
+            .cs-card-icon {
+                margin-bottom: 24px;
+
+                i {
+                    font-size: 36px;
+                    color: #8a7f7a;
+                    transition: all 0.3s ease;
+                }
+            }
+
+            h3 {
+                font-weight: 400;
+                font-size: 20px;
+                margin-bottom: 16px;
+                color: #2c2c2c;
+                letter-spacing: 0.3px;
+            }
+
+            p {
+                font-size: 14px;
+                color: #6b6b6b;
+                line-height: 1.7;
+                margin-bottom: 28px;
+                font-weight: 300;
+            }
+
+            .cs-link {
+                font-size: 13px;
+                color: #2c2c2c;
+                text-decoration: none;
+                border-bottom: none;
+                padding-bottom: 2px;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                font-weight: 500;
+                transition: all 0.3s ease;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+
+                i {
+                    font-size: 11px;
+                    transition: transform 0.3s ease;
+                }
+
+                &:hover {
+                    color: #8a7f7a;
+
+                    i {
+                        transform: translateX(4px);
+                    }
+                }
+            }
+
+            &:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+                background: #ffffff;
+
+                &::after {
+                    width: 60px;
+                    background: #8a7f7a;
+                }
+
+                .cs-card-icon i {
+                    color: #5a4e48;
+                }
+            }
+        }
+    }
+
+    // FAQ Preview Section
+    .cs-faq-preview {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 60px 0 40px;
+
+        .cs-faq-header {
+            text-align: center;
+            margin-bottom: 48px;
+
+            h2 {
+                font-weight: 300;
+                font-size: 38px;
+                margin-bottom: 16px;
+                color: #1a1a1a;
+                letter-spacing: -0.5px;
+            }
+
+            p {
+                font-size: 16px;
+                color: #6b6b6b;
+                font-weight: 300;
+                line-height: 1.6;
+            }
+        }
+
+        .cs-faq-container {
+            margin-bottom: 48px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eaeaea;
+            margin-bottom: 4px;
+            background: transparent;
+            transition: all 0.3s ease;
+
+            .faq-question {
+                width: 100%;
+                background: none;
+                border: none;
+                padding: 24px 0;
+                font-size: 17px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: 400;
+                color: #2c2c2c;
+                cursor: pointer;
+                text-align: left;
+                transition: all 0.3s ease;
+
+                span {
+                    flex: 1;
+                    padding-right: 20px;
+                }
+
+                i {
+                    font-size: 14px;
+                    color: #9a9a9a;
+                    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                }
+
+                &:hover {
+                    color: #8a7f7a;
+
+                    i {
+                        color: #8a7f7a;
+                    }
+                }
+
+                &.open i {
+                    transform: rotate(180deg);
+                }
+            }
+
+            .faq-answer {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+                padding: 0;
+                color: #4a4a4a;
+                font-size: 15px;
+                line-height: 1.8;
+                font-weight: 300;
+                background: #ffffff;
+                border-radius: 8px;
+
+                .faq-answer-content {
+                    padding: 4px 0 24px 0;
+
+                    p {
+                        margin-bottom: 16px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        a {
+                            color: #8a7f7a;
+                            text-decoration: none;
+                            font-weight: 400;
+                            border-bottom: 1px solid transparent;
+                            transition: border-color 0.3s;
+
+                            &:hover {
+                                border-bottom-color: #8a7f7a;
+                            }
+                        }
+                    }
+
+                    h4 {
+                        font-size: 15px;
+                        font-weight: 500;
+                        margin: 20px 0 12px;
+                        color: #2c2c2c;
+                    }
+
+                    ul,
+                    ol {
+                        margin: 0 0 16px 20px;
+
+                        li {
+                            margin-bottom: 8px;
+                            color: #5a5a5a;
+                        }
+                    }
+
+                    strong {
+                        font-weight: 500;
+                        color: #2c2c2c;
+                    }
+                }
+            }
+
+            &.expanded {
+                .faq-answer {
+                    max-height: 600px; // Kifayət qədər böyük
+                }
+
+                .faq-question {
+                    color: #8a7f7a;
+
+                    i {
+                        color: #8a7f7a;
+                    }
+                }
+            }
+        }
+
+        .cs-faq-footer {
+            text-align: center;
+            margin-top: 48px;
+            padding: 32px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
+
+            p {
+                font-size: 15px;
+                color: #4a4a4a;
+
+                a {
+                    color: #8a7f7a;
+                    text-decoration: none;
+                    font-weight: 400;
+                    border-bottom: 1px solid #e0e0e0;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        border-bottom-color: #8a7f7a;
+                        color: #5a4e48;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Responsive düzəlişlər
+@media (max-width: 768px) {
+    .customer-service {
+        margin: 0 auto 60px;
+        padding: 0 20px;
+
+        .cs-hero {
+            h1 {
+                font-size: 42px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+
+        .cs-faq-preview {
+            padding: 40px 0;
+
+            .cs-faq-header {
+                h2 {
+                    font-size: 32px;
+                }
+            }
+
+            .faq-item {
+                .faq-question {
+                    font-size: 16px;
+                    padding: 20px 0;
+                }
+            }
+        }
+    }
+}

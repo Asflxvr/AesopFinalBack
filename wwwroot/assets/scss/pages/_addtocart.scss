@@ -1,0 +1,694 @@
+$aesop-bg: #fffef2;
+
+$text-dark: #333;
+
+$text-gray: #666;
+
+$border-color: #e1e1e1;
+
+$font-main: 'Inter', sans-serif;
+
+
+
+.product-grid {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    padding: 60px 20px;
+
+    background-color: $aesop-bg;
+
+
+
+    .product-card {
+
+        flex: 1;
+
+        max-width: 310px; // Daha balaca kartlar
+
+        display: flex;
+
+        flex-direction: column;
+
+        text-align: center;
+
+
+
+        .image-wrapper {
+
+            position: relative;
+
+            width: 100%;
+
+            height: 310px;
+
+            margin-bottom: 20px;
+
+            cursor: pointer;
+
+
+
+            img {
+
+                width: 100%;
+
+                height: 100%;
+
+                object-fit: contain;
+
+                transition: opacity 0.5s ease;
+
+            }
+
+
+
+            .hover-img {
+
+                position: absolute;
+
+                top: 0;
+
+                left: 0;
+
+                opacity: 0;
+
+            }
+
+        }
+
+
+
+        &:hover {
+
+            .main-img {
+
+                opacity: 0;
+
+            }
+
+
+
+            .hover-img {
+
+                opacity: 1;
+
+            }
+
+        }
+
+
+
+        .content {
+
+            width: 100%;
+
+            flex-grow: 1; // Boşluğu doldurur
+
+            display: flex;
+
+            flex-direction: column;
+
+
+
+            h3 {
+
+                font-size: 15px;
+
+                margin-bottom: 6px;
+
+                color: $text-dark;
+
+            }
+
+
+
+            .product-desc {
+
+                font-size: 13px;
+
+                color: $text-gray;
+
+                margin-bottom: 20px;
+
+                flex-grow: 1; // Düyməni aşağı itələyən əsas hissə
+
+            }
+
+        }
+
+
+
+        .size-container {
+
+            width: 100%;
+
+            border: 1px solid $border-color;
+
+            padding: 10px;
+
+            margin-bottom: 12px;
+
+            position: relative;
+
+            text-align: left;
+
+
+
+            .size-label {
+
+                font-size: 10px;
+
+                position: absolute;
+
+                top: -7px;
+
+                left: 10px;
+
+                background: $aesop-bg;
+
+                padding: 0 4px;
+
+            }
+
+
+
+            .size-select {
+
+                width: 100%;
+
+                border: none;
+
+                background: transparent;
+
+                font-size: 13px;
+
+                outline: none;
+
+                cursor: pointer;
+
+            }
+
+        }
+
+
+
+        .no-size-box {
+
+            margin-bottom: 15px;
+
+            min-height: 48px;
+
+
+
+            span {
+
+                display: block;
+
+                font-size: 13px;
+
+            }
+
+
+
+            .kit-text {
+
+                font-weight: 500;
+
+                margin-top: 4px;
+
+            }
+
+        }
+
+
+
+        .price {
+
+            font-size: 13px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+        .add-btn {
+
+            margin-top: auto; // Düyməni həmişə ən aşağıya bərkidir
+
+            width: 100%;
+
+            background: #333;
+
+            color: #fff;
+
+            padding: 15px;
+
+            border: none;
+
+            cursor: pointer;
+
+            position: relative;
+
+            font-size: 13px;
+
+
+
+            .loader {
+
+                display: none;
+
+                animation: spin 1s linear infinite;
+
+            }
+
+
+
+            &.is-loading {
+
+                .text {
+
+                    visibility: hidden;
+
+                }
+
+
+
+                .loader {
+
+                    display: block;
+
+                    position: absolute;
+
+                    top: 50%;
+
+                    left: 50%;
+
+                    transform: translate(-50%, -50%);
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+
+// Variables
+$aesop-bg: #fffef2;
+$text-dark: #333;
+$text-gray: #666;
+$border-color: #e1e1e1;
+$font-main: 'Inter', sans-serif;
+
+// Animation
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; // Kartların sıraya sığmayanda aşağı düşməsi üçün
+    gap: 20px;
+    padding: 60px 20px;
+    background-color: $aesop-bg;
+
+    // =========================================
+    // RESPONSIVE: product-grid padding
+    // =========================================
+    @media (max-width: 1200px) {
+        padding: 50px 20px;
+        gap: 18px;
+    }
+
+    @media (max-width: 992px) {
+        padding: 40px 20px;
+        gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 35px 15px;
+        gap: 15px;
+    }
+
+    @media (max-width: 576px) {
+        padding: 30px 12px;
+        gap: 12px;
+    }
+
+    .product-card {
+        flex: 0 1 310px; // flex-grow: 0, flex-shrink: 1, flex-basis: 310px
+        max-width: 310px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        // =========================================
+        // RESPONSIVE: product-card
+        // =========================================
+        @media (max-width: 1200px) {
+            flex: 0 1 280px;
+            max-width: 280px;
+        }
+
+        @media (max-width: 992px) {
+            flex: 0 1 240px;
+            max-width: 240px;
+        }
+
+        @media (max-width: 768px) {
+            flex: 0 1 45%; // 2 kart yan-yana
+            max-width: 45%;
+        }
+
+        @media (max-width: 576px) {
+            flex: 0 1 100%; // 1 kart tam en
+            max-width: 100%;
+        }
+
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+            height: 310px;
+            margin-bottom: 20px;
+            cursor: pointer;
+
+            // =========================================
+            // RESPONSIVE: image-wrapper
+            // =========================================
+            @media (max-width: 1200px) {
+                height: 280px;
+                margin-bottom: 18px;
+            }
+
+            @media (max-width: 992px) {
+                height: 240px;
+                margin-bottom: 16px;
+            }
+
+            @media (max-width: 768px) {
+                height: auto; // Hündürlüyü şəklə uyğun
+                aspect-ratio: 1 / 1; // Kvadrat nisbət
+                margin-bottom: 15px;
+            }
+
+            @media (max-width: 576px) {
+                margin-bottom: 12px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                transition: opacity 0.5s ease;
+            }
+
+            .hover-img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+            }
+        }
+
+        &:hover {
+            .main-img {
+                opacity: 0;
+            }
+
+            .hover-img {
+                opacity: 1;
+            }
+        }
+
+        .content {
+            width: 100%;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 15px;
+                margin-bottom: 6px;
+                color: $text-dark;
+
+                // =========================================
+                // RESPONSIVE: h3
+                // =========================================
+                @media (max-width: 992px) {
+                    font-size: 14px;
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 14px;
+                    margin-bottom: 5px;
+                }
+
+                @media (max-width: 576px) {
+                    font-size: 13px;
+                    margin-bottom: 4px;
+                }
+            }
+
+            .product-desc {
+                font-size: 13px;
+                color: $text-gray;
+                margin-bottom: 20px;
+                flex-grow: 1;
+
+                // =========================================
+                // RESPONSIVE: product-desc
+                // =========================================
+                @media (max-width: 992px) {
+                    font-size: 12px;
+                    margin-bottom: 18px;
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 12px;
+                    margin-bottom: 16px;
+                }
+
+                @media (max-width: 576px) {
+                    font-size: 11px;
+                    margin-bottom: 14px;
+                }
+            }
+        }
+
+        .size-container {
+            width: 100%;
+            border: 1px solid $border-color;
+            padding: 10px;
+            margin-bottom: 12px;
+            position: relative;
+            text-align: left;
+
+            // =========================================
+            // RESPONSIVE: size-container
+            // =========================================
+            @media (max-width: 768px) {
+                padding: 8px;
+                margin-bottom: 10px;
+            }
+
+            @media (max-width: 576px) {
+                padding: 7px;
+                margin-bottom: 8px;
+            }
+
+            .size-label {
+                font-size: 10px;
+                position: absolute;
+                top: -7px;
+                left: 10px;
+                background: $aesop-bg;
+                padding: 0 4px;
+
+                // =========================================
+                // RESPONSIVE: size-label
+                // =========================================
+                @media (max-width: 576px) {
+                    font-size: 9px;
+                    top: -6px;
+                    left: 8px;
+                }
+            }
+
+            .size-select {
+                width: 100%;
+                border: none;
+                background: transparent;
+                font-size: 13px;
+                outline: none;
+                cursor: pointer;
+
+                // =========================================
+                // RESPONSIVE: size-select
+                // =========================================
+                @media (max-width: 992px) {
+                    font-size: 12px;
+                }
+
+                @media (max-width: 576px) {
+                    font-size: 11px;
+                }
+            }
+        }
+
+        .no-size-box {
+            margin-bottom: 15px;
+            min-height: 48px;
+
+            // =========================================
+            // RESPONSIVE: no-size-box
+            // =========================================
+            @media (max-width: 768px) {
+                margin-bottom: 12px;
+                min-height: 44px;
+            }
+
+            @media (max-width: 576px) {
+                margin-bottom: 10px;
+                min-height: 40px;
+            }
+
+            span {
+                display: block;
+                font-size: 13px;
+
+                // =========================================
+                // RESPONSIVE: span
+                // =========================================
+                @media (max-width: 992px) {
+                    font-size: 12px;
+                }
+
+                @media (max-width: 576px) {
+                    font-size: 11px;
+                }
+            }
+
+            .kit-text {
+                font-weight: 500;
+                margin-top: 4px;
+
+                @media (max-width: 576px) {
+                    margin-top: 3px;
+                }
+            }
+        }
+
+        .price {
+            font-size: 13px;
+            margin-bottom: 20px;
+
+            // =========================================
+            // RESPONSIVE: price
+            // =========================================
+            @media (max-width: 992px) {
+                font-size: 12px;
+                margin-bottom: 18px;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 12px;
+                margin-bottom: 16px;
+            }
+
+            @media (max-width: 576px) {
+                font-size: 11px;
+                margin-bottom: 14px;
+            }
+        }
+
+        .add-btn {
+            margin-top: auto;
+            width: 100%;
+            background: #333;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            font-size: 13px;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: lighten(#333, 10%);
+            }
+
+            // =========================================
+            // RESPONSIVE: add-btn
+            // =========================================
+            @media (max-width: 992px) {
+                padding: 14px;
+                font-size: 12px;
+            }
+
+            @media (max-width: 768px) {
+                padding: 12px;
+                font-size: 12px;
+            }
+
+            @media (max-width: 576px) {
+                padding: 11px;
+                font-size: 11px;
+            }
+
+            .loader {
+                display: none;
+                width: 20px;
+                height: 20px;
+                border: 2px solid #fff;
+                border-top-color: transparent;
+                border-radius: 50%;
+
+                // =========================================
+                // RESPONSIVE: loader
+                // =========================================
+                @media (max-width: 768px) {
+                    width: 18px;
+                    height: 18px;
+                    border-width: 2px;
+                }
+
+                @media (max-width: 576px) {
+                    width: 16px;
+                    height: 16px;
+                    border-width: 2px;
+                }
+            }
+
+            &.is-loading {
+                .text {
+                    visibility: hidden;
+                }
+
+                .loader {
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    animation: spin 1s linear infinite;
+                }
+            }
+        }
+    }
+}

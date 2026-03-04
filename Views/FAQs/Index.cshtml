@@ -1,0 +1,368 @@
+﻿
+@{
+	Layout = "_Layout";
+}
+
+<main>
+
+
+    <!-- FAQ Hero bölməsi -->
+    <section class="faq-hero">
+        <h1 class="faq-hero-title">Frequently Asked Questions</h1>
+        <p class="faq-hero-subtitle">
+            Find answers to common questions about our products, formulations,
+            shipping, returns, and more. If you can't find what you're looking for,
+            our Customer Service team is here to help.
+        </p>
+    </section>
+
+    <!-- Axtarış bölməsi -->
+    <section class="faq-search-section">
+        <div class="faq-search-container">
+            <div class="faq-search-wrapper">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="faqSearch" placeholder="Search for answers..." />
+            </div>
+        </div>
+    </section>
+
+    <!-- Kateqoriya nişanları -->
+    <section class="faq-categories">
+        <div class="faq-categories-container">
+            <span class="faq-category-tab active" data-category="orders">Orders & Shipping</span>
+            <span class="faq-category-tab" data-category="returns">Returns & Refunds</span>
+            <span class="faq-category-tab" data-category="products">Products & Ingredients</span>
+            <span class="faq-category-tab" data-category="account">Account & Gift Cards</span>
+            <span class="faq-category-tab" data-category="sustainability">Sustainability</span>
+            <span class="faq-category-tab" data-category="stores">Stores & Services</span>
+        </div>
+    </section>
+
+    <!-- FAQ suallar bölməsi -->
+    <section class="faq-main-section">
+        <div class="faq-container">
+            <!-- Orders & Shipping kateqoriyası -->
+            <div id="category-orders" class="faq-category-content active">
+                <h2 class="faq-category-title">Orders & Shipping</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-question-text">How long will it take to receive my order?</span>
+                        <i class="fa-solid fa-chevron-down faq-question-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            We offer complimentary Ground shipping on all orders. Delivery typically takes 3-5
+                            business days within the continental United States. Expedited shipping options are
+                            available at checkout for an additional charge.
+                        </p>
+                        <p>
+                            Once your order has been dispatched, you will receive a confirmation email with tracking
+                            information. Please note that delivery times may vary during peak seasons or due to
+                            unforeseen circumstances.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-question-text">Do you ship internationally?</span>
+                        <i class="fa-solid fa-chevron-down faq-question-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Yes, Aesop ships to select countries worldwide. Shipping costs and delivery times vary
+                            depending on the destination. During checkout, you will be able to select your country
+                            and view available shipping options and costs.
+                        </p>
+                        <p>
+                            Please note that international orders may be subject to import duties and taxes, which
+                            are the responsibility of the recipient.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-question-text">Can I modify or cancel my order?</span>
+                        <i class="fa-solid fa-chevron-down faq-question-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Orders can be modified or cancelled within 1 hour of placement. After this time, orders
+                            are processed and prepared for dispatch and cannot be changed. Please contact our
+                            Customer Service team immediately at <a href="mailto:customerservice@aesop.com">customerservice@aesop.com</a> with your
+                            order number and request.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-question-text">What is your sample policy?</span>
+                        <i class="fa-solid fa-chevron-down faq-question-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            We are pleased to offer complimentary samples with every order. During checkout, you can
+                            select up to three samples from our current selection. This allows you to experience our
+                            formulations before committing to a full-size product.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Returns & Refunds kateqoriyası -->
+            <div id="category-returns" class="faq-category-content">
+                <h2 class="faq-category-title">Returns & Refunds</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-question-text">What is your return policy?</span>
+                        <i class="fa-solid fa-chevron-down faq-question-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            We accept returns within 30 days of delivery for a full refund to the original payment
+                            method. Products must be unused, in their original packaging, and in saleable condition.
+                            To initiate a return, please visit our <a href="#">Returns Portal</a> or contact
+                            Customer Service.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-question-text">How do I return a gift?</span>
+                        <i class="fa-solid fa-chevron-down faq-question-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            If you received a gift and would like to return it, please contact our Customer Service
+                            team. We will issue a gift card or store credit for the value of the returned item. The
+                            gift giver will not be notified of the return unless the item was purchased as a
+                            "surprise gift."
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-question-text">How long do refunds take to process?</span>
+                        <i class="fa-solid fa-chevron-down faq-question-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Once we receive your return, please allow 5-7 business days for inspection and
+                            processing. The refund will be issued to your original payment method. Depending on your
+                            financial institution, it may take an additional 3-5 business days for the funds to
+                            appear in your account.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products & Ingredients kateqoriyası -->
+            <div id="category-products" class="faq-category-content">
+                <h2 class="faq-category-title">Products & Ingredients</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-question-text">Are Aesop products vegan?</span>
+                        <i class="fa-solid fa-chevron-down faq-question-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Yes, all Aesop products are vegan. We do not use any animal-derived ingredients or
+                            by-products in our formulations. Additionally, we are Leaping Bunny approved and a
+                            Certified B Corporation, reflecting our commitment to cruelty-free practices.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-question-text">Do you test on animals?</span>
+                        <i class="fa-solid fa-chevron-down faq-question-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Aesop does not test any of our products or ingredients on animals. We are certified by
+                            the Leaping Bunny program, the gold standard for cruelty-free certification. We require
+                            all our suppliers to confirm that their ingredients are not tested on animals.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-question-text">Where can I find ingredient lists?</span>
+                        <i class="fa-solid fa-chevron-down faq-question-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Complete ingredient lists are available on each product page on our website. They are
+                            also printed on product packaging. If you have specific questions about ingredients or
+                            formulations, please <a href="#">contact our Customer Service team</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Account & Gift Cards kateqoriyası -->
+            <div id="category-account" class="faq-category-content">
+                <h2 class="faq-category-title">Account & Gift Cards</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-question-text">How do I create an account?</span>
+                        <i class="fa-solid fa-chevron-down faq-question-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            You can create an account by clicking "Account" at the top of any page and selecting
+                            "Register." You'll need to provide your email address, name, and a password. Creating an
+                            account allows you to track orders, save addresses, and manage your preferences.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-question-text">How do I check my gift card balance?</span>
+                        <i class="fa-solid fa-chevron-down faq-question-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            You can check your gift card balance by visiting our <a href="#">
+                                Gift Card Balance
+                                page
+                            </a>. Simply enter your gift card number and PIN code. Balances can also be
+                            checked in-store or by contacting Customer Service.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sustainability kateqoriyası -->
+            <div id="category-sustainability" class="faq-category-content">
+                <h2 class="faq-category-title">Sustainability</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-question-text">What is Aesop doing to reduce packaging waste?</span>
+                        <i class="fa-solid fa-chevron-down faq-question-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Aesop is committed to sustainable packaging. We use recycled and recyclable materials
+                            wherever possible. Our bottles are made from post-consumer recycled (PCR) plastic, and
+                            our cardboard packaging is FSC-certified. We continually research and implement new ways
+                            to reduce our environmental footprint.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-question-text">Are Aesop products environmentally friendly?</span>
+                        <i class="fa-solid fa-chevron-down faq-question-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            We strive to minimize our environmental impact through responsible sourcing, sustainable
+                            manufacturing practices, and thoughtful packaging. As a Certified B Corporation, we meet
+                            high standards of social and environmental performance, accountability, and
+                            transparency.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stores & Services kateqoriyası -->
+            <div id="category-stores" class="faq-category-content">
+                <h2 class="faq-category-title">Stores & Services</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-question-text">Where can I find an Aesop store near me?</span>
+                        <i class="fa-solid fa-chevron-down faq-question-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            You can use our <a href="#">Store Locator</a> to find Aesop signature stores, department
+                            store counters, and stockists in your area. Each store page includes address, contact
+                            information, and opening hours. We look forward to welcoming you.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-question-text">Do you offer in-store consultations?</span>
+                        <i class="fa-solid fa-chevron-down faq-question-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Yes, our knowledgeable consultants are available in all Aesop stores to provide
+                            personalized product recommendations. We encourage you to visit a store to experience
+                            our formulations firsthand and receive tailored advice for your skin, hair, and body
+                            care needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- "Hələ də kömək lazımdır?" bölməsi -->
+    <section class="faq-help-section">
+        <h2 class="faq-help-title">Still need assistance?</h2>
+        <p class="faq-help-text">
+            Our Customer Service team is available Monday through Friday, 9am to 6pm EST,
+            to answer any questions you may have.
+        </p>
+        <div class="faq-help-buttons">
+            <a href="#" class="faq-help-btn">
+                <span>Contact us</span>
+                <i class="fa-solid fa-arrow-right-long"></i>
+            </a>
+            <a href="#" class="faq-help-btn">
+                <span>FAQs</span>
+                <i class="fa-solid fa-arrow-right-long"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Əlaqə saxla bölməsi -->
+    <section class="faq-contact-section">
+        <div class="faq-contact-grid">
+            <div class="faq-contact-card">
+                <div class="faq-contact-icon">
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+                <h3>Email us</h3>
+                <p>Send us a message and we'll respond within 24 hours on business days.</p>
+                <a href="mailto:customerservice@aesop.com" class="faq-contact-link">customerservice@aesop.com</a>
+            </div>
+
+            <div class="faq-contact-card">
+                <div class="faq-contact-icon">
+                    <i class="fa-regular fa-message"></i>
+                </div>
+                <h3>Live chat</h3>
+                <p>Chat with a consultant during business hours for immediate assistance.</p>
+                <a href="#" class="faq-contact-link">Start live chat</a>
+            </div>
+
+            <div class="faq-contact-card">
+                <div class="faq-contact-icon">
+                    <i class="fa-regular fa-building"></i>
+                </div>
+                <h3>Visit a store</h3>
+                <p>Speak with a consultant in person at any Aesop location.</p>
+                <a href="#" class="faq-contact-link">Find a store</a>
+            </div>
+        </div>
+    </section>
+</main>

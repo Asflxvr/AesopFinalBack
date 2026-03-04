@@ -1,0 +1,185 @@
+﻿
+@{
+	Layout = "_Layout";
+}
+
+<main>
+    <section class="product-detail-section">
+        <div class="detail-container">
+            <!-- Sol: Şəkil Qalereyası -->
+            <div class="detail-gallery">
+                <div class="main-image">
+                    <img src="./assets/images/Aesop_Skin_Lucent_Facial_Concentrate_60mL_Front_2000x2000px.jpg"
+                         alt="Lucent Facial Concentrate" class="main-img">
+                    <img src="./assets/images/Aesop_Skin_Lucent_Facial_Concentrate_60mL_NGL_Texture_2000x2000px.jpg"
+                         alt="Lucent Facial Concentrate Texture" class="hover-img">
+                </div>
+                <div class="thumbnail-list">
+                    <div class="thumb active">
+                        <img src="./assets/images/Aesop_Skin_Lucent_Facial_Concentrate_60mL_Front_2000x2000px.jpg"
+                             alt="Thumb 1">
+                    </div>
+                    <div class="thumb">
+                        <img src="./assets/images/Aesop_Skin_Lucent_Facial_Concentrate_60mL_NGL_Texture_2000x2000px.jpg"
+                             alt="Thumb 2">
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Sağ: Məhsul Məlumatı -->
+            <div class="detail-info">
+                <span class="badge">New addition</span>
+                <h1>Lucent Facial Concentrate</h1>
+                <p class="subtitle">For a wide range of skin types</p>
+
+                <div class="price-row">
+                    <span class="price">$137.00</span>
+                    <a href="#" class="installment-link">
+                        4 interest-free installments of $34.25 with Klarna. Learn
+                        more
+                    </a>
+                </div>
+
+                <!-- Size seçici (digər kartlardakı kimi) -->
+                <div class="size-selector">
+                    <span class="size-label">Size</span>
+                    <select id="sizeSelect">
+                        <option value="137.00">2.0 fl oz - $137.00</option>
+                        <option value="200.00">3.4 fl oz - $200.00</option>
+                    </select>
+                </div>
+
+                <button class="add-to-bag">Add to bag</button>
+                <button class="wishlist-toggle"><i class="fa-regular fa-bookmark"></i> Add to wishlist</button>
+
+                <!-- Accordion (Açılan bölmələr) -->
+                <div class="info-accordion">
+                    <div class="accordion-item active">
+                        <div class="accordion-header">
+                            <span>Product details</span>
+                            <i class="fa-solid fa-chevron-up"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                A hydrating, oil-based serum that helps to soften, smooth, and prime the skin.
+                                Formulated with a
+                                blend of 11 humectants and emollients, including Niacinamide (Vitamin B3) and Malt
+                                Extract. Suitable
+                                for a wide range of skin types, including those with a tendency toward congestion.
+                            </p>
+                            <p style="margin-top:15px;">
+                                <strong>Key ingredients:</strong> Niacinamide (Vitamin B3),
+                                Malt Extract,
+                                Hibiscus Flower Extract
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>How to use</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    <i class="fa-regular fa-circle-check"></i> Apply 4-6 drops to cleansed face and
+                                    neck morning and
+                                    evening.
+                                </li>
+                                <li>
+                                    <i class="fa-regular fa-circle-check"></i> Gently press into skin until fully
+                                    absorbed.
+                                </li>
+                                <li>
+                                    <i class="fa-regular fa-circle-check"></i> Follow with your preferred Aesop
+                                    moisturiser.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>Ingredients</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Water (Aqua), Glycerin, Niacinamide, Pentylene Glycol, Squalane, Malt Extract,
+                                Hibiscus Sabdariffa
+                                Flower Extract, Camellia Sinensis Leaf Extract, Rosmarinus Officinalis (Rosemary)
+                                Leaf Extract,
+                                Tocopherol, Xanthan Gum, Caprylyl Glycol, Citric Acid, Phenoxyethanol.
+                            </p>
+                            <p style="margin-top:10px;">
+                                <a href="#" style="text-decoration:underline;">
+                                    View full
+                                    list (PDF)
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>Shipping & returns</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>
+                                Complimentary ground shipping on all orders. Complimentary samples available at
+                                checkout. Returns
+                                accepted within 30 days of delivery. <a href="#"
+                                                                        style="text-decoration:underline;">
+                                    View full
+                                    policy
+                                </a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Əlaqəli Məhsullar (You may also like) -->
+    <section class="related-products">
+        <h2>You may also like</h2>
+        <div class="related-grid">
+            <div class="related-card">
+                <div class="image">
+                    <img src="./assets/images/Aesop_Skin_Lucent_Facial_Refiner_60mL_NGL_Front_2000x2000px.png"
+                         alt="Product">
+                </div>
+                <h4>Lucent Facial Refiner</h4>
+                <span class="related-price">$97.00</span>
+            </div>
+            <div class="related-card">
+                <div class="image">
+                    <img src="./assets/images/Aesop_Fragrance_Aurner_Eau_de_Parfum_50mL_Bottle_NGL_2000x2000px.png"
+                         alt="Product">
+                </div>
+                <h4>Aurner Eau de Parfum</h4>
+                <span class="related-price">$200.00</span>
+            </div>
+            <div class="related-card">
+                <div class="image">
+                    <img src="./assets/images/Aesop_Body_Geranium_Leaf_Hydrating_Body_Treatment_Web_Front_2000x2000px.png"
+                         alt="Product">
+                </div>
+                <h4>Geranium Leaf Body Treatment</h4>
+                <span class="related-price">$50.00</span>
+            </div>
+            <div class="related-card">
+                <div class="image">
+                    <img src="./assets/images/Aesop_Kits_Resurrection_Duet_Web_Front_A_2000x2000px.png"
+                         alt="Product">
+                </div>
+                <h4>Resurrection Duet</h4>
+                <span class="related-price">$140.00</span>
+            </div>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,307 @@
+// Dəyişənlər (İstəyə görə rəngləri dəyişə bilərsən)
+$bg-color: #f6f5e8; // Aesop-un xarakterik krem rəngi
+$text-color: #333;
+$font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$gap: 20px;
+
+.product-gallery {
+    display: flex;
+    flex-wrap: nowrap; // Şəkillərin bir sətirdə qalması üçün
+    gap: $gap;
+    padding: 40px 20px;
+    background-color: $bg-color;
+    overflow-x: auto; // Mobil versiyada sürüşdürülə bilsin deyə
+
+    // Scrollbar-ı gizlətmək üçün (istəyə bağlı)
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    .product-item {
+        flex: 0 0 calc(20% - #{$gap}); // 5 elementin yan-yana düzülməsi üçün
+        min-width: 200px; // Mobil cihazlarda çox kiçilməməsi üçün
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+            opacity: 0.8;
+
+            .product-image img {
+                transform: scale(1.02); // Kiçik bir böyümə effekti
+            }
+        }
+
+        .product-image {
+            width: 100%;
+            aspect-ratio: 1 / 1; // Şəkli kvadrat saxlayır
+            overflow: hidden;
+            margin-bottom: 15px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; // Şəklin formasını pozmadan konteynerə sığdırır
+                transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
+        }
+
+        .product-title {
+            font-family: $font-family;
+            font-size: 14px;
+            font-weight: 500;
+            color: $text-color;
+            margin: 0;
+            line-height: 1.4;
+            text-align: left; // Şəkildəki kimi sola söykəli
+        }
+    }
+}
+
+
+
+// Dəyişənlər (İstəyə görə rəngləri dəyişə bilərsən)
+$bg-color: #f6f5e8; // Aesop-un xarakterik krem rəngi
+$text-color: #333;
+$font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$gap: 20px;
+
+.product-gallery {
+    display: flex;
+    flex-wrap: nowrap; // Şəkillərin bir sətirdə qalması üçün
+    gap: $gap;
+    padding: 40px 20px;
+    background-color: $bg-color;
+    overflow-x: auto; // Mobil versiyada sürüşdürülə bilsin deyə
+
+    // Scrollbar-ı gizlətmək üçün (istəyə bağlı)
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    .product-item {
+        flex: 0 0 calc(20% - #{$gap}); // 5 elementin yan-yana düzülməsi üçün
+        min-width: 200px; // Mobil cihazlarda çox kiçilməməsi üçün
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+            opacity: 0.8;
+
+            .product-image img {
+                transform: scale(1.02); // Kiçik bir böyümə effekti
+            }
+        }
+
+        .product-image {
+            width: 100%;
+            aspect-ratio: 1 / 1; // Şəkli kvadrat saxlayır
+            overflow: hidden;
+            margin-bottom: 15px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; // Şəklin formasını pozmadan konteynerə sığdırır
+                transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
+        }
+
+        .product-title {
+            font-family: $font-family;
+            font-size: 14px;
+            font-weight: 500;
+            color: $text-color;
+            margin: 0;
+            line-height: 1.4;
+            text-align: left; // Şəkildəki kimi sola söykəli
+        }
+    }
+
+    // ========== RESPONSIVE ÜSLUBLAR ==========
+
+    /* Kompüter / Böyük ekranlar (1200px və yuxarı) */
+    @media (min-width: 1200px) {
+        padding: 50px 40px;
+        gap: 30px;
+
+        .product-item {
+            flex: 0 0 calc(20% - 30px); // 5 element, daha geniş aralıq
+            min-width: 220px;
+
+            .product-title {
+                font-size: 15px;
+            }
+        }
+    }
+
+    /* Orta ölçülü kompüter və böyük planşetlər (1024px - 1200px) */
+    @media (max-width: 1200px) and (min-width: 1024px) {
+        padding: 45px 30px;
+        gap: 25px;
+
+        .product-item {
+            flex: 0 0 calc(20% - 25px);
+            min-width: 200px;
+        }
+    }
+
+    /* Planşetlər üçün (768px - 1024px) */
+    @media (max-width: 1024px) and (min-width: 768px) {
+        padding: 40px 25px;
+        gap: 20px;
+
+        .product-item {
+            flex: 0 0 calc(25% - 20px); // 4 element yan-yana
+            min-width: 180px;
+
+            .product-title {
+                font-size: 13px;
+            }
+
+            .product-image {
+                margin-bottom: 12px;
+            }
+        }
+    }
+
+    /* Kiçik planşetlər (600px - 768px) */
+    @media (max-width: 768px) and (min-width: 600px) {
+        padding: 35px 20px;
+        gap: 18px;
+
+        .product-item {
+            flex: 0 0 calc(33.33% - 18px); // 3 element yan-yana
+            min-width: 160px;
+
+            .product-title {
+                font-size: 13px;
+                line-height: 1.3;
+            }
+
+            .product-image {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    /* Böyük telefonlar (480px - 600px) */
+    @media (max-width: 600px) and (min-width: 480px) {
+        padding: 30px 15px;
+        gap: 15px;
+
+        .product-item {
+            flex: 0 0 calc(50% - 15px); // 2 element yan-yana
+            min-width: 140px;
+
+            .product-title {
+                font-size: 12px;
+                line-height: 1.3;
+            }
+
+            .product-image {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    /* Kiçik telefonlar (480px-dən aşağı) */
+    @media (max-width: 480px) {
+        padding: 25px 12px;
+        gap: 12px;
+
+        .product-item {
+            flex: 0 0 calc(50% - 12px); // 2 element yan-yana
+            min-width: 130px;
+
+            .product-title {
+                font-size: 11px;
+                line-height: 1.2;
+            }
+
+            .product-image {
+                margin-bottom: 6px;
+            }
+        }
+    }
+
+    /* Çox kiçik telefonlar (360px-dən aşağı) */
+    @media (max-width: 360px) {
+        padding: 20px 10px;
+        gap: 10px;
+
+        .product-item {
+            flex: 0 0 100%; // 1 element tam genişlikdə
+            min-width: auto;
+
+            .product-title {
+                font-size: 12px;
+                text-align: center; // Tək elementdə mərkəzə alırıq
+            }
+
+            .product-image {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    /* Hover effektlərinin idarəsi */
+    @media (hover: hover) {
+        .product-item:hover {
+            opacity: 0.8;
+
+            .product-image img {
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    /* Toxunma cihazlar üçün active state */
+    @media (hover: none) {
+        .product-item:active {
+            opacity: 0.8;
+
+            .product-image img {
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    /* Landscape rejimində telefonlar */
+    @media (max-width: 900px) and (orientation: landscape) {
+        .product-item {
+            flex: 0 0 calc(33.33% - #{$gap}); // Landscape-də 3 element
+        }
+    }
+
+    /* Çox böyük ekranlar (4K, 5K) */
+    @media (min-width: 2000px) {
+        padding: 70px 60px;
+        gap: 40px;
+
+        .product-item {
+            flex: 0 0 calc(16.66% - 40px); // 6 element yan-yana
+            min-width: 280px;
+
+            .product-title {
+                font-size: 18px;
+            }
+
+            .product-image {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    /* Orta ekranlar üçün əlavə düzəliş (5 element çoxdursa) */
+    @media (max-width: 1400px) and (min-width: 1200px) {
+        .product-item {
+            flex: 0 0 calc(20% - 30px); // 5 element qorunur
+        }
+    }
+}

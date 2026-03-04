@@ -1,0 +1,624 @@
+// Şriftlər
+$font-serif: 'Cormorant Garamond', serif;
+$font-sans: 'Inter', sans-serif;
+
+// Rənglər
+$bg-cream: #fffef2;
+$text-main: #333;
+$hover-btn: #252525;
+
+.soap-grid {
+    background-color: $bg-cream;
+    padding: 100px 5%;
+    font-family: $font-sans;
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); // 3 sütunlu şəbəkə
+        gap: 40px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .soap-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        text-align: center;
+        padding-bottom: 20px;
+
+        .wishlist-btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            color: $text-main;
+            z-index: 10;
+        }
+
+        // HOVER EFFEKTİ BURADADIR
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            margin-bottom: 30px;
+            cursor: pointer;
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                max-width: 80%;
+                height: auto;
+                transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                    transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .img-secondary {
+                opacity: 0; // Tekstura/sabun gizlidir
+            }
+
+            &:hover {
+                .img-primary {
+                    opacity: 0;
+                }
+
+                .img-secondary {
+                    opacity: 1;
+                    transform: translate(-50%, -50%) scale(1.08); // Yüngül böyümə
+                }
+            }
+        }
+
+        .soap-info {
+            margin-bottom: 30px;
+            flex-grow: 1;
+
+            .product-name {
+                font-family: $font-serif;
+                font-size: 20px;
+                font-weight: 500;
+                margin-bottom: 8px;
+            }
+
+            .product-type {
+                font-size: 14px;
+                color: #666;
+                font-weight: 300;
+                margin-bottom: 12px;
+            }
+
+            .price {
+                font-size: 15px;
+                color: $text-main;
+            }
+        }
+
+        .add-to-cart {
+            width: 100%;
+            padding: 18px;
+            background-color: $text-main;
+            color: #fff;
+            border: none;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #000;
+            }
+        }
+    }
+}
+
+
+
+// Şriftlər
+$font-serif: 'Cormorant Garamond', serif;
+$font-sans: 'Inter', sans-serif;
+
+// Rənglər
+$bg-cream: #fffef2;
+$text-main: #333;
+$hover-btn: #252525;
+
+.soap-grid {
+    background-color: $bg-cream;
+    padding: 100px 5%;
+    font-family: $font-sans;
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); // 3 sütunlu şəbəkə
+        gap: 40px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .soap-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        text-align: center;
+        padding-bottom: 20px;
+
+        .wishlist-btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            color: $text-main;
+            z-index: 10;
+        }
+
+        // HOVER EFFEKTİ BURADADIR
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            margin-bottom: 30px;
+            cursor: pointer;
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                max-width: 80%;
+                height: auto;
+                transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                    transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .img-secondary {
+                opacity: 0; // Tekstura/sabun gizlidir
+            }
+
+            &:hover {
+                .img-primary {
+                    opacity: 0;
+                }
+
+                .img-secondary {
+                    opacity: 1;
+                    transform: translate(-50%, -50%) scale(1.08); // Yüngül böyümə
+                }
+            }
+        }
+
+        .soap-info {
+            margin-bottom: 30px;
+            flex-grow: 1;
+
+            .product-name {
+                font-family: $font-serif;
+                font-size: 20px;
+                font-weight: 500;
+                margin-bottom: 8px;
+            }
+
+            .product-type {
+                font-size: 14px;
+                color: #666;
+                font-weight: 300;
+                margin-bottom: 12px;
+            }
+
+            .price {
+                font-size: 15px;
+                color: $text-main;
+            }
+        }
+
+        .add-to-cart {
+            width: 100%;
+            padding: 18px;
+            background-color: $text-main;
+            color: #fff;
+            border: none;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #000;
+            }
+        }
+    }
+
+    // ========== RESPONSIVE ÜSLUBLAR ==========
+
+    /* Böyük kompüterlər / 4K ekranlar (1800px və yuxarı) */
+    @media (min-width: 1800px) {
+        padding: 120px 5%;
+
+        .grid-container {
+            max-width: 1600px;
+            gap: 60px;
+        }
+
+        .soap-card {
+            .image-wrapper {
+                height: 400px;
+                margin-bottom: 40px;
+            }
+
+            .soap-info {
+                .product-name {
+                    font-size: 24px;
+                }
+
+                .product-type {
+                    font-size: 16px;
+                }
+
+                .price {
+                    font-size: 18px;
+                }
+            }
+
+            .add-to-cart {
+                padding: 20px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    /* Orta ölçülü kompüterlər (1400px - 1800px) */
+    @media (max-width: 1800px) and (min-width: 1400px) {
+        .grid-container {
+            gap: 50px;
+        }
+
+        .soap-card {
+            .image-wrapper {
+                height: 380px;
+            }
+        }
+    }
+
+    /* Kiçik kompüterlər / böyük planşetlər (1200px - 1400px) */
+    @media (max-width: 1400px) and (min-width: 1200px) {
+        padding: 80px 5%;
+
+        .grid-container {
+            gap: 35px;
+        }
+
+        .soap-card {
+            .image-wrapper {
+                height: 320px;
+                margin-bottom: 25px;
+            }
+
+            .soap-info {
+                .product-name {
+                    font-size: 18px;
+                }
+
+                .product-type {
+                    font-size: 13px;
+                }
+
+                .price {
+                    font-size: 14px;
+                }
+            }
+
+            .add-to-cart {
+                padding: 16px;
+            }
+        }
+    }
+
+    /* Planşetlər (992px - 1200px) */
+    @media (max-width: 1200px) and (min-width: 992px) {
+        padding: 70px 4%;
+
+        .grid-container {
+            grid-template-columns: repeat(2, 1fr); // 3 sütun → 2 sütun
+            gap: 35px;
+        }
+
+        .soap-card {
+            .image-wrapper {
+                height: 350px;
+            }
+
+            .soap-info {
+                .product-name {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    /* Kiçik planşetlər (768px - 992px) */
+    @media (max-width: 992px) and (min-width: 768px) {
+        padding: 60px 4%;
+
+        .grid-container {
+            grid-template-columns: repeat(2, 1fr); // 2 sütun davam edir
+            gap: 30px;
+        }
+
+        .soap-card {
+            .image-wrapper {
+                height: 300px;
+                margin-bottom: 20px;
+            }
+
+            .soap-info {
+                .product-name {
+                    font-size: 18px;
+                }
+
+                .product-type {
+                    font-size: 13px;
+                }
+
+                .price {
+                    font-size: 14px;
+                }
+            }
+
+            .add-to-cart {
+                padding: 15px;
+                font-size: 12px;
+            }
+        }
+    }
+
+    /* Böyük telefonlar / phablet (576px - 768px) */
+    @media (max-width: 768px) and (min-width: 576px) {
+        padding: 50px 4%;
+
+        .grid-container {
+            grid-template-columns: repeat(2, 1fr); // 2 sütun davam edir
+            gap: 25px;
+        }
+
+        .soap-card {
+            .image-wrapper {
+                height: 260px;
+                margin-bottom: 18px;
+            }
+
+            .soap-info {
+                margin-bottom: 20px;
+
+                .product-name {
+                    font-size: 17px;
+                }
+
+                .product-type {
+                    font-size: 12px;
+                }
+
+                .price {
+                    font-size: 13px;
+                }
+            }
+
+            .add-to-cart {
+                padding: 14px;
+                font-size: 12px;
+            }
+        }
+    }
+
+    /* Telefonlar (480px - 576px) */
+    @media (max-width: 576px) and (min-width: 480px) {
+        padding: 40px 4%;
+
+        .grid-container {
+            grid-template-columns: repeat(2, 1fr); // 2 sütun davam edir
+            gap: 20px;
+        }
+
+        .soap-card {
+            .image-wrapper {
+                height: 220px;
+                margin-bottom: 15px;
+            }
+
+            .soap-info {
+                margin-bottom: 15px;
+
+                .product-name {
+                    font-size: 16px;
+                }
+
+                .product-type {
+                    font-size: 11px;
+                    margin-bottom: 8px;
+                }
+
+                .price {
+                    font-size: 12px;
+                }
+            }
+
+            .add-to-cart {
+                padding: 12px;
+                font-size: 11px;
+            }
+
+            .wishlist-btn {
+                padding: 5px;
+
+                i {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    /* Kiçik telefonlar (400px - 480px) */
+    @media (max-width: 480px) and (min-width: 400px) {
+        padding: 30px 4%;
+
+        .grid-container {
+            grid-template-columns: 1fr; // 2 sütun → 1 sütun
+            gap: 30px;
+        }
+
+        .soap-card {
+            .image-wrapper {
+                height: 280px;
+                max-width: 300px;
+                margin: 0 auto 20px auto;
+            }
+
+            .soap-info {
+                .product-name {
+                    font-size: 18px;
+                }
+
+                .product-type {
+                    font-size: 13px;
+                }
+
+                .price {
+                    font-size: 14px;
+                }
+            }
+
+            .add-to-cart {
+                padding: 16px;
+                font-size: 13px;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .wishlist-btn {
+                right: 10px;
+
+                i {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    /* Çox kiçik telefonlar (400px-dən aşağı) */
+    @media (max-width: 400px) {
+        padding: 25px 3%;
+
+        .grid-container {
+            grid-template-columns: 1fr; // Tək sütun
+            gap: 25px;
+        }
+
+        .soap-card {
+            .image-wrapper {
+                height: 240px;
+                max-width: 250px;
+                margin: 0 auto 15px auto;
+            }
+
+            .soap-info {
+                margin-bottom: 15px;
+
+                .product-name {
+                    font-size: 17px;
+                }
+
+                .product-type {
+                    font-size: 12px;
+                }
+
+                .price {
+                    font-size: 13px;
+                }
+            }
+
+            .add-to-cart {
+                padding: 14px;
+                font-size: 12px;
+                max-width: 250px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    /* Hover effektlərinin idarəsi */
+    @media (hover: hover) {
+        .image-wrapper:hover {
+            .img-primary {
+                opacity: 0;
+            }
+
+            .img-secondary {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1.08);
+            }
+        }
+
+        .add-to-cart:hover {
+            background-color: #000;
+        }
+    }
+
+    /* Toxunma cihazlar üçün active state */
+    @media (hover: none) {
+        .image-wrapper:active {
+            .img-primary {
+                opacity: 0;
+            }
+
+            .img-secondary {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1.08);
+            }
+        }
+
+        .add-to-cart:active {
+            background-color: #000;
+        }
+    }
+
+    /* Çox geniş telefonlar / landscape rejimi */
+    @media (max-width: 900px) and (orientation: landscape) {
+        .grid-container {
+            grid-template-columns: repeat(3, 1fr); // Landscape-də 3 sütun
+            gap: 20px;
+        }
+
+        .soap-card {
+            .image-wrapper {
+                height: 200px;
+            }
+
+            .soap-info {
+                .product-name {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    /* Planşet landscape rejimi */
+    @media (max-width: 1200px) and (orientation: landscape) and (min-width: 800px) {
+        .grid-container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .soap-card {
+            .image-wrapper {
+                height: 280px;
+            }
+        }
+    }
+}

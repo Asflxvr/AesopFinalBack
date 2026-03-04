@@ -1,0 +1,447 @@
+// Dəyişənlər
+$white: #ffffff;
+$font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+
+.aromatic-cta {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
+        url('https://www.aesop.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-aesop-us-Library/default/dw6345ec5d/Aesop_Careers_Page_2024_Web_Homepage_Primary_Full_Bleed_Mobile_900x900px.jpg?sw=640&sh=640&sm=cut&q=70');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: $white;
+    font-family: $font-main;
+
+    .cta-content {
+        max-width: 450px; // Məzmun sahəsini bir az daraltdıq
+        z-index: 2;
+
+        .tagline {
+            font-size: 13px; // 14px -> 13px (daha zərif)
+            font-weight: 500;
+            margin-bottom: 12px;
+            letter-spacing: 0.3px;
+        }
+
+        .title {
+            font-size: 28px; // 34px -> 28px (daha təmkinli)
+            font-weight: 400;
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            font-size: 14px; // 16px -> 14px
+            line-height: 1.6;
+            margin-bottom: 35px;
+            font-weight: 300;
+            opacity: 0.85; // Bir az daha şəffaf, mətni yumşaldır
+        }
+
+        .cta-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            min-width: 250px; // Bir az kiçiltdik
+            padding: 16px 22px; // İç boşluqları azaltdıq
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: $white;
+            text-decoration: none;
+            font-size: 13px; // 14px -> 13px
+            font-weight: 400;
+            transition: $transition;
+
+            .arrow {
+                font-size: 18px;
+                transition: transform 0.4s ease;
+            }
+
+            &:hover {
+                background-color: $white;
+                color: #333;
+                border-color: $white;
+
+                .arrow {
+                    transform: translateX(6px);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+// Dəyişənlər
+$white: #ffffff;
+$font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+
+.aromatic-cta {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
+        url('https://www.aesop.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-aesop-us-Library/default/dw6345ec5d/Aesop_Careers_Page_2024_Web_Homepage_Primary_Full_Bleed_Mobile_900x900px.jpg?sw=640&sh=640&sm=cut&q=70');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: $white;
+    font-family: $font-main;
+
+    // =========================================
+    // RESPONSIVE: height & min-height
+    // =========================================
+    @media (max-width: 1600px) {
+        height: 75vh;
+        min-height: 550px;
+    }
+
+    @media (max-width: 1400px) {
+        height: 70vh;
+        min-height: 500px;
+    }
+
+    @media (max-width: 1200px) {
+        height: 65vh;
+        min-height: 480px;
+        padding: 0 8%;
+    }
+
+    @media (max-width: 992px) {
+        height: 60vh;
+        min-height: 450px;
+        padding: 0 7%;
+        background-position: 70% center; // Şəklin diqqət mərkəzini sağa çəkirik
+    }
+
+    @media (max-width: 768px) {
+        height: auto; // Hündürlük avtomatik
+        min-height: 400px;
+        padding: 60px 25px;
+        align-items: flex-start; // Məzmunu yuxarıya yapışdırırıq
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+            url('https://www.aesop.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-aesop-us-Library/default/dw6345ec5d/Aesop_Careers_Page_2024_Web_Homepage_Primary_Full_Bleed_Mobile_900x900px.jpg?sw=800&sh=800&sm=cut&q=80'); // Mobil üçün daha böyük şəkil
+    }
+
+    @media (max-width: 576px) {
+        min-height: 380px;
+        padding: 50px 20px;
+    }
+
+    @media (max-width: 400px) {
+        min-height: 350px;
+        padding: 40px 15px;
+    }
+
+    .cta-content {
+        max-width: 450px;
+        z-index: 2;
+
+        // =========================================
+        // RESPONSIVE: content max-width
+        // =========================================
+        @media (max-width: 1600px) {
+            max-width: 500px; // Daha geniş ekranlarda bir az böyüdək
+        }
+
+        @media (max-width: 1400px) {
+            max-width: 450px;
+        }
+
+        @media (max-width: 1200px) {
+            max-width: 400px;
+        }
+
+        @media (max-width: 992px) {
+            max-width: 380px;
+        }
+
+        @media (max-width: 768px) {
+            max-width: 100%; // Mobildə tam en
+            text-align: left; // Sola dayalı qalsın
+        }
+
+        @media (max-width: 576px) {
+            max-width: 100%;
+        }
+
+        .tagline {
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 12px;
+            letter-spacing: 0.3px;
+
+            // =========================================
+            // RESPONSIVE: tagline
+            // =========================================
+            @media (max-width: 992px) {
+                font-size: 12.5px;
+                margin-bottom: 10px;
+                letter-spacing: 0.2px;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 12px;
+                margin-bottom: 8px;
+            }
+
+            @media (max-width: 576px) {
+                font-size: 11px;
+                margin-bottom: 6px;
+            }
+        }
+
+        .title {
+            font-size: 28px;
+            font-weight: 400;
+            line-height: 1.3;
+            margin-bottom: 20px;
+
+            // =========================================
+            // RESPONSIVE: title
+            // =========================================
+            @media (max-width: 1600px) {
+                font-size: 32px; // Geniş ekranda böyük olsun
+            }
+
+            @media (max-width: 1400px) {
+                font-size: 30px;
+            }
+
+            @media (max-width: 1200px) {
+                font-size: 28px;
+            }
+
+            @media (max-width: 992px) {
+                font-size: 26px;
+                margin-bottom: 18px;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
+
+            @media (max-width: 576px) {
+                font-size: 22px;
+                margin-bottom: 12px;
+                line-height: 1.25;
+            }
+
+            @media (max-width: 400px) {
+                font-size: 20px;
+            }
+        }
+
+        .description {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 35px;
+            font-weight: 300;
+            opacity: 0.85;
+
+            // =========================================
+            // RESPONSIVE: description
+            // =========================================
+            @media (max-width: 1600px) {
+                font-size: 15px;
+            }
+
+            @media (max-width: 1400px) {
+                font-size: 14.5px;
+            }
+
+            @media (max-width: 1200px) {
+                font-size: 14px;
+            }
+
+            @media (max-width: 992px) {
+                font-size: 13.5px;
+                margin-bottom: 30px;
+                line-height: 1.55;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 13px;
+                margin-bottom: 25px;
+                line-height: 1.5;
+            }
+
+            @media (max-width: 576px) {
+                font-size: 12.5px;
+                margin-bottom: 22px;
+            }
+
+            @media (max-width: 400px) {
+                font-size: 12px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .cta-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            min-width: 250px;
+            padding: 16px 22px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: $white;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 400;
+            transition: $transition;
+            background-color: transparent; // Şəffaf fon
+
+            // =========================================
+            // RESPONSIVE: cta-link
+            // =========================================
+            @media (max-width: 1600px) {
+                min-width: 260px;
+                padding: 17px 24px;
+                font-size: 13.5px;
+            }
+
+            @media (max-width: 1400px) {
+                min-width: 250px;
+                padding: 16px 22px;
+                font-size: 13px;
+            }
+
+            @media (max-width: 1200px) {
+                min-width: 240px;
+                padding: 15px 20px;
+            }
+
+            @media (max-width: 992px) {
+                min-width: 220px;
+                padding: 14px 18px;
+                font-size: 12.5px;
+            }
+
+            @media (max-width: 768px) {
+                min-width: 100%; // Mobildə tam en
+                padding: 16px 22px;
+                font-size: 13px;
+                justify-content: space-between;
+                background-color: rgba(0, 0, 0, 0.2); // Yüngül qara fon
+                backdrop-filter: blur(5px); // Şüşə effekti (opsiyonel)
+                border: 1px solid rgba(255, 255, 255, 0.4);
+            }
+
+            @media (max-width: 576px) {
+                padding: 14px 20px;
+                font-size: 12.5px;
+            }
+
+            @media (max-width: 400px) {
+                padding: 12px 18px;
+                font-size: 12px;
+            }
+
+            .arrow {
+                font-size: 18px;
+                transition: transform 0.4s ease;
+
+                // =========================================
+                // RESPONSIVE: arrow
+                // =========================================
+                @media (max-width: 1200px) {
+                    font-size: 17px;
+                }
+
+                @media (max-width: 992px) {
+                    font-size: 16px;
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 18px; // Mobilde bir az böyük olsun
+                }
+
+                @media (max-width: 576px) {
+                    font-size: 16px;
+                }
+            }
+
+            &:hover {
+                background-color: $white;
+                color: #333;
+                border-color: $white;
+
+                .arrow {
+                    transform: translateX(6px);
+
+                    @media (max-width: 768px) {
+                        transform: translateX(4px); // Mobilde az hərəkət
+                    }
+                }
+
+                // Mobilde hover effekti yoxdur, amma qalsın
+                @media (max-width: 768px) {
+                    background-color: rgba(255, 255, 255, 0.9);
+                    color: #333;
+                }
+            }
+
+            // Touch cihazlar üçün active state
+            &:active {
+                @media (max-width: 768px) {
+                    background-color: $white;
+                    color: #333;
+                    transform: scale(0.98); // Yüngül basma effekti
+                }
+            }
+        }
+    }
+
+    // Opsiyonel: mobil üçün overlay gradient (mətnin daha oxunaqlı olması üçün)
+    @media (max-width: 768px) {
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%);
+            z-index: 1;
+        }
+    }
+}
+
+// Retina display üçün yüksək keyfiyyətli şəkillər
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .aromatic-cta {
+        @media (max-width: 768px) {
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+                url('https://www.aesop.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-aesop-us-Library/default/dw6345ec5d/Aesop_Careers_Page_2024_Web_Homepage_Primary_Full_Bleed_Mobile_900x900px.jpg?sw=1200&sh=1200&sm=cut&q=90');
+        }
+
+        @media (min-width: 769px) {
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
+                url('https://www.aesop.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-aesop-us-Library/default/dw6345ec5d/Aesop_Careers_Page_2024_Web_Homepage_Primary_Full_Bleed_Mobile_900x900px.jpg?sw=1920&sh=1080&sm=cut&q=85');
+        }
+    }
+}

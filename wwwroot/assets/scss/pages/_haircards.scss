@@ -1,0 +1,72 @@
+// Dəyişənlər
+$bg-color: #fffef2; // Görüntüdəki krem rəngli arxa fon
+$text-color: #333;
+$font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$grid-gap: 30px;
+
+
+.product-section {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.product-grid {
+    display: flex;
+    gap: $grid-gap;
+    justify-content: center;
+
+    @media (max-width: 992px) {
+        flex-wrap: wrap; // Planşetlərdə alt-alta keçsin
+    }
+}
+
+.product-card {
+    flex: 1;
+    min-width: 300px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+        .image-wrapper img {
+            transform: scale(1.02); // Şəkil üzərinə gələndə azca böyüsün
+        }
+    }
+
+    .image-wrapper {
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 20px;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+    }
+
+    .product-title {
+        font-size: 14px;
+        font-weight: 500;
+        color: $text-color;
+        letter-spacing: 0.5px;
+        text-align: left;
+    }
+}
+
+// Mobil tənzimləmələr
+@media (max-width: 600px) {
+    body {
+        padding: 40px 20px;
+    }
+
+    .product-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .product-card {
+        min-width: 100%;
+    }
+}
