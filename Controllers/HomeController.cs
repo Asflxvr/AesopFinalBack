@@ -1,21 +1,29 @@
 using System.Diagnostics;
+using AesopFinal.Data;
 using AesopFinal.Models;
+using AesopFinal.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AesopFinal.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private AesopDbContext _context { get; }
+        public HomeController(AesopDbContext context)
         {
-            _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
         {
-            return View();
+
+            HomeViewModel homeVM = new HomeViewModel()
+            {
+                Products = _context.Products.ToList(),
+                Recommends = _context.Recommends.ToList(),
+                Categories = _context.Categories.ToList()
+            };
+            return View(homeVM);
         }
 
         public IActionResult Privacy()

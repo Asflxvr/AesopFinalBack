@@ -16,6 +16,7 @@ namespace AesopFinal.Areas.AdminPanel.ViewModels.UpdateVM
         public IFormFile? imageFile { get; set; }
         public IFormFile? imageFileSecond { get; set; }
         public Size Size { get; set; }
+        public int? categoryId { get; set; }
         public decimal GetActualSize()
         {
             return Size switch

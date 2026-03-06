@@ -12,6 +12,7 @@ namespace AesopFinal.Areas.AdminPanel.ViewModels.CreateVM
         [Required, MaxLength(120)]
         public string description { get; set; }
         public string? imageURL { get; set; }
+        public int? categoryId { get; set; }
         public string? secondaryImageURL { get; set; }
         public IFormFile? imageFile { get; set; }
         public IFormFile? imageFileSecond { get; set; }

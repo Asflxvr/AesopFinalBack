@@ -257,3 +257,4 @@ C:\Users\Ominbook\Desktop\AesopFinal\obj\Debug\net8.0\refint\AesopFinal.dll
 C:\Users\Ominbook\Desktop\AesopFinal\obj\Debug\net8.0\AesopFinal.pdb
 C:\Users\Ominbook\Desktop\AesopFinal\obj\Debug\net8.0\AesopFinal.genruntimeconfig.cache
 C:\Users\Ominbook\Desktop\AesopFinal\obj\Debug\net8.0\ref\AesopFinal.dll
+C:\Users\Ominbook\Desktop\AesopFinal\obj\Debug\net8.0\AesopFinal.sourcelink.json

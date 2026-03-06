@@ -1,0 +1,25 @@
+﻿@using AesopFinal.Areas.AdminPanel.ViewModels.UpdateVM
+@model CategoryUpdateVm
+
+<div class="row">
+
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Create Product form</h4>
+                <p class="card-description">
+                    <form class="forms-sample" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label asp-for="categoryName">Title</label>
+                            <input asp-for="categoryName" class=" form-control" placeholder="Title">
+                            <span asp-validation-for="categoryName" class="text-danger"></span>
+                        </div>
+                      
+                        <button type="submit" class="btn btn-primary me-2">Submit</button>
+                        <button class="btn btn-light" asp-action="Index" asp-controller="Category">Cancel</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>
+

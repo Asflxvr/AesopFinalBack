@@ -13,6 +13,26 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
       <link href="~/assets/css/main.css" rel="stylesheet" />
+    @* <style>
+        .rightLinks {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap; /* Lazım olsa elementlər aşağı düşsün */
+        }
+
+        /* İstəyə görə elementlərin ölçüsünü tənzimləmək */
+        .rightLinks > * {
+            margin: 0;
+            padding: 5px 10px;
+        }
+
+        /* Hover effekti istəyirsinizsə */
+        .rightLinks a:hover {
+            opacity: 0.8;
+            transition: 0.3s;
+        }
+    </style> *@
 </head>
 
 <body>
@@ -49,7 +69,17 @@
                 </div>
 
                 <div class="rightLinks">
-                    <a href="./signin.html">Sign In</a>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <span>@User.Identity.Name</span>
+                        <a asp-action="Logout" asp-controller="Account"><i class="fas fa-sign-out"></i></a>
+                    }
+                    else
+                    {
+                        <div class="login">
+                            <a asp-action="Login" asp-controller="Account">Sign </a>
+                        </div>
+                    }
                     <a href="#">Account</a>
                      <a href="/cart">View Cart</a>                   
                 </div>

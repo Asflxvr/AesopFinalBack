@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<Product>
 @{
 	Layout = "_Layout";
 }
@@ -153,7 +153,19 @@
                 <h2>For the ceramic burner</h2>
             </div>
             <div class="blends-grid">
-                <div class="blend-card">
+                @foreach (var item in Model)
+                {
+                    <div class="blend-card">
+                        <div class="blend-image">
+                            <img src="~/assets/images/@item.ImageURL" alt="Oil blend">
+                        </div>
+                        <h3>@item.Title</h3>
+                        <p class="blend-notes">@item.Description</p>
+                        <span class="blend-price">$@item.Price</span>
+                        <button class="blend-add">Add</button>
+                    </div>
+                }
+                @* <div class="blend-card">
                     <div class="blend-image">
                         <img src="./assets/images/Aesop_Category_Page_Fragrance_Secondary_3_Armoire_Mobile_900x900px.jpg" alt="Oil blend">
                     </div>
@@ -162,6 +174,7 @@
                     <span class="blend-price">$42.00</span>
                     <button class="blend-add">Add</button>
                 </div>
+
                 <div class="blend-card">
                     <div class="blend-image">
                         <img src="./assets/images/Aesop_Home_Cythera_Aromatique_Room_Spray_100mL_Web_Front_2000x2000px (1).png" alt="Oil blend">
@@ -171,6 +184,7 @@
                     <span class="blend-price">$42.00</span>
                     <button class="blend-add">Add</button>
                 </div>
+
                 <div class="blend-card">
                     <div class="blend-image">
                         <img src="./assets/images/Aesop Corporate Gifts (1).png" alt="Oil blend">
@@ -179,7 +193,8 @@
                     <p class="blend-notes">Myrrh, Sandalwood, Benzoin</p>
                     <span class="blend-price">$45.00</span>
                     <button class="blend-add">Add</button>
-                </div>
+                </div> *@
+
             </div>
         </div>
     </section>

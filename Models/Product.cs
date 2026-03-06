@@ -23,7 +23,7 @@ namespace AesopFinal.Models
             };
         }
 
-        public Category Category { get; set; }
-        public int CategoryId { get; set; }
+        public int? CategoryId { get; set; } = 0;
+        public Category? Category { get; set; }
     }
 }

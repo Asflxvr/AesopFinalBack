@@ -3,6 +3,7 @@ using AesopFinal.Areas.AdminPanel.ViewModels.UpdateVM;
 using AesopFinal.Data;
 using AesopFinal.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace AesopFinal.Areas.AdminPanel.Controllers
@@ -17,10 +18,15 @@ namespace AesopFinal.Areas.AdminPanel.Controllers
         }
         public IActionResult Index()
         {
-            return View(_context.Products);
+            return View(_context.Products
+    .Include(x => x.Category)
+    .ToList());
         }
         public IActionResult Create()
         {
+            ViewBag.Categories = _context.Categories
+       .Where(x => !x.IsDeleted)
+       .ToList();
             return View();
         }
 
@@ -35,7 +41,8 @@ namespace AesopFinal.Areas.AdminPanel.Controllers
                 Title = vm.title,
                 Description = vm.description,
                 Price = vm.price,
-                Size = vm.Size
+                Size = vm.Size,
+                CategoryId = vm.categoryId
             };
             if (vm.imageFile != null)
             {
@@ -73,54 +80,84 @@ namespace AesopFinal.Areas.AdminPanel.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
         }
-       
+
         public IActionResult Update(int? id)
         {
             if (id == null) return BadRequest();
-            Product cake = _context.Products.Where(p => !p.IsDeleted).FirstOrDefault(s => s.Id == id);
+
+            Product cake = _context.Products
+                .FirstOrDefault(s => s.Id == id);
+
             if (cake == null) return NotFound();
+
+            ViewBag.Categories = _context.Categories
+                .Where(x => !x.IsDeleted)
+                .ToList();
+
             ProductUpdateVM vm = new ProductUpdateVM
             {
                 title = cake.Title,
                 description = cake.Description,
                 price = cake.Price,
-                Size = cake.Size
+                Size = cake.Size,
+                categoryId = cake.CategoryId
             };
+
             return View(vm);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Update(ProductUpdateVM vm,int? id)
+        public async Task<IActionResult> Update(ProductUpdateVM vm, int? id)
         {
-            if (!ModelState.IsValid) return View();
-           Product cake = _context.Products.Where(i => !i.IsDeleted).FirstOrDefault(s => s.Id == id);
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Categories = _context.Categories
+                    .Where(x => !x.IsDeleted)
+                    .ToList();
+
+                return View(vm);
+            }
+
+            Product cake = _context.Products
+                .FirstOrDefault(s => s.Id == id);
+
             if (cake == null) return NotFound();
+
             cake.Title = vm.title;
             cake.Description = vm.description;
             cake.Price = vm.price;
             cake.Size = vm.Size;
+            cake.CategoryId = vm.categoryId;
+
             if (vm.imageFile != null)
             {
-                string fileName = Guid.NewGuid().ToString() + Path.GetExtension(vm.imageFile.FileName);
-                string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "assets", "images", fileName);
-                using (FileStream stream = new FileStream(filePath, FileMode.Create))
-                {
-                    await vm.imageFile.CopyToAsync(stream);
-                }
+                string fileName = Guid.NewGuid() + Path.GetExtension(vm.imageFile.FileName);
+                string filePath = Path.Combine(
+                    Directory.GetCurrentDirectory(),
+                    "wwwroot", "assets", "images",
+                    fileName);
+
+                using FileStream stream = new FileStream(filePath, FileMode.Create);
+                await vm.imageFile.CopyToAsync(stream);
+
                 cake.ImageURL = fileName;
             }
+
             if (vm.imageFileSecond != null)
             {
+                string fileName = Guid.NewGuid() + Path.GetExtension(vm.imageFileSecond.FileName);
+                string filePath = Path.Combine(
+                    Directory.GetCurrentDirectory(),
+                    "wwwroot", "assets", "images",
+                    fileName);
 
-                string fileName = Guid.NewGuid().ToString() + Path.GetExtension(vm.imageFileSecond.FileName);
-                string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "assets", "images", fileName);
-                using (FileStream stream = new FileStream(filePath, FileMode.Create))
-                {
-                    await vm.imageFileSecond.CopyToAsync(stream);
-                }
+                using FileStream stream = new FileStream(filePath, FileMode.Create);
+                await vm.imageFileSecond.CopyToAsync(stream);
+
                 cake.SecondaryImageURL = fileName;
             }
+
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
         }

@@ -1,53 +1,75 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model HomeViewModel
+@{
+	ViewData["Title"] = "Home Page";
 }
 
 
-    <main>
+<main>
 
 
-        <section id="heroSection">
-            <video autoplay muted loop id="heroVideo">
-                <source src="./assets/videos/v-c4edaa02-c8af-43ac-b51e-46b0d5ce69ca_original.mp4" type="video/mp4">
-            </video>
+	<section id="heroSection">
+		<video autoplay muted loop id="heroVideo">
+			<source src="./assets/videos/v-c4edaa02-c8af-43ac-b51e-46b0d5ce69ca_original.mp4" type="video/mp4">
+		</video>
 
-            <div class="heroOverlay">
-                <div class="heroContent">
-                    <span>From aroma, a world unfolds</span>
-                    <h1>Scents to stir the imagination</h1>
-                    <p>
-                        Our transportive fragrances for self and surrounds-candles, Eaux de Parfum, room sprays, incense and oil
-                        burner blends-stimulate the senses and stir the imagination.
-                    </p>
-                    <button class="discoverBtn">
-                        Discover our aromas <i class="fa-solid fa-arrow-right-long"></i>
-                    </button>
-                </div>
+		<div class="heroOverlay">
+			<div class="heroContent">
+				<span>From aroma, a world unfolds</span>
+				<h1>Scents to stir the imagination</h1>
+				<p>
+					Our transportive fragrances for self and surrounds-candles, Eaux de Parfum, room sprays, incense and oil
+					burner blends-stimulate the senses and stir the imagination.
+				</p>
+				<button class="discoverBtn">
+					Discover our aromas <i class="fa-solid fa-arrow-right-long"></i>
+				</button>
+			</div>
 
-                <div class="videoControls">
-                    <span class="playBtn"><i class="fa-solid fa-pause"></i></span>
-                    <span class="muteBtn"><i class="fa-solid fa-volume-xmark"></i></span>
-                </div>
-            </div>
-        </section>
-        <!-- newAndNotable -->
-        <section class="new-notable">
-            <div class="container">
-                <div class="section-title">
-                    <span>New and notable</span>
-                    <h2>
-                        A collection of longstanding formulations and recent additions to the range-each likely to make for a
-                        memorable gift.
-                    </h2>
-                </div>
+			<div class="videoControls">
+				<span class="playBtn"><i class="fa-solid fa-pause"></i></span>
+				<span class="muteBtn"><i class="fa-solid fa-volume-xmark"></i></span>
+			</div>
+		</div>
+	</section>
+	<!-- newAndNotable -->
+	<section class="new-notable">
+		<div class="container">
+			<div class="section-title">
+				<span>New and notable</span>
+				<h2>
+					A collection of longstanding formulations and recent additions to the range-each likely to make for a
+					memorable gift.
+				</h2>
+			</div>
 
-            <div class="slider-wrapper">
-                <button class="arrow prev" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+			<div class="slider-wrapper">
+				<button class="arrow prev" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
 
-                <div class="product-list" id="slider">
+				<div class="product-list" id="slider">
 
-                    <!-- data-id EKLENDİ -->
-                    <div class="product-item" data-id="home-scents-duo">
+					@foreach (var item in Model.Products.Take(6))
+					{
+						<div class="product-item">
+							<div class="badge">Online-only offer</div>
+
+							<div class="product-image">
+								<img src="~/assets/images/@item.ImageURL"
+									 class="main-img">
+								<img src="~/assets/images/@item.SecondaryImageURL" class="hover-img">
+								<button class="wishlist-btn"><i class="fa-regular fa-bookmark"></i></button>
+							</div>
+							<div class="product-info">
+								<h4>@item.Title</h4>
+								<p class="desc">@item.Description</p>
+								<span class="size">Size: @item.GetActualSize</span>
+								<p class="price">$@item.Price</p>
+							</div>
+							<button class="add-to-cart buy-button">Add all to cart</button>
+						</div>
+					}
+
+
+					@* <div class="product-item">
                         <div class="badge">Online-only offer</div>
 
                         <div class="product-image">
@@ -66,7 +88,7 @@
                     </div>
 
                     <!-- data-id EKLENDİ -->
-                    <div class="product-item" data-id="resurrection-duet">
+                    <div class="product-item" >
                         <div class="badge">New addition</div>
                         <div class="product-image">
                             <img src="./assets/images/Aesop_Kits_Resurrection_Duet_Web_Front_A_2000x2000px.png" class="main-img">
@@ -84,7 +106,7 @@
                     </div>
 
                     <!-- Diğer ürünler için de data-id ekleyin -->
-                    <div class="product-item" data-id="lucent-facial-refiner">
+                    <div class="product-item">
                         <div class="badge">New addition</div>
                         <div class="product-image">
                             <img src="./assets/images/Aesop_Skin_Lucent_Facial_Refiner_60mL_NGL_Front_2000x2000px.png"
@@ -102,7 +124,7 @@
                         <button class="add-to-cart">Add to cart</button>
                     </div>
 
-                    <div class="product-item" data-id="aurner-eau-de-parfum">
+                    <div class="product-item">
                         <div class="badge">New addition</div>
                         <div class="product-image">
                             <img src="./assets/images/Aesop_Fragrance_Aurner_Eau_de_Parfum_50mL_Bottle_NGL_2000x2000px.png"
@@ -120,7 +142,7 @@
                         <button class="add-to-cart">Add to cart</button>
                     </div>
 
-                    <div class="product-item" data-id="geranium-body-treatment">
+                    <div class="product-item">
                         <div class="badge">New addition</div>
                         <div class="product-image">
                             <img src="./assets/images/Aesop_Body_Geranium_Leaf_Hydrating_Body_Treatment_Web_Front_2000x2000px.png"
@@ -136,424 +158,429 @@
                             <p class="price">$50.00</p>
                         </div>
                         <button class="add-to-cart">Add to cart</button>
-                    </div>
-                </div>
+                    </div> *@
+				</div>
 
-                <button class="arrow next" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
-            </div>
+				<button class="arrow next" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+			</div>
 
-                <div class="slider-progress">
-                    <div class="progress-bar" id="progressBar"></div>
-                </div>
-            </div>
-        </section>
-        <!-- discovergifts -->
-        <section class="horse-section">
-            <div class="horse-container">
-                <div class="horse-content">
-                    <span class="horse-label">Celebrating the Year of the Horse</span>
-                    <h2 class="horse-title">Considered companions to the galloping rhythms of the day</h2>
-                    <p class="horse-text">
-                        Our latest offerings honour the spirit of new beginnings-an invitation to discover something singular for
-                        the
-                        year ahead.
-                    </p>
-                    <a href="#" class="horse-btn">
-                        <span>Discover gifts</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
+			<div class="slider-progress">
+				<div class="progress-bar" id="progressBar"></div>
+			</div>
+		</div>
+	</section>
+	<!-- discovergifts -->
+	<section class="horse-section">
+		<div class="horse-container">
+			<div class="horse-content">
+				<span class="horse-label">Celebrating the Year of the Horse</span>
+				<h2 class="horse-title">Considered companions to the galloping rhythms of the day</h2>
+				<p class="horse-text">
+					Our latest offerings honour the spirit of new beginnings-an invitation to discover something singular for
+					the
+					year ahead.
+				</p>
+				<a href="#" class="horse-btn">
+					<span>Discover gifts</span>
+					<i class="fa-solid fa-arrow-right"></i>
+				</a>
+			</div>
 
-                <div class="horse-video-wrapper">
-                    <video id="horseVideo" autoplay muted loop playsinline class="horse-video">
-                        <source src="./assets/videos/WhatsApp Video 2026-02-21 at 13.25.46.mp4" type="video/mp4">
-                    </video>
+			<div class="horse-video-wrapper">
+				<video id="horseVideo" autoplay muted loop playsinline class="horse-video">
+					<source src="./assets/videos/WhatsApp Video 2026-02-21 at 13.25.46.mp4" type="video/mp4">
+				</video>
 
-                    <div class="video-controls">
-                        <button id="playPauseBtn" class="control-btn">
-                            <i class="fa-solid fa-pause" id="controlIcon"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- addtocarrt -->
-        <section class="product-grid">
+				<div class="video-controls">
+					<button id="playPauseBtn" class="control-btn">
+						<i class="fa-solid fa-pause" id="controlIcon"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- addtocarrt -->
+	<section class="product-grid">
 
-            <div class="product-card" data-id="lucent">
+		<div class="product-card" data-id="lucent">
 
-                <div class="image-wrapper">
+			<div class="image-wrapper">
 
-                    <img src="./assets/images/Aesop_Skin_Lucent_Facial_Concentrate_60mL_Front_2000x2000px.jpg" class="main-img"
-                         alt="Lucent Facial Concentrate">
+				<img src="./assets/images/Aesop_Skin_Lucent_Facial_Concentrate_60mL_Front_2000x2000px.jpg" class="main-img"
+					 alt="Lucent Facial Concentrate">
 
-                    <img src="./assets/images/Aesop_Skin_Lucent_Facial_Concentrate_60mL_NGL_Texture_2000x2000px.jpg"
-                         class="hover-img" alt="Lucent Hover Effect">
+				<img src="./assets/images/Aesop_Skin_Lucent_Facial_Concentrate_60mL_NGL_Texture_2000x2000px.jpg"
+					 class="hover-img" alt="Lucent Hover Effect">
 
-                </div>
+			</div>
 
 
 
-                <div class="content">
+			<div class="content">
 
-                    <h3 class="product-title">Lucent Facial Concentrate</h3>
+				<h3 class="product-title">Lucent Facial Concentrate</h3>
 
-                    <p class="product-desc" style="justify-self:start; align-self:start;">For a wide range of skin types</p>
+				<p class="product-desc" style="justify-self:start; align-self:start;">For a wide range of skin types</p>
 
 
 
-                    <div class="size-container">
+				<div class="size-container">
 
-                        <span class="size-label">Size</span>
+					<span class="size-label">Size</span>
 
-                        <select class="size-select">
+					<select class="size-select">
 
-                            <option value="137.00">2.0 fl oz</option>
+						<option value="137.00">2.0 fl oz</option>
 
-                            <option value="200.00">3.4 fl oz</option>
+						<option value="200.00">3.4 fl oz</option>
 
-                        </select>
+					</select>
 
-                    </div>
+				</div>
 
 
 
-                    <p class="price">$<span class="val">137.00</span></p>
+				<p class="price">$<span class="val">137.00</span></p>
 
 
 
-                    <button class="add-btn">
+				<button class="add-btn">
 
-                        <span class="text">Add to cart</span>
+					<span class="text">Add to cart</span>
 
-                        <i class="fa-solid fa-spinner loader"></i>
+					<i class="fa-solid fa-spinner loader"></i>
 
-                    </button>
+				</button>
 
-                </div>
+			</div>
 
-            </div>
+		</div>
 
-            <div class="product-card" data-id="rind">
+		<div class="product-card" data-id="rind">
 
-                <div class="image-wrapper">
+			<div class="image-wrapper">
 
-                    <img src="./assets/images/Aesop_Body_Rind_Concentrate_Body_Balm_100mL_Web_Front_B_2000x2000px.jpg"
-                         class="main-img" alt="Rind Concentrate Body Balm">
+				<img src="./assets/images/Aesop_Body_Rind_Concentrate_Body_Balm_100mL_Web_Front_B_2000x2000px.jpg"
+					 class="main-img" alt="Rind Concentrate Body Balm">
 
-                    <img src="./assets/images/Aesop_Body_Rind_Concentrate_Body_Balm_100mL_Web_Front_A_2000x2000px.jpg"
-                         class="hover-img" alt="Rind Hover Effect">
+				<img src="./assets/images/Aesop_Body_Rind_Concentrate_Body_Balm_100mL_Web_Front_A_2000x2000px.jpg"
+					 class="hover-img" alt="Rind Hover Effect">
 
-                </div>
+			</div>
 
 
 
-                <div class="content">
+			<div class="content">
 
-                    <h3 class="product-title">Rind Concentrate Body Balm</h3>
+				<h3 class="product-title">Rind Concentrate Body Balm</h3>
 
-                    <p class="product-desc">Citrus, fresh</p>
+				<p class="product-desc">Citrus, fresh</p>
 
 
 
-                    <div class="size-container">
+				<div class="size-container">
 
-                        <span class="size-label">Size</span>
+					<span class="size-label">Size</span>
 
-                        <select class="size-select">
+					<select class="size-select">
 
-                            <option value="49.00"
-                                    data-img="./assets/images/Aesop_Body_Rind_Concentrate_Body_Balm_100mL_Web_Front_B_2000x2000px.jpg"
-                                    data-hover="./assets/images/Aesop_Body_Rind_Concentrate_Body_Balm_100mL_Web_Front_A_2000x2000px.jpg">
+						<option value="49.00"
+								data-img="./assets/images/Aesop_Body_Rind_Concentrate_Body_Balm_100mL_Web_Front_B_2000x2000px.jpg"
+								data-hover="./assets/images/Aesop_Body_Rind_Concentrate_Body_Balm_100mL_Web_Front_A_2000x2000px.jpg">
 
-                                3.4 fl oz
+							3.4 fl oz
 
-                            </option>
+						</option>
 
 
 
-                            <option value="107.00"
-                                    data-img="./assets/images/Aesop_Body_Rind_Concentrate_Body_Balm_500mL_Web_Front_2000x2000px.jpg"
-                                    data-hover="./assets/images/Aesop_Body_Rind_Concentrate_Body_Balm_500mL_Web_Back_2000x2000px.jpg">
+						<option value="107.00"
+								data-img="./assets/images/Aesop_Body_Rind_Concentrate_Body_Balm_500mL_Web_Front_2000x2000px.jpg"
+								data-hover="./assets/images/Aesop_Body_Rind_Concentrate_Body_Balm_500mL_Web_Back_2000x2000px.jpg">
 
-                                17 oz
+							17 oz
 
-                            </option>
+						</option>
 
-                        </select>
+					</select>
 
-                    </div>
+				</div>
 
 
 
-                    <p class="price">$<span class="val">49.00</span></p>
+				<p class="price">$<span class="val">49.00</span></p>
 
 
 
-                    <button class="add-btn">
+				<button class="add-btn">
 
-                        <span class="text">Add to cart</span>
+					<span class="text">Add to cart</span>
 
-                        <i class="fa-solid fa-spinner loader"></i>
+					<i class="fa-solid fa-spinner loader"></i>
 
-                    </button>
+				</button>
 
-                </div>
+			</div>
 
-            </div>
+		</div>
 
 
 
-            <div class="product-card" data-id="geranium">
+		<div class="product-card" data-id="geranium">
 
-                <div class="image-wrapper">
+			<div class="image-wrapper">
 
-                    <img src="./assets/images/Aesop_Geranium_Leaf_Hydrating_Body_Treatment_100mL-NGL_In-Situ_01_Product_2000x2000px.png"
-                         class="main-img" alt="Geranium Leaf Duet">
+				<img src="./assets/images/Aesop_Geranium_Leaf_Hydrating_Body_Treatment_100mL-NGL_In-Situ_01_Product_2000x2000px.png"
+					 class="main-img" alt="Geranium Leaf Duet">
 
-                    <img src="./assets/images/Aesop_Geranium_Leaf_Body_Cleanser_500mL_NGL_In-Situ_02_Dosage_2000x2000px.png"
-                         class="hover-img" alt="Geranium Hover Effect">
+				<img src="./assets/images/Aesop_Geranium_Leaf_Body_Cleanser_500mL_NGL_In-Situ_02_Dosage_2000x2000px.png"
+					 class="hover-img" alt="Geranium Hover Effect">
 
-                </div>
+			</div>
 
 
 
-                <div class="content">
+			<div class="content">
 
-                    <h3 class="product-title">Geranium Leaf Duet</h3>
+				<h3 class="product-title">Geranium Leaf Duet</h3>
 
-                    <p class="product-desc">A green, citrus, fresh duo to cleanse and hydrate the body</p>
+				<p class="product-desc">A green, citrus, fresh duo to cleanse and hydrate the body</p>
 
 
 
-                    <div class="no-size-box">
+				<div class="no-size-box">
 
-                        <span class="one-size-text">One size only</span>
+					<span class="one-size-text">One size only</span>
 
-                        <span class="kit-text">Kit</span>
+					<span class="kit-text">Kit</span>
 
-                    </div>
+				</div>
 
 
 
-                    <p class="price">$147.00</p>
+				<p class="price">$147.00</p>
 
 
 
-                    <button class="add-btn">
+				<button class="add-btn">
 
-                        <span class="text">Add to cart</span>
+					<span class="text">Add to cart</span>
 
-                        <i class="fa-solid fa-spinner loader"></i>
+					<i class="fa-solid fa-spinner loader"></i>
 
-                    </button>
+				</button>
 
-                </div>
+			</div>
 
-            </div>
+		</div>
 
-        </section>
-        <!-- browse -->
-        <section class="category-section">
-            <div class="category-header">
-                <h2>Browse by category</h2>
-            </div>
+	</section>
+	<!-- browse -->
+	<section class="category-section">
+		<div class="category-header">
+			<h2>Browse by category</h2>
+		</div>
 
-            <div class="carousel-container">
-                <button class="nav-btn prev" id="catPrevBtn"><i class="fa-solid fa-chevron-left"></i></button>
-                <button class="nav-btn next" id="catNextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+		<div class="carousel-container">
+			<button class="nav-btn prev" id="catPrevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+			<button class="nav-btn next" id="catNextBtn"><i class="fa-solid fa-chevron-right"></i></button>
 
-                <div class="carousel-track-wrapper">
-                    <div class="carousel-track" id="track">
-                        <div class="category-card">
-                            <img src="./assets/images/skincare.jpg" alt="Skin Care">
-                            <span>Skin Care</span>
-                        </div>
-                        <div class="category-card">
-                            <img src="./assets/images/hand-and-body.jpg" alt="Hand & Body">
-                            <span>Hand & Body</span>
-                        </div>
-                        <div class="category-card">
-                            <img src="./assets/images/fragrance.jpg" alt="Fragrance">
-                            <span>Fragrance</span>
-                        </div>
-                        <div class="category-card">
-                            <img src="./assets/images/home.jpg" alt="Home">
-                            <span>Home</span>
-                        </div>
-                        <div class="category-card">
-                            <img src="./assets/images/hair.jpg" alt="Hair">
-                            <span>Hair</span>
-                        </div>
-                        <div class="category-card">
-                            <img src="./assets/images/travel.jpg" alt="Body Care">
-                            <span>Body Care</span>
-                        </div>
-                        <div class="category-card">
-                            <img src="./assets/images/Aesop Corporate Gifts.png" alt="Kits">
-                            <span>Kits</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- explore -->
-        <section class="promo-section">
-            <div class="promo-container">
-                <div class="promo-image-wrapper">
-                    <img src="./assets/images/Ramadan_2026_HP_Secondary_60-40_Mobile_1080x1080px.jpg"
-                         alt="Aesop Above Us, Steorra Eau de Parfum">
-                </div>
+			<div class="carousel-track-wrapper">
+				<div class="carousel-track" id="track">
+					<div class="category-card">
+						<img src="./assets/images/skincare.jpg" alt="Skin Care">
+						<span>Skin Care</span>
+					</div>
+					<div class="category-card">
+						<img src="./assets/images/hand-and-body.jpg" alt="Hand & Body">
+						<span>Hand & Body</span>
+					</div>
+					<div class="category-card">
+						<img src="./assets/images/fragrance.jpg" alt="Fragrance">
+						<span>Fragrance</span>
+					</div>
+					<div class="category-card">
+						<img src="./assets/images/home.jpg" alt="Home">
+						<span>Home</span>
+					</div>
+					<div class="category-card">
+						<img src="./assets/images/hair.jpg" alt="Hair">
+						<span>Hair</span>
+					</div>
+					<div class="category-card">
+						<img src="./assets/images/travel.jpg" alt="Body Care">
+						<span>Body Care</span>
+					</div>
+					<div class="category-card">
+						<img src="./assets/images/Aesop Corporate Gifts.png" alt="Kits">
+						<span>Kits</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- explore -->
+	<section class="promo-section">
+		<div class="promo-container">
+			<div class="promo-image-wrapper">
+				<img src="./assets/images/Ramadan_2026_HP_Secondary_60-40_Mobile_1080x1080px.jpg"
+					 alt="Aesop Above Us, Steorra Eau de Parfum">
+			</div>
 
-                <div class="promo-content">
-                    <div class="text-group">
-                        <span class="subtitle">A constellation of aromas</span>
-                        <h2 class="title">Illuminating treasured connections</h2>
-                        <p class="description">
-                            Sensorial home fragrances create a welcoming abode
-                            while evocative Eaux de Parfum make for inspiriting gifts.
-                        </p>
-                    </div>
+			<div class="promo-content">
+				<div class="text-group">
+					<span class="subtitle">A constellation of aromas</span>
+					<h2 class="title">Illuminating treasured connections</h2>
+					<p class="description">
+						Sensorial home fragrances create a welcoming abode
+						while evocative Eaux de Parfum make for inspiriting gifts.
+					</p>
+				</div>
 
-                    <a href="#" class="promo-btn">
-                        Explore gifts
-                        <span class="arrow-icon">→</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-        <!-- kart -->
-        <section class="product-grid">
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="./assets/images/Aesop_Fragrance_Aurner_Eau_de_Parfum_50mL_Bottle_NGL_2000x2000px.png" alt="Perfume"
-                         class="primary-img">
-                    <img src="./assets/images/Aesop_Fragrance_Aurner_Eau_de_Parfum_50mL_Bottle_with_Carton_NGL_2000x2000px.png"
-                         alt="Perfume Hover" class="secondary-img">
-                    <button class="bookmark-btn"><i class="far fa-bookmark"></i></button>
-                </div>
-                <div class="product-info">
-                    <span class="tag">New addition</span>
-                    <h3>Above Us, Steorra Eau de Parfum</h3>
-                    <p class="ingredients">Cardamom, Vanilla Bean, Frankincense</p>
-                    <div class="meta">
-                        <span>One size only</span>
-                        <span class="divider"></span>
-                        <span>1.6 fl oz</span>
-                    </div>
-                    <p class="price">$200.00</p>
-                </div>
-                <button class="add-to-cart">Add to cart</button>
-            </div>
-
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="./assets/images/Aesop_Body_Eleos_Nourishing_Body_Cleanser_180mL_Tube_Front_2000x2000px.jpg"
-                         alt="Body Cleanser" class="primary-img">
-                    <img src="./assets/images/Aesop_Body_Eleos_Nourishing_Body_Cleanser_Texture_2000x2000px.jpg"
-                         alt="Body Cleanser Hover" class="secondary-img">
-                    <button class="bookmark-btn"><i class="far fa-bookmark"></i></button>
-                </div>
-                <div class="product-info">
-                    <span class="tag">New addition</span>
-                    <h3>Eleos Nourishing Body Cleanser</h3>
-                    <p class="ingredients">Herbaceous, woody, spicy</p>
-
-                    <div class="size-dropdown-custom">
-                        <div class="dropdown-header">
-                            <label>Size</label>
-                            <div class="selected-value">
-                                <span id="current-size">6.2 oz</span>
-                                <i class="fas fa-chevron-down arrow-icon"></i>
-                            </div>
-                        </div>
-                        <ul class="dropdown-list">
-                            <li data-value="6.2">6.2 oz</li>
-                            <li data-value="16.9">16.9 fl oz</li>
-                            <li data-value="16.9r">16.9 fl oz refill</li>
-                        </ul>
-                    </div>
-
-                    <p class="price">$38.00</p>
-                </div>
-                <button class="add-to-cart">Add to cart</button>
-            </div>
-
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="./assets/images/Aesop_Home_Murasaki_Aromatique_Incense_Web_Front_2000x2000px.png" alt="Incense"
-                         class="primary-img">
-                    <img src="./assets/images/Aesop_Top_20_2025_PDP_Application_Incense_2000x2000px.png" alt="Incense Hover"
-                         class="secondary-img">
-                    <button class="bookmark-btn"><i class="far fa-bookmark"></i></button>
-                </div>
-                <div class="product-info">
-                    <h3>Murasaki Aromatique Incense</h3>
-                    <p class="ingredients">Woody, spicy, resinous</p>
-                    <div class="meta">
-                        <span>One size only</span>
-                        <span class="divider"></span>
-                        <span>33 sticks</span>
-                    </div>
-                    <p class="price">$49.00</p>
-                </div>
-                <button class="add-to-cart">Add to cart</button>
-            </div>
-        </section>
-        <!-- video -->
-        <section class="video-hero">
-            <video autoplay muted loop playsinline id="bgVideo">
-                <source src="./assets/videos/v-41a8ce4e-fcc9-4fcf-ad86-2b0d919616c4_original.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-
-            <div class="video-overlay"></div>
-
-            <div class="video-controls">
-                <button id="bgPlayPause" class="control-btn">
-                    <i class="fas fa-pause"></i>
-                </button>
-                <button id="bgMute" class="control-btn">
-                    <i class="fas fa-volume-mute"></i>
-                </button>
-            </div>
-        </section>
-        <!-- neigbourly -->
-        <section class="store-locator">
-            <div class="store-container">
-                <div class="store-content">
-                    <span class="store-location">Aesop Upper West Side</span>
-                    <h2 class="store-title">A neighbourly presence</h2>
-                    <p class="store-description">
-                        Our signature stores are designed to fit comfortably within their surrounds,
-                        paying respects to local history and values. We look forward to hosting you,
-                        whether you are visiting a store in a new city or your own.
-                    </p>
-                    <a href="#" class="store-link">
-                        <span>Find a nearby store</span>
-                        <i class="fa-solid fa-arrow-right-long"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-        <!-- recommendeed -->
-        <section class="recommended-reading">
-            <div class="reading-container">
-                <h2 class="section-title">Recommended reading</h2>
-
-                <div class="reading-grid">
-                    <article class="reading-card">
-                        <div class="image-wrapper">
-                            <img src="./assets/images/Aesop_An_Introduction_to_Skin_Types_Web_Primary_Full_Bleed_Mobile_540x400.jpg"
-                                 alt="Literature">
-                        </div>
-                        <div class="card-content">
-                            <span class="category">Literature</span>
-                            <h3 class="article-title">Above Us, Steorra Eau de Parfum: celestial literature</h3>
-                            <span class="read-time">Three-minute read</span>
-                        </div>
-                    </article>
-
+				<a href="#" class="promo-btn">
+					Explore gifts
+					<span class="arrow-icon">→</span>
+				</a>
+			</div>
+		</div>
+	</section>
+	<!-- kart -->
+	<section class="product-grid">
+		<div class="product-card">
+			<div class="image-container">
+				<img src="./assets/images/Aesop_Fragrance_Aurner_Eau_de_Parfum_50mL_Bottle_NGL_2000x2000px.png" alt="Perfume"
+					 class="primary-img">
+				<img src="./assets/images/Aesop_Fragrance_Aurner_Eau_de_Parfum_50mL_Bottle_with_Carton_NGL_2000x2000px.png"
+					 alt="Perfume Hover" class="secondary-img">
+				<button class="bookmark-btn"><i class="far fa-bookmark"></i></button>
+			</div>
+			<div class="product-info">
+				<span class="tag">New addition</span>
+				<h3>Above Us, Steorra Eau de Parfum</h3>
+				<p class="ingredients">Cardamom, Vanilla Bean, Frankincense</p>
+				<div class="meta">
+					<span>One size only</span>
+					<span class="divider"></span>
+					<span>1.6 fl oz</span>
+				</div>
+				<p class="price">$200.00</p>
+			</div>
+			<button class="add-to-cart">Add to cart</button>
+		</div>
+
+		<div class="product-card">
+			<div class="image-container">
+				<img src="./assets/images/Aesop_Body_Eleos_Nourishing_Body_Cleanser_180mL_Tube_Front_2000x2000px.jpg"
+					 alt="Body Cleanser" class="primary-img">
+				<img src="./assets/images/Aesop_Body_Eleos_Nourishing_Body_Cleanser_Texture_2000x2000px.jpg"
+					 alt="Body Cleanser Hover" class="secondary-img">
+				<button class="bookmark-btn"><i class="far fa-bookmark"></i></button>
+			</div>
+			<div class="product-info">
+				<span class="tag">New addition</span>
+				<h3>Eleos Nourishing Body Cleanser</h3>
+				<p class="ingredients">Herbaceous, woody, spicy</p>
+
+				<div class="size-dropdown-custom">
+					<div class="dropdown-header">
+						<label>Size</label>
+						<div class="selected-value">
+							<span id="current-size">6.2 oz</span>
+							<i class="fas fa-chevron-down arrow-icon"></i>
+						</div>
+					</div>
+					<ul class="dropdown-list">
+						<li data-value="6.2">6.2 oz</li>
+						<li data-value="16.9">16.9 fl oz</li>
+						<li data-value="16.9r">16.9 fl oz refill</li>
+					</ul>
+				</div>
+
+				<p class="price">$38.00</p>
+			</div>
+			<button class="add-to-cart">Add to cart</button>
+		</div>
+
+		<div class="product-card">
+			<div class="image-container">
+				<img src="./assets/images/Aesop_Home_Murasaki_Aromatique_Incense_Web_Front_2000x2000px.png" alt="Incense"
+					 class="primary-img">
+				<img src="./assets/images/Aesop_Top_20_2025_PDP_Application_Incense_2000x2000px.png" alt="Incense Hover"
+					 class="secondary-img">
+				<button class="bookmark-btn"><i class="far fa-bookmark"></i></button>
+			</div>
+			<div class="product-info">
+				<h3>Murasaki Aromatique Incense</h3>
+				<p class="ingredients">Woody, spicy, resinous</p>
+				<div class="meta">
+					<span>One size only</span>
+					<span class="divider"></span>
+					<span>33 sticks</span>
+				</div>
+				<p class="price">$49.00</p>
+			</div>
+			<button class="add-to-cart">Add to cart</button>
+		</div>
+	</section>
+	<!-- video -->
+	<section class="video-hero">
+		<video autoplay muted loop playsinline id="bgVideo">
+			<source src="./assets/videos/v-41a8ce4e-fcc9-4fcf-ad86-2b0d919616c4_original.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+
+		<div class="video-overlay"></div>
+
+		<div class="video-controls">
+			<button id="bgPlayPause" class="control-btn">
+				<i class="fas fa-pause"></i>
+			</button>
+			<button id="bgMute" class="control-btn">
+				<i class="fas fa-volume-mute"></i>
+			</button>
+		</div>
+	</section>
+	<!-- neigbourly -->
+	<section class="store-locator">
+		<div class="store-container">
+			<div class="store-content">
+				<span class="store-location">Aesop Upper West Side</span>
+				<h2 class="store-title">A neighbourly presence</h2>
+				<p class="store-description">
+					Our signature stores are designed to fit comfortably within their surrounds,
+					paying respects to local history and values. We look forward to hosting you,
+					whether you are visiting a store in a new city or your own.
+				</p>
+				<a href="#" class="store-link">
+					<span>Find a nearby store</span>
+					<i class="fa-solid fa-arrow-right-long"></i>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- recommendeed -->
+	<section class="recommended-reading">
+		<div class="reading-container">
+			<h2 class="section-title">Recommended reading</h2>
+
+			<div class="reading-grid">
+
+				@foreach (var item in Model.Recommends.Take(3))
+				{
+					<article class="reading-card">
+						<div class="image-wrapper">
+							<img src="~/assets/images/@item.ImageUrl"
+								 alt="Literature">
+						</div>
+						<div class="card-content">
+							<span class="category">@item.Category</span>
+							<h3 class="article-title">@item.Title</h3>
+							<span class="read-time">@item.ReadingMinute minute read</span>
+						</div>
+					</article>
+				}
+				@* 
                     <article class="reading-card">
                         <div class="image-wrapper">
                             <img src="./assets/images/Aesop_NGL_Athenaeum_Thumbnail_Geranium_Article_Mobile_540x400.jpg"
@@ -576,18 +603,17 @@
                             <h3 class="article-title">Sensorialist Literature</h3>
                             <span class="read-time">Thirty-minute read</span>
                         </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-        <!-- wishes -->
-        <section class="quote-section">
-            <div class="quote-container">
-                <blockquote class="quote-text">
-                    ‘Your best and wisest refuge from all troubles is in your science.’
-                </blockquote>
-                <cite class="quote-author">Ada Lovelace</cite>
-            </div>
-        </section>
-    </main>
-   
+                    </article> *@
+			</div>
+		</div>
+	</section>
+	<!-- wishes -->
+	<section class="quote-section">
+		<div class="quote-container">
+			<blockquote class="quote-text">
+				‘Your best and wisest refuge from all troubles is in your science.’
+			</blockquote>
+			<cite class="quote-author">Ada Lovelace</cite>
+		</div>
+	</section>
+</main>

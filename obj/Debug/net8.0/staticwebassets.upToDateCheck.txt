@@ -50,6 +50,7 @@ wwwroot\assets\admin\images\faces\face6.jpg
 wwwroot\assets\admin\images\faces\face7.jpg
 wwwroot\assets\admin\images\faces\face8.jpg
 wwwroot\assets\admin\images\faces\face9.jpg
+wwwroot\assets\admin\images\faces\userprofile.png
 wwwroot\assets\admin\images\favicon.ico
 wwwroot\assets\admin\images\favicon.png
 wwwroot\assets\admin\images\logo-mini.svg
@@ -83,12 +84,24 @@ wwwroot\assets\admin\vendors\mdi\fonts\materialdesignicons-webfont.woff2
 wwwroot\assets\css\faqs.css
 wwwroot\assets\css\main.css
 wwwroot\assets\images\0064868f-d7aa-4d30-ba00-9f23215f6057.png
+wwwroot\assets\images\1ef6e722-9800-4dd3-902c-f36104b8e950.png
 wwwroot\assets\images\2006.133.128-list.webp
 wwwroot\assets\images\2017085_OS_N26_webimageland.jpg
+wwwroot\assets\images\21c607a0-681f-4930-9a90-489f416f9a16.png
+wwwroot\assets\images\229b4597-e978-448b-8a18-cdd066dc1575.jpg
+wwwroot\assets\images\2cdacb1a-70e3-4049-86da-738bc39fccb3.png
+wwwroot\assets\images\3247fd4c-cc2b-4e18-81c9-5558d4cfa482.png
+wwwroot\assets\images\499ea12a-6488-4b7f-802c-96ec9f666113.png
 wwwroot\assets\images\5b2de624-e5cd-4519-9290-f58cb73e8a66.png
+wwwroot\assets\images\5cde4e9f-62e4-4d96-92a0-d149b22a8352.jpg
+wwwroot\assets\images\6fd3fd93-6f36-45a6-9268-da08719bfff3.jpg
+wwwroot\assets\images\6ffcdda1-6bb3-4fe4-8c3d-ccdbcb540612.jpg
 wwwroot\assets\images\711kG9Gax2L._AC_UF350,350_QL80_.jpg
 wwwroot\assets\images\75f181da26df41e000f94fe2d1b44510-mobile.jpg
+wwwroot\assets\images\7ce88eb1-d554-4808-aa0a-cb383832bfe1.png
+wwwroot\assets\images\8167b01f-3d75-4f46-bdad-dc5fac38a402.jpg
 wwwroot\assets\images\8da4f83f-07b3-440a-9de2-c691be4c5674.png
+wwwroot\assets\images\9af03f9f-b880-44df-95d3-9777b16d68ef.png
 wwwroot\assets\images\a5403a80691363d81543860141127dea-mobile.jpg
 wwwroot\assets\images\a745e52456d988dfef7759dd49533f7b-mobile.jpg
 wwwroot\assets\images\Aesop boxes.png
@@ -241,11 +254,13 @@ wwwroot\assets\images\Aesop_Top_20_2025_PDP_Texture_Resurrection_Hand_Wash_2000x
 wwwroot\assets\images\Aesop_Top_20_2025_PDP_Texture_Resurrection_Hand_Wash_2000x2000px.png
 wwwroot\assets\images\Aesop_Top_20_2025_PDP_Texture_Reverence_Hand_Wash_2000x2000px.png
 wwwroot\assets\images\Aesop_Top_20_2025_PDP_Texture_Shampoo_2000x2000px.png
+wwwroot\assets\images\af25bf67-23ef-4783-9b4e-3a38761a33fe.jpg
 wwwroot\assets\images\aglogo.png
 wwwroot\assets\images\ambery.png
 wwwroot\assets\images\Battersea-power-station-website-assets-resize-01-1600x1067px.jpg
 wwwroot\assets\images\clickandcollect.png
 wwwroot\assets\images\counter.png
+wwwroot\assets\images\d1140765-22e0-4ead-b551-2f27de70f77e.png
 wwwroot\assets\images\da550216-1687-4fec-9ab4-3c83c5b18a44.png
 wwwroot\assets\images\darkAesop.svg
 wwwroot\assets\images\facial.png
@@ -418,8 +433,3 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\assets\images\3247fd4c-cc2b-4e18-81c9-5558d4cfa482.png
-wwwroot\assets\images\9af03f9f-b880-44df-95d3-9777b16d68ef.png
-wwwroot\assets\images\d1140765-22e0-4ead-b551-2f27de70f77e.png
-wwwroot\assets\images\499ea12a-6488-4b7f-802c-96ec9f666113.png
-wwwroot\assets\images\7ce88eb1-d554-4808-aa0a-cb383832bfe1.png
