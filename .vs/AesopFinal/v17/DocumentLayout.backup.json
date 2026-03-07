@@ -3,68 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|c:\\users\\ominbook\\desktop\\aesopfinal\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|solutionrelative:views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|c:\\users\\ominbook\\desktop\\aesopfinal\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|c:\\users\\ominbook\\desktop\\aesopfinal\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|c:\\users\\ominbook\\desktop\\aesopfinal\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|c:\\users\\ominbook\\desktop\\aesopfinal\\views\\shared\\_secondarylayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|solutionrelative:views\\shared\\_secondarylayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|c:\\users\\ominbook\\desktop\\aesopfinal\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|c:\\users\\ominbook\\desktop\\aesopfinal\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|solutionrelative:views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|c:\\users\\ominbook\\desktop\\aesopfinal\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|c:\\users\\ominbook\\desktop\\aesopfinal\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|solutionrelative:models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|c:\\users\\ominbook\\desktop\\aesopfinal\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|solutionrelative:viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|c:\\users\\ominbook\\desktop\\aesopfinal\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|solutionrelative:viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|c:\\users\\ominbook\\desktop\\aesopfinal\\data\\aesopdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|solutionrelative:data\\aesopdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|c:\\users\\ominbook\\desktop\\aesopfinal\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|solutionrelative:controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|c:\\users\\ominbook\\desktop\\aesopfinal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|c:\\users\\ominbook\\desktop\\aesopfinal\\views\\skincare\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|solutionrelative:views\\skincare\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|c:\\users\\ominbook\\desktop\\aesopfinal\\controllers\\skincarecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|solutionrelative:controllers\\skincarecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|c:\\users\\ominbook\\desktop\\aesopfinal\\controllers\\homeaesopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|solutionrelative:controllers\\homeaesopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|c:\\users\\ominbook\\desktop\\aesopfinal\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|solutionrelative:viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|c:\\users\\ominbook\\desktop\\aesopfinal\\views\\homeaesop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|solutionrelative:views\\homeaesop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|c:\\users\\ominbook\\desktop\\aesopfinal\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|c:\\users\\ominbook\\desktop\\aesopfinal\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B67ED932-84D9-4389-95A4-9BE898CCB25F}|AesopFinal.csproj|solutionrelative:models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,19 +38,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Views\\Shared\\_Layout.cshtml*",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml*",
-              "ViewState": "AgIAAAoAAAAAm5mZmZn7vyIAAAAPAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAGkAAAAAy8zMzMwdwHcAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-06T09:41:47.417Z",
+              "WhenOpened": "2026-03-07T09:23:44.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_SecondaryLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Views\\Shared\\_SecondaryLayout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_SecondaryLayout.cshtml",
+              "ToolTip": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Views\\Shared\\_SecondaryLayout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_SecondaryLayout.cshtml",
+              "ViewState": "AgIAAL8AAAAAmZmZmRkmwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-07T09:23:33.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAEsAAAAAPDMzM7MSwF0AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-07T08:25:20.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Controllers\\CartController.cs",
+              "RelativeToolTip": "Controllers\\CartController.cs",
+              "ViewState": "AgIAAFoAAAAAAJqZmZmZv3QAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-07T08:10:19.88Z",
               "EditorCaption": ""
             },
             {
@@ -95,193 +98,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAFcAAABAMzMzMzMrwAIAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-06T09:31:18.889Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Views\\Account\\Register.cshtml",
-              "RelativeToolTip": "Views\\Account\\Register.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-06T09:30:28.69Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\ViewModels\\LoginViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\LoginViewModel.cs",
-              "ToolTip": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\ViewModels\\LoginViewModel.cs",
-              "RelativeToolTip": "ViewModels\\LoginViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
+              "Title": "CartItem.cs",
+              "DocumentMoniker": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Models\\CartItem.cs",
+              "RelativeDocumentMoniker": "Models\\CartItem.cs",
+              "ToolTip": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Models\\CartItem.cs",
+              "RelativeToolTip": "Models\\CartItem.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAYwBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T09:26:43.957Z",
+              "WhenOpened": "2026-03-07T08:07:39.739Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AgIAAEsAAACAAgAAAIAvwFcAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T09:24:41.561Z",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Views\\Cart\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cart\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Views\\Cart\\Index.cshtml*",
+              "RelativeToolTip": "Views\\Cart\\Index.cshtml*",
+              "ViewState": "AgIAAIEAAAAAgM/MzMzMv4QAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-07T07:38:43.064Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "AppUser.cs",
-              "DocumentMoniker": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Models\\AppUser.cs",
-              "RelativeDocumentMoniker": "Models\\AppUser.cs",
-              "ToolTip": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Models\\AppUser.cs",
-              "RelativeToolTip": "Models\\AppUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T09:23:50.678Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAA2wBQAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T07:09:24.574Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "RegisterViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\ViewModels\\RegisterViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\RegisterViewModel.cs",
-              "ToolTip": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\ViewModels\\RegisterViewModel.cs",
-              "RelativeToolTip": "ViewModels\\RegisterViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T09:27:00.224Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AesopDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Data\\AesopDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\AesopDbContext.cs",
-              "ToolTip": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Data\\AesopDbContext.cs",
-              "RelativeToolTip": "Data\\AesopDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T09:23:46.986Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAIwDoAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-06T09:23:31.838Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Views\\SkinCare\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\SkinCare\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Views\\SkinCare\\Index.cshtml",
-              "RelativeToolTip": "Views\\SkinCare\\Index.cshtml",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAIwFAAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-05T08:48:48.384Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "SkinCareController.cs",
-              "DocumentMoniker": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Controllers\\SkinCareController.cs",
-              "RelativeDocumentMoniker": "Controllers\\SkinCareController.cs",
-              "ToolTip": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Controllers\\SkinCareController.cs",
-              "RelativeToolTip": "Controllers\\SkinCareController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T08:36:44.702Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "HomeAesopController.cs",
-              "DocumentMoniker": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Controllers\\HomeAesopController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeAesopController.cs",
-              "ToolTip": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Controllers\\HomeAesopController.cs",
-              "RelativeToolTip": "Controllers\\HomeAesopController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T08:13:34.101Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Views\\HomeAesop\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\HomeAesop\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Views\\HomeAesop\\Index.cshtml",
-              "RelativeToolTip": "Views\\HomeAesop\\Index.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACsAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-05T08:18:38.391Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "HomeViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\ViewModels\\HomeViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\HomeViewModel.cs",
-              "ToolTip": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\ViewModels\\HomeViewModel.cs",
-              "RelativeToolTip": "ViewModels\\HomeViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T07:06:47.066Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Ominbook\\Desktop\\AesopFinal\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAkwE0AAABkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-05T07:05:52.957Z"
             }
           ]
         }

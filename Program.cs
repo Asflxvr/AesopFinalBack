@@ -22,7 +22,14 @@ namespace AesopFinal
                 options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromSeconds(10);
             }).AddDefaultTokenProviders().AddEntityFrameworkStores<AesopDbContext>();
             builder.Services.AddControllersWithViews();
-
+            builder.Services.AddSession();
+            builder.Services.AddHttpContextAccessor();
+            builder.Services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30); // Sessiya müdd?ti
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -36,7 +43,7 @@ namespace AesopFinal
             app.UseHttpsRedirection();
             
             app.UseRouting();
-
+            app.UseSession();
             app.UseStaticFiles();
             app.UseAuthentication();
             app.UseAuthorization();

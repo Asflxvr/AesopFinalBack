@@ -1,267 +1,574 @@
-﻿@{
-    ViewData["Title"] = "Shopping Cart";
+﻿@model List<CartItem>
 
+@{
+    ViewData["Title"] = "Shopping Cart";
 }
 
-<div class="cart-page">
-    <div class="cart-header">
-        <h1>Shopping Cart</h1>
+<div class="aesop-cart-page">
+    <div class="aesop-cart-header">
+        <h1 class="aesop-title">Shopping Cart</h1>
+        <span class="item-count">@Model.Sum(x => x.Quantity) items</span>
     </div>
 
-    <div class="cart-container" id="cartContainer">
-        <!-- Sepet buraya yüklenecek -->
+    <div class="aesop-cart-container" id="cartContainer">
+        @if (!Model.Any())
+        {
+            <div class="aesop-empty-cart">
+                <div class="empty-illustration">
+                    <span class="line"></span>
+                    <span class="circle"></span>
+                </div>
+                <h2>Your cart is empty</h2>
+                <p>Discover our collection of skin, body and hair care</p>
+                <a href="/" class="aesop-button aesop-button--primary">Continue Shopping</a>
+            </div>
+        }
+        else
+        {
+            <div class="aesop-cart-items">
+                @foreach (var item in Model)
+                {
+                    <div class="aesop-cart-item" id="item-@item.ProductId">
+                        <div class="item-badge">Online exclusive</div>
+
+                        <div class="item-image">
+                            <img src="~/assets/images/@item.ImageURL"
+                                 alt="@item.Title"
+                                 class="main-image">
+                            <button class="item-wishlist" aria-label="Save for later">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 5C5 3.89543 5.89543 3 7 3H17C18.1046 3 19 3.89543 19 5V21L12 18L5 21V5Z"
+                                          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="item-details">
+                            <div class="item-header">
+                                <h3 class="item-title">@item.Title</h3>
+                                <p class="item-price">$@item.Price</p>
+                            </div>
+
+                            <p class="item-description">@item.Description</p>
+
+                            <div class="item-attributes">
+                                <span class="attribute">Size: @item.GetActualSize() ml</span>
+                            </div>
+
+                            <div class="item-actions">
+                                <div class="quantity-selector">
+                                    <button class="quantity-btn"
+                                            onclick="updateQty(@item.ProductId, -1)"
+                                            aria-label="Decrease quantity">
+                                        <svg width="12" height="2" viewBox="0 0 12 2" fill="none">
+                                            <path d="M1 1H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                        </svg>
+                                    </button>
+
+                                    <span class="quantity-value">@item.Quantity</span>
+
+                                    <button class="quantity-btn"
+                                            onclick="updateQty(@item.ProductId, 1)"
+                                            aria-label="Increase quantity">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                            <path d="M1 6H11M6 1V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <button class="remove-link" onclick="remove(@item.ProductId)">
+                                    Remove
+                                </button>
+                            </div>
+
+                            <div class="item-subtotal">
+                                <span>Subtotal</span>
+                                <span class="subtotal-value">$@(item.Price* item.Quantity)</span>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <!-- Order Summary -->
+            <div class="aesop-order-summary">
+                <h2 class="summary-title">Order Summary</h2>
+
+                <div class="summary-details">
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span>$@Model.Sum(x => x.Price * x.Quantity)</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span>Calculated at checkout</span>
+                    </div>
+                    <div class="summary-row summary-total">
+                        <span>Total</span>
+                        <span>$@Model.Sum(x => x.Price * x.Quantity)</span>
+                    </div>
+                </div>
+
+                <button class="aesop-button aesop-button--primary checkout-button">
+                    Proceed to Checkout
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+
+                <div class="payment-icons">
+                    <span>Visa</span>
+                    <span>Mastercard</span>
+                    <span>Amex</span>
+                    <span>PayPal</span>
+                </div>
+            </div>
+        }
     </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    function remove(productId) {
+        @* if (!confirm('Remove this item from your cart?')) return; *@
+
+        axios.post('/Cart/Remove', null, {
+            params: { productId: productId }
+        })
+        .then(function () {
+            location.reload();
+        })
+        .catch(function (error) {
+            console.error('Error removing item:', error);
+        });
+    }
+
+    function updateQty(productId, change) {
+        axios.post('/Cart/UpdateQuantity', null, {
+            params: {
+                productId: productId,
+                change: change
+            }
+        })
+        .then(function () {
+            location.reload();
+        })
+        .catch(function (error) {
+            console.error('Error updating quantity:', error);
+        });
+    }
+</script>
+
 <style>
-    .cart-page {
-        max-width: 1200px;
-        margin: 120px auto 60px;
-        padding: 0 20px;
+    /* Aesop Minimal Design System */
+    .aesop-cart-page {
+        max-width: 1400px;
+        margin: 140px auto 80px;
+        padding: 0 40px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        background: #ffffff;
+        color: #1e1e1e;
     }
 
-    .cart-header h1 {
+    /* Typography */
+    .aesop-title {
         font-size: 32px;
-        font-weight: 300;
-        margin-bottom: 40px;
-        padding-bottom: 20px;
-        border-bottom: 1px solid #e5e5e5;
+        font-weight: 400;
+        letter-spacing: -0.01em;
+        margin: 0;
+        line-height: 1.2;
     }
 
-    .cart-items {
-        width: 100%;
-        border-collapse: collapse;
+    .item-count {
+        font-size: 15px;
+        color: #6b6b6b;
+        font-weight: 400;
     }
 
-        .cart-items th {
-            text-align: left;
-            padding: 15px 10px;
-            font-weight: 500;
-            color: #666;
-            font-size: 13px;
-            border-bottom: 1px solid #e5e5e5;
+    .aesop-cart-header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #e8e8e8;
+        margin-bottom: 50px;
+    }
+
+    /* Cart Container - Grid Layout */
+    .aesop-cart-container {
+        display: grid;
+        grid-template-columns: 1fr 380px;
+        gap: 60px;
+    }
+
+    /* Cart Items */
+    .aesop-cart-items {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .aesop-cart-item {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 30px;
+        padding: 30px 0;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+    }
+
+        .aesop-cart-item:first-child {
+            padding-top: 0;
         }
 
-    .cart-item td {
-        padding: 20px 10px;
-        border-bottom: 1px solid #f0f0f0;
+    .item-badge {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 12px;
+        color: #b57a44;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-weight: 500;
     }
 
-    .cart-item-product {
+    /* Image Container */
+    .item-image {
+        position: relative;
+        aspect-ratio: 3/4;
+        background: #fafafa;
+        overflow: hidden;
+    }
+
+    .main-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+    }
+
+    .aesop-cart-item:hover .main-image {
+        transform: scale(1.03);
+    }
+
+    .item-wishlist {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background: white;
+        border: none;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
         display: flex;
         align-items: center;
-        gap: 15px;
-    }
-
-        .cart-item-product img {
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-            border-radius: 4px;
-        }
-
-    .cart-item-name {
-        font-weight: 500;
-    }
-
-    .cart-item-size {
-        font-size: 13px;
-        color: #666;
-    }
-
-    .cart-item-price {
-        font-weight: 500;
-    }
-
-    .cart-item-quantity input {
-        width: 60px;
-        padding: 5px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-    }
-
-    .cart-item-remove {
-        color: #999;
+        justify-content: center;
         cursor: pointer;
+        color: #1e1e1e;
+        transition: all 0.2s ease;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
 
-        .cart-item-remove:hover {
-            color: #ff4444;
+        .item-wishlist:hover {
+            background: #f5f5f5;
+            transform: scale(1.05);
         }
 
-    .cart-summary {
-        margin-top: 30px;
-        padding: 20px;
-        background: #f9f9f9;
-        border-radius: 8px;
+    /* Item Details */
+    .item-details {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .item-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 4px;
+    }
+
+    .item-title {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0;
+        line-height: 1.3;
+        letter-spacing: -0.01em;
+    }
+
+    .item-price {
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0;
+        color: #1e1e1e;
+    }
+
+    .item-description {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #6b6b6b;
+        margin: 0 0 8px 0;
+    }
+
+    .item-attributes {
+        margin-bottom: 8px;
+    }
+
+    .attribute {
+        font-size: 13px;
+        color: #8b8b8b;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+    }
+
+    /* Quantity Selector */
+    .item-actions {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin: 12px 0;
+    }
+
+    .quantity-selector {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        border: 1px solid #e0e0e0;
+        padding: 8px 16px;
+        border-radius: 30px;
+    }
+
+    .quantity-btn {
+        background: none;
+        border: none;
+        padding: 4px;
+        cursor: pointer;
+        color: #1e1e1e;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.2s;
+    }
+
+        .quantity-btn:hover {
+            opacity: 0.5;
+        }
+
+    .quantity-value {
+        font-size: 14px;
+        font-weight: 500;
+        min-width: 20px;
+        text-align: center;
+    }
+
+    .remove-link {
+        background: none;
+        border: none;
+        color: #8b8b8b;
+        font-size: 13px;
+        text-decoration: underline;
+        cursor: pointer;
+        padding: 0;
+        transition: color 0.2s;
+    }
+
+        .remove-link:hover {
+            color: #1e1e1e;
+        }
+
+    /* Subtotal */
+    .item-subtotal {
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
-
-    .cart-total {
-        font-size: 18px;
-        font-weight: 600;
-    }
-
-    .checkout-btn {
-        background: #333;
-        color: white;
-        border: none;
-        padding: 15px 30px;
+        padding-top: 12px;
+        border-top: 1px dashed #e0e0e0;
         font-size: 14px;
-        cursor: pointer;
-        transition: background 0.3s;
+        color: #6b6b6b;
     }
 
-        .checkout-btn:hover {
+    .subtotal-value {
+        font-weight: 500;
+        color: #1e1e1e;
+    }
+
+    /* Order Summary */
+    .aesop-order-summary {
+        background: #fafafa;
+        padding: 40px;
+        border-radius: 0;
+        height: fit-content;
+        position: sticky;
+        top: 120px;
+    }
+
+    .summary-title {
+        font-size: 20px;
+        font-weight: 500;
+        margin: 0 0 30px 0;
+        letter-spacing: -0.01em;
+    }
+
+    .summary-details {
+        margin-bottom: 30px;
+    }
+
+    .summary-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        font-size: 14px;
+        color: #6b6b6b;
+        border-bottom: 1px solid #e8e8e8;
+    }
+
+        .summary-row:last-of-type {
+            border-bottom: none;
+        }
+
+    .summary-total {
+        font-size: 16px;
+        font-weight: 500;
+        color: #1e1e1e;
+        padding-top: 20px;
+        margin-top: 10px;
+        border-top: 2px solid #1e1e1e;
+    }
+
+    /* Buttons */
+    .aesop-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        width: 100%;
+        padding: 16px 32px;
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+    }
+
+    .aesop-button--primary {
+        background: #1e1e1e;
+        color: #ffffff;
+    }
+
+        .aesop-button--primary:hover {
             background: #b57a44;
         }
 
-    .empty-cart {
-        text-align: center;
-        padding: 60px;
-        background: #f9f9f9;
+    .checkout-button {
+        margin: 20px 0;
     }
 
-        .empty-cart i {
-            font-size: 50px;
-            color: #ddd;
-            margin-bottom: 20px;
+    .payment-icons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        font-size: 12px;
+        color: #8b8b8b;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    /* Empty Cart */
+    .aesop-empty-cart {
+        grid-column: 1 / -1;
+        text-align: center;
+        padding: 100px 20px;
+        background: #fafafa;
+    }
+
+    .empty-illustration {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 30px;
+    }
+
+        .empty-illustration .line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #1e1e1e;
+            transform: translateY(-50%);
         }
 
-    .continue-shopping {
-        display: inline-block;
-        margin-top: 20px;
-        padding: 10px 20px;
-        background: #333;
-        color: white;
-        text-decoration: none;
+        .empty-illustration .circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            border: 1px solid #1e1e1e;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            background: #fafafa;
+        }
+
+    .aesop-empty-cart h2 {
+        font-size: 24px;
+        font-weight: 400;
+        margin: 0 0 12px 0;
+    }
+
+    .aesop-empty-cart p {
+        color: #6b6b6b;
+        margin-bottom: 30px;
+    }
+
+    .aesop-empty-cart .aesop-button {
+        width: auto;
+        min-width: 250px;
+    }
+
+    /* Responsive */
+    @@media (max-width: 1024px) {
+        .aesop-cart-container {
+            grid-template-columns: 1fr 320px;
+            gap: 40px;
+        }
+    }
+
+    @@media (max-width: 768px) {
+        .aesop-cart-page {
+            padding: 0 20px;
+            margin-top: 100px;
+        }
+
+        .aesop-cart-container {
+            grid-template-columns: 1fr;
+        }
+
+        .aesop-cart-item {
+            grid-template-columns: 120px 1fr;
+            gap: 20px;
+        }
+
+        .aesop-order-summary {
+            position: static;
+        }
+    }
+
+    @@media (max-width: 480px) {
+        .aesop-cart-item {
+            grid-template-columns: 1fr;
+        }
+
+        .item-image {
+            width: 60%;
+        }
+
+        .item-header {
+            flex-direction: column;
+            gap: 8px;
+        }
     }
 </style>
-
-<script>
-    document.addEventListener('DOMContentLoaded', loadCartPage);
-
-    async function loadCartPage() {
-        try {
-            const response = await fetch('/api/cartapi');
-            const data = await response.json();
-
-            if (data.items && data.items.length > 0) {
-                displayCartPage(data.items, data.total);
-            } else {
-                displayEmptyCart();
-            }
-        } catch (error) {
-            console.error('Error:', error);
-        }
-    }
-
-    function displayCartPage(items, total) {
-        const container = document.getElementById('cartContainer');
-
-        container.innerHTML = `
-            <table class="cart-items">
-                <thead>
-                    <tr>
-                        <th>Product</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Total</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    ${items.map(item => `
-                        <tr class="cart-item" data-id="${item.id}" data-size="${item.size}">
-                            <td>
-                                <div class="cart-item-product">
-                                    <img src="${item.imageUrl || '/assets/images/placeholder.jpg'}" alt="${item.name}">
-                                    <div>
-                                        <div class="cart-item-name">${item.name}</div>
-                                        <div class="cart-item-size">${item.size}</div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="cart-item-price">$${item.price.toFixed(2)}</td>
-                            <td class="cart-item-quantity">
-                                <input type="number" value="${item.quantity || 1}" min="1"
-                                       onchange="updateCartItemQuantity('${item.id}', '${item.size}', this.value)">
-                            </td>
-                            <td class="cart-item-price">$${(item.price * (item.quantity || 1)).toFixed(2)}</td>
-                            <td>
-                                <span class="cart-item-remove" onclick="removeCartItem('${item.id}', '${item.size}')">
-                                    <i class="fa-solid fa-trash-can"></i>
-                                </span>
-                            </td>
-                        </tr>
-                    `).join('')}
-                </tbody>
-            </table>
-
-            <div class="cart-summary">
-                <div class="cart-total">
-                    Total: $${total.toFixed(2)}
-                </div>
-                <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
-            </div>
-        `;
-    }
-
-    function displayEmptyCart() {
-        document.getElementById('cartContainer').innerHTML = `
-            <div class="empty-cart">
-                <i class="fa-solid fa-bag-shopping"></i>
-                <h3>Your cart is empty</h3>
-                <p>Looks like you haven't added anything yet.</p>
-                <a href="/" class="continue-shopping">Continue Shopping</a>
-            </div>
-        `;
-    }
-
-    async function updateCartItemQuantity(id, size, quantity) {
-        const item = { id, size, quantity: parseInt(quantity) };
-
-        try {
-            const response = await fetch('/api/cartapi/update', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(item)
-            });
-
-            if (response.ok) {
-                loadCartPage();
-                // Header'daki sepeti de güncelle
-                if (typeof loadCart === 'function') loadCart();
-            }
-        } catch (error) {
-            console.error('Error:', error);
-        }
-    }
-
-    async function removeCartItem(id, size) {
-        if (!confirm('Remove this item from cart?')) return;
-
-        const item = { id, size };
-
-        try {
-            const response = await fetch('/api/cartapi/remove', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(item)
-            });
-
-            if (response.ok) {
-                loadCartPage();
-                if (typeof loadCart === 'function') loadCart();
-            }
-        } catch (error) {
-            console.error('Error:', error);
-        }
-    }
-
-    function checkout() {
-        alert('Checkout functionality coming soon!');
-    }
-</script>

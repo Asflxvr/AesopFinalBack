@@ -68,15 +68,15 @@
                     <a asp-controller="Home" asp-action="Index"><img src="./assets/images/indir.svg" alt="Aesop" class="logo-dark" /></a>
                 </div>
 
-                <div class="rightLinks">
+                <div class="rightLinks" style="display:flex; align-items:center;">
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <span>@User.Identity.Name</span>
+                        <span style="display:flex; align-items:center; color: white; font-size:14px;">@User.Identity.Name</span>
                         <a asp-action="Logout" asp-controller="Account"><i class="fas fa-sign-out"></i></a>
                     }
                     else
                     {
-                        <div class="login">
+                        <div class="login" style="display:flex; align-items:center;">
                             <a asp-action="Login" asp-controller="Account">Sign </a>
                         </div>
                     }
@@ -100,11 +100,25 @@
                         <li><a asp-controller="Experience" asp-action="Index">Experience</a></li>
                     </ul>
                 </nav>
-                <div class="searchBox">
+                @* <div class="searchBox">
                     <button type="button">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <input type="text" placeholder="Search...">
                     </button>
+                </div> *@
+                <div class="searchBox" >
+                    <input id="searchInput" type="text" placeholder="Search..."
+                           style="border: 1px solid #ddd;
+                                background-color: transparent;
+                                 border-radius: 20px;
+                                padding: 8px 16px;
+                                outline: none;
+                                font-size: 14px;
+                                 width: 200px;
+                                  transition: all 0.3s ease;"
+                           onfocus="this.style.borderColor='#007bff'"
+                           onblur="this.style.borderColor='#ddd'">
+
                 </div>
             </div>
         </div>
@@ -342,7 +356,7 @@
         }
 
         // Sepete ekle
-        async function addToCart(item, button) {
+      //  async function addToCart(item, button) {
             // Loading state
             button.classList.add('loading');
             button.disabled = true;
@@ -535,7 +549,37 @@
                 }
             }
         `;
-        document.head.appendChild(style);</script>
+        document.head.appendChild(style);
+        
+                //search
+                        const searchInput = document.getElementById("searchInput");
+
+        searchInput.addEventListener("keyup", function () {
+
+            const value = this.value.toLowerCase();
+
+            const products = document.querySelectorAll(".product-card, .product-item");
+
+            products.forEach(product => {
+
+                const title =
+                    product.querySelector(".product-title") ||
+                    product.querySelector("h4");
+
+                if (!title) return;
+
+                const name = title.textContent.toLowerCase();
+
+                if (name.includes(value)) {
+                    product.style.display = "";
+                } else {
+                    product.style.display = "none";
+                }
+
+            });
+
+        });
+                </script>
 </body>
 
 </html>

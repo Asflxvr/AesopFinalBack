@@ -64,102 +64,50 @@
 								<span class="size">Size: @item.GetActualSize</span>
 								<p class="price">$@item.Price</p>
 							</div>
-							<button class="add-to-cart buy-button">Add all to cart</button>
+							<button class="add-to-cart buy-button" onclick="addToCart(this, @item.Id)"> Add all to cart</button>
 						</div>
 					}
-
-
-					@* <div class="product-item">
-                        <div class="badge">Online-only offer</div>
-
-                        <div class="product-image">
-                            <img src="./assets/images/Aesop_Scents_Campaign_Home_Ptolemy_Kagerou_Vertical_Bundle_PDP_2000x2000px.png"
-                                 class="main-img">
-                            <img src="./assets/images/Aesop_Scents_PDP_Range_Candles_2000x2000px.png" class="hover-img">
-                            <button class="wishlist-btn"><i class="fa-regular fa-bookmark"></i></button>
-                        </div>
-                        <div class="product-info">
-                            <h4>Home Scents Duo</h4>
-                            <p class="desc">An aromatic pairing for the home</p>
-                            <span class="size">One size only</span>
-                            <p class="price">$152.00</p>
-                        </div>
-                        <button class="add-to-cart buy-button">Add all to cart</button>
-                    </div>
-
-                    <!-- data-id EKLENDİ -->
-                    <div class="product-item" >
-                        <div class="badge">New addition</div>
-                        <div class="product-image">
-                            <img src="./assets/images/Aesop_Kits_Resurrection_Duet_Web_Front_A_2000x2000px.png" class="main-img">
-                            <img src="./assets/images/Aesop_Top_20_2025_PDP_Texture_Resurrection_Hand_Wash_2000x2000px.png"
-                                 class="hover-img">
-                            <button class="wishlist-btn"><i class="fa-regular fa-bookmark"></i></button>
-                        </div>
-                        <div class="product-info">
-                            <h4>Resurrection Duet</h4>
-                            <p class="desc">A citrus, woody, herbaceous duo</p>
-                            <span class="size">Kit</span>
-                            <p class="price">$140.00</p>
-                        </div>
-                        <button class="add-to-cart">Add to cart</button>
-                    </div>
-
-                    <!-- Diğer ürünler için de data-id ekleyin -->
-                    <div class="product-item">
-                        <div class="badge">New addition</div>
-                        <div class="product-image">
-                            <img src="./assets/images/Aesop_Skin_Lucent_Facial_Refiner_60mL_NGL_Front_2000x2000px.png"
-                                 class="main-img">
-                            <img src="./assets/images/Aesop_Skin_Lucent_Facial_Refiner_60mL_NGL_Use_2000x2000px.png"
-                                 class="hover-img">
-                            <button class="wishlist-btn"><i class="fa-regular fa-bookmark"></i></button>
-                        </div>
-                        <div class="product-info">
-                            <h4>Lucent Facial Refiner</h4>
-                            <p class="desc">For normal to dry; dehydrated, dull skin</p>
-                            <span class="size">2 fl oz</span>
-                            <p class="price">$97.00</p>
-                        </div>
-                        <button class="add-to-cart">Add to cart</button>
-                    </div>
-
-                    <div class="product-item">
-                        <div class="badge">New addition</div>
-                        <div class="product-image">
-                            <img src="./assets/images/Aesop_Fragrance_Aurner_Eau_de_Parfum_50mL_Bottle_NGL_2000x2000px.png"
-                                 class="main-img">
-                            <img src="./assets/images/Aesop_Fragrance_Aurner_Eau_de_Parfum_50mL_Bottle_with_Carton_NGL_2000x2000px.png"
-                                 class="hover-img">
-                            <button class="wishlist-btn"><i class="fa-regular fa-bookmark"></i></button>
-                        </div>
-                        <div class="product-info">
-                            <h4>Aurner Eau de Parfum</h4>
-                            <p class="desc">Magnolia Leaf, Roman Chamomile, Cedar Heart</p>
-                            <span class="size">1.6 fl oz</span>
-                            <p class="price">$200.00</p>
-                        </div>
-                        <button class="add-to-cart">Add to cart</button>
-                    </div>
-
-                    <div class="product-item">
-                        <div class="badge">New addition</div>
-                        <div class="product-image">
-                            <img src="./assets/images/Aesop_Body_Geranium_Leaf_Hydrating_Body_Treatment_Web_Front_2000x2000px.png"
-                                 class="main-img">
-                            <img src="./assets/images/Aesop_Geranium_Leaf_Hydrating_Body_Treatment_100mL-NGL_In-Situ_01_Product_2000x2000px.png"
-                                 class="hover-img">
-                            <button class="wishlist-btn"><i class="fa-regular fa-bookmark"></i></button>
-                        </div>
-                        <div class="product-info">
-                            <h4>Geranium Leaf Body Treatment</h4>
-                            <p class="desc">Nourishing oil for soft, supple skin</p>
-                            <span class="size">3.4 fl oz</span>
-                            <p class="price">$50.00</p>
-                        </div>
-                        <button class="add-to-cart">Add to cart</button>
-                    </div> *@
 				</div>
+				@* -------------------- *@
+				@* -------------------- *@
+				@* -------------------- *@
+
+				<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+				<script>
+									function addToCart(btn,productId) {
+
+						if (btn) {
+							btn.disabled = true;
+						}
+
+						axios.post('/Cart/AddToCart', null, {
+							params: { productId: productId }
+						})
+						.then(function (res) {
+
+							const cartCountElement = document.getElementById("cart-count");
+
+							if (cartCountElement) {
+								cartCountElement.innerText = res.data.cartCount;
+							}
+
+							// alert("Səbətə əlavə olundu ✅");
+
+						})
+						.catch(function (err) {
+							console.error(err);
+						})
+						.finally(function () {
+							if (btn) {
+								btn.disabled = false;
+							}
+						});
+					}
+				</script>
+
+				@* -------------------- *@
+				@* -------------------- *@
+				@* -------------------- *@
 
 				<button class="arrow next" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
 			</div>
