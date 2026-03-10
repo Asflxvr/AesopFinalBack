@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AesopFinal")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+00c20587500af86aa0ef1bf3308f8b5bb16903d8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1981181403b59262f16b042eab95379fddd9b867")]
 [assembly: System.Reflection.AssemblyProductAttribute("AesopFinal")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AesopFinal")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
