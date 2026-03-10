@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<Product>
+@{
 	Layout = "_Layout";
 }
 
@@ -25,7 +26,25 @@
                 <h2 class="section-title">Recently introduced</h2>
             </div>
             <div class="fragrance-grid">
-                <div class="fragrance-card">
+                @foreach (var item in Model)
+                {
+                    <div class="fragrance-card">
+                        <div class="card-badge">New</div>
+                        <div class="card-image">
+                            <img src="./assets/images/@item.ImageURL" alt="Aurner Eau de Parfum" class="primary-img">
+                            <img src="./assets/images/@item.SecondaryImageURL" alt="Aurner detail" class="hover-img">
+                            <button class="wishlist-btn"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <div class="card-content">
+                            <h3>Aurner Eau de Parfum</h3>
+                            <p class="notes">Magnolia Leaf, Roman Chamomile, Cedar Heart</p>
+                            <span class="size">1.6 fl oz / 50 mL</span>
+                            <p class="price">$200.00</p>
+                        </div>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                }
+                @* <div class="fragrance-card">
                     <div class="card-badge">New</div>
                     <div class="card-image">
                         <img src="./assets/images/Aesop_Fragrance_Tacit_Eau_de_Parfum_100mL_Bottle_NGL_2000x2000px.png" alt="Aurner Eau de Parfum" class="primary-img">
@@ -70,7 +89,7 @@
                         <p class="price">$185.00</p>
                     </div>
                     <button class="add-to-cart">Add to cart</button>
-                </div>
+                </div> *@
             </div>
         </div>
     </section>

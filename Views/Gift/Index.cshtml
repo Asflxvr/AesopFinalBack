@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<Product>
 @{
 	Layout = "_Layout";
 }
@@ -71,58 +71,22 @@
                 <h2>Gift sets</h2>
             </div>
             <div class="sets-grid">
-                <div class="set-card">
-                    <div class="set-image">
-                        <img src="./assets/images/Aesop_Body_Breathless_100mL_Web_Front_2000x2000px.png" alt="Resurrection Duet">
-                        <span class="set-badge">Bestseller</span>
-                        <button class="wishlist-btn"><i class="fa-regular fa-bookmark"></i></button>
+                @foreach(var item in Model)
+                {
+                    <div class="set-card">
+                        <div class="set-image">
+                            <img src="./assets/images/@item.ImageURL" alt="Resurrection Duet">
+                            <span class="set-badge">Bestseller</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-bookmark"></i></button>
+                        </div>
+                        <div class="set-content">
+                            <h3>@item.Title</h3>
+                            <p class="set-desc">@item.Description</p>
+                            <div class="set-price">@item.Price</div>
+                        </div>
+                        <button class="add-to-cart">Add to cart</button>
                     </div>
-                    <div class="set-content">
-                        <h3>Resurrection Duet</h3>
-                        <p class="set-desc">Hand wash + hand balm</p>
-                        <div class="set-price">$140.00</div>
-                    </div>
-                    <button class="add-to-cart">Add to cart</button>
-                </div>
-                <div class="set-card">
-                    <div class="set-image">
-                        <img src="./assets/images/Aesop_Body_Rejuvenate_Intensive_Body_Balm_100mL_Web_Front_A_2000x2000px.png" alt="Geranium Leaf Duet">
-                        <span class="set-badge">New</span>
-                        <button class="wishlist-btn"><i class="fa-regular fa-bookmark"></i></button>
-                    </div>
-                    <div class="set-content">
-                        <h3>Geranium Leaf Duet</h3>
-                        <p class="set-desc">Body cleanser + body treatment</p>
-                        <div class="set-price">$147.00</div>
-                    </div>
-                    <button class="add-to-cart">Add to cart</button>
-                </div>
-                <div class="set-card">
-                    <div class="set-image">
-                        <img src="./assets/images/Aesop_Hand_Reverence_Aromatique_Hand_Wash_500mL_Web_Front_2000x2000px (1).png" alt="Fragrance Duet">
-                        <span class="set-badge">Limited</span>
-                        <button class="wishlist-btn"><i class="fa-regular fa-bookmark"></i></button>
-                    </div>
-                    <div class="set-content">
-                        <h3>Fragrance Duet</h3>
-                        <p class="set-desc">Two Eaux de Parfum</p>
-                        <div class="set-price">$285.00</div>
-                    </div>
-                    <button class="add-to-cart">Add to cart</button>
-                </div>
-                <div class="set-card">
-                    <div class="set-image">
-                        <img src="./assets/images/Aesop_Kits_Gift_Kits_2025-26_Too_Many_Cooks_in_the_Kitchen_GL_NGL_Baseline_2000x2000px (2).png" alt="Home Scents Duo">
-                        <span class="set-badge">Exclusive</span>
-                        <button class="wishlist-btn"><i class="fa-regular fa-bookmark"></i></button>
-                    </div>
-                    <div class="set-content">
-                        <h3>Home Scents Duo</h3>
-                        <p class="set-desc">Candle + room spray</p>
-                        <div class="set-price">$152.00</div>
-                    </div>
-                    <button class="add-to-cart">Add to cart</button>
-                </div>
+                }
             </div>
         </div>
     </section>

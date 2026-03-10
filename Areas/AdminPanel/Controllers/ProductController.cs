@@ -34,7 +34,15 @@ namespace AesopFinal.Areas.AdminPanel.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(ProductCreateVM vm)
         {
-            if (!ModelState.IsValid) return View(vm);
+            //if (!ModelState.IsValid) return View(vm);
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Categories = _context.Categories
+                    .Where(x => !x.IsDeleted)
+                    .ToList();
+
+                return View(vm);
+            }
             Product cake = new Product
             {
                 IsDeleted = false,

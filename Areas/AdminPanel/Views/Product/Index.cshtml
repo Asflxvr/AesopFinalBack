@@ -56,7 +56,7 @@
 										@item.Description
 									</td>
 									<td>
-										@item.Category.CategoryName
+										@(item.Category != null ? item.Category.CategoryName : "Kategori mövcud deyil")
 									</td>
 									<td>
 										$@item.Price

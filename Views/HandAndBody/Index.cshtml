@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<Product>
+@{
     Layout = "_SecondaryLayout";
 }
 
@@ -84,40 +85,26 @@
                 </div>
                 <button class="add-btn" disabled>Out of stock</button>
             </div>
-
-            <div class="product-card">
+            @foreach (var item in Model)
+            {
+                <div class="product-card">
                 <div class="card-top">
                     <span class="badge">New addition</span>
                     <button class="save-btn"><i class="fa-regular fa-bookmark"></i></button>
                 </div>
                 <div class="product-image">
-                    <img src="./assets/images/Aesop_Kits_Gift_Kits_2025-26_Shower_Room_Serenades_GL_NGL_Baseline_2000x2000px.png"
+                    <img src="./assets/images/@item.ImageURL"
                          alt="Shower Room Serenades">
                 </div>
                 <div class="product-info">
-                    <h3 class="item-name">Shower Room Serenades</h3>
-                    <p class="item-desc">A pair of Eleos formulations ideal for dry hands and bodies</p>
-                    <p class="item-price">$65.00</p>
+                    <h3 class="item-name">@item.Title</h3>
+                    <p class="item-desc">@item.Description</p>
+                    <p class="item-price">@item.Price</p>
                 </div>
                 <button class="add-btn">Add to cart</button>
             </div>
+            }
 
-            <div class="product-card">
-                <div class="card-top">
-                    <span class="badge">New addition</span>
-                    <button class="save-btn"><i class="fa-regular fa-bookmark"></i></button>
-                </div>
-                <div class="product-image">
-                    <img src="./assets/images/Aesop_Kits_Gift_Kits_2025-26_Too_Many_Cooks_in_the_Kitchen_GL_NGL_Baseline_2000x2000px.png"
-                         alt="Too Many Cooks In the Kitchen">
-                </div>
-                <div class="product-info">
-                    <h3 class="item-name">Too Many Cooks In the Kitchen</h3>
-                    <p class="item-desc">Three sink-side staples for the hands</p>
-                    <p class="item-price">$96.00</p>
-                </div>
-                <button class="add-btn">Add to cart</button>
-            </div>
         </div>
     </section>
     <!-- purplesection -->
